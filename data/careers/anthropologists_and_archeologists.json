@@ -1,0 +1,172 @@
+{
+  "id": "anthropologists_and_archeologists",
+  "title": "Anthropologists and Archeologists",
+  "category": "general",
+  "description": "Study the origin, development, and behavior of human beings. May study the way of life, language, or physical characteristics of people in various parts of the world. May engage in systematic recovery and examination of material evidence, such as tools or pottery remaining from past human cultures, in order to determine the history, customs, and living habits of earlier civilizations.",
+  "onet_code": "19-3091.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$21 - $25",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational anthropologists and archeologists training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Collect information and make judgments through observation, interviews, and review of documents.Related occupations",
+        "Teach or mentor undergraduate and graduate students in anthropology or archeology.Related occupations",
+        "Write about and present research findings for a variety of specialized and general audiences.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$24 - $31",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Plan and direct research to characterize and compare the economic, demographic, health care, social, political, linguistic, and religious institutions of distinct cultural groups, communities, and organizations.Related occupations",
+        "Create data records for use in describing and analyzing social patterns and processes, using photography, videography, and audio recordings.Related occupations",
+        "Train others in the application of ethnographic research methods to solve problems in organizational effectiveness, communications, technology development, policy making, and program planning.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$31 - $46",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Identify culturally specific beliefs and practices affecting health status and access to services for distinct populations and communities, in collaboration with medical and public health officials.Related occupations",
+        "Apply traditional ecological knowledge and assessments of culturally distinctive land and resource management institutions to assist in the resolution of conflicts over habitat protection and resource enhancement.Related occupations",
+        "Lead field training sites and train field staff, students, and volunteers in excavation methods.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$46 - $62",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$62+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative"
+  ],
+  "tasks": [
+    "Collect information and make judgments through observation, interviews, and review of documents.Related occupations",
+    "Teach or mentor undergraduate and graduate students in anthropology or archeology.Related occupations",
+    "Write about and present research findings for a variety of specialized and general audiences.Related occupations",
+    "Plan and direct research to characterize and compare the economic, demographic, health care, social, political, linguistic, and religious institutions of distinct cultural groups, communities, and organizations.Related occupations",
+    "Create data records for use in describing and analyzing social patterns and processes, using photography, videography, and audio recordings.Related occupations",
+    "Train others in the application of ethnographic research methods to solve problems in organizational effectiveness, communications, technology development, policy making, and program planning.Related occupations",
+    "Identify culturally specific beliefs and practices affecting health status and access to services for distinct populations and communities, in collaboration with medical and public health officials.Related occupations",
+    "Apply traditional ecological knowledge and assessments of culturally distinctive land and resource management institutions to assist in the resolution of conflicts over habitat protection and resource enhancement.Related occupations",
+    "Lead field training sites and train field staff, students, and volunteers in excavation methods.Related occupations",
+    "Conduct participatory action research in communities and organizations to assess how work is done and to design work systems, technologies, and environments.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

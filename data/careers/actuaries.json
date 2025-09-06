@@ -1,0 +1,173 @@
+{
+  "id": "actuaries",
+  "title": "Actuaries",
+  "category": "general",
+  "description": "Analyze statistical data, such as mortality, accident, sickness, disability, and retirement rates and construct probability tables to forecast risk and liability for payment of future benefits. May ascertain insurance rates required and cash reserves necessary to ensure payment of future benefits.",
+  "onet_code": "15-2011.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$42 - $50",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational actuaries training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Ascertain premium rates required and cash reserves and liabilities necessary to ensure payment of future benefits.Related occupations",
+        "Collaborate with programmers, underwriters, accounts, claims experts, and senior management to help companies develop plans for new lines of business or improvements to existing business.Related occupations",
+        "Analyze statistical information to estimate mortality, accident, sickness, disability, and retirement rates.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$48 - $60",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Design, review, and help administer insurance, annuity and pension plans, determining financial soundness and calculating premiums.Related occupations",
+        "Determine, or help determine, company policy, and explain complex technical matters to company executives, government officials, shareholders, policyholders, or the public.Related occupations",
+        "Construct probability tables for events such as fires, natural disasters, and unemployment, based on analysis of statistical data and other pertinent information.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$60 - $90",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Provide advice to clients on a contract basis, working as a consultant.Related occupations",
+        "Determine equitable basis for distributing surplus earnings under participating insurance and annuity contracts in mutual companies.Related occupations",
+        "Negotiate terms and conditions of reinsurance with other companies.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$90 - $120",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$120+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Investigative",
+    "Enterprising",
+    "Conventional"
+  ],
+  "tasks": [
+    "Ascertain premium rates required and cash reserves and liabilities necessary to ensure payment of future benefits.Related occupations",
+    "Collaborate with programmers, underwriters, accounts, claims experts, and senior management to help companies develop plans for new lines of business or improvements to existing business.Related occupations",
+    "Analyze statistical information to estimate mortality, accident, sickness, disability, and retirement rates.Related occupations",
+    "Design, review, and help administer insurance, annuity and pension plans, determining financial soundness and calculating premiums.Related occupations",
+    "Determine, or help determine, company policy, and explain complex technical matters to company executives, government officials, shareholders, policyholders, or the public.Related occupations",
+    "Construct probability tables for events such as fires, natural disasters, and unemployment, based on analysis of statistical data and other pertinent information.Related occupations",
+    "Provide advice to clients on a contract basis, working as a consultant.Related occupations",
+    "Determine equitable basis for distributing surplus earnings under participating insurance and annuity contracts in mutual companies.Related occupations",
+    "Negotiate terms and conditions of reinsurance with other companies.Related occupations",
+    "Provide expertise to help financial institutions manage risks and maximize returns associated with investment products or credit offerings.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

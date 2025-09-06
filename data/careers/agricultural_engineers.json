@@ -1,0 +1,173 @@
+{
+  "id": "agricultural_engineers",
+  "title": "Agricultural Engineers",
+  "category": "engineering",
+  "description": "Apply knowledge of engineering technology and biological science to agricultural problems concerned with power and machinery, electrification, structures, soil and water conservation, and processing of agricultural products.",
+  "onet_code": "17-2021.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$28 - $33",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational agricultural engineers training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Prepare reports, sketches, working drawings, specifications, proposals, and budgets for proposed sites or systems.Related occupations",
+        "Visit sites to observe environmental problems, to consult with contractors, or to monitor construction activities.Related occupations",
+        "Meet with clients, such as district or regional councils, farmers, and developers, to discuss their needs.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$32 - $40",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Discuss plans with clients, contractors, consultants, and other engineers so that they can be evaluated and necessary changes made.Related occupations",
+        "Test agricultural machinery and equipment to ensure adequate performance.Related occupations",
+        "Plan and direct construction of rural electric-power distribution systems, and irrigation, drainage, and flood control systems for soil and water conservation.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$40 - $60",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Provide advice on water quality and issues related to pollution management, river control, and ground and surface water resources.Related occupations",
+        "Design structures for crop storage, animal shelter and loading, and animal and crop processing, and supervise their construction.Related occupations",
+        "Conduct educational programs that provide farmers or farm cooperative members with information that can help them improve agricultural productivity.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$60 - $80",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$80+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative",
+    "Conventional"
+  ],
+  "tasks": [
+    "Prepare reports, sketches, working drawings, specifications, proposals, and budgets for proposed sites or systems.Related occupations",
+    "Visit sites to observe environmental problems, to consult with contractors, or to monitor construction activities.Related occupations",
+    "Meet with clients, such as district or regional councils, farmers, and developers, to discuss their needs.Related occupations",
+    "Discuss plans with clients, contractors, consultants, and other engineers so that they can be evaluated and necessary changes made.Related occupations",
+    "Test agricultural machinery and equipment to ensure adequate performance.Related occupations",
+    "Plan and direct construction of rural electric-power distribution systems, and irrigation, drainage, and flood control systems for soil and water conservation.Related occupations",
+    "Provide advice on water quality and issues related to pollution management, river control, and ground and surface water resources.Related occupations",
+    "Design structures for crop storage, animal shelter and loading, and animal and crop processing, and supervise their construction.Related occupations",
+    "Conduct educational programs that provide farmers or farm cooperative members with information that can help them improve agricultural productivity.Related occupations",
+    "Design sensing, measuring, and recording devices, and other instrumentation used to study plant or animal life.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Low"
+}

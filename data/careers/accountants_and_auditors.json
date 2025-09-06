@@ -1,0 +1,173 @@
+{
+  "id": "accountants_and_auditors",
+  "title": "Accountants and Auditors",
+  "category": "business",
+  "description": "Examine, analyze, and interpret accounting records to prepare financial statements, give advice, or audit and evaluate statements prepared by others. Install or advise on systems of recording costs or other financial and budgetary data.",
+  "onet_code": "13-2011.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$27 - $32",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational accountants and auditors training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Prepare detailed reports on audit findings.Related occupations",
+        "Report to management about asset utilization and audit results, and recommend changes in operations and financial activities.Related occupations",
+        "Collect and analyze data to detect deficient controls, duplicated effort, extravagance, fraud, or non-compliance with laws, regulations, and management policies.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$31 - $39",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Inspect account books and accounting systems for efficiency, effectiveness, and use of accepted accounting procedures to record transactions.Related occupations",
+        "Supervise auditing of establishments, and determine scope of investigation required.Related occupations",
+        "Confer with company officials about financial and regulatory matters.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$39 - $58",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Examine and evaluate financial and information systems, recommending controls to ensure system reliability and data integrity.Related occupations",
+        "Inspect cash on hand, notes receivable and payable, negotiable securities, and canceled checks to confirm records are accurate.Related occupations",
+        "Examine records and interview workers to ensure recording of transactions and compliance with laws and regulations.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$58 - $78",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$78+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Investigative",
+    "Enterprising",
+    "Conventional"
+  ],
+  "tasks": [
+    "Prepare detailed reports on audit findings.Related occupations",
+    "Report to management about asset utilization and audit results, and recommend changes in operations and financial activities.Related occupations",
+    "Collect and analyze data to detect deficient controls, duplicated effort, extravagance, fraud, or non-compliance with laws, regulations, and management policies.Related occupations",
+    "Inspect account books and accounting systems for efficiency, effectiveness, and use of accepted accounting procedures to record transactions.Related occupations",
+    "Supervise auditing of establishments, and determine scope of investigation required.Related occupations",
+    "Confer with company officials about financial and regulatory matters.Related occupations",
+    "Examine and evaluate financial and information systems, recommending controls to ensure system reliability and data integrity.Related occupations",
+    "Inspect cash on hand, notes receivable and payable, negotiable securities, and canceled checks to confirm records are accurate.Related occupations",
+    "Examine records and interview workers to ensure recording of transactions and compliance with laws and regulations.Related occupations",
+    "Prepare, examine, or analyze accounting records, financial statements, or other financial reports to assess accuracy, completeness, and conformance to reporting and procedural standards.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

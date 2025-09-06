@@ -1,0 +1,172 @@
+{
+  "id": "animal_trainers",
+  "title": "Animal Trainers",
+  "category": "education",
+  "description": "Train animals for riding, harness, security, performance, or obedience, or for assisting persons with disabilities. Accustom animals to human voice and contact, and condition animals to respond to commands. Train animals according to prescribed standards for show or competition. May train animals to carry pack loads or work as part of pack team.",
+  "onet_code": "39-2011.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$12 - $14",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational animal trainers training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Cue or signal animals during performances.Related occupations",
+        "Talk to or interact with animals to familiarize them to human voices or contact.Related occupations",
+        "Conduct training programs to develop or maintain desired animal behaviors for competition, entertainment, obedience, security, riding, or related purposes.Related occupations"
+      ],
+      "education": "High school diploma"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$14 - $18",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Feed or exercise animals or provide other general care, such as cleaning or maintaining holding or performance areas.Related occupations",
+        "Observe animals' physical conditions to detect illness or unhealthy conditions requiring medical care.Related occupations",
+        "Evaluate animals to determine their temperaments, abilities, or aptitude for training.Related occupations"
+      ],
+      "education": "High school diploma"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$18 - $27",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Administer prescribed medications to animals.Related occupations",
+        "Keep records documenting animal health, diet, or behavior.Related occupations",
+        "Evaluate animals for trainability and ability to perform.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$27 - $36",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$36+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Social"
+  ],
+  "tasks": [
+    "Cue or signal animals during performances.Related occupations",
+    "Talk to or interact with animals to familiarize them to human voices or contact.Related occupations",
+    "Conduct training programs to develop or maintain desired animal behaviors for competition, entertainment, obedience, security, riding, or related purposes.Related occupations",
+    "Feed or exercise animals or provide other general care, such as cleaning or maintaining holding or performance areas.Related occupations",
+    "Observe animals' physical conditions to detect illness or unhealthy conditions requiring medical care.Related occupations",
+    "Evaluate animals to determine their temperaments, abilities, or aptitude for training.Related occupations",
+    "Administer prescribed medications to animals.Related occupations",
+    "Keep records documenting animal health, diet, or behavior.Related occupations",
+    "Evaluate animals for trainability and ability to perform.Related occupations",
+    "Advise animal owners regarding the purchase of specific animals.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

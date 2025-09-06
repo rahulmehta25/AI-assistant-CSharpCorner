@@ -1,0 +1,171 @@
+{
+  "id": "animal_scientists",
+  "title": "Animal Scientists",
+  "category": "science",
+  "description": "Conduct research in the genetics, nutrition, reproduction, growth, and development of domestic farm animals.",
+  "onet_code": "19-1011.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$26 - $31",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational animal scientists training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Study nutritional requirements of animals and nutritive values of animal feed materials.Related occupations",
+        "Write up or orally communicate research findings to the scientific community, producers, and the public.Related occupations",
+        "Develop improved practices in feeding, housing, sanitation, or parasite and disease control of animals.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$30 - $38",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Advise producers about improved products and techniques that could enhance their animal production efforts.Related occupations",
+        "Conduct research concerning animal nutrition, breeding, or management to improve products or processes.Related occupations",
+        "Study effects of management practices, processing methods, feed, or environmental conditions on quality and quantity of animal products, such as eggs and milk.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$38 - $57",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Research and control animal selection and breeding practices to increase production efficiency and improve animal quality.Related occupations",
+        "Determine genetic composition of animal populations and heritability of traits, using principles of genetics.Related occupations",
+        "Crossbreed animals with existing strains or cross strains to obtain new combinations of desirable characteristics.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$57 - $76",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$76+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative"
+  ],
+  "tasks": [
+    "Study nutritional requirements of animals and nutritive values of animal feed materials.Related occupations",
+    "Write up or orally communicate research findings to the scientific community, producers, and the public.Related occupations",
+    "Develop improved practices in feeding, housing, sanitation, or parasite and disease control of animals.Related occupations",
+    "Advise producers about improved products and techniques that could enhance their animal production efforts.Related occupations",
+    "Conduct research concerning animal nutrition, breeding, or management to improve products or processes.Related occupations",
+    "Study effects of management practices, processing methods, feed, or environmental conditions on quality and quantity of animal products, such as eggs and milk.Related occupations",
+    "Research and control animal selection and breeding practices to increase production efficiency and improve animal quality.Related occupations",
+    "Determine genetic composition of animal populations and heritability of traits, using principles of genetics.Related occupations",
+    "Crossbreed animals with existing strains or cross strains to obtain new combinations of desirable characteristics.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

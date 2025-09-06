@@ -1,0 +1,173 @@
+{
+  "id": "acute_care_nurses",
+  "title": "Acute Care Nurses",
+  "category": "healthcare",
+  "description": "Provide advanced nursing care for patients with acute conditions such as heart attacks, respiratory distress syndrome, or shock. May care for pre- and post-operative patients or perform advanced, invasive diagnostic or therapeutic procedures.",
+  "onet_code": "29-1141.01",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$31 - $37",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational acute care nurses training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Discuss illnesses and treatments with patients and family members.Related occupations",
+        "Diagnose acute or chronic conditions that could result in rapid physiological deterioration or life-threatening instability.Related occupations",
+        "Perform emergency medical procedures, such as basic cardiac life support (BLS), advanced cardiac life support (ACLS), and other condition-stabilizing interventions.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$36 - $45",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Assess urgent and emergent health conditions, using both physiologically and technologically derived data.Related occupations",
+        "Set up, operate, or monitor invasive equipment and devices, such as colostomy or tracheotomy equipment, mechanical ventilators, catheters, gastrointestinal tubes, and central lines.Related occupations",
+        "Document data related to patients' care, including assessment results, interventions, medications, patient responses, or treatment changes.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$45 - $67",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Administer blood and blood product transfusions or intravenous infusions, monitoring patients for adverse reactions.Related occupations",
+        "Interpret information obtained from electrocardiograms (EKGs) or radiographs (x-rays).Related occupations",
+        "Perform administrative duties that facilitate admission, transfer, or discharge of patients.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$67 - $90",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$90+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative",
+    "Social"
+  ],
+  "tasks": [
+    "Discuss illnesses and treatments with patients and family members.Related occupations",
+    "Diagnose acute or chronic conditions that could result in rapid physiological deterioration or life-threatening instability.Related occupations",
+    "Perform emergency medical procedures, such as basic cardiac life support (BLS), advanced cardiac life support (ACLS), and other condition-stabilizing interventions.Related occupations",
+    "Assess urgent and emergent health conditions, using both physiologically and technologically derived data.Related occupations",
+    "Set up, operate, or monitor invasive equipment and devices, such as colostomy or tracheotomy equipment, mechanical ventilators, catheters, gastrointestinal tubes, and central lines.Related occupations",
+    "Document data related to patients' care, including assessment results, interventions, medications, patient responses, or treatment changes.Related occupations",
+    "Administer blood and blood product transfusions or intravenous infusions, monitoring patients for adverse reactions.Related occupations",
+    "Interpret information obtained from electrocardiograms (EKGs) or radiographs (x-rays).Related occupations",
+    "Perform administrative duties that facilitate admission, transfer, or discharge of patients.Related occupations",
+    "Obtain specimens or samples for laboratory work.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Low"
+}

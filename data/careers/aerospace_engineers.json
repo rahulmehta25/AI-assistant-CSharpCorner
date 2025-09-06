@@ -2,164 +2,172 @@
   "id": "aerospace_engineers",
   "title": "Aerospace Engineers",
   "category": "engineering",
-  "description": "Professional Aerospace Engineers responsible for various duties in the engineering field.",
-  "growth_rate": "10-15%",
+  "description": "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques.",
+  "onet_code": "17-2011.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
   "levels": {
     "Entry": {
       "years": "0-2",
-      "salary_range": "$54,000 - $72,000",
+      "salary_range": "$44 - $52",
       "skills": [
-        "CAD Software",
-        "Mathematics",
-        "Technical Drawing",
+        "Communication",
         "Problem Solving",
-        "Safety"
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
       ],
-      "certifications": [
-        "FE Exam",
-        "AutoCAD Certification"
-      ],
+      "knowledge": [],
+      "certifications": [],
       "projects": [
-        "Complete aerospace engineers fundamentals course",
-        "Build portfolio with 3-5 sample projects",
-        "Contribute to team projects",
-        "Document learning journey"
+        "Complete foundational aerospace engineers training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
       ],
       "milestones": [
-        "Complete foundational training in aerospace engineers",
-        "Gain hands-on experience through internships or entry positions",
-        "Build portfolio of work samples",
-        "Establish professional network"
+        "Formulate mathematical models or other methods of computer analysis to develop, evaluate, or modify design, according to customer engineering requirements.Related occupations",
+        "Plan or conduct experimental, environmental, operational, or stress tests on models or prototypes of aircraft or aerospace systems or equipment.Related occupations",
+        "Formulate conceptual design of aeronautical or aerospace products or systems to meet customer requirements or conform to environmental regulations.Related occupations"
       ],
-      "education": "Bachelor's degree or equivalent"
+      "education": "Master's degree"
     },
     "Junior": {
       "years": "2-4",
-      "salary_range": "$62,999 - $81,000",
+      "salary_range": "$51 - $64",
       "skills": [
-        "Advanced CAD",
-        "Project Management",
-        "Quality Control",
-        "Technical Writing",
-        "Simulation Software"
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
       ],
-      "certifications": [
-        "PE License",
-        "Specialized Software Cert"
-      ],
+      "knowledge": [],
+      "certifications": [],
       "projects": [
-        "Lead small aerospace engineers project",
-        "Improve existing processes",
-        "Mentor new team members",
-        "Present at team meetings"
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
       ],
       "milestones": [
-        "Master core competencies",
-        "Complete 3-5 independent projects",
-        "Obtain industry certification",
-        "Present work to stakeholders"
+        "Plan or coordinate investigation and resolution of customers' reports of technical problems with aircraft or aerospace vehicles.Related occupations",
+        "Write technical reports or other documentation, such as handbooks or bulletins, for use by engineering staff, management, or customers.Related occupations",
+        "Direct or coordinate activities of engineering or technical personnel involved in designing, fabricating, modifying, or testing of aircraft or aerospace products.Related occupations"
       ],
-      "education": "Bachelor's + 2 years experience"
+      "education": "Master's degree"
     },
     "Mid-Level": {
       "years": "4-7",
-      "salary_range": "$81,000 - $108,000",
+      "salary_range": "$64 - $96",
       "skills": [
-        "System Design",
-        "Project Leadership",
-        "Cost Analysis",
-        "Regulatory Compliance",
-        "Innovation"
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
       ],
-      "certifications": [
-        "Project Management",
-        "Lean Six Sigma"
-      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
       "projects": [
-        "Lead cross-functional initiative",
-        "Develop new methodologies",
-        "Build and manage team",
-        "Drive measurable improvements"
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
       ],
       "milestones": [
-        "Lead project teams",
-        "Mentor junior staff",
-        "Develop specialized expertise",
-        "Contribute to strategic planning"
+        "Evaluate product data or design from inspections or reports for conformance to engineering principles, customer requirements, environmental regulations, or quality standards.Related occupations",
+        "Develop design criteria for aeronautical or aerospace products or systems, including testing methods, production costs, quality standards, environmental standards, or completion dates.Related occupations",
+        "Analyze project requests, proposals, or engineering data to determine feasibility, productibility, cost, or production time of aerospace or aeronautical products.Related occupations"
       ],
-      "education": "Bachelor's + 5 years experience"
+      "education": "Bachelor's degree or higher"
     },
     "Senior": {
       "years": "7-10",
-      "salary_range": "$108,000 - $144,000",
+      "salary_range": "$96 - $128",
       "skills": [
-        "Technical Direction",
-        "Portfolio Management",
-        "Executive Advisory",
-        "Industry Leadership",
-        "Innovation Strategy"
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
       ],
+      "knowledge": [],
+      "abilities": [],
       "certifications": [
-        "Executive Leadership",
-        "Industry Fellow"
+        "Advanced certifications",
+        "Industry recognition"
       ],
       "projects": [
-        "Transform department operations",
-        "Develop strategic initiatives",
-        "Build industry partnerships",
-        "Create innovation programs"
-      ],
-      "milestones": [
         "Lead department initiatives",
-        "Develop team members",
-        "Drive innovation",
+        "Drive strategic improvements",
         "Represent organization externally"
       ],
-      "education": "Advanced degree + 7 years experience"
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
     },
     "Expert": {
       "years": "10+",
-      "salary_range": "$135,000+",
+      "salary_range": "$128+",
       "skills": [
-        "Industry Thought Leadership",
-        "Executive Advisory",
-        "Board Governance",
+        "Industry Leadership",
         "Strategic Vision",
-        "Legacy Building"
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
       ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
       "certifications": [
-        "Industry Fellow",
-        "Honorary Degrees",
-        "Lifetime Achievement"
+        "Executive programs",
+        "Industry fellow"
       ],
       "projects": [
-        "Shape industry standards",
-        "Advisory board participation",
-        "Thought leadership initiatives",
-        "Legacy programs"
-      ],
-      "milestones": [
         "Shape organizational strategy",
         "Industry thought leadership",
-        "Executive advisory role",
-        "Build lasting legacy"
+        "Transformational initiatives"
       ],
-      "education": "Advanced degree + 10+ years experience"
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
     }
   },
-  "related_careers": [
-    "Project Engineer",
-    "Design Engineer",
-    "Quality Engineer",
-    "Systems Engineer"
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
   ],
-  "industry_trends": [
-    "Sustainable Design",
-    "Smart Systems",
-    "3D Printing",
-    "IoT Integration",
-    "Green Technology"
+  "interests": [
+    "Realistic",
+    "Investigative",
+    "Conventional"
   ],
+  "tasks": [
+    "Formulate mathematical models or other methods of computer analysis to develop, evaluate, or modify design, according to customer engineering requirements.Related occupations",
+    "Plan or conduct experimental, environmental, operational, or stress tests on models or prototypes of aircraft or aerospace systems or equipment.Related occupations",
+    "Formulate conceptual design of aeronautical or aerospace products or systems to meet customer requirements or conform to environmental regulations.Related occupations",
+    "Plan or coordinate investigation and resolution of customers' reports of technical problems with aircraft or aerospace vehicles.Related occupations",
+    "Write technical reports or other documentation, such as handbooks or bulletins, for use by engineering staff, management, or customers.Related occupations",
+    "Direct or coordinate activities of engineering or technical personnel involved in designing, fabricating, modifying, or testing of aircraft or aerospace products.Related occupations",
+    "Evaluate product data or design from inspections or reports for conformance to engineering principles, customer requirements, environmental regulations, or quality standards.Related occupations",
+    "Develop design criteria for aeronautical or aerospace products or systems, including testing methods, production costs, quality standards, environmental standards, or completion dates.Related occupations",
+    "Analyze project requests, proposals, or engineering data to determine feasibility, productibility, cost, or production time of aerospace or aeronautical products.Related occupations",
+    "Maintain records of performance reports for future reference.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
   "remote_friendly": false,
-  "automation_risk": "Medium"
+  "automation_risk": "Low"
 }

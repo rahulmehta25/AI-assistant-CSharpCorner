@@ -1,0 +1,174 @@
+{
+  "id": "anesthesiologist_assistants",
+  "title": "Anesthesiologist Assistants",
+  "category": "general",
+  "description": "Assist anesthesiologists in the administration of anesthesia for surgical and non-surgical procedures. Monitor patient status and provide patient care during surgical treatment.",
+  "onet_code": "29-1071.01",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$44 - $52",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational anesthesiologist assistants training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Provide airway management interventions including tracheal intubation, fiber optics, or ventilary support.Related occupations",
+        "Respond to emergency situations by providing cardiopulmonary resuscitation (CPR), basic cardiac life support (BLS), advanced cardiac life support (ACLS), or pediatric advanced life support (PALS).Related occupations",
+        "Verify availability of operating room supplies, medications, and gases.Related occupations"
+      ],
+      "education": "Master's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$51 - $64",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Pretest and calibrate anesthesia delivery systems and monitors.Related occupations",
+        "Participate in seminars, workshops, or other professional activities to keep abreast of developments in anesthesiology.Related occupations",
+        "Control anesthesia levels during procedures.Related occupations"
+      ],
+      "education": "Master's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$64 - $96",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Assist anesthesiologists in monitoring of patients, including electrocardiogram (EKG), direct arterial pressure, central venous pressure, arterial blood gas, hematocrit, or routine measurement of temperature, respiration, blood pressure or heart rate.Related occupations",
+        "Administer blood, blood products, or supportive fluids.Related occupations",
+        "Collect and document patients' pre-anesthetic health histories.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$96 - $128",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$128+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative",
+    "Social",
+    "Conventional"
+  ],
+  "tasks": [
+    "Provide airway management interventions including tracheal intubation, fiber optics, or ventilary support.Related occupations",
+    "Respond to emergency situations by providing cardiopulmonary resuscitation (CPR), basic cardiac life support (BLS), advanced cardiac life support (ACLS), or pediatric advanced life support (PALS).Related occupations",
+    "Verify availability of operating room supplies, medications, and gases.Related occupations",
+    "Pretest and calibrate anesthesia delivery systems and monitors.Related occupations",
+    "Participate in seminars, workshops, or other professional activities to keep abreast of developments in anesthesiology.Related occupations",
+    "Control anesthesia levels during procedures.Related occupations",
+    "Assist anesthesiologists in monitoring of patients, including electrocardiogram (EKG), direct arterial pressure, central venous pressure, arterial blood gas, hematocrit, or routine measurement of temperature, respiration, blood pressure or heart rate.Related occupations",
+    "Administer blood, blood products, or supportive fluids.Related occupations",
+    "Collect and document patients' pre-anesthetic health histories.Related occupations",
+    "Assist in the provision of advanced life support techniques including those procedures using high frequency ventilation or intra-arterial cardiovascular assistance devices.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

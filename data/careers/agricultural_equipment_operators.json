@@ -1,0 +1,172 @@
+{
+  "id": "agricultural_equipment_operators",
+  "title": "Agricultural Equipment Operators",
+  "category": "general",
+  "description": "Drive and control equipment to support agricultural activities such as tilling soil; planting, cultivating, and harvesting crops; feeding and herding livestock; or removing animal waste. May perform tasks such as crop baling or hay bucking. May operate stationary equipment to perform post-harvest tasks such as husking, shelling, threshing, and ginning.",
+  "onet_code": "45-2091.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$14 - $16",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational agricultural equipment operators training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Load and unload crops or containers of materials, manually or using conveyors, handtrucks, forklifts, or transfer augers.Related occupations",
+        "Mix specified materials or chemicals, and dump solutions, powders, or seeds into planter or sprayer machinery.Related occupations",
+        "Spray fertilizer or pesticide solutions to control insects, fungus and weed growth, and diseases, using hand sprayers.Related occupations"
+      ],
+      "education": "High school diploma"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$16 - $20",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Observe and listen to machinery operation to detect equipment malfunctions.Related occupations",
+        "Manipulate controls to set, activate, and adjust mechanisms on machinery.Related occupations",
+        "Operate or tend equipment used in agricultural production, such as tractors, combines, and irrigation equipment.Related occupations"
+      ],
+      "education": "High school diploma"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$20 - $30",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Adjust, repair, and service farm machinery and notify supervisors when machinery malfunctions.Related occupations",
+        "Attach farm implements such as plows, discs, sprayers, or harvesters to tractors, using bolts and hand tools.Related occupations",
+        "Load hoppers, containers, or conveyors to feed machines with products, using forklifts, transfer augers, suction gates, shovels, or pitchforks.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$30 - $40",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$40+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Conventional"
+  ],
+  "tasks": [
+    "Load and unload crops or containers of materials, manually or using conveyors, handtrucks, forklifts, or transfer augers.Related occupations",
+    "Mix specified materials or chemicals, and dump solutions, powders, or seeds into planter or sprayer machinery.Related occupations",
+    "Spray fertilizer or pesticide solutions to control insects, fungus and weed growth, and diseases, using hand sprayers.Related occupations",
+    "Observe and listen to machinery operation to detect equipment malfunctions.Related occupations",
+    "Manipulate controls to set, activate, and adjust mechanisms on machinery.Related occupations",
+    "Operate or tend equipment used in agricultural production, such as tractors, combines, and irrigation equipment.Related occupations",
+    "Adjust, repair, and service farm machinery and notify supervisors when machinery malfunctions.Related occupations",
+    "Attach farm implements such as plows, discs, sprayers, or harvesters to tractors, using bolts and hand tools.Related occupations",
+    "Load hoppers, containers, or conveyors to feed machines with products, using forklifts, transfer augers, suction gates, shovels, or pitchforks.Related occupations",
+    "Direct and monitor the activities of work crews engaged in planting, weeding, or harvesting activities.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "High"
+}

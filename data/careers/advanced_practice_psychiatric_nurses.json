@@ -1,0 +1,172 @@
+{
+  "id": "advanced_practice_psychiatric_nurses",
+  "title": "Advanced Practice Psychiatric Nurses",
+  "category": "healthcare",
+  "description": "Assess, diagnose, and treat individuals and families with mental health or substance use disorders or the potential for such disorders. Apply therapeutic activities, including the prescription of medication, per state regulations, and the administration of psychotherapy.",
+  "onet_code": "29-1141.02",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$31 - $37",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational advanced practice psychiatric nurses training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Assess patients' mental and physical status, based on the presenting symptoms and complaints.Related occupations",
+        "Diagnose psychiatric disorders and mental health conditions.Related occupations",
+        "Document patients' medical and psychological histories, physical assessment results, diagnoses, treatment plans, prescriptions, or outcomes.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$36 - $45",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Educate patients and family members about mental health and medical conditions, preventive health measures, medications, or treatment plans.Related occupations",
+        "Write prescriptions for psychotropic medications as allowed by state regulations and collaborative practice agreements.Related occupations",
+        "Monitor patients' medication usage and results.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$45 - $67",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Evaluate patients' behavior to formulate diagnoses or assess treatments.Related occupations",
+        "Distinguish between physiologically- and psychologically-based disorders, and diagnose appropriately.Related occupations",
+        "Develop and implement treatment plans.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$67 - $90",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$90+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Investigative",
+    "Social"
+  ],
+  "tasks": [
+    "Assess patients' mental and physical status, based on the presenting symptoms and complaints.Related occupations",
+    "Diagnose psychiatric disorders and mental health conditions.Related occupations",
+    "Document patients' medical and psychological histories, physical assessment results, diagnoses, treatment plans, prescriptions, or outcomes.Related occupations",
+    "Educate patients and family members about mental health and medical conditions, preventive health measures, medications, or treatment plans.Related occupations",
+    "Write prescriptions for psychotropic medications as allowed by state regulations and collaborative practice agreements.Related occupations",
+    "Monitor patients' medication usage and results.Related occupations",
+    "Evaluate patients' behavior to formulate diagnoses or assess treatments.Related occupations",
+    "Distinguish between physiologically- and psychologically-based disorders, and diagnose appropriately.Related occupations",
+    "Develop and implement treatment plans.Related occupations",
+    "Conduct individual, group, or family psychotherapy for those with chronic or acute mental disorders.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Low"
+}

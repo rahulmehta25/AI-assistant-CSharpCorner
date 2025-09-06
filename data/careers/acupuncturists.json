@@ -1,0 +1,173 @@
+{
+  "id": "acupuncturists",
+  "title": "Acupuncturists",
+  "category": "general",
+  "description": "Diagnose, treat, and prevent disorders by stimulating specific acupuncture points within the body using acupuncture needles. May also use cups, nutritional supplements, therapeutic massage, acupressure, and other alternative health therapies.",
+  "onet_code": "29-1291.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$25 - $30",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational acupuncturists training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Maintain and follow standard quality, safety, environmental, and infection control policies and procedures.Related occupations",
+        "Treat patients using tools, such as needles, cups, ear balls, seeds, pellets, or nutritional supplements.Related occupations",
+        "Adhere to local, state, and federal laws, regulations, and statutes.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$29 - $37",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Identify correct anatomical and proportional point locations based on patients' anatomy and positions, contraindications, and precautions related to treatments, such as intradermal needles, moxibustion, electricity, guasha, or bleeding.Related occupations",
+        "Develop individual treatment plans and strategies.Related occupations",
+        "Insert needles to provide acupuncture treatment.Related occupations"
+      ],
+      "education": "Doctoral degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$37 - $55",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Evaluate treatment outcomes and recommend new or altered treatments as necessary to further promote, restore, or maintain health.Related occupations",
+        "Collect medical histories and general health and lifestyle information from patients.Related occupations",
+        "Maintain detailed and complete records of health care plans and prognoses.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$55 - $74",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$74+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative",
+    "Social"
+  ],
+  "tasks": [
+    "Maintain and follow standard quality, safety, environmental, and infection control policies and procedures.Related occupations",
+    "Treat patients using tools, such as needles, cups, ear balls, seeds, pellets, or nutritional supplements.Related occupations",
+    "Adhere to local, state, and federal laws, regulations, and statutes.Related occupations",
+    "Identify correct anatomical and proportional point locations based on patients' anatomy and positions, contraindications, and precautions related to treatments, such as intradermal needles, moxibustion, electricity, guasha, or bleeding.Related occupations",
+    "Develop individual treatment plans and strategies.Related occupations",
+    "Insert needles to provide acupuncture treatment.Related occupations",
+    "Evaluate treatment outcomes and recommend new or altered treatments as necessary to further promote, restore, or maintain health.Related occupations",
+    "Collect medical histories and general health and lifestyle information from patients.Related occupations",
+    "Maintain detailed and complete records of health care plans and prognoses.Related occupations",
+    "Educate patients on topics, such as meditation, ergonomics, stretching, exercise, nutrition, the healing process, breathing, or relaxation techniques.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

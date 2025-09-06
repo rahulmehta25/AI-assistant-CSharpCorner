@@ -1,0 +1,173 @@
+{
+  "id": "arbitrators_mediators_and_conciliators",
+  "title": "Arbitrators, Mediators, and Conciliators",
+  "category": "creative",
+  "description": "Facilitate negotiation and conflict resolution through dialogue. Resolve conflicts outside of the court system by mutual consent of parties involved.",
+  "onet_code": "23-1022.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$22 - $26",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational arbitrators, mediators, and conciliators training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Prepare written opinions or decisions regarding cases.Related occupations",
+        "Apply relevant laws, regulations, policies, or precedents to reach conclusions.Related occupations",
+        "Conduct hearings to obtain information or evidence relative to disposition of claims.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$25 - $32",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Determine extent of liability according to evidence, laws, or administrative or judicial precedents.Related occupations",
+        "Rule on exceptions, motions, or admissibility of evidence.Related occupations",
+        "Confer with disputants to clarify issues, identify underlying concerns, and develop an understanding of their respective needs and interests.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$32 - $48",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Use mediation techniques to facilitate communication between disputants, to further parties' understanding of different perspectives, and to guide parties toward mutual agreement.Related occupations",
+        "Conduct initial meetings with disputants to outline the arbitration process, settle procedural matters, such as fees, or determine details, such as witness numbers or time requirements.Related occupations",
+        "Evaluate information from documents, such as claim applications, birth or death certificates, or physician or employer records.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$48 - $64",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$64+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Social",
+    "Enterprising",
+    "Conventional"
+  ],
+  "tasks": [
+    "Prepare written opinions or decisions regarding cases.Related occupations",
+    "Apply relevant laws, regulations, policies, or precedents to reach conclusions.Related occupations",
+    "Conduct hearings to obtain information or evidence relative to disposition of claims.Related occupations",
+    "Determine extent of liability according to evidence, laws, or administrative or judicial precedents.Related occupations",
+    "Rule on exceptions, motions, or admissibility of evidence.Related occupations",
+    "Confer with disputants to clarify issues, identify underlying concerns, and develop an understanding of their respective needs and interests.Related occupations",
+    "Use mediation techniques to facilitate communication between disputants, to further parties' understanding of different perspectives, and to guide parties toward mutual agreement.Related occupations",
+    "Conduct initial meetings with disputants to outline the arbitration process, settle procedural matters, such as fees, or determine details, such as witness numbers or time requirements.Related occupations",
+    "Evaluate information from documents, such as claim applications, birth or death certificates, or physician or employer records.Related occupations",
+    "Research laws, regulations, policies, or precedent decisions to prepare for hearings.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

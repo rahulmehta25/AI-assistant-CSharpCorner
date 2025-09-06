@@ -1,0 +1,173 @@
+{
+  "id": "agents_and_business_managers_of_artists_performers_and_athletes",
+  "title": "Agents and Business Managers of Artists, Performers, and Athletes",
+  "category": "business",
+  "description": "Represent and promote artists, performers, and athletes in dealings with current or prospective employers. May handle contract negotiation and other business matters for clients.",
+  "onet_code": "13-1011.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$32 - $38",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational agents and business managers of artists, performers, and athletes training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Collect fees, commissions, or other payments, according to contract terms.Related occupations",
+        "Send samples of clients' work and other promotional material to potential employers to obtain auditions, sponsorships, or endorsement deals.Related occupations",
+        "Keep informed of industry trends and deals.Related occupations"
+      ],
+      "education": "Master's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$36 - $46",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Conduct auditions or interviews to evaluate potential clients.Related occupations",
+        "Negotiate with managers, promoters, union officials, and other persons regarding clients' contractual rights and obligations.Related occupations",
+        "Confer with clients to develop strategies for their careers, and to explain actions taken on their behalf.Related occupations"
+      ],
+      "education": "Master's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$46 - $69",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Develop contacts with individuals and organizations, and apply effective strategies and techniques to ensure their clients' success.Related occupations",
+        "Schedule promotional or performance engagements for clients.Related occupations",
+        "Arrange meetings concerning issues involving their clients.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$69 - $92",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$92+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Social",
+    "Enterprising",
+    "Conventional"
+  ],
+  "tasks": [
+    "Collect fees, commissions, or other payments, according to contract terms.Related occupations",
+    "Send samples of clients' work and other promotional material to potential employers to obtain auditions, sponsorships, or endorsement deals.Related occupations",
+    "Keep informed of industry trends and deals.Related occupations",
+    "Conduct auditions or interviews to evaluate potential clients.Related occupations",
+    "Negotiate with managers, promoters, union officials, and other persons regarding clients' contractual rights and obligations.Related occupations",
+    "Confer with clients to develop strategies for their careers, and to explain actions taken on their behalf.Related occupations",
+    "Develop contacts with individuals and organizations, and apply effective strategies and techniques to ensure their clients' success.Related occupations",
+    "Schedule promotional or performance engagements for clients.Related occupations",
+    "Arrange meetings concerning issues involving their clients.Related occupations",
+    "Manage business and financial affairs for clients, such as arranging travel and lodging, selling tickets, and directing marketing and advertising activities.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Low"
+}

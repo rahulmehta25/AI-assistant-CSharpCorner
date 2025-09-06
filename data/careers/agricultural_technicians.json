@@ -1,0 +1,173 @@
+{
+  "id": "agricultural_technicians",
+  "title": "Agricultural Technicians",
+  "category": "trades",
+  "description": "Work with agricultural scientists in plant, fiber, and animal research, or assist with animal breeding and nutrition. Set up or maintain laboratory equipment and collect samples from crops or animals. Prepare specimens or record data to assist scientists in biology or related life science experiments. Conduct tests and experiments to improve yield and quality of crops or to increase the resistance of plants and animals to disease or insects.",
+  "onet_code": "19-4012.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$15 - $18",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational agricultural technicians training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Prepare land for cultivated crops, orchards, or vineyards by plowing, discing, leveling, or contouring.Related occupations",
+        "Operate farm machinery, including tractors, plows, mowers, combines, balers, sprayers, earthmoving equipment, or trucks.Related occupations",
+        "Record data pertaining to experimentation, research, or animal care.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$17 - $22",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Maintain or repair agricultural facilities, equipment, or tools to ensure operational readiness, safety, and cleanliness.Related occupations",
+        "Perform crop production duties, such as tilling, hoeing, pruning, weeding, or harvesting crops.Related occupations",
+        "Collect animal or crop samples.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$22 - $33",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Examine animals or crop specimens to determine the presence of diseases or other problems.Related occupations",
+        "Set up laboratory or field equipment as required for site testing.Related occupations",
+        "Supervise or train agricultural technicians or farm laborers.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$33 - $44",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$44+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative",
+    "Conventional"
+  ],
+  "tasks": [
+    "Prepare land for cultivated crops, orchards, or vineyards by plowing, discing, leveling, or contouring.Related occupations",
+    "Operate farm machinery, including tractors, plows, mowers, combines, balers, sprayers, earthmoving equipment, or trucks.Related occupations",
+    "Record data pertaining to experimentation, research, or animal care.Related occupations",
+    "Maintain or repair agricultural facilities, equipment, or tools to ensure operational readiness, safety, and cleanliness.Related occupations",
+    "Perform crop production duties, such as tilling, hoeing, pruning, weeding, or harvesting crops.Related occupations",
+    "Collect animal or crop samples.Related occupations",
+    "Examine animals or crop specimens to determine the presence of diseases or other problems.Related occupations",
+    "Set up laboratory or field equipment as required for site testing.Related occupations",
+    "Supervise or train agricultural technicians or farm laborers.Related occupations",
+    "Conduct studies of nitrogen or alternative fertilizer application methods, quantities, or timing to ensure satisfaction of crop needs and minimization of leaching, runoff, or denitrification.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

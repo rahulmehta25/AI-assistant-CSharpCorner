@@ -1,0 +1,173 @@
+{
+  "id": "aerospace_engineering_and_operations_technologists_and_technicians",
+  "title": "Aerospace Engineering and Operations Technologists and Technicians",
+  "category": "engineering",
+  "description": "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data.",
+  "onet_code": "17-3021.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$26 - $31",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational aerospace engineering and operations technologists and technicians training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Test aircraft systems under simulated operational conditions, performing systems readiness tests and pre- and post-operational checkouts, to establish design or fabrication parameters.Related occupations",
+        "Identify required data, data acquisition plans, and test parameters, setting up equipment to conform to these specifications.Related occupations",
+        "Inspect, diagnose, maintain, and operate test setups and equipment to detect malfunctions.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$30 - $38",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Confer with engineering personnel regarding details and implications of test procedures and results.Related occupations",
+        "Operate and calibrate computer systems and devices to comply with test requirements and to perform data acquisition and analysis.Related occupations",
+        "Record and interpret test data on parts, assemblies, and mechanisms.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$38 - $57",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Adjust, repair, or replace faulty components of test setups and equipment.Related occupations",
+        "Fabricate and install parts and systems to be tested in test equipment, using hand tools, power tools, and test instruments.Related occupations",
+        "Finish vehicle instrumentation and deinstrumentation.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$57 - $76",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$76+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Realistic",
+    "Investigative",
+    "Conventional"
+  ],
+  "tasks": [
+    "Test aircraft systems under simulated operational conditions, performing systems readiness tests and pre- and post-operational checkouts, to establish design or fabrication parameters.Related occupations",
+    "Identify required data, data acquisition plans, and test parameters, setting up equipment to conform to these specifications.Related occupations",
+    "Inspect, diagnose, maintain, and operate test setups and equipment to detect malfunctions.Related occupations",
+    "Confer with engineering personnel regarding details and implications of test procedures and results.Related occupations",
+    "Operate and calibrate computer systems and devices to comply with test requirements and to perform data acquisition and analysis.Related occupations",
+    "Record and interpret test data on parts, assemblies, and mechanisms.Related occupations",
+    "Adjust, repair, or replace faulty components of test setups and equipment.Related occupations",
+    "Fabricate and install parts and systems to be tested in test equipment, using hand tools, power tools, and test instruments.Related occupations",
+    "Finish vehicle instrumentation and deinstrumentation.Related occupations",
+    "Construct and maintain test facilities for aircraft parts and systems, according to specifications.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Low"
+}

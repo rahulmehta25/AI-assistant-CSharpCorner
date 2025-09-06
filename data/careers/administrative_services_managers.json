@@ -1,0 +1,173 @@
+{
+  "id": "administrative_services_managers",
+  "title": "Administrative Services Managers",
+  "category": "business",
+  "description": "Plan, direct, or coordinate one or more administrative services of an organization, such as records and information management, mail distribution, and other office support services.",
+  "onet_code": "11-3012.00",
+  "growth_rate": "8%",
+  "growth_description": "As fast as average",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$36 - $43",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Complete foundational administrative services managers training",
+        "Shadow experienced professionals",
+        "Complete first independent project"
+      ],
+      "milestones": [
+        "Prepare and review operational reports and schedules to ensure accuracy and efficiency.Related occupations",
+        "Set goals and deadlines for the department.Related occupations",
+        "Acquire, distribute and store supplies.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$41 - $52",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "certifications": [],
+      "projects": [
+        "Lead small projects independently",
+        "Contribute to major initiatives",
+        "Mentor new team members"
+      ],
+      "milestones": [
+        "Analyze internal processes and recommend and implement procedural or policy changes to improve operations, such as supply changes or the disposal of records.Related occupations",
+        "Conduct classes to teach procedures to staff.Related occupations",
+        "Plan, administer, and control budgets for contracts, equipment, and supplies.Related occupations"
+      ],
+      "education": "Bachelor's degree"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$52 - $78",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [],
+      "projects": [
+        "Lead cross-functional projects",
+        "Develop new processes or systems",
+        "Train and develop team members"
+      ],
+      "milestones": [
+        "Hire and terminate clerical and administrative personnel.Related occupations",
+        "Direct or coordinate the supportive services department of a business, agency, or organization.Related occupations",
+        "Communicate with and provide guidance for external vendors and service providers to ensure the organization, department, or work unit's business needs are met.Related occupations"
+      ],
+      "education": "Bachelor's degree or higher"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$78 - $104",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Teamwork",
+        "Attention to Detail"
+      ],
+      "knowledge": [],
+      "abilities": [],
+      "certifications": [
+        "Advanced certifications",
+        "Industry recognition"
+      ],
+      "projects": [
+        "Lead department initiatives",
+        "Drive strategic improvements",
+        "Represent organization externally"
+      ],
+      "milestones": [
+        "Become recognized expert",
+        "Lead major initiatives",
+        "Influence industry practices"
+      ],
+      "education": "Bachelor's degree or higher + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$104+",
+      "skills": [
+        "Industry Leadership",
+        "Strategic Vision",
+        "Innovation",
+        "Communication",
+        "Problem Solving",
+        "Time Management"
+      ],
+      "knowledge": [
+        "Industry Expertise",
+        "Strategic Planning"
+      ],
+      "abilities": [],
+      "certifications": [
+        "Executive programs",
+        "Industry fellow"
+      ],
+      "projects": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Transformational initiatives"
+      ],
+      "milestones": [
+        "Executive leadership role",
+        "Industry recognition",
+        "Leave lasting legacy"
+      ],
+      "education": "Advanced degree + executive education"
+    }
+  },
+  "work_values": [
+    "Achievement",
+    "Independence",
+    "Recognition",
+    "Relationships",
+    "Support",
+    "Working Conditions"
+  ],
+  "interests": [
+    "Social",
+    "Enterprising",
+    "Conventional"
+  ],
+  "tasks": [
+    "Prepare and review operational reports and schedules to ensure accuracy and efficiency.Related occupations",
+    "Set goals and deadlines for the department.Related occupations",
+    "Acquire, distribute and store supplies.Related occupations",
+    "Analyze internal processes and recommend and implement procedural or policy changes to improve operations, such as supply changes or the disposal of records.Related occupations",
+    "Conduct classes to teach procedures to staff.Related occupations",
+    "Plan, administer, and control budgets for contracts, equipment, and supplies.Related occupations",
+    "Hire and terminate clerical and administrative personnel.Related occupations",
+    "Direct or coordinate the supportive services department of a business, agency, or organization.Related occupations",
+    "Communicate with and provide guidance for external vendors and service providers to ensure the organization, department, or work unit's business needs are met.Related occupations",
+    "Develop operational standards and procedures for the work unit or department.Related occupations"
+  ],
+  "related_careers": [],
+  "industry_trends": [],
+  "remote_friendly": false,
+  "automation_risk": "Low"
+}
