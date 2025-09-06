@@ -1,0 +1,165 @@
+{
+  "id": "hvac_technicians",
+  "title": "HVAC Technicians",
+  "category": "trades",
+  "description": "Professional HVAC Technicians responsible for various duties in the trades field.",
+  "growth_rate": "10-15%",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$33,000 - $44,000",
+      "skills": [
+        "Tool Usage",
+        "Safety Protocols",
+        "Blueprint Reading",
+        "Physical Stamina",
+        "Problem Solving"
+      ],
+      "certifications": [
+        "Apprentice License",
+        "OSHA 10"
+      ],
+      "projects": [
+        "Complete hvac technicians fundamentals course",
+        "Build portfolio with 3-5 sample projects",
+        "Contribute to team projects",
+        "Document learning journey"
+      ],
+      "milestones": [
+        "Complete foundational training in hvac technicians",
+        "Gain hands-on experience through internships or entry positions",
+        "Build portfolio of work samples",
+        "Establish professional network"
+      ],
+      "education": "Bachelor's degree or equivalent"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$38,500 - $49,500",
+      "skills": [
+        "Advanced Techniques",
+        "Project Estimation",
+        "Client Relations",
+        "Code Compliance",
+        "Troubleshooting"
+      ],
+      "certifications": [
+        "Journeyman License",
+        "Specialized Equipment"
+      ],
+      "projects": [
+        "Lead small hvac technicians project",
+        "Improve existing processes",
+        "Mentor new team members",
+        "Present at team meetings"
+      ],
+      "milestones": [
+        "Master core competencies",
+        "Complete 3-5 independent projects",
+        "Obtain industry certification",
+        "Present work to stakeholders"
+      ],
+      "education": "Bachelor's + 2 years experience"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$49,500 - $66,000",
+      "skills": [
+        "Business Management",
+        "Crew Leadership",
+        "Contract Negotiation",
+        "Quality Assurance",
+        "Training"
+      ],
+      "certifications": [
+        "Master License",
+        "Inspector Certification"
+      ],
+      "projects": [
+        "Lead cross-functional initiative",
+        "Develop new methodologies",
+        "Build and manage team",
+        "Drive measurable improvements"
+      ],
+      "milestones": [
+        "Lead project teams",
+        "Mentor junior staff",
+        "Develop specialized expertise",
+        "Contribute to strategic planning"
+      ],
+      "education": "Bachelor's + 5 years experience"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$66,000 - $88,000",
+      "skills": [
+        "Business Leadership",
+        "Multi-site Management",
+        "Industry Relations",
+        "Strategic Growth",
+        "Succession Planning"
+      ],
+      "certifications": [
+        "Contractor License",
+        "Business Management"
+      ],
+      "projects": [
+        "Transform department operations",
+        "Develop strategic initiatives",
+        "Build industry partnerships",
+        "Create innovation programs"
+      ],
+      "milestones": [
+        "Lead department initiatives",
+        "Develop team members",
+        "Drive innovation",
+        "Represent organization externally"
+      ],
+      "education": "Advanced degree + 7 years experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$82,500+",
+      "skills": [
+        "Industry Thought Leadership",
+        "Executive Advisory",
+        "Board Governance",
+        "Strategic Vision",
+        "Legacy Building"
+      ],
+      "certifications": [
+        "Industry Fellow",
+        "Honorary Degrees",
+        "Lifetime Achievement"
+      ],
+      "projects": [
+        "Shape industry standards",
+        "Advisory board participation",
+        "Thought leadership initiatives",
+        "Legacy programs"
+      ],
+      "milestones": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Executive advisory role",
+        "Build lasting legacy"
+      ],
+      "education": "Advanced degree + 10+ years experience"
+    }
+  },
+  "related_careers": [
+    "Project Manager",
+    "Site Supervisor",
+    "Quality Inspector",
+    "Safety Manager"
+  ],
+  "industry_trends": [
+    "Green Building",
+    "Smart Home Tech",
+    "Prefabrication",
+    "Safety Technology",
+    "Sustainable Materials"
+  ],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

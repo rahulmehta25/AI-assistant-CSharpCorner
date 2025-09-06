@@ -1,0 +1,165 @@
+{
+  "id": "civil_engineers",
+  "title": "Civil Engineers",
+  "category": "engineering",
+  "description": "Professional Civil Engineers responsible for various duties in the engineering field.",
+  "growth_rate": "10-15%",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$54,000 - $72,000",
+      "skills": [
+        "CAD Software",
+        "Mathematics",
+        "Technical Drawing",
+        "Problem Solving",
+        "Safety"
+      ],
+      "certifications": [
+        "FE Exam",
+        "AutoCAD Certification"
+      ],
+      "projects": [
+        "Complete civil engineers fundamentals course",
+        "Build portfolio with 3-5 sample projects",
+        "Contribute to team projects",
+        "Document learning journey"
+      ],
+      "milestones": [
+        "Complete foundational training in civil engineers",
+        "Gain hands-on experience through internships or entry positions",
+        "Build portfolio of work samples",
+        "Establish professional network"
+      ],
+      "education": "Bachelor's degree or equivalent"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$62,999 - $81,000",
+      "skills": [
+        "Advanced CAD",
+        "Project Management",
+        "Quality Control",
+        "Technical Writing",
+        "Simulation Software"
+      ],
+      "certifications": [
+        "PE License",
+        "Specialized Software Cert"
+      ],
+      "projects": [
+        "Lead small civil engineers project",
+        "Improve existing processes",
+        "Mentor new team members",
+        "Present at team meetings"
+      ],
+      "milestones": [
+        "Master core competencies",
+        "Complete 3-5 independent projects",
+        "Obtain industry certification",
+        "Present work to stakeholders"
+      ],
+      "education": "Bachelor's + 2 years experience"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$81,000 - $108,000",
+      "skills": [
+        "System Design",
+        "Project Leadership",
+        "Cost Analysis",
+        "Regulatory Compliance",
+        "Innovation"
+      ],
+      "certifications": [
+        "Project Management",
+        "Lean Six Sigma"
+      ],
+      "projects": [
+        "Lead cross-functional initiative",
+        "Develop new methodologies",
+        "Build and manage team",
+        "Drive measurable improvements"
+      ],
+      "milestones": [
+        "Lead project teams",
+        "Mentor junior staff",
+        "Develop specialized expertise",
+        "Contribute to strategic planning"
+      ],
+      "education": "Bachelor's + 5 years experience"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$108,000 - $144,000",
+      "skills": [
+        "Technical Direction",
+        "Portfolio Management",
+        "Executive Advisory",
+        "Industry Leadership",
+        "Innovation Strategy"
+      ],
+      "certifications": [
+        "Executive Leadership",
+        "Industry Fellow"
+      ],
+      "projects": [
+        "Transform department operations",
+        "Develop strategic initiatives",
+        "Build industry partnerships",
+        "Create innovation programs"
+      ],
+      "milestones": [
+        "Lead department initiatives",
+        "Develop team members",
+        "Drive innovation",
+        "Represent organization externally"
+      ],
+      "education": "Advanced degree + 7 years experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$135,000+",
+      "skills": [
+        "Industry Thought Leadership",
+        "Executive Advisory",
+        "Board Governance",
+        "Strategic Vision",
+        "Legacy Building"
+      ],
+      "certifications": [
+        "Industry Fellow",
+        "Honorary Degrees",
+        "Lifetime Achievement"
+      ],
+      "projects": [
+        "Shape industry standards",
+        "Advisory board participation",
+        "Thought leadership initiatives",
+        "Legacy programs"
+      ],
+      "milestones": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Executive advisory role",
+        "Build lasting legacy"
+      ],
+      "education": "Advanced degree + 10+ years experience"
+    }
+  },
+  "related_careers": [
+    "Project Engineer",
+    "Design Engineer",
+    "Quality Engineer",
+    "Systems Engineer"
+  ],
+  "industry_trends": [
+    "Sustainable Design",
+    "Smart Systems",
+    "3D Printing",
+    "IoT Integration",
+    "Green Technology"
+  ],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}

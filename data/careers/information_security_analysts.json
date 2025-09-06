@@ -1,0 +1,167 @@
+{
+  "id": "information_security_analysts",
+  "title": "Information Security Analysts",
+  "category": "technology",
+  "description": "Professional Information Security Analysts responsible for various duties in the technology field.",
+  "growth_rate": "10-15%",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$57,000 - $76,000",
+      "skills": [
+        "Programming Basics",
+        "Version Control",
+        "Problem Solving",
+        "Documentation",
+        "Testing"
+      ],
+      "certifications": [
+        "CompTIA A+",
+        "AWS Cloud Practitioner"
+      ],
+      "projects": [
+        "Complete information security analysts fundamentals course",
+        "Build portfolio with 3-5 sample projects",
+        "Contribute to team projects",
+        "Document learning journey"
+      ],
+      "milestones": [
+        "Complete foundational training in information security analysts",
+        "Gain hands-on experience through internships or entry positions",
+        "Build portfolio of work samples",
+        "Establish professional network"
+      ],
+      "education": "Bachelor's in Computer Science or related"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$66,500 - $85,500",
+      "skills": [
+        "Advanced Programming",
+        "Database Management",
+        "API Development",
+        "Cloud Basics",
+        "Agile"
+      ],
+      "certifications": [
+        "AWS Developer",
+        "Certified Scrum Developer"
+      ],
+      "projects": [
+        "Lead small information security analysts project",
+        "Improve existing processes",
+        "Mentor new team members",
+        "Present at team meetings"
+      ],
+      "milestones": [
+        "Master core competencies",
+        "Complete 3-5 independent projects",
+        "Obtain industry certification",
+        "Present work to stakeholders"
+      ],
+      "education": "Bachelor's + certifications"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$85,500 - $114,000",
+      "skills": [
+        "System Architecture",
+        "DevOps",
+        "Security",
+        "Performance Optimization",
+        "Team Leadership"
+      ],
+      "certifications": [
+        "AWS Solutions Architect",
+        "Security+",
+        "Kubernetes Admin"
+      ],
+      "projects": [
+        "Lead cross-functional initiative",
+        "Develop new methodologies",
+        "Build and manage team",
+        "Drive measurable improvements"
+      ],
+      "milestones": [
+        "Lead project teams",
+        "Mentor junior staff",
+        "Develop specialized expertise",
+        "Contribute to strategic planning"
+      ],
+      "education": "Bachelor's + advanced certifications"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$114,000 - $152,000",
+      "skills": [
+        "Technical Strategy",
+        "Enterprise Architecture",
+        "Executive Communication",
+        "Innovation Leadership",
+        "Vendor Management"
+      ],
+      "certifications": [
+        "TOGAF",
+        "CISSP",
+        "Executive Programs"
+      ],
+      "projects": [
+        "Transform department operations",
+        "Develop strategic initiatives",
+        "Build industry partnerships",
+        "Create innovation programs"
+      ],
+      "milestones": [
+        "Lead department initiatives",
+        "Develop team members",
+        "Drive innovation",
+        "Represent organization externally"
+      ],
+      "education": "Bachelor's/Master's + extensive experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$142,500+",
+      "skills": [
+        "Industry Thought Leadership",
+        "Executive Advisory",
+        "Board Governance",
+        "Strategic Vision",
+        "Legacy Building"
+      ],
+      "certifications": [
+        "Industry Fellow",
+        "Honorary Degrees",
+        "Lifetime Achievement"
+      ],
+      "projects": [
+        "Shape industry standards",
+        "Advisory board participation",
+        "Thought leadership initiatives",
+        "Legacy programs"
+      ],
+      "milestones": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Executive advisory role",
+        "Build lasting legacy"
+      ],
+      "education": "Advanced degree preferred + industry recognition"
+    }
+  },
+  "related_careers": [
+    "Software Engineer",
+    "Data Analyst",
+    "System Administrator",
+    "DevOps Engineer"
+  ],
+  "industry_trends": [
+    "AI/ML Integration",
+    "Cloud Migration",
+    "Cybersecurity Focus",
+    "Remote Work",
+    "Automation"
+  ],
+  "remote_friendly": true,
+  "automation_risk": "Medium"
+}

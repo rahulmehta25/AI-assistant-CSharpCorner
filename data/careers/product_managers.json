@@ -1,0 +1,166 @@
+{
+  "id": "product_managers",
+  "title": "Product Managers",
+  "category": "business",
+  "description": "Professional Product Managers responsible for various duties in the business field.",
+  "growth_rate": "10-15%",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$48,000 - $64,000",
+      "skills": [
+        "Microsoft Office",
+        "Data Analysis",
+        "Communication",
+        "Time Management",
+        "Research"
+      ],
+      "certifications": [
+        "Microsoft Office Specialist",
+        "Google Analytics"
+      ],
+      "projects": [
+        "Complete product managers fundamentals course",
+        "Build portfolio with 3-5 sample projects",
+        "Contribute to team projects",
+        "Document learning journey"
+      ],
+      "milestones": [
+        "Complete foundational training in product managers",
+        "Gain hands-on experience through internships or entry positions",
+        "Build portfolio of work samples",
+        "Establish professional network"
+      ],
+      "education": "Bachelor's in Business or related"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$56,000 - $72,000",
+      "skills": [
+        "Financial Analysis",
+        "Project Management",
+        "Strategic Planning",
+        "Presentation Skills",
+        "CRM Systems"
+      ],
+      "certifications": [
+        "PMP Associate",
+        "Six Sigma Green Belt"
+      ],
+      "projects": [
+        "Lead small product managers project",
+        "Improve existing processes",
+        "Mentor new team members",
+        "Present at team meetings"
+      ],
+      "milestones": [
+        "Master core competencies",
+        "Complete 3-5 independent projects",
+        "Obtain industry certification",
+        "Present work to stakeholders"
+      ],
+      "education": "Bachelor's + relevant experience"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$72,000 - $96,000",
+      "skills": [
+        "Strategic Management",
+        "Budget Management",
+        "Stakeholder Management",
+        "Change Management",
+        "Analytics"
+      ],
+      "certifications": [
+        "PMP",
+        "Six Sigma Black Belt",
+        "CPA"
+      ],
+      "projects": [
+        "Lead cross-functional initiative",
+        "Develop new methodologies",
+        "Build and manage team",
+        "Drive measurable improvements"
+      ],
+      "milestones": [
+        "Lead project teams",
+        "Mentor junior staff",
+        "Develop specialized expertise",
+        "Contribute to strategic planning"
+      ],
+      "education": "Bachelor's/MBA + certifications"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$96,000 - $128,000",
+      "skills": [
+        "Executive Leadership",
+        "Corporate Strategy",
+        "Board Reporting",
+        "M&A",
+        "Transformation"
+      ],
+      "certifications": [
+        "Executive MBA",
+        "Board Governance"
+      ],
+      "projects": [
+        "Transform department operations",
+        "Develop strategic initiatives",
+        "Build industry partnerships",
+        "Create innovation programs"
+      ],
+      "milestones": [
+        "Lead department initiatives",
+        "Develop team members",
+        "Drive innovation",
+        "Represent organization externally"
+      ],
+      "education": "MBA + executive training"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$120,000+",
+      "skills": [
+        "Industry Thought Leadership",
+        "Executive Advisory",
+        "Board Governance",
+        "Strategic Vision",
+        "Legacy Building"
+      ],
+      "certifications": [
+        "Industry Fellow",
+        "Honorary Degrees",
+        "Lifetime Achievement"
+      ],
+      "projects": [
+        "Shape industry standards",
+        "Advisory board participation",
+        "Thought leadership initiatives",
+        "Legacy programs"
+      ],
+      "milestones": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Executive advisory role",
+        "Build lasting legacy"
+      ],
+      "education": "MBA/Doctorate + board experience"
+    }
+  },
+  "related_careers": [
+    "Business Analyst",
+    "Project Manager",
+    "Operations Manager",
+    "Financial Analyst"
+  ],
+  "industry_trends": [
+    "Digital Transformation",
+    "Data-Driven Decisions",
+    "Sustainability",
+    "Remote Teams",
+    "Agile Methods"
+  ],
+  "remote_friendly": true,
+  "automation_risk": "Medium"
+}

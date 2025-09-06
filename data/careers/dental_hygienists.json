@@ -1,0 +1,165 @@
+{
+  "id": "dental_hygienists",
+  "title": "Dental Hygienists",
+  "category": "healthcare",
+  "description": "Professional Dental Hygienists responsible for various duties in the healthcare field.",
+  "growth_rate": "10-15%",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$51,000 - $68,000",
+      "skills": [
+        "Patient Care",
+        "Medical Terminology",
+        "Documentation",
+        "Safety Protocols",
+        "Communication"
+      ],
+      "certifications": [
+        "CPR Certification",
+        "HIPAA Training"
+      ],
+      "projects": [
+        "Complete dental hygienists fundamentals course",
+        "Build portfolio with 3-5 sample projects",
+        "Contribute to team projects",
+        "Document learning journey"
+      ],
+      "milestones": [
+        "Complete foundational training in dental hygienists",
+        "Gain hands-on experience through internships or entry positions",
+        "Build portfolio of work samples",
+        "Establish professional network"
+      ],
+      "education": "Associate/Bachelor's in Healthcare"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$59,499 - $76,500",
+      "skills": [
+        "Advanced Procedures",
+        "Patient Assessment",
+        "Medical Software",
+        "Team Collaboration",
+        "Specialization Basics"
+      ],
+      "certifications": [
+        "Specialty Certification",
+        "Advanced Life Support"
+      ],
+      "projects": [
+        "Lead small dental hygienists project",
+        "Improve existing processes",
+        "Mentor new team members",
+        "Present at team meetings"
+      ],
+      "milestones": [
+        "Master core competencies",
+        "Complete 3-5 independent projects",
+        "Obtain industry certification",
+        "Present work to stakeholders"
+      ],
+      "education": "Bachelor's + clinical training"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$76,500 - $102,000",
+      "skills": [
+        "Clinical Leadership",
+        "Department Management",
+        "Policy Development",
+        "Quality Improvement",
+        "Mentoring"
+      ],
+      "certifications": [
+        "Management Certification",
+        "Quality Improvement"
+      ],
+      "projects": [
+        "Lead cross-functional initiative",
+        "Develop new methodologies",
+        "Build and manage team",
+        "Drive measurable improvements"
+      ],
+      "milestones": [
+        "Lead project teams",
+        "Mentor junior staff",
+        "Develop specialized expertise",
+        "Contribute to strategic planning"
+      ],
+      "education": "Bachelor's/Master's + specialization"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$102,000 - $136,000",
+      "skills": [
+        "Healthcare Administration",
+        "Strategic Planning",
+        "Regulatory Compliance",
+        "Executive Leadership",
+        "Innovation"
+      ],
+      "certifications": [
+        "Healthcare Executive",
+        "Board Certification"
+      ],
+      "projects": [
+        "Transform department operations",
+        "Develop strategic initiatives",
+        "Build industry partnerships",
+        "Create innovation programs"
+      ],
+      "milestones": [
+        "Lead department initiatives",
+        "Develop team members",
+        "Drive innovation",
+        "Represent organization externally"
+      ],
+      "education": "Master's/Doctorate + leadership training"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$127,500+",
+      "skills": [
+        "Industry Thought Leadership",
+        "Executive Advisory",
+        "Board Governance",
+        "Strategic Vision",
+        "Legacy Building"
+      ],
+      "certifications": [
+        "Industry Fellow",
+        "Honorary Degrees",
+        "Lifetime Achievement"
+      ],
+      "projects": [
+        "Shape industry standards",
+        "Advisory board participation",
+        "Thought leadership initiatives",
+        "Legacy programs"
+      ],
+      "milestones": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Executive advisory role",
+        "Build lasting legacy"
+      ],
+      "education": "Doctorate + executive education"
+    }
+  },
+  "related_careers": [
+    "Nurse Practitioner",
+    "Medical Assistant",
+    "Healthcare Administrator",
+    "Clinical Specialist"
+  ],
+  "industry_trends": [
+    "Telemedicine",
+    "AI Diagnostics",
+    "Personalized Medicine",
+    "Mental Health Focus",
+    "Preventive Care"
+  ],
+  "remote_friendly": false,
+  "automation_risk": "Low"
+}

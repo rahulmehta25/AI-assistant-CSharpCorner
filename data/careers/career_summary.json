@@ -1,0 +1,330 @@
+{
+  "total_careers": 63,
+  "categories": [
+    "education",
+    "engineering",
+    "trades",
+    "science",
+    "business",
+    "technology",
+    "healthcare",
+    "creative"
+  ],
+  "careers": [
+    {
+      "id": "software_developers",
+      "title": "Software Developers",
+      "category": "technology"
+    },
+    {
+      "id": "data_scientists",
+      "title": "Data Scientists",
+      "category": "technology"
+    },
+    {
+      "id": "information_security_analysts",
+      "title": "Information Security Analysts",
+      "category": "technology"
+    },
+    {
+      "id": "web_developers",
+      "title": "Web Developers",
+      "category": "technology"
+    },
+    {
+      "id": "database_administrators",
+      "title": "Database Administrators",
+      "category": "technology"
+    },
+    {
+      "id": "computer_systems_analysts",
+      "title": "Computer Systems Analysts",
+      "category": "technology"
+    },
+    {
+      "id": "network_administrators",
+      "title": "Network Administrators",
+      "category": "technology"
+    },
+    {
+      "id": "computer_programmers",
+      "title": "Computer Programmers",
+      "category": "technology"
+    },
+    {
+      "id": "devops_engineers",
+      "title": "DevOps Engineers",
+      "category": "technology"
+    },
+    {
+      "id": "cloud_architects",
+      "title": "Cloud Architects",
+      "category": "technology"
+    },
+    {
+      "id": "registered_nurses",
+      "title": "Registered Nurses",
+      "category": "healthcare"
+    },
+    {
+      "id": "physicians",
+      "title": "Physicians",
+      "category": "healthcare"
+    },
+    {
+      "id": "medical_assistants",
+      "title": "Medical Assistants",
+      "category": "healthcare"
+    },
+    {
+      "id": "physical_therapists",
+      "title": "Physical Therapists",
+      "category": "healthcare"
+    },
+    {
+      "id": "pharmacists",
+      "title": "Pharmacists",
+      "category": "healthcare"
+    },
+    {
+      "id": "dental_hygienists",
+      "title": "Dental Hygienists",
+      "category": "healthcare"
+    },
+    {
+      "id": "medical_technologists",
+      "title": "Medical Technologists",
+      "category": "healthcare"
+    },
+    {
+      "id": "healthcare_administrators",
+      "title": "Healthcare Administrators",
+      "category": "healthcare"
+    },
+    {
+      "id": "management_analysts",
+      "title": "Management Analysts",
+      "category": "business"
+    },
+    {
+      "id": "financial_analysts",
+      "title": "Financial Analysts",
+      "category": "business"
+    },
+    {
+      "id": "marketing_managers",
+      "title": "Marketing Managers",
+      "category": "business"
+    },
+    {
+      "id": "human_resources_specialists",
+      "title": "Human Resources Specialists",
+      "category": "business"
+    },
+    {
+      "id": "accountants",
+      "title": "Accountants",
+      "category": "business"
+    },
+    {
+      "id": "project_managers",
+      "title": "Project Managers",
+      "category": "business"
+    },
+    {
+      "id": "business_analysts",
+      "title": "Business Analysts",
+      "category": "business"
+    },
+    {
+      "id": "operations_managers",
+      "title": "Operations Managers",
+      "category": "business"
+    },
+    {
+      "id": "sales_managers",
+      "title": "Sales Managers",
+      "category": "business"
+    },
+    {
+      "id": "product_managers",
+      "title": "Product Managers",
+      "category": "business"
+    },
+    {
+      "id": "mechanical_engineers",
+      "title": "Mechanical Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "electrical_engineers",
+      "title": "Electrical Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "civil_engineers",
+      "title": "Civil Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "chemical_engineers",
+      "title": "Chemical Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "aerospace_engineers",
+      "title": "Aerospace Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "environmental_engineers",
+      "title": "Environmental Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "industrial_engineers",
+      "title": "Industrial Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "biomedical_engineers",
+      "title": "Biomedical Engineers",
+      "category": "engineering"
+    },
+    {
+      "id": "elementary_school_teachers",
+      "title": "Elementary School Teachers",
+      "category": "education"
+    },
+    {
+      "id": "high_school_teachers",
+      "title": "High School Teachers",
+      "category": "education"
+    },
+    {
+      "id": "instructional_designers",
+      "title": "Instructional Designers",
+      "category": "education"
+    },
+    {
+      "id": "training_specialists",
+      "title": "Training Specialists",
+      "category": "education"
+    },
+    {
+      "id": "education_administrators",
+      "title": "Education Administrators",
+      "category": "education"
+    },
+    {
+      "id": "special_education_teachers",
+      "title": "Special Education Teachers",
+      "category": "education"
+    },
+    {
+      "id": "graphic_designers",
+      "title": "Graphic Designers",
+      "category": "creative"
+    },
+    {
+      "id": "ux_ui_designers",
+      "title": "UX/UI Designers",
+      "category": "creative"
+    },
+    {
+      "id": "content_writers",
+      "title": "Content Writers",
+      "category": "creative"
+    },
+    {
+      "id": "video_editors",
+      "title": "Video Editors",
+      "category": "creative"
+    },
+    {
+      "id": "photographers",
+      "title": "Photographers",
+      "category": "creative"
+    },
+    {
+      "id": "art_directors",
+      "title": "Art Directors",
+      "category": "creative"
+    },
+    {
+      "id": "multimedia_artists",
+      "title": "Multimedia Artists",
+      "category": "creative"
+    },
+    {
+      "id": "electricians",
+      "title": "Electricians",
+      "category": "trades"
+    },
+    {
+      "id": "plumbers",
+      "title": "Plumbers",
+      "category": "trades"
+    },
+    {
+      "id": "hvac_technicians",
+      "title": "HVAC Technicians",
+      "category": "trades"
+    },
+    {
+      "id": "automotive_technicians",
+      "title": "Automotive Technicians",
+      "category": "trades"
+    },
+    {
+      "id": "construction_managers",
+      "title": "Construction Managers",
+      "category": "trades"
+    },
+    {
+      "id": "carpenters",
+      "title": "Carpenters",
+      "category": "trades"
+    },
+    {
+      "id": "welders",
+      "title": "Welders",
+      "category": "trades"
+    },
+    {
+      "id": "research_scientists",
+      "title": "Research Scientists",
+      "category": "science"
+    },
+    {
+      "id": "laboratory_technicians",
+      "title": "Laboratory Technicians",
+      "category": "science"
+    },
+    {
+      "id": "environmental_scientists",
+      "title": "Environmental Scientists",
+      "category": "science"
+    },
+    {
+      "id": "chemists",
+      "title": "Chemists",
+      "category": "science"
+    },
+    {
+      "id": "biologists",
+      "title": "Biologists",
+      "category": "science"
+    },
+    {
+      "id": "physicists",
+      "title": "Physicists",
+      "category": "science"
+    },
+    {
+      "id": "geologists",
+      "title": "Geologists",
+      "category": "science"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "ux_ui_designers",
+  "title": "UX/UI Designers",
+  "category": "creative",
+  "description": "Professional UX/UI Designers responsible for various duties in the creative field.",
+  "growth_rate": "10-15%",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$36,000 - $48,000",
+      "skills": [
+        "Design Software",
+        "Color Theory",
+        "Typography",
+        "Creativity",
+        "Time Management"
+      ],
+      "certifications": [
+        "Adobe Certified",
+        "Google UX Design"
+      ],
+      "projects": [
+        "Complete ux/ui designers fundamentals course",
+        "Build portfolio with 3-5 sample projects",
+        "Contribute to team projects",
+        "Document learning journey"
+      ],
+      "milestones": [
+        "Complete foundational training in ux/ui designers",
+        "Gain hands-on experience through internships or entry positions",
+        "Build portfolio of work samples",
+        "Establish professional network"
+      ],
+      "education": "Bachelor's degree or equivalent"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$42,000 - $54,000",
+      "skills": [
+        "Advanced Design Tools",
+        "Brand Development",
+        "Client Management",
+        "Portfolio Development",
+        "Trend Analysis"
+      ],
+      "certifications": [
+        "Specialized Design Certification",
+        "UX Certification"
+      ],
+      "projects": [
+        "Lead small ux/ui designers project",
+        "Improve existing processes",
+        "Mentor new team members",
+        "Present at team meetings"
+      ],
+      "milestones": [
+        "Master core competencies",
+        "Complete 3-5 independent projects",
+        "Obtain industry certification",
+        "Present work to stakeholders"
+      ],
+      "education": "Bachelor's + 2 years experience"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$54,000 - $72,000",
+      "skills": [
+        "Creative Direction",
+        "Team Management",
+        "Strategic Design",
+        "Business Development",
+        "Innovation"
+      ],
+      "certifications": [
+        "Creative Direction",
+        "Brand Management"
+      ],
+      "projects": [
+        "Lead cross-functional initiative",
+        "Develop new methodologies",
+        "Build and manage team",
+        "Drive measurable improvements"
+      ],
+      "milestones": [
+        "Lead project teams",
+        "Mentor junior staff",
+        "Develop specialized expertise",
+        "Contribute to strategic planning"
+      ],
+      "education": "Bachelor's + 5 years experience"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$72,000 - $96,000",
+      "skills": [
+        "Creative Strategy",
+        "Agency Management",
+        "Client Leadership",
+        "Industry Innovation",
+        "Thought Leadership"
+      ],
+      "certifications": [
+        "Executive Programs",
+        "Industry Awards"
+      ],
+      "projects": [
+        "Transform department operations",
+        "Develop strategic initiatives",
+        "Build industry partnerships",
+        "Create innovation programs"
+      ],
+      "milestones": [
+        "Lead department initiatives",
+        "Develop team members",
+        "Drive innovation",
+        "Represent organization externally"
+      ],
+      "education": "Advanced degree + 7 years experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$90,000+",
+      "skills": [
+        "Industry Thought Leadership",
+        "Executive Advisory",
+        "Board Governance",
+        "Strategic Vision",
+        "Legacy Building"
+      ],
+      "certifications": [
+        "Industry Fellow",
+        "Honorary Degrees",
+        "Lifetime Achievement"
+      ],
+      "projects": [
+        "Shape industry standards",
+        "Advisory board participation",
+        "Thought leadership initiatives",
+        "Legacy programs"
+      ],
+      "milestones": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Executive advisory role",
+        "Build lasting legacy"
+      ],
+      "education": "Advanced degree + 10+ years experience"
+    }
+  },
+  "related_careers": [
+    "Art Director",
+    "Brand Manager",
+    "Content Creator",
+    "User Experience Designer"
+  ],
+  "industry_trends": [
+    "Digital First",
+    "AI Tools",
+    "Sustainable Design",
+    "Interactive Media",
+    "Personal Branding"
+  ],
+  "remote_friendly": true,
+  "automation_risk": "Low"
+}

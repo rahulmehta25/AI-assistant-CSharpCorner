@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from datetime import datetime, timedelta
 import time
 import hashlib

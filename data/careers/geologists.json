@@ -1,0 +1,165 @@
+{
+  "id": "geologists",
+  "title": "Geologists",
+  "category": "science",
+  "description": "Professional Geologists responsible for various duties in the science field.",
+  "growth_rate": "10-15%",
+  "levels": {
+    "Entry": {
+      "years": "0-2",
+      "salary_range": "$42,000 - $56,000",
+      "skills": [
+        "Laboratory Skills",
+        "Data Collection",
+        "Scientific Method",
+        "Documentation",
+        "Safety"
+      ],
+      "certifications": [
+        "Lab Safety Certification",
+        "Good Laboratory Practice"
+      ],
+      "projects": [
+        "Complete geologists fundamentals course",
+        "Build portfolio with 3-5 sample projects",
+        "Contribute to team projects",
+        "Document learning journey"
+      ],
+      "milestones": [
+        "Complete foundational training in geologists",
+        "Gain hands-on experience through internships or entry positions",
+        "Build portfolio of work samples",
+        "Establish professional network"
+      ],
+      "education": "Bachelor's degree or equivalent"
+    },
+    "Junior": {
+      "years": "2-4",
+      "salary_range": "$49,000 - $63,000",
+      "skills": [
+        "Research Design",
+        "Statistical Analysis",
+        "Grant Writing",
+        "Publication Writing",
+        "Advanced Equipment"
+      ],
+      "certifications": [
+        "Specialized Technique Certification",
+        "Quality Assurance"
+      ],
+      "projects": [
+        "Lead small geologists project",
+        "Improve existing processes",
+        "Mentor new team members",
+        "Present at team meetings"
+      ],
+      "milestones": [
+        "Master core competencies",
+        "Complete 3-5 independent projects",
+        "Obtain industry certification",
+        "Present work to stakeholders"
+      ],
+      "education": "Bachelor's + 2 years experience"
+    },
+    "Mid-Level": {
+      "years": "4-7",
+      "salary_range": "$63,000 - $84,000",
+      "skills": [
+        "Research Leadership",
+        "Lab Management",
+        "Grant Management",
+        "Collaboration",
+        "Innovation"
+      ],
+      "certifications": [
+        "Project Management",
+        "Clinical Research"
+      ],
+      "projects": [
+        "Lead cross-functional initiative",
+        "Develop new methodologies",
+        "Build and manage team",
+        "Drive measurable improvements"
+      ],
+      "milestones": [
+        "Lead project teams",
+        "Mentor junior staff",
+        "Develop specialized expertise",
+        "Contribute to strategic planning"
+      ],
+      "education": "Bachelor's + 5 years experience"
+    },
+    "Senior": {
+      "years": "7-10",
+      "salary_range": "$84,000 - $112,000",
+      "skills": [
+        "Research Direction",
+        "Institutional Leadership",
+        "Policy Influence",
+        "International Collaboration",
+        "Innovation"
+      ],
+      "certifications": [
+        "Executive Leadership",
+        "Research Excellence"
+      ],
+      "projects": [
+        "Transform department operations",
+        "Develop strategic initiatives",
+        "Build industry partnerships",
+        "Create innovation programs"
+      ],
+      "milestones": [
+        "Lead department initiatives",
+        "Develop team members",
+        "Drive innovation",
+        "Represent organization externally"
+      ],
+      "education": "Advanced degree + 7 years experience"
+    },
+    "Expert": {
+      "years": "10+",
+      "salary_range": "$105,000+",
+      "skills": [
+        "Industry Thought Leadership",
+        "Executive Advisory",
+        "Board Governance",
+        "Strategic Vision",
+        "Legacy Building"
+      ],
+      "certifications": [
+        "Industry Fellow",
+        "Honorary Degrees",
+        "Lifetime Achievement"
+      ],
+      "projects": [
+        "Shape industry standards",
+        "Advisory board participation",
+        "Thought leadership initiatives",
+        "Legacy programs"
+      ],
+      "milestones": [
+        "Shape organizational strategy",
+        "Industry thought leadership",
+        "Executive advisory role",
+        "Build lasting legacy"
+      ],
+      "education": "Advanced degree + 10+ years experience"
+    }
+  },
+  "related_careers": [
+    "Research Analyst",
+    "Lab Manager",
+    "Data Scientist",
+    "Technical Writer"
+  ],
+  "industry_trends": [
+    "Interdisciplinary Research",
+    "Big Data",
+    "Open Science",
+    "Sustainability",
+    "Global Collaboration"
+  ],
+  "remote_friendly": false,
+  "automation_risk": "Medium"
+}
