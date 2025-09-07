@@ -1,0 +1,20 @@
+{
+  "timestamp": "20250906_235838",
+  "total_careers": 10,
+  "clusters": [
+    "Computer and Mathematical"
+  ],
+  "career_titles": [
+    "Software Developers",
+    "Computer Programmers",
+    "Software Quality Assurance Analysts and Testers",
+    "Computer Systems Analysts",
+    "Computer Systems Engineers/Architects",
+    "Web and Digital Interface Designers",
+    "Web Developers",
+    "Database Architects",
+    "Data Scientists",
+    "Computer User Support Specialists"
+  ],
+  "successful_scrapes": 10
+}

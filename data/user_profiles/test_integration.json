@@ -1,0 +1,23 @@
+{
+  "user_id": "test_integration",
+  "name": "Integration Test User",
+  "email": null,
+  "education_level": "Bachelor's Degree",
+  "current_skills": [
+    "Python",
+    "Data Analysis",
+    "Communication"
+  ],
+  "interests": [
+    "Technology",
+    "Problem Solving"
+  ],
+  "career_goals": [
+    "Software Developer"
+  ],
+  "work_experience": [],
+  "preferred_locations": [],
+  "salary_expectations": null,
+  "created_at": "2025-09-07T00:06:48.058041",
+  "updated_at": "2025-09-07T00:06:48.058044"
+}

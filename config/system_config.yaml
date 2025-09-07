@@ -1,0 +1,156 @@
+# Career Assistant System Configuration
+# Central configuration file for all system components
+
+# Application Settings
+app:
+  name: "Career Assistant AI"
+  version: "2.0.0"
+  environment: "development"
+  debug: true
+  host: "localhost"
+  port: 7860
+
+# Database Configuration
+database:
+  user_profiles: "data/user_profiles/"
+  career_data: "data/comprehensive_careers/"
+  job_data: "data/scraped_jobs/"
+  progress_data: "data/user_progress/"
+  cache_data: "data/cache/"
+
+# API Configuration
+apis:
+  onet:
+    base_url: "https://www.onetonline.org"
+    timeout: 30
+    retry_attempts: 3
+  job_boards:
+    indeed:
+      enabled: true
+      base_url: "https://indeed.com"
+    glassdoor:
+      enabled: true
+      base_url: "https://glassdoor.com"
+    linkedin:
+      enabled: false  # Requires authentication
+      base_url: "https://linkedin.com"
+
+# Module Configuration
+modules:
+  career_roadmap:
+    max_roadmap_items: 50
+    default_timeline_months: 24
+    include_prerequisites: true
+    include_certifications: true
+  
+  job_scraper:
+    max_results_per_search: 100
+    timeout: 15
+    user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+    delay_between_requests: 2
+  
+  recommendation_engine:
+    min_match_score: 0.6
+    max_recommendations: 10
+    weight_skills: 0.4
+    weight_experience: 0.3
+    weight_interests: 0.3
+  
+  student_pathways:
+    education_levels:
+      - "High School"
+      - "Associate's Degree"
+      - "Bachelor's Degree"
+      - "Master's Degree"
+      - "Doctoral Degree"
+      - "Professional Certificate"
+    max_pathway_steps: 20
+
+# UI Configuration
+ui:
+  theme: "soft"
+  max_concurrent_users: 50
+  session_timeout_hours: 24
+  tabs:
+    - name: "Career Explorer"
+      enabled: true
+    - name: "Student Pathways"
+      enabled: true
+    - name: "Job Search"
+      enabled: true
+    - name: "Recommendations"
+      enabled: true
+    - name: "Progress Dashboard"
+      enabled: true
+
+# Caching Configuration
+cache:
+  career_data_ttl_hours: 168  # 1 week
+  job_search_ttl_hours: 24    # 1 day
+  user_session_ttl_hours: 24  # 1 day
+  max_cache_size_mb: 500
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/career_assistant.log"
+  max_size_mb: 50
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Security Configuration
+security:
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 60
+  data_privacy:
+    anonymize_logs: true
+    data_retention_days: 90
+  allowed_origins: ["localhost", "127.0.0.1"]
+
+# Feature Flags
+features:
+  advanced_analytics: true
+  export_reports: true
+  email_notifications: false
+  social_sharing: false
+  ai_powered_insights: true
+  real_time_job_alerts: true
+
+# System Limits
+limits:
+  max_user_profiles: 1000
+  max_saved_searches: 50
+  max_career_roadmaps: 20
+  max_file_upload_mb: 10
+
+# Integration Settings
+integrations:
+  email_service:
+    enabled: false
+    smtp_server: ""
+    smtp_port: 587
+  analytics:
+    enabled: false
+    tracking_id: ""
+  external_apis:
+    openai:
+      enabled: false
+      model: "gpt-3.5-turbo"
+    google_ai:
+      enabled: false
+      model: "gemini-pro"
+
+# Error Handling
+error_handling:
+  retry_attempts: 3
+  backoff_factor: 2
+  timeout_seconds: 30
+  fallback_responses: true
+
+# Performance Settings
+performance:
+  max_concurrent_requests: 10
+  request_timeout: 30
+  connection_pool_size: 20
+  enable_compression: true

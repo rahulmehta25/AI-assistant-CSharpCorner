@@ -1,0 +1,29 @@
+{
+  "user_id": "demo_user",
+  "name": "Demo User",
+  "email": null,
+  "education_level": "Bachelor's Degree",
+  "current_skills": [
+    "Python",
+    "Data Analysis",
+    "Communication"
+  ],
+  "interests": [
+    "Technology",
+    "Problem Solving",
+    "Innovation"
+  ],
+  "career_goals": [
+    "Software Developer",
+    "Data Scientist"
+  ],
+  "work_experience": [],
+  "preferred_locations": [
+    "Remote",
+    "San Francisco",
+    "New York"
+  ],
+  "salary_expectations": null,
+  "created_at": "2025-09-07T00:07:34.062666",
+  "updated_at": "2025-09-07T00:07:34.062670"
+}
