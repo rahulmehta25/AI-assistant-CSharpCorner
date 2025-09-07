@@ -1,0 +1,185 @@
+{
+  "student_level": "sophomore_hs",
+  "career_field": "computer science",
+  "onet_code": null,
+  "milestones": [
+    {
+      "title": "Choose Career Path",
+      "description": "Research and narrow down career interests",
+      "deadline": "End of Spring",
+      "priority": "high",
+      "category": "career"
+    },
+    {
+      "title": "Plan Junior Year Courses",
+      "description": "Select challenging courses for junior year",
+      "deadline": "March",
+      "priority": "high",
+      "category": "academic"
+    },
+    {
+      "title": "Begin Standardized Test Prep",
+      "description": "Start SAT/ACT preparation",
+      "deadline": "January",
+      "priority": "high",
+      "category": "application"
+    },
+    {
+      "title": "Leadership Opportunities",
+      "description": "Take on leadership roles in activities",
+      "deadline": "Ongoing",
+      "priority": "medium",
+      "category": "career"
+    },
+    {
+      "title": "STEM Competitions",
+      "description": "Participate in science fairs or coding competitions",
+      "deadline": "Spring",
+      "priority": "medium",
+      "category": "career"
+    }
+  ],
+  "courses": [
+    {
+      "course_name": "Geometry",
+      "course_type": "regular",
+      "description": "Spatial reasoning",
+      "prerequisites": [
+        "Algebra II"
+      ],
+      "difficulty_level": "intermediate",
+      "relevance_score": 0.8
+    },
+    {
+      "course_name": "Chemistry",
+      "course_type": "regular",
+      "description": "Physical sciences foundation",
+      "prerequisites": [
+        "Biology"
+      ],
+      "difficulty_level": "intermediate",
+      "relevance_score": 0.9
+    },
+    {
+      "course_name": "English II",
+      "course_type": "regular",
+      "description": "Advanced communication",
+      "prerequisites": [
+        "English I"
+      ],
+      "difficulty_level": "intermediate",
+      "relevance_score": 1.0
+    },
+    {
+      "course_name": "Introduction to Computer Science",
+      "course_type": "regular",
+      "description": "Programming basics",
+      "prerequisites": [],
+      "difficulty_level": "beginner",
+      "relevance_score": 1.0
+    }
+  ],
+  "activities": [
+    {
+      "name": "Robotics Club",
+      "type": "club",
+      "description": "Build and program robots",
+      "time_commitment": "10-15 hours/week",
+      "skills_gained": [
+        "programming",
+        "teamwork",
+        "problem-solving"
+      ],
+      "career_relevance": 1.0
+    },
+    {
+      "name": "Science Olympiad",
+      "type": "competition",
+      "description": "Academic STEM competition",
+      "time_commitment": "5-8 hours/week",
+      "skills_gained": [
+        "research",
+        "presentation",
+        "analytical thinking"
+      ],
+      "career_relevance": 0.9
+    },
+    {
+      "name": "Math Team",
+      "type": "club",
+      "description": "Mathematical problem solving",
+      "time_commitment": "3-5 hours/week",
+      "skills_gained": [
+        "mathematics",
+        "logic",
+        "competition"
+      ],
+      "career_relevance": 0.8
+    },
+    {
+      "name": "Volunteer Work",
+      "type": "volunteer",
+      "description": "Community service",
+      "time_commitment": "2-4 hours/week",
+      "skills_gained": [
+        "empathy",
+        "leadership",
+        "community engagement"
+      ],
+      "career_relevance": 0.7
+    },
+    {
+      "name": "Study Groups",
+      "type": "academic",
+      "description": "Collaborative learning",
+      "time_commitment": "3-5 hours/week",
+      "skills_gained": [
+        "teamwork",
+        "communication",
+        "academic success"
+      ],
+      "career_relevance": 0.6
+    }
+  ],
+  "skills_to_develop": [
+    "data structures",
+    "web development",
+    "database management",
+    "study skills",
+    "mathematical reasoning",
+    "test-taking strategies",
+    "research skills",
+    "note-taking",
+    "system analysis",
+    "time management",
+    "software design",
+    "programming",
+    "algorithms",
+    "problem-solving"
+  ],
+  "timeline": {
+    "September": [
+      "Activities: Join clubs and organizations"
+    ],
+    "October": [],
+    "November": [],
+    "December": [],
+    "January": [
+      "Milestone: Begin Standardized Test Prep"
+    ],
+    "February": [],
+    "March": [
+      "Milestone: Choose Career Path",
+      "Milestone: Plan Junior Year Courses",
+      "Milestone: STEM Competitions",
+      "Course Registration: Plan next year's courses"
+    ],
+    "April": [],
+    "May": [],
+    "June": [],
+    "July": [],
+    "August": [
+      "Activities: Research and prepare for new activities"
+    ]
+  }
+}

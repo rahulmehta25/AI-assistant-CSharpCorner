@@ -1,0 +1,1096 @@
+{
+  "career_field": "software_developers",
+  "onet_code": null,
+  "student_level": "college_sophomore",
+  "current_skills": [
+    "Python",
+    "HTML",
+    "CSS",
+    "Basic JavaScript"
+  ],
+  "target_role": "software_developers",
+  "roadmap_duration": "5 years",
+  "milestones": [
+    {
+      "id": "edu_1",
+      "title": "Complete Bachelor's in Computer Science or related",
+      "description": "Achieve educational requirement: Bachelor's in Computer Science or related",
+      "target_date": "Year 1",
+      "priority": "critical",
+      "category": "education",
+      "prerequisites": [],
+      "skills_gained": [
+        "Programming Basics",
+        "Version Control",
+        "Problem Solving"
+      ],
+      "estimated_hours": 2080,
+      "completion_criteria": [
+        "Obtain Bachelor's in Computer Science or related"
+      ],
+      "resources": [
+        "Universities",
+        "Online programs",
+        "Community colleges"
+      ],
+      "career_impact": 0.9
+    },
+    {
+      "id": "skill_2",
+      "title": "Master Programming Basics",
+      "description": "Develop proficiency in Programming Basics",
+      "target_date": "Year 1.0",
+      "priority": "high",
+      "category": "skill",
+      "prerequisites": [
+        "Python",
+        "HTML",
+        "CSS",
+        "Basic JavaScript"
+      ],
+      "skills_gained": [
+        "Programming Basics"
+      ],
+      "estimated_hours": 200,
+      "completion_criteria": [
+        "Demonstrate Programming Basics proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.8
+    },
+    {
+      "id": "skill_3",
+      "title": "Master Version Control",
+      "description": "Develop proficiency in Version Control",
+      "target_date": "Year 1.5",
+      "priority": "medium",
+      "category": "skill",
+      "prerequisites": [
+        "Programming Basics"
+      ],
+      "skills_gained": [
+        "Version Control"
+      ],
+      "estimated_hours": 300,
+      "completion_criteria": [
+        "Demonstrate Version Control proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.7000000000000001
+    },
+    {
+      "id": "skill_4",
+      "title": "Master Problem Solving",
+      "description": "Develop proficiency in Problem Solving",
+      "target_date": "Year 2.0",
+      "priority": "medium",
+      "category": "skill",
+      "prerequisites": [
+        "Version Control"
+      ],
+      "skills_gained": [
+        "Problem Solving"
+      ],
+      "estimated_hours": 400,
+      "completion_criteria": [
+        "Demonstrate Problem Solving proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.6000000000000001
+    },
+    {
+      "id": "proj_5",
+      "title": "Complete software developers fundamentals course",
+      "description": "Complete project: Complete software developers fundamentals course",
+      "target_date": "Year 1.5",
+      "priority": "high",
+      "category": "project",
+      "prerequisites": [
+        "Programming Basics"
+      ],
+      "skills_gained": [],
+      "estimated_hours": 160,
+      "completion_criteria": [
+        "Successfully complete Complete software developers fundamentals course"
+      ],
+      "resources": [
+        "Team collaboration",
+        "Project management tools"
+      ],
+      "career_impact": 0.7
+    },
+    {
+      "id": "proj_6",
+      "title": "Build portfolio with 3-5 sample projects",
+      "description": "Complete project: Build portfolio with 3-5 sample projects",
+      "target_date": "Year 2.0",
+      "priority": "high",
+      "category": "project",
+      "prerequisites": [
+        "Programming Basics"
+      ],
+      "skills_gained": [],
+      "estimated_hours": 240,
+      "completion_criteria": [
+        "Successfully complete Build portfolio with 3-5 sample projects"
+      ],
+      "resources": [
+        "Team collaboration",
+        "Project management tools"
+      ],
+      "career_impact": 0.7
+    },
+    {
+      "id": "edu_7",
+      "title": "Complete Bachelor's + certifications",
+      "description": "Achieve educational requirement: Bachelor's + certifications",
+      "target_date": "Year 2",
+      "priority": "critical",
+      "category": "education",
+      "prerequisites": [],
+      "skills_gained": [
+        "Advanced Programming",
+        "Database Management",
+        "API Development"
+      ],
+      "estimated_hours": 2080,
+      "completion_criteria": [
+        "Obtain Bachelor's + certifications"
+      ],
+      "resources": [
+        "Universities",
+        "Online programs",
+        "Community colleges"
+      ],
+      "career_impact": 0.9
+    },
+    {
+      "id": "skill_8",
+      "title": "Master Advanced Programming",
+      "description": "Develop proficiency in Advanced Programming",
+      "target_date": "Year 2.0",
+      "priority": "high",
+      "category": "skill",
+      "prerequisites": [
+        "Python",
+        "HTML",
+        "CSS",
+        "Basic JavaScript"
+      ],
+      "skills_gained": [
+        "Advanced Programming"
+      ],
+      "estimated_hours": 200,
+      "completion_criteria": [
+        "Demonstrate Advanced Programming proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.8
+    },
+    {
+      "id": "skill_9",
+      "title": "Master Database Management",
+      "description": "Develop proficiency in Database Management",
+      "target_date": "Year 2.5",
+      "priority": "medium",
+      "category": "skill",
+      "prerequisites": [
+        "Advanced Programming"
+      ],
+      "skills_gained": [
+        "Database Management"
+      ],
+      "estimated_hours": 300,
+      "completion_criteria": [
+        "Demonstrate Database Management proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.7000000000000001
+    },
+    {
+      "id": "skill_10",
+      "title": "Master API Development",
+      "description": "Develop proficiency in API Development",
+      "target_date": "Year 3.0",
+      "priority": "medium",
+      "category": "skill",
+      "prerequisites": [
+        "Database Management"
+      ],
+      "skills_gained": [
+        "API Development"
+      ],
+      "estimated_hours": 400,
+      "completion_criteria": [
+        "Demonstrate API Development proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.6000000000000001
+    },
+    {
+      "id": "proj_11",
+      "title": "Lead small software developers project",
+      "description": "Complete project: Lead small software developers project",
+      "target_date": "Year 2.5",
+      "priority": "high",
+      "category": "project",
+      "prerequisites": [
+        "Advanced Programming"
+      ],
+      "skills_gained": [],
+      "estimated_hours": 160,
+      "completion_criteria": [
+        "Successfully complete Lead small software developers project"
+      ],
+      "resources": [
+        "Team collaboration",
+        "Project management tools"
+      ],
+      "career_impact": 0.7
+    },
+    {
+      "id": "proj_12",
+      "title": "Improve existing processes",
+      "description": "Complete project: Improve existing processes",
+      "target_date": "Year 3.0",
+      "priority": "high",
+      "category": "project",
+      "prerequisites": [
+        "Advanced Programming"
+      ],
+      "skills_gained": [],
+      "estimated_hours": 240,
+      "completion_criteria": [
+        "Successfully complete Improve existing processes"
+      ],
+      "resources": [
+        "Team collaboration",
+        "Project management tools"
+      ],
+      "career_impact": 0.7
+    },
+    {
+      "id": "edu_13",
+      "title": "Complete Bachelor's + advanced certifications",
+      "description": "Achieve educational requirement: Bachelor's + advanced certifications",
+      "target_date": "Year 4",
+      "priority": "critical",
+      "category": "education",
+      "prerequisites": [],
+      "skills_gained": [
+        "System Architecture",
+        "DevOps",
+        "Security"
+      ],
+      "estimated_hours": 2080,
+      "completion_criteria": [
+        "Obtain Bachelor's + advanced certifications"
+      ],
+      "resources": [
+        "Universities",
+        "Online programs",
+        "Community colleges"
+      ],
+      "career_impact": 0.9
+    },
+    {
+      "id": "skill_14",
+      "title": "Master System Architecture",
+      "description": "Develop proficiency in System Architecture",
+      "target_date": "Year 4.0",
+      "priority": "high",
+      "category": "skill",
+      "prerequisites": [
+        "Python",
+        "HTML",
+        "CSS",
+        "Basic JavaScript"
+      ],
+      "skills_gained": [
+        "System Architecture"
+      ],
+      "estimated_hours": 200,
+      "completion_criteria": [
+        "Demonstrate System Architecture proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.8
+    },
+    {
+      "id": "skill_15",
+      "title": "Master DevOps",
+      "description": "Develop proficiency in DevOps",
+      "target_date": "Year 4.5",
+      "priority": "medium",
+      "category": "skill",
+      "prerequisites": [
+        "System Architecture"
+      ],
+      "skills_gained": [
+        "DevOps"
+      ],
+      "estimated_hours": 300,
+      "completion_criteria": [
+        "Demonstrate DevOps proficiency",
+        "Complete relevant projects"
+      ],
+      "resources": [
+        "Online courses",
+        "Practice projects",
+        "Mentorship"
+      ],
+      "career_impact": 0.7000000000000001
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CompTIA IT Fundamentals+",
+      "provider": "CompTIA",
+      "description": "Foundation-level certification covering basic IT concepts",
+      "difficulty": "beginner",
+      "time_to_complete": "2-3 months",
+      "cost_range": "$300-$400",
+      "prerequisites": [],
+      "career_relevance": 0.6,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "exam_code": "FC0-U61",
+        "duration": "60 minutes",
+        "questions": "75 questions",
+        "passing_score": "675/900"
+      }
+    },
+    {
+      "name": "AWS Cloud Practitioner",
+      "provider": "Amazon Web Services",
+      "description": "Entry-level AWS cloud certification",
+      "difficulty": "beginner",
+      "time_to_complete": "1-2 months",
+      "cost_range": "$100",
+      "prerequisites": [],
+      "career_relevance": 0.8,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "exam_code": "CLF-C01",
+        "duration": "90 minutes",
+        "questions": "65 questions",
+        "passing_score": "700/1000"
+      }
+    },
+    {
+      "name": "Google Associate Cloud Engineer",
+      "provider": "Google Cloud",
+      "description": "Associate-level Google Cloud certification",
+      "difficulty": "beginner",
+      "time_to_complete": "2-4 months",
+      "cost_range": "$125",
+      "prerequisites": [
+        "6 months cloud experience"
+      ],
+      "career_relevance": 0.75,
+      "renewal_period": "2 years",
+      "exam_info": {
+        "duration": "2 hours",
+        "questions": "Multiple choice and multiple select",
+        "format": "Remote or test center"
+      }
+    },
+    {
+      "name": "AWS Certified Developer - Associate",
+      "provider": "Amazon Web Services",
+      "description": "Demonstrates ability to develop cloud applications on AWS",
+      "difficulty": "intermediate",
+      "time_to_complete": "3-6 months",
+      "cost_range": "$150",
+      "prerequisites": [
+        "AWS Cloud Practitioner",
+        "1 year development experience"
+      ],
+      "career_relevance": 0.9,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "exam_code": "DVA-C01",
+        "duration": "130 minutes",
+        "questions": "65 questions",
+        "passing_score": "720/1000"
+      }
+    },
+    {
+      "name": "Certified Kubernetes Application Developer (CKAD)",
+      "provider": "Cloud Native Computing Foundation",
+      "description": "Validates skills in designing and building applications for Kubernetes",
+      "difficulty": "intermediate",
+      "time_to_complete": "4-6 months",
+      "cost_range": "$375",
+      "prerequisites": [
+        "Container experience",
+        "Basic Kubernetes knowledge"
+      ],
+      "career_relevance": 0.85,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "duration": "2 hours",
+        "questions": "15-20 performance-based tasks",
+        "format": "Hands-on lab"
+      }
+    },
+    {
+      "name": "Oracle Certified Professional, Java SE",
+      "provider": "Oracle",
+      "description": "Professional-level Java programming certification",
+      "difficulty": "intermediate",
+      "time_to_complete": "4-8 months",
+      "cost_range": "$245",
+      "prerequisites": [
+        "Oracle Certified Associate Java SE"
+      ],
+      "career_relevance": 0.8,
+      "renewal_period": "Does not expire",
+      "exam_info": {
+        "exam_code": "1Z0-816",
+        "duration": "90 minutes",
+        "questions": "80 questions",
+        "passing_score": "63%"
+      }
+    },
+    {
+      "name": "Microsoft Certified: Azure Developer Associate",
+      "provider": "Microsoft",
+      "description": "Validates skills for developing solutions on Microsoft Azure",
+      "difficulty": "intermediate",
+      "time_to_complete": "3-5 months",
+      "cost_range": "$165",
+      "prerequisites": [
+        "1-2 years development experience",
+        "Azure fundamentals"
+      ],
+      "career_relevance": 0.85,
+      "renewal_period": "1 year",
+      "exam_info": {
+        "exam_code": "AZ-204",
+        "duration": "100-120 minutes",
+        "questions": "40-60 questions",
+        "format": "Multiple choice, drag and drop, build list"
+      }
+    },
+    {
+      "name": "AWS Certified Solutions Architect - Professional",
+      "provider": "Amazon Web Services",
+      "description": "Advanced AWS architecture and design certification",
+      "difficulty": "advanced",
+      "time_to_complete": "6-12 months",
+      "cost_range": "$300",
+      "prerequisites": [
+        "AWS Solutions Architect Associate",
+        "2+ years AWS experience"
+      ],
+      "career_relevance": 0.95,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "exam_code": "SAP-C01",
+        "duration": "180 minutes",
+        "questions": "75 questions",
+        "passing_score": "750/1000"
+      }
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "provider": "Cloud Native Computing Foundation",
+      "description": "Validates skills in Kubernetes administration",
+      "difficulty": "advanced",
+      "time_to_complete": "6-9 months",
+      "cost_range": "$375",
+      "prerequisites": [
+        "CKAD or equivalent experience"
+      ],
+      "career_relevance": 0.9,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "duration": "2 hours",
+        "questions": "15-20 performance-based tasks",
+        "format": "Hands-on lab"
+      }
+    },
+    {
+      "name": "CISSP (Certified Information Systems Security Professional)",
+      "provider": "ISC2",
+      "description": "Advanced cybersecurity certification for architects and senior practitioners",
+      "difficulty": "advanced",
+      "time_to_complete": "6-12 months",
+      "cost_range": "$749",
+      "prerequisites": [
+        "5 years security experience"
+      ],
+      "career_relevance": 0.85,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "duration": "3 hours",
+        "questions": "100-150 questions",
+        "format": "Adaptive"
+      }
+    },
+    {
+      "name": "TOGAF 9 Certified",
+      "provider": "The Open Group",
+      "description": "Enterprise architecture framework certification",
+      "difficulty": "expert",
+      "time_to_complete": "4-8 months",
+      "cost_range": "$680",
+      "prerequisites": [
+        "Enterprise architecture experience"
+      ],
+      "career_relevance": 0.9,
+      "renewal_period": "Does not expire",
+      "exam_info": {
+        "parts": "Foundation and Certified",
+        "duration": "90 minutes each",
+        "questions": "40 questions each",
+        "passing_score": "60%"
+      }
+    },
+    {
+      "name": "Certified Information Security Manager (CISM)",
+      "provider": "ISACA",
+      "description": "Management-level information security certification",
+      "difficulty": "expert",
+      "time_to_complete": "8-12 months",
+      "cost_range": "$760",
+      "prerequisites": [
+        "5 years security experience",
+        "3 years management"
+      ],
+      "career_relevance": 0.9,
+      "renewal_period": "3 years",
+      "exam_info": {
+        "duration": "4 hours",
+        "questions": "150 questions",
+        "passing_score": "450/800"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_1",
+      "name": "Personal Portfolio Website",
+      "description": "Build a responsive portfolio website showcasing your skills and projects",
+      "type": "portfolio",
+      "difficulty": "beginner",
+      "estimated_duration": "2-3 weeks",
+      "skills_practiced": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design"
+      ],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "Git"
+      ],
+      "deliverables": [
+        "Live website hosted on GitHub Pages",
+        "Responsive design across devices",
+        "Contact form integration",
+        "Project showcase section"
+      ],
+      "career_impact": 0.8,
+      "portfolio_value": 0.9
+    },
+    {
+      "id": "proj_2",
+      "name": "Task Management Application",
+      "description": "Full-stack web application for managing tasks and projects",
+      "type": "portfolio",
+      "difficulty": "intermediate",
+      "estimated_duration": "4-6 weeks",
+      "skills_practiced": [
+        "Frontend Development",
+        "Backend Development",
+        "Database Design",
+        "API Development"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "JWT Authentication"
+      ],
+      "deliverables": [
+        "User authentication system",
+        "CRUD operations for tasks",
+        "Responsive web interface",
+        "REST API documentation"
+      ],
+      "career_impact": 0.9,
+      "portfolio_value": 0.95
+    },
+    {
+      "id": "proj_3",
+      "name": "E-commerce Platform",
+      "description": "Complete e-commerce solution with shopping cart, payment integration, and admin panel",
+      "type": "portfolio",
+      "difficulty": "advanced",
+      "estimated_duration": "8-12 weeks",
+      "skills_practiced": [
+        "Full-Stack Development",
+        "Payment Integration",
+        "Security",
+        "Database Optimization"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Stripe API",
+        "Docker",
+        "AWS"
+      ],
+      "deliverables": [
+        "Customer-facing storefront",
+        "Admin management panel",
+        "Payment processing system",
+        "Order management system",
+        "Deployed production app"
+      ],
+      "career_impact": 0.95,
+      "portfolio_value": 0.98
+    },
+    {
+      "id": "proj_4",
+      "name": "Social Media Dashboard",
+      "description": "Analytics dashboard aggregating data from multiple social media platforms",
+      "type": "portfolio",
+      "difficulty": "intermediate",
+      "estimated_duration": "5-7 weeks",
+      "skills_practiced": [
+        "API Integration",
+        "Data Visualization",
+        "Frontend Development"
+      ],
+      "technologies": [
+        "Vue.js",
+        "Python",
+        "FastAPI",
+        "Chart.js",
+        "Social Media APIs"
+      ],
+      "deliverables": [
+        "Multi-platform data integration",
+        "Interactive dashboard interface",
+        "Real-time data updates",
+        "Export functionality"
+      ],
+      "career_impact": 0.85,
+      "portfolio_value": 0.9
+    },
+    {
+      "id": "proj_5",
+      "name": "Contribute to Popular JavaScript Library",
+      "description": "Make meaningful contributions to established open source projects",
+      "type": "open_source",
+      "difficulty": "intermediate",
+      "estimated_duration": "Ongoing",
+      "skills_practiced": [
+        "Code Review",
+        "Collaboration",
+        "Documentation",
+        "Testing"
+      ],
+      "technologies": [
+        "JavaScript",
+        "TypeScript",
+        "Jest",
+        "GitHub"
+      ],
+      "deliverables": [
+        "Bug fixes and patches",
+        "Feature implementations",
+        "Documentation improvements",
+        "Test coverage increases"
+      ],
+      "career_impact": 0.9,
+      "portfolio_value": 0.85
+    },
+    {
+      "id": "proj_6",
+      "name": "Create Developer Tool Package",
+      "description": "Build and publish a useful developer tool or library",
+      "type": "open_source",
+      "difficulty": "advanced",
+      "estimated_duration": "6-10 weeks",
+      "skills_practiced": [
+        "Package Development",
+        "API Design",
+        "Documentation",
+        "Testing"
+      ],
+      "technologies": [
+        "Node.js",
+        "TypeScript",
+        "npm",
+        "CI/CD"
+      ],
+      "deliverables": [
+        "Published npm package",
+        "Comprehensive documentation",
+        "Unit and integration tests",
+        "Usage examples and tutorials"
+      ],
+      "career_impact": 0.95,
+      "portfolio_value": 0.9
+    },
+    {
+      "id": "proj_7",
+      "name": "Startup MVP Development",
+      "description": "Build minimum viable product for a startup idea",
+      "type": "business",
+      "difficulty": "advanced",
+      "estimated_duration": "10-16 weeks",
+      "skills_practiced": [
+        "Product Development",
+        "User Research",
+        "Agile Development",
+        "Business Analysis"
+      ],
+      "technologies": [
+        "Modern Web Stack",
+        "Analytics Tools",
+        "Cloud Deployment"
+      ],
+      "deliverables": [
+        "Market research and validation",
+        "User-tested MVP",
+        "Analytics implementation",
+        "Go-to-market strategy"
+      ],
+      "career_impact": 0.98,
+      "portfolio_value": 0.95
+    },
+    {
+      "id": "proj_8",
+      "name": "SaaS Application Development",
+      "description": "Build and launch a Software-as-a-Service application",
+      "type": "business",
+      "difficulty": "expert",
+      "estimated_duration": "16-24 weeks",
+      "skills_practiced": [
+        "SaaS Architecture",
+        "Subscription Management",
+        "Multi-tenancy",
+        "Scaling"
+      ],
+      "technologies": [
+        "Cloud Platform",
+        "Subscription APIs",
+        "Monitoring Tools"
+      ],
+      "deliverables": [
+        "Multi-tenant SaaS platform",
+        "Subscription and billing system",
+        "Customer onboarding flow",
+        "Analytics and monitoring"
+      ],
+      "career_impact": 1.0,
+      "portfolio_value": 0.98
+    }
+  ],
+  "salary_progression": [
+    {
+      "level": "CareerLevel.ENTRY",
+      "years_experience": "0-2",
+      "min_salary": 57000,
+      "max_salary": 76000,
+      "median_salary": 66500,
+      "location_factor": 1.0,
+      "currency": "USD"
+    },
+    {
+      "level": "CareerLevel.JUNIOR",
+      "years_experience": "2-4",
+      "min_salary": 66500,
+      "max_salary": 85500,
+      "median_salary": 76000,
+      "location_factor": 1.0,
+      "currency": "USD"
+    },
+    {
+      "level": "CareerLevel.MID_LEVEL",
+      "years_experience": "4-7",
+      "min_salary": 85500,
+      "max_salary": 114000,
+      "median_salary": 99750,
+      "location_factor": 1.0,
+      "currency": "USD"
+    },
+    {
+      "level": "CareerLevel.SENIOR",
+      "years_experience": "7-10",
+      "min_salary": 114000,
+      "max_salary": 152000,
+      "median_salary": 133000,
+      "location_factor": 1.0,
+      "currency": "USD"
+    }
+  ],
+  "skill_progression": {
+    "1": [
+      "Programming Basics",
+      "Version Control",
+      "Problem Solving",
+      "Documentation",
+      "Testing",
+      "Advanced Web Development"
+    ],
+    "2": [
+      "Advanced Programming",
+      "Database Management",
+      "API Development",
+      "Cloud Basics",
+      "Agile",
+      "Advanced Machine Learning"
+    ],
+    "3": [
+      "System Architecture",
+      "DevOps",
+      "Security",
+      "Performance Optimization",
+      "Team Leadership"
+    ],
+    "4": [
+      "Technical Strategy",
+      "Enterprise Architecture",
+      "Executive Communication",
+      "Innovation Leadership",
+      "Vendor Management"
+    ],
+    "5": [
+      "Industry Thought Leadership",
+      "Executive Advisory",
+      "Board Governance",
+      "Strategic Vision",
+      "Legacy Building"
+    ]
+  },
+  "alternative_paths": [
+    {
+      "path_name": "Transition to Software Engineer",
+      "description": "Alternative path focusing on Software Engineer",
+      "transition_requirements": [
+        "Additional training in Software Engineer",
+        "Build relevant project portfolio",
+        "Network with {related_career} professionals"
+      ],
+      "additional_skills": [
+        "Software Engineer expertise",
+        "Cross-functional knowledge"
+      ],
+      "time_to_transition": "6-12 months",
+      "salary_impact": 0.1,
+      "market_demand": "High",
+      "reasons_to_consider": [
+        "Growing demand in Software Engineer",
+        "Leverages existing skills",
+        "Better work-life balance potential"
+      ]
+    },
+    {
+      "path_name": "Transition to Data Analyst",
+      "description": "Alternative path focusing on Data Analyst",
+      "transition_requirements": [
+        "Additional training in Data Analyst",
+        "Build relevant project portfolio",
+        "Network with {related_career} professionals"
+      ],
+      "additional_skills": [
+        "Data Analyst expertise",
+        "Cross-functional knowledge"
+      ],
+      "time_to_transition": "6-12 months",
+      "salary_impact": 0.1,
+      "market_demand": "High",
+      "reasons_to_consider": [
+        "Growing demand in Data Analyst",
+        "Leverages existing skills",
+        "Better work-life balance potential"
+      ]
+    },
+    {
+      "path_name": "Transition to System Administrator",
+      "description": "Alternative path focusing on System Administrator",
+      "transition_requirements": [
+        "Additional training in System Administrator",
+        "Build relevant project portfolio",
+        "Network with {related_career} professionals"
+      ],
+      "additional_skills": [
+        "System Administrator expertise",
+        "Cross-functional knowledge"
+      ],
+      "time_to_transition": "6-12 months",
+      "salary_impact": 0.1,
+      "market_demand": "High",
+      "reasons_to_consider": [
+        "Growing demand in System Administrator",
+        "Leverages existing skills",
+        "Better work-life balance potential"
+      ]
+    }
+  ],
+  "pivot_opportunities": [
+    "Data Science",
+    "Product Management",
+    "DevOps Engineering",
+    "Technical Writing",
+    "UX/UI Design"
+  ],
+  "timeline": {
+    "timeline_type": "TimelineType.MILESTONE",
+    "total_duration": "5 years",
+    "phases": [
+      {
+        "phase_name": "Phase 1",
+        "years": "Year 1-1",
+        "focus": "Foundation & Learning",
+        "milestones": [
+          "Complete Bachelor's in Computer Science or related",
+          "Master Programming Basics",
+          "Master Version Control",
+          "Complete software developers fundamentals course"
+        ]
+      },
+      {
+        "phase_name": "Phase 2",
+        "years": "Year 2-2",
+        "focus": "Skill Development & Experience",
+        "milestones": [
+          "Master Problem Solving",
+          "Build portfolio with 3-5 sample projects",
+          "Complete Bachelor's + certifications",
+          "Master Advanced Programming",
+          "Master Database Management"
+        ]
+      },
+      {
+        "phase_name": "Phase 3",
+        "years": "Year 3-3",
+        "focus": "Leadership & Specialization",
+        "milestones": [
+          "Master API Development",
+          "Improve existing processes"
+        ]
+      },
+      {
+        "phase_name": "Phase 4",
+        "years": "Year 4-4",
+        "focus": "Leadership & Specialization",
+        "milestones": [
+          "Complete Bachelor's + advanced certifications",
+          "Master System Architecture",
+          "Master DevOps"
+        ]
+      },
+      {
+        "phase_name": "Phase 5",
+        "years": "Year 5-5",
+        "focus": "Leadership & Specialization",
+        "milestones": []
+      }
+    ],
+    "milestones_by_year": {
+      "1": [
+        "Complete Bachelor's in Computer Science or related",
+        "Master Programming Basics",
+        "Master Version Control",
+        "Complete software developers fundamentals course"
+      ],
+      "2": [
+        "Master Problem Solving",
+        "Build portfolio with 3-5 sample projects",
+        "Complete Bachelor's + certifications",
+        "Master Advanced Programming",
+        "Master Database Management",
+        "Lead small software developers project"
+      ],
+      "3": [
+        "Master API Development",
+        "Improve existing processes"
+      ],
+      "4": [
+        "Complete Bachelor's + advanced certifications",
+        "Master System Architecture",
+        "Master DevOps"
+      ]
+    },
+    "decision_points": [
+      {
+        "year": 2,
+        "decision": "Career Assessment & Path Adjustment",
+        "options": [
+          "Continue current path",
+          "Pivot to alternative",
+          "Accelerate progress"
+        ]
+      },
+      {
+        "year": 2,
+        "decision": "Career Assessment & Path Adjustment",
+        "options": [
+          "Continue current path",
+          "Pivot to alternative",
+          "Accelerate progress"
+        ]
+      },
+      {
+        "year": 4,
+        "decision": "Career Assessment & Path Adjustment",
+        "options": [
+          "Continue current path",
+          "Pivot to alternative",
+          "Accelerate progress"
+        ]
+      }
+    ],
+    "parallel_tracks": null
+  },
+  "created_date": "2025-09-06T17:03:44.790498",
+  "last_updated": "2025-09-06T17:03:44.790505",
+  "confidence_score": 0.96
+}

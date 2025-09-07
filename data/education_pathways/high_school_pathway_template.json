@@ -1,0 +1,380 @@
+{
+  "template_version": "1.0",
+  "description": "High School Career Pathway Template (Grades 9-12)",
+  "grade_levels": {
+    "freshman_hs": {
+      "grade": 9,
+      "focus": "Foundation Building & Exploration",
+      "key_objectives": [
+        "Explore career interests through assessments",
+        "Build strong academic foundation",
+        "Develop study habits and time management",
+        "Join extracurricular activities",
+        "Begin building relationships with counselors and teachers"
+      ],
+      "core_courses": [
+        {
+          "subject": "English",
+          "course": "English I",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Mathematics",
+          "course": "Algebra II or Geometry",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Science",
+          "course": "Biology",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Social Studies",
+          "course": "World History",
+          "credits": 1.0,
+          "importance": "medium"
+        }
+      ],
+      "suggested_electives_by_career": {
+        "STEM": ["Introduction to Computer Science", "Engineering Fundamentals", "Advanced Mathematics"],
+        "Business": ["Introduction to Business", "Personal Finance", "Communications"],
+        "Arts": ["Art I", "Music", "Creative Writing", "Theater"],
+        "Health": ["Health Sciences", "Biology", "Psychology"],
+        "Liberal Arts": ["Foreign Language", "Philosophy", "Creative Writing"]
+      },
+      "milestones": [
+        {
+          "title": "Career Interest Assessment",
+          "deadline": "October",
+          "category": "career_exploration",
+          "priority": "high"
+        },
+        {
+          "title": "Join Academic/Career Clubs",
+          "deadline": "November",
+          "category": "extracurricular",
+          "priority": "medium"
+        },
+        {
+          "title": "Establish Study Routine",
+          "deadline": "September",
+          "category": "academic_skills",
+          "priority": "high"
+        },
+        {
+          "title": "Meet with School Counselor",
+          "deadline": "End of Semester",
+          "category": "guidance",
+          "priority": "high"
+        }
+      ],
+      "skills_to_develop": [
+        "time management",
+        "note-taking",
+        "study strategies",
+        "basic research skills",
+        "communication skills",
+        "teamwork",
+        "self-advocacy"
+      ]
+    },
+    "sophomore_hs": {
+      "grade": 10,
+      "focus": "Skill Development & Career Direction",
+      "key_objectives": [
+        "Narrow down career interests",
+        "Take more challenging courses",
+        "Begin standardized test preparation",
+        "Seek leadership opportunities",
+        "Start building resume through activities"
+      ],
+      "core_courses": [
+        {
+          "subject": "English",
+          "course": "English II",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Mathematics",
+          "course": "Geometry or Algebra II",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Science",
+          "course": "Chemistry",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Social Studies",
+          "course": "US History",
+          "credits": 1.0,
+          "importance": "medium"
+        }
+      ],
+      "advanced_options_by_career": {
+        "STEM": ["Honors Chemistry", "Honors Mathematics", "Computer Programming"],
+        "Business": ["Honors Economics", "Statistics", "Business Communications"],
+        "Arts": ["Advanced Art", "Digital Media", "Creative Writing II"],
+        "Health": ["Honors Biology", "Health Sciences II", "Psychology"],
+        "Liberal Arts": ["Honors English", "Advanced Foreign Language", "Philosophy"]
+      },
+      "milestones": [
+        {
+          "title": "PSAT/NMSQT Preparation",
+          "deadline": "September",
+          "category": "standardized_tests",
+          "priority": "high"
+        },
+        {
+          "title": "Leadership Role in Activities",
+          "deadline": "Throughout Year",
+          "category": "extracurricular",
+          "priority": "medium"
+        },
+        {
+          "title": "Career Field Research Project",
+          "deadline": "Spring",
+          "category": "career_exploration",
+          "priority": "high"
+        },
+        {
+          "title": "Begin SAT/ACT Preparation",
+          "deadline": "January",
+          "category": "standardized_tests",
+          "priority": "high"
+        }
+      ],
+      "skills_to_develop": [
+        "critical thinking",
+        "problem-solving",
+        "leadership",
+        "public speaking",
+        "research and analysis",
+        "test-taking strategies",
+        "goal setting"
+      ]
+    },
+    "junior_hs": {
+      "grade": 11,
+      "focus": "College Preparation & Career Specialization",
+      "key_objectives": [
+        "Take challenging AP/Honors courses",
+        "Complete standardized testing",
+        "Research colleges and programs",
+        "Gain relevant work/volunteer experience",
+        "Build college application portfolio"
+      ],
+      "core_courses": [
+        {
+          "subject": "English",
+          "course": "English III or AP English Language",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Mathematics",
+          "course": "Pre-Calculus or AP Calculus AB",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Science",
+          "course": "Physics or AP Science",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Social Studies",
+          "course": "AP History or Government",
+          "credits": 1.0,
+          "importance": "medium"
+        }
+      ],
+      "ap_recommendations_by_career": {
+        "STEM": ["AP Calculus AB/BC", "AP Physics", "AP Chemistry", "AP Computer Science A"],
+        "Business": ["AP Statistics", "AP Economics", "AP Psychology", "AP Calculus AB"],
+        "Arts": ["AP Art and Design", "AP English Literature", "AP Music Theory", "AP Art History"],
+        "Health": ["AP Biology", "AP Chemistry", "AP Psychology", "AP Statistics"],
+        "Liberal Arts": ["AP English Literature", "AP Foreign Language", "AP History", "AP Psychology"]
+      },
+      "milestones": [
+        {
+          "title": "SAT/ACT Testing (Spring)",
+          "deadline": "March-June",
+          "category": "standardized_tests",
+          "priority": "high"
+        },
+        {
+          "title": "College Research & Campus Visits",
+          "deadline": "Throughout Year",
+          "category": "college_prep",
+          "priority": "high"
+        },
+        {
+          "title": "Summer Program/Internship Applications",
+          "deadline": "February-March",
+          "category": "career_experience",
+          "priority": "high"
+        },
+        {
+          "title": "Build College Application List",
+          "deadline": "May",
+          "category": "college_prep",
+          "priority": "high"
+        },
+        {
+          "title": "Begin Application Essays",
+          "deadline": "Summer",
+          "category": "college_prep",
+          "priority": "medium"
+        }
+      ],
+      "skills_to_develop": [
+        "advanced academic skills",
+        "college-level writing",
+        "research methods",
+        "interview skills",
+        "networking",
+        "self-reflection",
+        "decision making"
+      ]
+    },
+    "senior_hs": {
+      "grade": 12,
+      "focus": "College Applications & Transition Preparation",
+      "key_objectives": [
+        "Complete college applications",
+        "Apply for financial aid and scholarships",
+        "Maintain academic performance",
+        "Prepare for college transition",
+        "Complete capstone projects"
+      ],
+      "core_courses": [
+        {
+          "subject": "English",
+          "course": "English IV or AP English Literature",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Mathematics",
+          "course": "AP Calculus BC or Statistics",
+          "credits": 1.0,
+          "importance": "high"
+        },
+        {
+          "subject": "Science",
+          "course": "AP Science or Advanced Course",
+          "credits": 1.0,
+          "importance": "medium"
+        },
+        {
+          "subject": "Electives",
+          "course": "Career-specific advanced courses",
+          "credits": 2.0,
+          "importance": "high"
+        }
+      ],
+      "capstone_opportunities_by_career": {
+        "STEM": ["Independent Research Project", "Engineering Design Challenge", "Science Fair"],
+        "Business": ["Business Plan Development", "Marketing Campaign", "Economic Analysis"],
+        "Arts": ["Portfolio Development", "Art Exhibition", "Creative Writing Publication"],
+        "Health": ["Health Research Project", "Community Health Initiative", "Medical Shadowing"],
+        "Liberal Arts": ["Thesis Project", "Community Service Initiative", "Cultural Research"]
+      },
+      "milestones": [
+        {
+          "title": "Complete College Applications",
+          "deadline": "November-January",
+          "category": "college_prep",
+          "priority": "high"
+        },
+        {
+          "title": "FAFSA and Financial Aid Applications",
+          "deadline": "October-January",
+          "category": "financial_aid",
+          "priority": "high"
+        },
+        {
+          "title": "Scholarship Applications",
+          "deadline": "Throughout Year",
+          "category": "financial_aid",
+          "priority": "high"
+        },
+        {
+          "title": "College Decision",
+          "deadline": "May 1",
+          "category": "college_prep",
+          "priority": "high"
+        },
+        {
+          "title": "Senior Capstone Project",
+          "deadline": "Spring",
+          "category": "academic",
+          "priority": "medium"
+        }
+      ],
+      "skills_to_develop": [
+        "application writing",
+        "financial literacy",
+        "independence",
+        "college readiness",
+        "transition planning",
+        "professional communication",
+        "life skills"
+      ]
+    }
+  },
+  "summer_programs": {
+    "after_freshman": [
+      "Academic enrichment camps",
+      "Career exploration programs",
+      "Volunteer opportunities",
+      "Sports camps",
+      "Arts programs"
+    ],
+    "after_sophomore": [
+      "Pre-college programs",
+      "Career internships",
+      "Leadership camps",
+      "Academic competitions",
+      "Skills workshops"
+    ],
+    "after_junior": [
+      "Competitive internships",
+      "Research programs",
+      "College prep courses",
+      "Advanced skills training",
+      "Professional shadowing"
+    ],
+    "after_senior": [
+      "Bridge programs",
+      "College orientation",
+      "Summer jobs",
+      "Gap year programs",
+      "Transition preparation"
+    ]
+  },
+  "standardized_testing_timeline": {
+    "freshman": [],
+    "sophomore": ["PSAT/NMSQT (October)"],
+    "junior": ["SAT/ACT (Spring)", "AP Exams (May)", "Subject Tests (if needed)"],
+    "senior": ["Final SAT/ACT (if needed)", "AP Exams (May)"]
+  },
+  "college_application_components": [
+    "Common Application or school-specific applications",
+    "Personal essays",
+    "Letters of recommendation",
+    "Official transcripts",
+    "Standardized test scores",
+    "Activity lists and resumes",
+    "Portfolio (for arts programs)",
+    "Interviews (for some schools)"
+  ]
+}

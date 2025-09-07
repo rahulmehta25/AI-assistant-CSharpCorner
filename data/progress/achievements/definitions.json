@@ -1,0 +1,30 @@
+{
+  "first_milestone": {
+    "title": "First Steps",
+    "description": "Complete your first milestone",
+    "category": "milestone",
+    "points": 100,
+    "rarity": "common"
+  },
+  "skill_master": {
+    "title": "Skill Master",
+    "description": "Reach advanced level in a skill",
+    "category": "skill",
+    "points": 300,
+    "rarity": "rare"
+  },
+  "week_streak": {
+    "title": "Consistent Learner",
+    "description": "Maintain 7-day learning streak",
+    "category": "streak",
+    "points": 200,
+    "rarity": "common"
+  },
+  "project_pioneer": {
+    "title": "Project Pioneer",
+    "description": "Complete your first major project",
+    "category": "project",
+    "points": 250,
+    "rarity": "common"
+  }
+}

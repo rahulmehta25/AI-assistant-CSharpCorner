@@ -1,0 +1,467 @@
+{
+  "technology": {
+    "careers": [
+      "software_developer",
+      "data_scientist",
+      "cybersecurity_analyst",
+      "ai_engineer",
+      "cloud_architect",
+      "devops_engineer",
+      "system_administrator",
+      "network_engineer",
+      "database_administrator",
+      "tech_consultant"
+    ],
+    "related_interests": [
+      "coding",
+      "artificial_intelligence",
+      "robotics",
+      "gaming",
+      "innovation",
+      "gadgets",
+      "automation",
+      "algorithms",
+      "open_source",
+      "tech_trends"
+    ],
+    "personality_fit": {
+      "openness": 0.8,
+      "conscientiousness": 0.7,
+      "analytical_thinking": 0.9
+    }
+  },
+  "healthcare": {
+    "careers": [
+      "doctor",
+      "nurse",
+      "medical_researcher",
+      "therapist",
+      "healthcare_administrator",
+      "public_health_specialist",
+      "pharmacist",
+      "medical_technician",
+      "nutritionist",
+      "physical_therapist"
+    ],
+    "related_interests": [
+      "helping_others",
+      "biology",
+      "medicine",
+      "wellness",
+      "patient_care",
+      "medical_research",
+      "health_education",
+      "anatomy",
+      "psychology",
+      "public_health"
+    ],
+    "personality_fit": {
+      "agreeableness": 0.8,
+      "conscientiousness": 0.85,
+      "empathy": 0.9
+    }
+  },
+  "business": {
+    "careers": [
+      "business_analyst",
+      "marketing_manager",
+      "entrepreneur",
+      "financial_analyst",
+      "consultant",
+      "product_manager",
+      "operations_manager",
+      "hr_manager",
+      "account_manager",
+      "business_developer"
+    ],
+    "related_interests": [
+      "strategy",
+      "finance",
+      "leadership",
+      "innovation",
+      "entrepreneurship",
+      "economics",
+      "management",
+      "negotiation",
+      "market_analysis",
+      "networking"
+    ],
+    "personality_fit": {
+      "extraversion": 0.7,
+      "conscientiousness": 0.75,
+      "ambition": 0.85
+    }
+  },
+  "creative_arts": {
+    "careers": [
+      "graphic_designer",
+      "animator",
+      "photographer",
+      "artist",
+      "creative_director",
+      "ux_designer",
+      "fashion_designer",
+      "musician",
+      "video_editor",
+      "content_creator"
+    ],
+    "related_interests": [
+      "art",
+      "design",
+      "creativity",
+      "visual_arts",
+      "music",
+      "photography",
+      "storytelling",
+      "aesthetics",
+      "imagination",
+      "self_expression"
+    ],
+    "personality_fit": {
+      "openness": 0.95,
+      "creativity": 0.9,
+      "independence": 0.8
+    }
+  },
+  "education": {
+    "careers": [
+      "teacher",
+      "professor",
+      "educational_technologist",
+      "curriculum_developer",
+      "education_administrator",
+      "instructional_designer",
+      "school_counselor",
+      "education_consultant",
+      "librarian",
+      "special_education_teacher"
+    ],
+    "related_interests": [
+      "teaching",
+      "mentoring",
+      "child_development",
+      "learning",
+      "knowledge_sharing",
+      "curriculum_design",
+      "educational_psychology",
+      "student_success",
+      "literacy",
+      "educational_technology"
+    ],
+    "personality_fit": {
+      "agreeableness": 0.85,
+      "patience": 0.9,
+      "communication": 0.85
+    }
+  },
+  "environment": {
+    "careers": [
+      "environmental_scientist",
+      "conservation_biologist",
+      "sustainability_consultant",
+      "renewable_energy_engineer",
+      "environmental_lawyer",
+      "climate_researcher",
+      "park_ranger",
+      "marine_biologist",
+      "environmental_engineer",
+      "urban_planner"
+    ],
+    "related_interests": [
+      "nature",
+      "sustainability",
+      "climate",
+      "conservation",
+      "renewable_energy",
+      "wildlife",
+      "ecology",
+      "environmental_policy",
+      "green_technology",
+      "outdoor_activities"
+    ],
+    "personality_fit": {
+      "openness": 0.8,
+      "conscientiousness": 0.75,
+      "idealism": 0.85
+    }
+  },
+  "social_impact": {
+    "careers": [
+      "social_worker",
+      "nonprofit_manager",
+      "community_organizer",
+      "policy_analyst",
+      "human_rights_advocate",
+      "counselor",
+      "public_affairs_specialist",
+      "grant_writer",
+      "volunteer_coordinator",
+      "advocacy_director"
+    ],
+    "related_interests": [
+      "social_justice",
+      "community",
+      "advocacy",
+      "helping",
+      "equality",
+      "human_rights",
+      "public_service",
+      "volunteering",
+      "social_change",
+      "empowerment"
+    ],
+    "personality_fit": {
+      "agreeableness": 0.9,
+      "empathy": 0.95,
+      "altruism": 0.9
+    }
+  },
+  "science_research": {
+    "careers": [
+      "research_scientist",
+      "laboratory_technician",
+      "clinical_researcher",
+      "data_scientist",
+      "physicist",
+      "chemist",
+      "biologist",
+      "astronomer",
+      "materials_scientist",
+      "research_analyst"
+    ],
+    "related_interests": [
+      "discovery",
+      "experimentation",
+      "scientific_method",
+      "data_analysis",
+      "hypothesis_testing",
+      "laboratory_work",
+      "peer_review",
+      "innovation",
+      "problem_solving",
+      "critical_thinking"
+    ],
+    "personality_fit": {
+      "openness": 0.85,
+      "conscientiousness": 0.8,
+      "curiosity": 0.95
+    }
+  },
+  "media_communication": {
+    "careers": [
+      "journalist",
+      "content_writer",
+      "public_relations_specialist",
+      "social_media_manager",
+      "broadcaster",
+      "editor",
+      "communications_director",
+      "copywriter",
+      "media_planner",
+      "podcast_host"
+    ],
+    "related_interests": [
+      "writing",
+      "storytelling",
+      "current_events",
+      "social_media",
+      "broadcasting",
+      "journalism",
+      "content_creation",
+      "public_speaking",
+      "media_production",
+      "digital_communication"
+    ],
+    "personality_fit": {
+      "extraversion": 0.75,
+      "creativity": 0.8,
+      "communication": 0.9
+    }
+  },
+  "finance_economics": {
+    "careers": [
+      "financial_analyst",
+      "investment_banker",
+      "accountant",
+      "economist",
+      "financial_advisor",
+      "actuary",
+      "budget_analyst",
+      "credit_analyst",
+      "risk_manager",
+      "portfolio_manager"
+    ],
+    "related_interests": [
+      "investing",
+      "economics",
+      "market_analysis",
+      "financial_planning",
+      "risk_assessment",
+      "budgeting",
+      "cryptocurrency",
+      "stock_market",
+      "financial_modeling",
+      "wealth_management"
+    ],
+    "personality_fit": {
+      "conscientiousness": 0.85,
+      "analytical_thinking": 0.9,
+      "detail_orientation": 0.85
+    }
+  },
+  "engineering": {
+    "careers": [
+      "mechanical_engineer",
+      "electrical_engineer",
+      "civil_engineer",
+      "software_engineer",
+      "chemical_engineer",
+      "aerospace_engineer",
+      "biomedical_engineer",
+      "industrial_engineer",
+      "robotics_engineer",
+      "systems_engineer"
+    ],
+    "related_interests": [
+      "building",
+      "problem_solving",
+      "design",
+      "innovation",
+      "mathematics",
+      "physics",
+      "technology",
+      "systems_thinking",
+      "optimization",
+      "technical_challenges"
+    ],
+    "personality_fit": {
+      "conscientiousness": 0.8,
+      "analytical_thinking": 0.95,
+      "persistence": 0.85
+    }
+  },
+  "law_governance": {
+    "careers": [
+      "lawyer",
+      "paralegal",
+      "judge",
+      "legal_consultant",
+      "compliance_officer",
+      "policy_analyst",
+      "legislative_assistant",
+      "contract_specialist",
+      "legal_researcher",
+      "public_defender"
+    ],
+    "related_interests": [
+      "justice",
+      "law",
+      "policy",
+      "debate",
+      "ethics",
+      "governance",
+      "regulations",
+      "advocacy",
+      "legal_research",
+      "constitutional_law"
+    ],
+    "personality_fit": {
+      "conscientiousness": 0.9,
+      "analytical_thinking": 0.85,
+      "argumentation": 0.9
+    }
+  },
+  "hospitality_tourism": {
+    "careers": [
+      "hotel_manager",
+      "event_planner",
+      "travel_agent",
+      "tour_guide",
+      "restaurant_manager",
+      "cruise_director",
+      "hospitality_consultant",
+      "concierge",
+      "tourism_marketing",
+      "resort_manager"
+    ],
+    "related_interests": [
+      "travel",
+      "customer_service",
+      "event_planning",
+      "cultural_exchange",
+      "hospitality",
+      "tourism",
+      "food_service",
+      "guest_relations",
+      "destination_management",
+      "leisure_activities"
+    ],
+    "personality_fit": {
+      "extraversion": 0.85,
+      "agreeableness": 0.8,
+      "adaptability": 0.85
+    }
+  },
+  "sports_fitness": {
+    "careers": [
+      "personal_trainer",
+      "sports_coach",
+      "athletic_trainer",
+      "sports_analyst",
+      "fitness_instructor",
+      "sports_psychologist",
+      "recreation_director",
+      "sports_agent",
+      "physical_therapist",
+      "sports_nutritionist"
+    ],
+    "related_interests": [
+      "athletics",
+      "fitness",
+      "coaching",
+      "sports",
+      "physical_health",
+      "team_building",
+      "competition",
+      "exercise_science",
+      "performance_optimization",
+      "wellness"
+    ],
+    "personality_fit": {
+      "extraversion": 0.8,
+      "energy": 0.9,
+      "motivation": 0.85
+    }
+  },
+  "agriculture_food": {
+    "careers": [
+      "agricultural_scientist",
+      "farmer",
+      "food_scientist",
+      "agricultural_engineer",
+      "agronomist",
+      "food_safety_inspector",
+      "agricultural_economist",
+      "horticulturist",
+      "veterinarian",
+      "agricultural_consultant"
+    ],
+    "related_interests": [
+      "farming",
+      "food_production",
+      "sustainability",
+      "agriculture",
+      "crop_science",
+      "animal_husbandry",
+      "food_technology",
+      "rural_development",
+      "organic_farming",
+      "agricultural_innovation"
+    ],
+    "personality_fit": {
+      "conscientiousness": 0.75,
+      "patience": 0.85,
+      "practical_thinking": 0.9
+    }
+  }
+}

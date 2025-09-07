@@ -1,0 +1,875 @@
+{
+  "software_developers": {
+    "entry": [
+      {
+        "name": "CompTIA IT Fundamentals+",
+        "provider": "CompTIA",
+        "description": "Foundation-level certification covering basic IT concepts",
+        "difficulty": "beginner",
+        "time_to_complete": "2-3 months",
+        "cost_range": "$300-$400",
+        "prerequisites": [],
+        "career_relevance": 0.6,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "FC0-U61",
+          "duration": "60 minutes",
+          "questions": "75 questions",
+          "passing_score": "675/900"
+        }
+      },
+      {
+        "name": "AWS Cloud Practitioner",
+        "provider": "Amazon Web Services",
+        "description": "Entry-level AWS cloud certification",
+        "difficulty": "beginner",
+        "time_to_complete": "1-2 months",
+        "cost_range": "$100",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "CLF-C01",
+          "duration": "90 minutes",
+          "questions": "65 questions",
+          "passing_score": "700/1000"
+        }
+      },
+      {
+        "name": "Google Associate Cloud Engineer",
+        "provider": "Google Cloud",
+        "description": "Associate-level Google Cloud certification",
+        "difficulty": "beginner",
+        "time_to_complete": "2-4 months",
+        "cost_range": "$125",
+        "prerequisites": ["6 months cloud experience"],
+        "career_relevance": 0.75,
+        "renewal_period": "2 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "Multiple choice and multiple select",
+          "format": "Remote or test center"
+        }
+      }
+    ],
+    "junior": [
+      {
+        "name": "AWS Certified Developer - Associate",
+        "provider": "Amazon Web Services",
+        "description": "Demonstrates ability to develop cloud applications on AWS",
+        "difficulty": "intermediate",
+        "time_to_complete": "3-6 months",
+        "cost_range": "$150",
+        "prerequisites": ["AWS Cloud Practitioner", "1 year development experience"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "DVA-C01",
+          "duration": "130 minutes",
+          "questions": "65 questions",
+          "passing_score": "720/1000"
+        }
+      },
+      {
+        "name": "Certified Kubernetes Application Developer (CKAD)",
+        "provider": "Cloud Native Computing Foundation",
+        "description": "Validates skills in designing and building applications for Kubernetes",
+        "difficulty": "intermediate",
+        "time_to_complete": "4-6 months",
+        "cost_range": "$375",
+        "prerequisites": ["Container experience", "Basic Kubernetes knowledge"],
+        "career_relevance": 0.85,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "15-20 performance-based tasks",
+          "format": "Hands-on lab"
+        }
+      },
+      {
+        "name": "Oracle Certified Professional, Java SE",
+        "provider": "Oracle",
+        "description": "Professional-level Java programming certification",
+        "difficulty": "intermediate",
+        "time_to_complete": "4-8 months",
+        "cost_range": "$245",
+        "prerequisites": ["Oracle Certified Associate Java SE"],
+        "career_relevance": 0.8,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "exam_code": "1Z0-816",
+          "duration": "90 minutes", 
+          "questions": "80 questions",
+          "passing_score": "63%"
+        }
+      },
+      {
+        "name": "Microsoft Certified: Azure Developer Associate",
+        "provider": "Microsoft",
+        "description": "Validates skills for developing solutions on Microsoft Azure",
+        "difficulty": "intermediate",
+        "time_to_complete": "3-5 months",
+        "cost_range": "$165",
+        "prerequisites": ["1-2 years development experience", "Azure fundamentals"],
+        "career_relevance": 0.85,
+        "renewal_period": "1 year",
+        "exam_info": {
+          "exam_code": "AZ-204",
+          "duration": "100-120 minutes",
+          "questions": "40-60 questions",
+          "format": "Multiple choice, drag and drop, build list"
+        }
+      }
+    ],
+    "mid_level": [
+      {
+        "name": "AWS Certified Solutions Architect - Professional",
+        "provider": "Amazon Web Services",
+        "description": "Advanced AWS architecture and design certification",
+        "difficulty": "advanced",
+        "time_to_complete": "6-12 months",
+        "cost_range": "$300",
+        "prerequisites": ["AWS Solutions Architect Associate", "2+ years AWS experience"],
+        "career_relevance": 0.95,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "SAP-C01",
+          "duration": "180 minutes",
+          "questions": "75 questions",
+          "passing_score": "750/1000"
+        }
+      },
+      {
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "provider": "Cloud Native Computing Foundation",
+        "description": "Validates skills in Kubernetes administration",
+        "difficulty": "advanced",
+        "time_to_complete": "6-9 months",
+        "cost_range": "$375",
+        "prerequisites": ["CKAD or equivalent experience"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "15-20 performance-based tasks",
+          "format": "Hands-on lab"
+        }
+      },
+      {
+        "name": "CISSP (Certified Information Systems Security Professional)",
+        "provider": "ISC2",
+        "description": "Advanced cybersecurity certification for architects and senior practitioners",
+        "difficulty": "advanced",
+        "time_to_complete": "6-12 months",
+        "cost_range": "$749",
+        "prerequisites": ["5 years security experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3 hours",
+          "questions": "100-150 questions",
+          "format": "Adaptive"
+        }
+      }
+    ],
+    "senior": [
+      {
+        "name": "TOGAF 9 Certified",
+        "provider": "The Open Group",
+        "description": "Enterprise architecture framework certification",
+        "difficulty": "expert",
+        "time_to_complete": "4-8 months",
+        "cost_range": "$680",
+        "prerequisites": ["Enterprise architecture experience"],
+        "career_relevance": 0.9,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "parts": "Foundation and Certified",
+          "duration": "90 minutes each",
+          "questions": "40 questions each",
+          "passing_score": "60%"
+        }
+      },
+      {
+        "name": "Certified Information Security Manager (CISM)",
+        "provider": "ISACA",
+        "description": "Management-level information security certification",
+        "difficulty": "expert",
+        "time_to_complete": "8-12 months",
+        "cost_range": "$760",
+        "prerequisites": ["5 years security experience", "3 years management"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "4 hours",
+          "questions": "150 questions",
+          "passing_score": "450/800"
+        }
+      }
+    ]
+  },
+  "data_scientists": {
+    "entry": [
+      {
+        "name": "Microsoft Certified: Azure Data Fundamentals",
+        "provider": "Microsoft",
+        "description": "Foundational knowledge of core data concepts on Azure",
+        "difficulty": "beginner",
+        "time_to_complete": "1-2 months",
+        "cost_range": "$99",
+        "prerequisites": [],
+        "career_relevance": 0.7,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "exam_code": "DP-900",
+          "duration": "45 minutes",
+          "questions": "40-60 questions"
+        }
+      },
+      {
+        "name": "Google Data Analytics Professional Certificate",
+        "provider": "Google (via Coursera)",
+        "description": "Entry-level data analytics skills and tools",
+        "difficulty": "beginner",
+        "time_to_complete": "3-6 months",
+        "cost_range": "$39-49/month",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "format": "Project-based assessment",
+          "capstone": "Case study project"
+        }
+      },
+      {
+        "name": "SAS Certified Specialist: Base Programming",
+        "provider": "SAS",
+        "description": "Foundation SAS programming certification",
+        "difficulty": "beginner",
+        "time_to_complete": "3-4 months",
+        "cost_range": "$180",
+        "prerequisites": [],
+        "career_relevance": 0.7,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "exam_code": "A00-231",
+          "duration": "110 minutes",
+          "questions": "60-70 questions"
+        }
+      }
+    ],
+    "junior": [
+      {
+        "name": "AWS Certified Machine Learning - Specialty",
+        "provider": "Amazon Web Services",
+        "description": "Specialty certification in machine learning on AWS",
+        "difficulty": "intermediate",
+        "time_to_complete": "4-8 months",
+        "cost_range": "$300",
+        "prerequisites": ["1-2 years ML experience", "AWS experience"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "MLS-C01",
+          "duration": "180 minutes",
+          "questions": "65 questions",
+          "passing_score": "750/1000"
+        }
+      },
+      {
+        "name": "Google Professional Data Engineer",
+        "provider": "Google Cloud",
+        "description": "Professional-level data engineering on Google Cloud",
+        "difficulty": "intermediate",
+        "time_to_complete": "6-9 months",
+        "cost_range": "$200",
+        "prerequisites": ["3+ years industry experience", "1+ year GCP"],
+        "career_relevance": 0.9,
+        "renewal_period": "2 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "Multiple choice and multiple select",
+          "format": "Scenario-based"
+        }
+      },
+      {
+        "name": "Microsoft Certified: Azure Data Scientist Associate",
+        "provider": "Microsoft",
+        "description": "Data science and machine learning on Azure",
+        "difficulty": "intermediate", 
+        "time_to_complete": "4-6 months",
+        "cost_range": "$165",
+        "prerequisites": ["Data science experience", "Azure fundamentals"],
+        "career_relevance": 0.85,
+        "renewal_period": "1 year",
+        "exam_info": {
+          "exam_code": "DP-100",
+          "duration": "100-120 minutes",
+          "questions": "40-60 questions"
+        }
+      },
+      {
+        "name": "Tableau Certified Data Analyst",
+        "provider": "Tableau",
+        "description": "Data analysis and visualization with Tableau",
+        "difficulty": "intermediate",
+        "time_to_complete": "3-5 months",
+        "cost_range": "$250",
+        "prerequisites": ["3+ months Tableau experience"],
+        "career_relevance": 0.8,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "36-45 questions",
+          "format": "Hands-on and knowledge-based"
+        }
+      }
+    ],
+    "mid_level": [
+      {
+        "name": "Google Professional Machine Learning Engineer",
+        "provider": "Google Cloud",
+        "description": "Advanced ML engineering on Google Cloud Platform",
+        "difficulty": "advanced",
+        "time_to_complete": "6-12 months",
+        "cost_range": "$200",
+        "prerequisites": ["3+ years ML experience", "1+ year GCP ML"],
+        "career_relevance": 0.95,
+        "renewal_period": "2 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "Multiple choice and multiple select",
+          "format": "Scenario-based ML problems"
+        }
+      },
+      {
+        "name": "Databricks Certified Professional Data Scientist",
+        "provider": "Databricks",
+        "description": "Advanced data science on the Databricks platform",
+        "difficulty": "advanced",
+        "time_to_complete": "4-8 months",
+        "cost_range": "$200",
+        "prerequisites": ["Databricks Associate certification", "2+ years experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "2 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "45 questions",
+          "format": "Multiple choice"
+        }
+      },
+      {
+        "name": "SAS Certified Advanced Programmer",
+        "provider": "SAS",
+        "description": "Advanced SAS programming and data manipulation",
+        "difficulty": "advanced",
+        "time_to_complete": "6-9 months",
+        "cost_range": "$180",
+        "prerequisites": ["SAS Base Programming certification"],
+        "career_relevance": 0.75,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "exam_code": "A00-232",
+          "duration": "115 minutes",
+          "questions": "60-70 questions"
+        }
+      }
+    ],
+    "senior": [
+      {
+        "name": "AWS Certified Data Analytics - Specialty",
+        "provider": "Amazon Web Services",
+        "description": "Expert-level big data analytics on AWS",
+        "difficulty": "expert",
+        "time_to_complete": "8-12 months",
+        "cost_range": "$300",
+        "prerequisites": ["5+ years analytics experience", "AWS expertise"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "DAS-C01",
+          "duration": "180 minutes",
+          "questions": "65 questions",
+          "passing_score": "750/1000"
+        }
+      }
+    ]
+  },
+  "business_analysts": {
+    "entry": [
+      {
+        "name": "IIBA Entry Certificate in Business Analysis (ECBA)",
+        "provider": "International Institute of Business Analysis",
+        "description": "Entry-level business analysis certification",
+        "difficulty": "beginner",
+        "time_to_complete": "3-4 months",
+        "cost_range": "$325",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3.5 hours",
+          "questions": "130 questions",
+          "passing_score": "70%"
+        }
+      },
+      {
+        "name": "Microsoft Office Specialist: Excel Expert",
+        "provider": "Microsoft",
+        "description": "Advanced Excel skills for business analysis",
+        "difficulty": "beginner",
+        "time_to_complete": "1-2 months",
+        "cost_range": "$100",
+        "prerequisites": [],
+        "career_relevance": 0.75,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "exam_code": "MO-201",
+          "duration": "50 minutes",
+          "questions": "35-40 tasks",
+          "format": "Performance-based"
+        }
+      },
+      {
+        "name": "Google Data Analytics Professional Certificate",
+        "provider": "Google (via Coursera)",
+        "description": "Data analysis skills for business insights",
+        "difficulty": "beginner",
+        "time_to_complete": "3-6 months",
+        "cost_range": "$39-49/month",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "Does not expire",
+        "exam_info": {
+          "format": "Project-based capstone"
+        }
+      }
+    ],
+    "junior": [
+      {
+        "name": "IIBA Certification of Capability in Business Analysis (CCBA)",
+        "provider": "International Institute of Business Analysis",
+        "description": "Mid-level business analysis certification",
+        "difficulty": "intermediate",
+        "time_to_complete": "6-9 months",
+        "cost_range": "$325",
+        "prerequisites": ["3,750 hours BA experience", "900 hours development"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3.5 hours",
+          "questions": "130 questions",
+          "passing_score": "70%"
+        }
+      },
+      {
+        "name": "PMI Professional in Business Analysis (PMI-PBA)",
+        "provider": "Project Management Institute",
+        "description": "Business analysis in project environments",
+        "difficulty": "intermediate",
+        "time_to_complete": "4-8 months",
+        "cost_range": "$405 (members), $555 (non-members)",
+        "prerequisites": ["Secondary education", "4,500 hours BA experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "4 hours",
+          "questions": "200 questions",
+          "format": "Multiple choice"
+        }
+      },
+      {
+        "name": "Tableau Certified Data Analyst",
+        "provider": "Tableau",
+        "description": "Data visualization and analysis with Tableau",
+        "difficulty": "intermediate",
+        "time_to_complete": "3-5 months",
+        "cost_range": "$250",
+        "prerequisites": ["3+ months Tableau experience"],
+        "career_relevance": 0.8,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "2 hours",
+          "questions": "36-45 questions",
+          "format": "Hands-on and multiple choice"
+        }
+      },
+      {
+        "name": "Certified ScrumMaster (CSM)",
+        "provider": "Scrum Alliance",
+        "description": "Scrum framework for agile business analysis",
+        "difficulty": "intermediate",
+        "time_to_complete": "1-2 months",
+        "cost_range": "$995-1,495",
+        "prerequisites": ["2-day CSM course attendance"],
+        "career_relevance": 0.75,
+        "renewal_period": "2 years",
+        "exam_info": {
+          "duration": "1 hour",
+          "questions": "50 questions",
+          "passing_score": "74%"
+        }
+      }
+    ],
+    "mid_level": [
+      {
+        "name": "IIBA Certified Business Analysis Professional (CBAP)",
+        "provider": "International Institute of Business Analysis",
+        "description": "Senior-level business analysis certification",
+        "difficulty": "advanced",
+        "time_to_complete": "6-12 months",
+        "cost_range": "$325",
+        "prerequisites": ["7,500 hours BA experience", "900 hours development"],
+        "career_relevance": 0.95,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3.5 hours",
+          "questions": "120 questions",
+          "passing_score": "70%"
+        }
+      },
+      {
+        "name": "Project Management Professional (PMP)",
+        "provider": "Project Management Institute",
+        "description": "Advanced project management for business analysts",
+        "difficulty": "advanced",
+        "time_to_complete": "6-10 months",
+        "cost_range": "$405 (members), $555 (non-members)",
+        "prerequisites": ["Bachelor's + 4,500 hours PM experience"],
+        "career_relevance": 0.8,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "4 hours",
+          "questions": "180 questions",
+          "format": "Multiple choice and scenarios"
+        }
+      }
+    ]
+  },
+  "marketing_managers": {
+    "entry": [
+      {
+        "name": "Google Ads Certification",
+        "provider": "Google",
+        "description": "Google Ads platform proficiency",
+        "difficulty": "beginner",
+        "time_to_complete": "1-2 months",
+        "cost_range": "Free",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "1 year",
+        "exam_info": {
+          "duration": "75 minutes",
+          "questions": "50 questions",
+          "passing_score": "80%"
+        }
+      },
+      {
+        "name": "Facebook Blueprint Certification",
+        "provider": "Facebook",
+        "description": "Facebook and Instagram advertising certification",
+        "difficulty": "beginner",
+        "time_to_complete": "1-2 months",
+        "cost_range": "$150 per exam",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "1 year",
+        "exam_info": {
+          "duration": "90 minutes",
+          "questions": "60 questions",
+          "passing_score": "700/1000"
+        }
+      },
+      {
+        "name": "HubSpot Content Marketing Certification",
+        "provider": "HubSpot",
+        "description": "Content marketing strategy and execution",
+        "difficulty": "beginner",
+        "time_to_complete": "1 month",
+        "cost_range": "Free",
+        "prerequisites": [],
+        "career_relevance": 0.7,
+        "renewal_period": "2 years",
+        "exam_info": {
+          "duration": "75 minutes",
+          "questions": "60 questions",
+          "passing_score": "75%"
+        }
+      }
+    ],
+    "junior": [
+      {
+        "name": "Google Analytics Individual Qualification (IQ)",
+        "provider": "Google",
+        "description": "Advanced Google Analytics proficiency",
+        "difficulty": "intermediate",
+        "time_to_complete": "2-3 months",
+        "cost_range": "Free",
+        "prerequisites": ["Basic Analytics experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "1 year",
+        "exam_info": {
+          "duration": "90 minutes",
+          "questions": "70 questions",
+          "passing_score": "80%"
+        }
+      },
+      {
+        "name": "HubSpot Inbound Marketing Certification",
+        "provider": "HubSpot",
+        "description": "Comprehensive inbound marketing methodology",
+        "difficulty": "intermediate",
+        "time_to_complete": "2-3 months",
+        "cost_range": "Free",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "2 years",
+        "exam_info": {
+          "duration": "105 minutes",
+          "questions": "60 questions",
+          "passing_score": "75%"
+        }
+      },
+      {
+        "name": "American Marketing Association PCM",
+        "provider": "American Marketing Association",
+        "description": "Professional Certified Marketer certification",
+        "difficulty": "intermediate",
+        "time_to_complete": "4-6 months",
+        "cost_range": "$399-599",
+        "prerequisites": ["Marketing experience recommended"],
+        "career_relevance": 0.85,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3 hours",
+          "questions": "150 questions",
+          "format": "Multiple choice"
+        }
+      }
+    ],
+    "mid_level": [
+      {
+        "name": "Google Analytics 4 Certification",
+        "provider": "Google",
+        "description": "Advanced GA4 implementation and analysis",
+        "difficulty": "intermediate",
+        "time_to_complete": "3-4 months",
+        "cost_range": "Free",
+        "prerequisites": ["Universal Analytics experience"],
+        "career_relevance": 0.9,
+        "renewal_period": "1 year",
+        "exam_info": {
+          "duration": "75 minutes",
+          "questions": "50-60 questions",
+          "passing_score": "80%"
+        }
+      },
+      {
+        "name": "Salesforce Marketing Cloud Email Specialist",
+        "provider": "Salesforce",
+        "description": "Advanced email marketing and automation",
+        "difficulty": "advanced",
+        "time_to_complete": "4-6 months",
+        "cost_range": "$200",
+        "prerequisites": ["6 months Marketing Cloud experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "1 year",
+        "exam_info": {
+          "duration": "90 minutes",
+          "questions": "60 questions",
+          "passing_score": "65%"
+        }
+      }
+    ]
+  },
+  "cybersecurity_specialists": {
+    "entry": [
+      {
+        "name": "CompTIA Security+",
+        "provider": "CompTIA",
+        "description": "Foundation-level cybersecurity certification",
+        "difficulty": "beginner",
+        "time_to_complete": "3-4 months",
+        "cost_range": "$370",
+        "prerequisites": [],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "SY0-601",
+          "duration": "90 minutes",
+          "questions": "90 questions maximum",
+          "passing_score": "750/900"
+        }
+      },
+      {
+        "name": "CompTIA Network+",
+        "provider": "CompTIA",
+        "description": "Networking fundamentals for security",
+        "difficulty": "beginner",
+        "time_to_complete": "3-4 months",
+        "cost_range": "$370",
+        "prerequisites": [],
+        "career_relevance": 0.8,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "N10-008",
+          "duration": "90 minutes",
+          "questions": "90 questions maximum",
+          "passing_score": "720/900"
+        }
+      },
+      {
+        "name": "(ISC)² Systems Security Certified Practitioner (SSCP)",
+        "provider": "ISC2",
+        "description": "Hands-on security skills certification",
+        "difficulty": "beginner",
+        "time_to_complete": "4-6 months",
+        "cost_range": "$249",
+        "prerequisites": ["1 year security experience"],
+        "career_relevance": 0.8,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3 hours",
+          "questions": "125 questions",
+          "format": "Multiple choice"
+        }
+      }
+    ],
+    "junior": [
+      {
+        "name": "Certified Ethical Hacker (CEH)",
+        "provider": "EC-Council",
+        "description": "Ethical hacking and penetration testing",
+        "difficulty": "intermediate",
+        "time_to_complete": "4-6 months",
+        "cost_range": "$1,199",
+        "prerequisites": ["2 years security experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "312-50",
+          "duration": "4 hours",
+          "questions": "125 questions",
+          "passing_score": "70%"
+        }
+      },
+      {
+        "name": "CompTIA CySA+",
+        "provider": "CompTIA",
+        "description": "Cybersecurity analyst skills",
+        "difficulty": "intermediate",
+        "time_to_complete": "4-6 months",
+        "cost_range": "$370",
+        "prerequisites": ["Network+ and Security+ recommended"],
+        "career_relevance": 0.85,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "exam_code": "CS0-002",
+          "duration": "165 minutes",
+          "questions": "85 questions maximum",
+          "passing_score": "750/900"
+        }
+      },
+      {
+        "name": "GIAC Security Essentials (GSEC)",
+        "provider": "SANS/GIAC",
+        "description": "Comprehensive security knowledge",
+        "difficulty": "intermediate",
+        "time_to_complete": "6-9 months",
+        "cost_range": "$2,000-7,000",
+        "prerequisites": ["Basic security knowledge"],
+        "career_relevance": 0.9,
+        "renewal_period": "4 years",
+        "exam_info": {
+          "duration": "5 hours",
+          "questions": "180 questions",
+          "format": "Multiple choice and hands-on"
+        }
+      }
+    ],
+    "mid_level": [
+      {
+        "name": "Certified Information Systems Security Professional (CISSP)",
+        "provider": "ISC2",
+        "description": "Advanced cybersecurity management",
+        "difficulty": "advanced",
+        "time_to_complete": "6-12 months",
+        "cost_range": "$749",
+        "prerequisites": ["5 years security experience"],
+        "career_relevance": 0.95,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3 hours",
+          "questions": "100-150 questions",
+          "format": "Adaptive"
+        }
+      },
+      {
+        "name": "Certified Information Security Manager (CISM)",
+        "provider": "ISACA",
+        "description": "Information security management",
+        "difficulty": "advanced",
+        "time_to_complete": "8-12 months",
+        "cost_range": "$760",
+        "prerequisites": ["5 years security experience"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "4 hours",
+          "questions": "150 questions",
+          "passing_score": "450/800"
+        }
+      },
+      {
+        "name": "GIAC Certified Incident Handler (GCIH)",
+        "provider": "SANS/GIAC",
+        "description": "Incident response and digital forensics",
+        "difficulty": "advanced",
+        "time_to_complete": "6-10 months",
+        "cost_range": "$2,000-7,000",
+        "prerequisites": ["GSEC or equivalent experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "4 years",
+        "exam_info": {
+          "duration": "4 hours",
+          "questions": "115 questions",
+          "format": "Multiple choice"
+        }
+      }
+    ],
+    "senior": [
+      {
+        "name": "Certified Information Systems Auditor (CISA)",
+        "provider": "ISACA",
+        "description": "IS audit, control and assurance",
+        "difficulty": "expert",
+        "time_to_complete": "8-12 months",
+        "cost_range": "$760",
+        "prerequisites": ["5 years audit/security experience"],
+        "career_relevance": 0.85,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "4 hours",
+          "questions": "150 questions",
+          "passing_score": "450/800"
+        }
+      },
+      {
+        "name": "Certified Cloud Security Professional (CCSP)",
+        "provider": "ISC2",
+        "description": "Advanced cloud security expertise",
+        "difficulty": "expert",
+        "time_to_complete": "8-15 months",
+        "cost_range": "$749",
+        "prerequisites": ["5 years IT experience", "3 years security"],
+        "career_relevance": 0.9,
+        "renewal_period": "3 years",
+        "exam_info": {
+          "duration": "3 hours",
+          "questions": "125 questions",
+          "format": "Multiple choice"
+        }
+      }
+    ]
+  }
+}

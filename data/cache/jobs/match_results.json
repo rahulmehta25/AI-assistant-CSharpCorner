@@ -1,0 +1,303 @@
+{
+  "user_profile": {
+    "user_id": "test_user_software_engineer",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "SQL",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "REST API",
+      "GraphQL",
+      "Machine Learning",
+      "TensorFlow",
+      "Pandas",
+      "NumPy",
+      "Django",
+      "Flask"
+    ],
+    "experience_level": "mid",
+    "experience_years": 5,
+    "preferred_locations": [
+      "San Francisco",
+      "New York",
+      "Remote",
+      "Seattle",
+      "Austin"
+    ],
+    "salary_expectations": {
+      "min": 120000,
+      "max": 180000,
+      "period": "year"
+    },
+    "job_titles": [
+      "Software Engineer",
+      "Full Stack Developer",
+      "Backend Developer",
+      "Python Developer",
+      "Senior Software Engineer",
+      "Software Developer"
+    ],
+    "industries": [
+      "Technology",
+      "Finance",
+      "Healthcare",
+      "E-commerce",
+      "Startups"
+    ],
+    "work_preferences": {
+      "remote": true,
+      "hybrid": true,
+      "onsite": true
+    },
+    "education_level": "Bachelor's Degree in Computer Science",
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ],
+    "languages": [
+      "English",
+      "Python",
+      "JavaScript"
+    ],
+    "career_goals": [
+      "Tech Lead",
+      "Senior Engineer",
+      "Full Stack Expert",
+      "Machine Learning Engineer",
+      "Cloud Architect"
+    ]
+  },
+  "match_report": {
+    "summary": "Analyzed 5 jobs and found 0 excellent matches",
+    "total_jobs": 5,
+    "match_distribution": {
+      "excellent": 0,
+      "good": 2,
+      "potential": 3,
+      "poor": 0
+    },
+    "top_companies": {
+      "StartupXYZ": 1,
+      "TechCorp Inc": 1,
+      "Enterprise Corp": 1,
+      "Cloud First Inc": 1,
+      "AI Solutions Ltd": 1
+    },
+    "top_locations": {
+      "Remote": 1,
+      "San Francisco, CA": 1,
+      "Austin, TX": 1,
+      "Seattle, WA": 1,
+      "New York, NY": 1
+    },
+    "skill_gaps": [
+      "full stack",
+      "microservices",
+      "frontend",
+      "java",
+      "backend",
+      "devops"
+    ],
+    "recommendations": [
+      "Found 2 good job matches (60-80% compatibility)",
+      "Found 3 potential matches (40-60% compatibility)",
+      "Consider developing these in-demand skills: full stack, microservices, frontend, java, backend"
+    ],
+    "user_profile_summary": {
+      "skills_count": 18,
+      "experience_years": 5,
+      "preferred_locations": [
+        "San Francisco",
+        "New York",
+        "Remote",
+        "Seattle",
+        "Austin"
+      ],
+      "salary_range": {
+        "min": 120000,
+        "max": 180000,
+        "period": "year"
+      }
+    }
+  },
+  "ranked_jobs": [
+    {
+      "title": "Full Stack JavaScript Developer",
+      "company": "StartupXYZ",
+      "location": "Remote",
+      "description": "Remote full stack developer position. Need experience with React, Node.js, Express, MongoDB, and modern frontend tools. 3-5 years experience required.",
+      "salary_info": {
+        "min_salary": 110000,
+        "max_salary": 140000,
+        "period": "year"
+      },
+      "source": "sample",
+      "scraped_at": "2024-01-01T12:00:00",
+      "match_score": {
+        "overall_score": 0.7628871548619448,
+        "skill_score": 0.0653061224489796,
+        "experience_score": 1.0,
+        "location_score": 1.0,
+        "salary_score": 0.8333333333333333,
+        "title_score": 0.7843137254901961,
+        "industry_score": 0.5,
+        "work_preference_score": 1.0,
+        "match_reasons": [
+          "Close experience match (user: 5, job: 4 years)",
+          "Experience level match: mid",
+          "Location match: Remote → Remote",
+          "Location match: Remote → Remote",
+          "Location match: Remote → Remote",
+          "Location match: Remote → Remote",
+          "Location match: Remote → Remote",
+          "Remote work preference match",
+          "Salary overlap: $110,000-$140,000 vs expected $120,000-$180,000",
+          "Title match: Full Stack Developer → Full Stack JavaScript Developer"
+        ],
+        "concerns": [
+          "Limited skill match with job requirements"
+        ]
+      }
+    },
+    {
+      "title": "Senior Python Developer",
+      "company": "TechCorp Inc",
+      "location": "San Francisco, CA",
+      "description": "We are looking for a senior Python developer with 5+ years of experience in Django, Flask, REST APIs, PostgreSQL, and AWS cloud services. Experience with machine learning and data science is a plus.",
+      "salary_info": {
+        "min_salary": 140000,
+        "max_salary": 170000,
+        "period": "year"
+      },
+      "source": "sample",
+      "scraped_at": "2024-01-01T12:00:00",
+      "match_score": {
+        "overall_score": 0.6574254317111461,
+        "skill_score": 0.15510204081632653,
+        "experience_score": 0.6,
+        "location_score": 0.8666666666666667,
+        "salary_score": 1.0,
+        "title_score": 0.8205128205128205,
+        "industry_score": 0.5,
+        "work_preference_score": 0.7,
+        "match_reasons": [
+          "Moderate experience match (user: 5, job: 8 years)",
+          "Location match: San Francisco → San Francisco, CA",
+          "Salary overlap: $140,000-$170,000 vs expected $120,000-$180,000",
+          "Job salary meets minimum expectations",
+          "Title match: Python Developer → Senior Python Developer"
+        ],
+        "concerns": [
+          "Limited skill match with job requirements"
+        ]
+      }
+    },
+    {
+      "title": "Backend Developer",
+      "company": "Enterprise Corp",
+      "location": "Austin, TX",
+      "description": "Backend developer for enterprise applications. Java, Spring Boot, microservices, Docker, Kubernetes. 4+ years experience.",
+      "salary_info": {
+        "min_salary": 115000,
+        "max_salary": 145000,
+        "period": "year"
+      },
+      "source": "sample",
+      "scraped_at": "2024-01-01T12:00:00",
+      "match_score": {
+        "overall_score": 0.5696258503401361,
+        "skill_score": 0.044897959183673466,
+        "experience_score": 1.0,
+        "location_score": 0.0,
+        "salary_score": 0.9166666666666667,
+        "title_score": 1.0,
+        "industry_score": 0.5,
+        "work_preference_score": 0.7,
+        "match_reasons": [
+          "Close experience match (user: 5, job: 4 years)",
+          "Experience level match: mid",
+          "Salary overlap: $115,000-$145,000 vs expected $120,000-$180,000",
+          "Title match: Full Stack Developer → Backend Developer",
+          "Title match: Backend Developer → Backend Developer"
+        ],
+        "concerns": [
+          "Limited skill match with job requirements",
+          "Location not preferred"
+        ]
+      }
+    },
+    {
+      "title": "DevOps Engineer",
+      "company": "Cloud First Inc",
+      "location": "Seattle, WA",
+      "description": "DevOps engineer with AWS, Terraform, Jenkins, Docker, Kubernetes experience. Focus on CI/CD and infrastructure automation.",
+      "salary_info": {
+        "min_salary": 130000,
+        "max_salary": 160000,
+        "period": "year"
+      },
+      "source": "sample",
+      "scraped_at": "2024-01-01T12:00:00",
+      "match_score": {
+        "overall_score": 0.5584183673469388,
+        "skill_score": 0.08979591836734693,
+        "experience_score": 1.0,
+        "location_score": 0.0,
+        "salary_score": 1.0,
+        "title_score": 0.625,
+        "industry_score": 0.5,
+        "work_preference_score": 0.7,
+        "match_reasons": [
+          "Close experience match (user: 5, job: 4 years)",
+          "Experience level match: mid",
+          "Salary overlap: $130,000-$160,000 vs expected $120,000-$180,000",
+          "Job salary meets minimum expectations"
+        ],
+        "concerns": [
+          "Limited skill match with job requirements",
+          "Location not preferred"
+        ]
+      }
+    },
+    {
+      "title": "Machine Learning Engineer",
+      "company": "AI Solutions Ltd",
+      "location": "New York, NY",
+      "description": "ML Engineer role focusing on deep learning and NLP. Python, TensorFlow, PyTorch, AWS/GCP experience required. PhD preferred but not required.",
+      "salary_info": {
+        "min_salary": 160000,
+        "max_salary": 200000,
+        "period": "year"
+      },
+      "source": "sample",
+      "scraped_at": "2024-01-01T12:00:00",
+      "match_score": {
+        "overall_score": 0.5316326530612245,
+        "skill_score": 0.08979591836734693,
+        "experience_score": 1.0,
+        "location_score": 0.0,
+        "salary_score": 0.8333333333333333,
+        "title_score": 0.5238095238095238,
+        "industry_score": 0.5,
+        "work_preference_score": 0.7,
+        "match_reasons": [
+          "Close experience match (user: 5, job: 4 years)",
+          "Experience level match: mid",
+          "Salary overlap: $160,000-$200,000 vs expected $120,000-$180,000",
+          "Job salary meets minimum expectations"
+        ],
+        "concerns": [
+          "Limited skill match with job requirements",
+          "Location not preferred"
+        ]
+      }
+    }
+  ],
+  "generated_at": "2024-01-01T12:00:00"
+}

@@ -1,0 +1,353 @@
+{
+  "student": {
+    "id": "STU001",
+    "name": "Alex Chen",
+    "major": "Computer Science",
+    "gpa": 3.7
+  },
+  "recommendations": [
+    {
+      "career_id": "software_developers",
+      "title": "Software Developers",
+      "match_score": 0.531,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, conscientiousness traits are ideal for success in this role",
+        "Academic excellence: Your 3.7 GPA and undergraduate education exceed requirements",
+        "High growth field: This career has 10-15% growth rate, offering excellent future opportunities"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Programming Basics",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Programming Basics",
+            "Book: Mastering Programming Basics",
+            "Tutorial: Programming Basics for beginners",
+            "Practice projects in Programming Basics"
+          ]
+        },
+        {
+          "skill": "Version Control",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Version Control",
+            "Book: Mastering Version Control",
+            "Tutorial: Version Control for beginners",
+            "Practice projects in Version Control"
+          ]
+        },
+        {
+          "skill": "Documentation",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Documentation",
+            "Book: Mastering Documentation",
+            "Tutorial: Documentation for beginners",
+            "Practice projects in Documentation"
+          ]
+        },
+        {
+          "skill": "Testing",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Testing",
+            "Book: Mastering Testing",
+            "Tutorial: Testing for beginners",
+            "Practice projects in Testing"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Programming Basics through online courses and practice",
+        "  2. Master Version Control through online courses and practice",
+        "  3. Master Documentation through online courses and practice",
+        "Phase 2: Professional Certifications (6-12 months)",
+        "  - Obtain CompTIA A+ certification",
+        "  - Obtain AWS Cloud Practitioner certification",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete software developers fundamentals course",
+        "  - Build portfolio with 3-5 sample projects",
+        "  - Contribute to team projects",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Software Developers",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Software Developers",
+        "  - Customize resume for technology industry"
+      ],
+      "growth_potential": "10-15%",
+      "salary_range": "$57,000 - $76,000",
+      "job_outlook": "Good - Above average growth"
+    },
+    {
+      "career_id": "onet_scrape_summary",
+      "title": "Onet Scrape Summary",
+      "match_score": 0.496,
+      "confidence": 0.9,
+      "reasons": [
+        "Personality fit: Your openness, conscientiousness traits are ideal for success in this role",
+        "Academic excellence: Your 3.7 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [],
+      "learning_path": [
+        "Phase 4: Experience Building",
+        "  - Seek internships in this field",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to this role",
+        "  - Customize resume for this industry"
+      ],
+      "growth_potential": "Moderate",
+      "salary_range": "Competitive",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "computer_systems_analysts",
+      "title": "Computer Systems Analysts",
+      "match_score": 0.481,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, conscientiousness traits are ideal for success in this role",
+        "Academic excellence: Your 3.7 GPA and undergraduate education exceed requirements",
+        "High growth field: This career has 10-15% growth rate, offering excellent future opportunities"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Programming Basics",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Programming Basics",
+            "Book: Mastering Programming Basics",
+            "Tutorial: Programming Basics for beginners",
+            "Practice projects in Programming Basics"
+          ]
+        },
+        {
+          "skill": "Version Control",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Version Control",
+            "Book: Mastering Version Control",
+            "Tutorial: Version Control for beginners",
+            "Practice projects in Version Control"
+          ]
+        },
+        {
+          "skill": "Documentation",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Documentation",
+            "Book: Mastering Documentation",
+            "Tutorial: Documentation for beginners",
+            "Practice projects in Documentation"
+          ]
+        },
+        {
+          "skill": "Testing",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Testing",
+            "Book: Mastering Testing",
+            "Tutorial: Testing for beginners",
+            "Practice projects in Testing"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Programming Basics through online courses and practice",
+        "  2. Master Version Control through online courses and practice",
+        "  3. Master Documentation through online courses and practice",
+        "Phase 2: Professional Certifications (6-12 months)",
+        "  - Obtain CompTIA A+ certification",
+        "  - Obtain AWS Cloud Practitioner certification",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete computer systems analysts fundamentals course",
+        "  - Build portfolio with 3-5 sample projects",
+        "  - Contribute to team projects",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Computer Systems Analysts",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Computer Systems Analysts",
+        "  - Customize resume for technology industry"
+      ],
+      "growth_potential": "10-15%",
+      "salary_range": "$57,000 - $76,000",
+      "job_outlook": "Good - Above average growth"
+    },
+    {
+      "career_id": "acute_care_nurses",
+      "title": "Acute Care Nurses",
+      "match_score": 0.436,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, conscientiousness traits are ideal for success in this role",
+        "Academic excellence: Your 3.7 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Time Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Time Management",
+            "Book: Mastering Time Management",
+            "Tutorial: Time Management for beginners",
+            "Practice projects in Time Management"
+          ]
+        },
+        {
+          "skill": "Teamwork",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Teamwork",
+            "Book: Mastering Teamwork",
+            "Tutorial: Teamwork for beginners",
+            "Practice projects in Teamwork"
+          ]
+        },
+        {
+          "skill": "Attention to Detail",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Attention to Detail",
+            "Book: Mastering Attention to Detail",
+            "Tutorial: Attention to Detail for beginners",
+            "Practice projects in Attention to Detail"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Time Management through online courses and practice",
+        "  2. Master Teamwork through online courses and practice",
+        "  3. Master Attention to Detail through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational acute care nurses training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Acute Care Nurses",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Acute Care Nurses",
+        "  - Customize resume for healthcare industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$31 - $37",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "instructional_designers",
+      "title": "Instructional Designers",
+      "match_score": 0.372,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, conscientiousness traits are ideal for success in this role",
+        "Academic excellence: Your 3.7 GPA and undergraduate education exceed requirements",
+        "High growth field: This career has 10-15% growth rate, offering excellent future opportunities"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Lesson Planning",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Lesson Planning",
+            "Book: Mastering Lesson Planning",
+            "Tutorial: Lesson Planning for beginners",
+            "Practice projects in Lesson Planning"
+          ]
+        },
+        {
+          "skill": "Classroom Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Classroom Management",
+            "Book: Mastering Classroom Management",
+            "Tutorial: Classroom Management for beginners",
+            "Practice projects in Classroom Management"
+          ]
+        },
+        {
+          "skill": "Assessment",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Assessment",
+            "Book: Mastering Assessment",
+            "Tutorial: Assessment for beginners",
+            "Practice projects in Assessment"
+          ]
+        },
+        {
+          "skill": "Technology",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Technology",
+            "Book: Mastering Technology",
+            "Tutorial: Technology for beginners",
+            "Practice projects in Technology"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Lesson Planning through online courses and practice",
+        "  2. Master Classroom Management through online courses and practice",
+        "  3. Master Assessment through online courses and practice",
+        "Phase 2: Professional Certifications (6-12 months)",
+        "  - Obtain Teaching License certification",
+        "  - Obtain First Aid certification",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete instructional designers fundamentals course",
+        "  - Build portfolio with 3-5 sample projects",
+        "  - Contribute to team projects",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Instructional Designers",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Instructional Designers",
+        "  - Customize resume for education industry"
+      ],
+      "growth_potential": "10-15%",
+      "salary_range": "$33,000 - $44,000",
+      "job_outlook": "Good - Above average growth"
+    }
+  ],
+  "assessment": {
+    "holland_code": "IAC",
+    "top_skills": [
+      [
+        "Problem Solving",
+        5
+      ],
+      [
+        "Python",
+        4
+      ],
+      [
+        "Data Analysis",
+        4
+      ],
+      [
+        "Mathematics",
+        4
+      ],
+      [
+        "Machine Learning",
+        3
+      ]
+    ]
+  }
+}

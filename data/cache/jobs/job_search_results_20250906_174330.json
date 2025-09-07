@@ -1,0 +1,19 @@
+{
+  "error": "No jobs found",
+  "search_metadata": {
+    "queries": [
+      {
+        "query": "python developer",
+        "location": "remote"
+      },
+      {
+        "query": "react developer san",
+        "location": "francisco"
+      }
+    ],
+    "sources": [
+      "indeed"
+    ],
+    "search_time": "2025-09-06T17:43:30.907607"
+  }
+}

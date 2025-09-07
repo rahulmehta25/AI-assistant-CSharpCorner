@@ -1,0 +1,643 @@
+{
+  "software_developers": {
+    "portfolio": [
+      {
+        "name": "Personal Portfolio Website",
+        "description": "Build a responsive portfolio website showcasing your skills and projects",
+        "difficulty": "beginner",
+        "duration": "2-3 weeks",
+        "skills": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+        "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git"],
+        "deliverables": [
+          "Live website hosted on GitHub Pages",
+          "Responsive design across devices",
+          "Contact form integration",
+          "Project showcase section"
+        ],
+        "career_impact": 0.8,
+        "portfolio_value": 0.9
+      },
+      {
+        "name": "Task Management Application",
+        "description": "Full-stack web application for managing tasks and projects",
+        "difficulty": "intermediate",
+        "duration": "4-6 weeks",
+        "skills": ["Frontend Development", "Backend Development", "Database Design", "API Development"],
+        "technologies": ["React", "Node.js", "MongoDB", "Express.js", "JWT Authentication"],
+        "deliverables": [
+          "User authentication system",
+          "CRUD operations for tasks",
+          "Responsive web interface",
+          "REST API documentation"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.95
+      },
+      {
+        "name": "E-commerce Platform",
+        "description": "Complete e-commerce solution with shopping cart, payment integration, and admin panel",
+        "difficulty": "advanced",
+        "duration": "8-12 weeks",
+        "skills": ["Full-Stack Development", "Payment Integration", "Security", "Database Optimization"],
+        "technologies": ["React", "Node.js", "PostgreSQL", "Stripe API", "Docker", "AWS"],
+        "deliverables": [
+          "Customer-facing storefront",
+          "Admin management panel",
+          "Payment processing system",
+          "Order management system",
+          "Deployed production app"
+        ],
+        "career_impact": 0.95,
+        "portfolio_value": 0.98
+      },
+      {
+        "name": "Social Media Dashboard",
+        "description": "Analytics dashboard aggregating data from multiple social media platforms",
+        "difficulty": "intermediate",
+        "duration": "5-7 weeks",
+        "skills": ["API Integration", "Data Visualization", "Frontend Development"],
+        "technologies": ["Vue.js", "Python", "FastAPI", "Chart.js", "Social Media APIs"],
+        "deliverables": [
+          "Multi-platform data integration",
+          "Interactive dashboard interface",
+          "Real-time data updates",
+          "Export functionality"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.9
+      }
+    ],
+    "open_source": [
+      {
+        "name": "Contribute to Popular JavaScript Library",
+        "description": "Make meaningful contributions to established open source projects",
+        "difficulty": "intermediate",
+        "duration": "Ongoing",
+        "skills": ["Code Review", "Collaboration", "Documentation", "Testing"],
+        "technologies": ["JavaScript", "TypeScript", "Jest", "GitHub"],
+        "deliverables": [
+          "Bug fixes and patches",
+          "Feature implementations",
+          "Documentation improvements",
+          "Test coverage increases"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.85
+      },
+      {
+        "name": "Create Developer Tool Package",
+        "description": "Build and publish a useful developer tool or library",
+        "difficulty": "advanced",
+        "duration": "6-10 weeks",
+        "skills": ["Package Development", "API Design", "Documentation", "Testing"],
+        "technologies": ["Node.js", "TypeScript", "npm", "CI/CD"],
+        "deliverables": [
+          "Published npm package",
+          "Comprehensive documentation",
+          "Unit and integration tests",
+          "Usage examples and tutorials"
+        ],
+        "career_impact": 0.95,
+        "portfolio_value": 0.9
+      }
+    ],
+    "business": [
+      {
+        "name": "Startup MVP Development",
+        "description": "Build minimum viable product for a startup idea",
+        "difficulty": "advanced",
+        "duration": "10-16 weeks",
+        "skills": ["Product Development", "User Research", "Agile Development", "Business Analysis"],
+        "technologies": ["Modern Web Stack", "Analytics Tools", "Cloud Deployment"],
+        "deliverables": [
+          "Market research and validation",
+          "User-tested MVP",
+          "Analytics implementation",
+          "Go-to-market strategy"
+        ],
+        "career_impact": 0.98,
+        "portfolio_value": 0.95
+      },
+      {
+        "name": "SaaS Application Development",
+        "description": "Build and launch a Software-as-a-Service application",
+        "difficulty": "expert",
+        "duration": "16-24 weeks",
+        "skills": ["SaaS Architecture", "Subscription Management", "Multi-tenancy", "Scaling"],
+        "technologies": ["Cloud Platform", "Subscription APIs", "Monitoring Tools"],
+        "deliverables": [
+          "Multi-tenant SaaS platform",
+          "Subscription and billing system",
+          "Customer onboarding flow",
+          "Analytics and monitoring"
+        ],
+        "career_impact": 1.0,
+        "portfolio_value": 0.98
+      }
+    ]
+  },
+  "data_scientists": {
+    "portfolio": [
+      {
+        "name": "Exploratory Data Analysis Project",
+        "description": "Comprehensive analysis of real-world dataset with insights and visualizations",
+        "difficulty": "beginner",
+        "duration": "2-3 weeks",
+        "skills": ["Data Cleaning", "Statistical Analysis", "Data Visualization", "Storytelling"],
+        "technologies": ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter"],
+        "deliverables": [
+          "Clean and processed dataset",
+          "Statistical analysis report",
+          "Interactive visualizations",
+          "Business insights presentation"
+        ],
+        "career_impact": 0.8,
+        "portfolio_value": 0.85
+      },
+      {
+        "name": "Predictive Analytics Model",
+        "description": "Build and deploy machine learning model for business predictions",
+        "difficulty": "intermediate",
+        "duration": "4-6 weeks",
+        "skills": ["Machine Learning", "Model Evaluation", "Feature Engineering", "Model Deployment"],
+        "technologies": ["Scikit-learn", "Python", "Flask", "Docker", "Cloud Platform"],
+        "deliverables": [
+          "Trained ML model with validation",
+          "Web API for model predictions",
+          "Model performance documentation",
+          "Deployment on cloud platform"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.9
+      },
+      {
+        "name": "Real-time Analytics Dashboard",
+        "description": "Interactive dashboard for real-time data monitoring and analytics",
+        "difficulty": "intermediate",
+        "duration": "5-8 weeks",
+        "skills": ["Real-time Processing", "Dashboard Development", "Data Pipeline", "Visualization"],
+        "technologies": ["Streamlit", "Python", "Kafka", "Redis", "Plotly"],
+        "deliverables": [
+          "Real-time data pipeline",
+          "Interactive web dashboard",
+          "Automated alerting system",
+          "Performance monitoring"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.9
+      },
+      {
+        "name": "Computer Vision Application",
+        "description": "Deep learning application for image recognition or processing",
+        "difficulty": "advanced",
+        "duration": "8-12 weeks",
+        "skills": ["Deep Learning", "Computer Vision", "Neural Networks", "Model Optimization"],
+        "technologies": ["TensorFlow", "OpenCV", "Python", "GPU Computing"],
+        "deliverables": [
+          "Trained computer vision model",
+          "Web application interface",
+          "Model optimization report",
+          "Performance benchmarks"
+        ],
+        "career_impact": 0.95,
+        "portfolio_value": 0.95
+      }
+    ],
+    "research": [
+      {
+        "name": "Industry Trend Analysis",
+        "description": "Research and analysis of emerging trends in specific industry",
+        "difficulty": "beginner",
+        "duration": "3-4 weeks",
+        "skills": ["Research Methods", "Data Collection", "Trend Analysis", "Report Writing"],
+        "technologies": ["Python", "Web Scraping", "Statistical Analysis", "Visualization Tools"],
+        "deliverables": [
+          "Comprehensive trend report",
+          "Supporting data analysis",
+          "Predictive insights",
+          "Executive summary presentation"
+        ],
+        "career_impact": 0.7,
+        "portfolio_value": 0.75
+      },
+      {
+        "name": "Academic Paper Reproduction",
+        "description": "Reproduce results from published data science research paper",
+        "difficulty": "intermediate",
+        "duration": "6-10 weeks",
+        "skills": ["Academic Research", "Statistical Methods", "Reproducible Research", "Critical Analysis"],
+        "technologies": ["R or Python", "Statistical Libraries", "LaTeX", "Version Control"],
+        "deliverables": [
+          "Reproduced experimental results",
+          "Code and documentation",
+          "Analysis of methodology",
+          "Research report"
+        ],
+        "career_impact": 0.8,
+        "portfolio_value": 0.85
+      }
+    ],
+    "competition": [
+      {
+        "name": "Kaggle Competition Participation",
+        "description": "Compete in machine learning competitions on Kaggle platform",
+        "difficulty": "intermediate",
+        "duration": "Competition timeline",
+        "skills": ["Competitive ML", "Feature Engineering", "Model Ensembling", "Time Management"],
+        "technologies": ["Competition-specific tools", "ML Libraries", "Cloud Compute"],
+        "deliverables": [
+          "Competition submission",
+          "Solution documentation",
+          "Code repository",
+          "Performance analysis"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.8
+      }
+    ]
+  },
+  "business_analysts": {
+    "portfolio": [
+      {
+        "name": "Business Process Optimization Analysis",
+        "description": "Analyze and optimize existing business processes for efficiency",
+        "difficulty": "intermediate",
+        "duration": "4-6 weeks",
+        "skills": ["Process Mapping", "Requirements Analysis", "Stakeholder Management", "Optimization"],
+        "technologies": ["Process Mapping Tools", "Excel", "SQL", "Tableau"],
+        "deliverables": [
+          "Current state process maps",
+          "Gap analysis documentation",
+          "Optimized process design",
+          "Implementation roadmap"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.8
+      },
+      {
+        "name": "Market Research and Analysis",
+        "description": "Comprehensive market analysis for new product or service launch",
+        "difficulty": "beginner",
+        "duration": "3-5 weeks",
+        "skills": ["Market Research", "Competitive Analysis", "Data Analysis", "Presentation"],
+        "technologies": ["Excel", "Survey Tools", "Statistical Analysis", "Visualization"],
+        "deliverables": [
+          "Market size and opportunity analysis",
+          "Competitive landscape report",
+          "Customer persona profiles",
+          "Go-to-market recommendations"
+        ],
+        "career_impact": 0.8,
+        "portfolio_value": 0.85
+      },
+      {
+        "name": "Financial Performance Dashboard",
+        "description": "Interactive dashboard for tracking and analyzing business KPIs",
+        "difficulty": "intermediate",
+        "duration": "4-7 weeks",
+        "skills": ["Business Intelligence", "Dashboard Design", "KPI Development", "Financial Analysis"],
+        "technologies": ["Tableau", "Power BI", "SQL", "Excel"],
+        "deliverables": [
+          "Executive dashboard interface",
+          "KPI tracking system",
+          "Automated reporting",
+          "User training documentation"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.9
+      },
+      {
+        "name": "Digital Transformation Assessment",
+        "description": "Assess organization's digital maturity and recommend transformation roadmap",
+        "difficulty": "advanced",
+        "duration": "8-12 weeks",
+        "skills": ["Digital Strategy", "Change Management", "Technology Assessment", "Strategic Planning"],
+        "technologies": ["Assessment Frameworks", "Analytics Tools", "Project Management"],
+        "deliverables": [
+          "Digital maturity assessment",
+          "Technology gap analysis",
+          "Transformation roadmap",
+          "ROI and risk analysis"
+        ],
+        "career_impact": 0.95,
+        "portfolio_value": 0.9
+      }
+    ],
+    "consulting": [
+      {
+        "name": "Small Business Efficiency Consulting",
+        "description": "Help small businesses improve operational efficiency and reduce costs",
+        "difficulty": "intermediate",
+        "duration": "6-8 weeks per client",
+        "skills": ["Business Consulting", "Efficiency Analysis", "Cost Reduction", "Implementation"],
+        "technologies": ["Process Analysis Tools", "Financial Modeling", "Project Management"],
+        "deliverables": [
+          "Business efficiency audit",
+          "Cost reduction recommendations",
+          "Implementation plan",
+          "Success metrics tracking"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.85
+      }
+    ],
+    "academic": [
+      {
+        "name": "Business Case Study Analysis",
+        "description": "In-depth analysis of real business cases with strategic recommendations",
+        "difficulty": "beginner",
+        "duration": "2-4 weeks",
+        "skills": ["Case Analysis", "Strategic Thinking", "Problem Solving", "Presentation"],
+        "technologies": ["Research Tools", "Analysis Frameworks", "Presentation Software"],
+        "deliverables": [
+          "Case study analysis report",
+          "Strategic recommendations",
+          "Implementation timeline",
+          "Executive presentation"
+        ],
+        "career_impact": 0.7,
+        "portfolio_value": 0.75
+      }
+    ]
+  },
+  "marketing_managers": {
+    "portfolio": [
+      {
+        "name": "Digital Marketing Campaign",
+        "description": "End-to-end digital marketing campaign for real or fictional brand",
+        "difficulty": "intermediate",
+        "duration": "6-8 weeks",
+        "skills": ["Campaign Planning", "Content Creation", "Ad Management", "Analytics"],
+        "technologies": ["Google Ads", "Facebook Ads", "Analytics Tools", "Design Software"],
+        "deliverables": [
+          "Campaign strategy document",
+          "Creative assets and copy",
+          "Campaign performance report",
+          "ROI analysis and optimization"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.9
+      },
+      {
+        "name": "Content Marketing Strategy",
+        "description": "Comprehensive content marketing strategy and execution plan",
+        "difficulty": "beginner",
+        "duration": "4-6 weeks",
+        "skills": ["Content Strategy", "SEO", "Content Creation", "Performance Tracking"],
+        "technologies": ["CMS", "SEO Tools", "Analytics", "Design Tools"],
+        "deliverables": [
+          "Content strategy document",
+          "Editorial calendar",
+          "Sample content pieces",
+          "Performance metrics plan"
+        ],
+        "career_impact": 0.8,
+        "portfolio_value": 0.85
+      },
+      {
+        "name": "Brand Identity and Positioning Project",
+        "description": "Develop complete brand identity and positioning strategy",
+        "difficulty": "intermediate",
+        "duration": "5-8 weeks",
+        "skills": ["Brand Strategy", "Market Research", "Creative Direction", "Brand Guidelines"],
+        "technologies": ["Design Software", "Research Tools", "Survey Platforms"],
+        "deliverables": [
+          "Brand positioning statement",
+          "Visual identity system",
+          "Brand guidelines document",
+          "Brand launch strategy"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.9
+      },
+      {
+        "name": "Marketing Analytics Dashboard",
+        "description": "Comprehensive dashboard tracking marketing performance across channels",
+        "difficulty": "intermediate",
+        "duration": "4-6 weeks",
+        "skills": ["Marketing Analytics", "Dashboard Design", "Data Integration", "Reporting"],
+        "technologies": ["Google Analytics", "Data Studio", "Excel", "Visualization Tools"],
+        "deliverables": [
+          "Integrated analytics dashboard",
+          "Automated reporting system",
+          "Performance insights reports",
+          "Optimization recommendations"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.85
+      }
+    ],
+    "agency": [
+      {
+        "name": "Client Marketing Audit",
+        "description": "Complete marketing audit and strategy recommendations for real client",
+        "difficulty": "advanced",
+        "duration": "8-10 weeks",
+        "skills": ["Marketing Audit", "Strategy Development", "Client Management", "Presentation"],
+        "technologies": ["Audit Tools", "Analytics Platforms", "Presentation Software"],
+        "deliverables": [
+          "Marketing audit report",
+          "Strategic recommendations",
+          "Implementation roadmap",
+          "Client presentation"
+        ],
+        "career_impact": 0.95,
+        "portfolio_value": 0.9
+      }
+    ],
+    "startup": [
+      {
+        "name": "Startup Growth Marketing Strategy",
+        "description": "Growth marketing strategy and execution for early-stage startup",
+        "difficulty": "advanced",
+        "duration": "10-16 weeks",
+        "skills": ["Growth Marketing", "Experimentation", "User Acquisition", "Retention"],
+        "technologies": ["Growth Tools", "A/B Testing", "Analytics", "Automation"],
+        "deliverables": [
+          "Growth strategy framework",
+          "User acquisition plan",
+          "Retention improvement program",
+          "Growth experiment results"
+        ],
+        "career_impact": 0.95,
+        "portfolio_value": 0.95
+      }
+    ]
+  },
+  "cybersecurity_specialists": {
+    "portfolio": [
+      {
+        "name": "Network Security Assessment",
+        "description": "Comprehensive security assessment of network infrastructure",
+        "difficulty": "intermediate",
+        "duration": "4-6 weeks",
+        "skills": ["Network Security", "Vulnerability Assessment", "Risk Analysis", "Reporting"],
+        "technologies": ["Nmap", "Wireshark", "OpenVAS", "Metasploit"],
+        "deliverables": [
+          "Network architecture diagram",
+          "Vulnerability assessment report",
+          "Risk analysis and prioritization",
+          "Remediation recommendations"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.9
+      },
+      {
+        "name": "Incident Response Plan",
+        "description": "Develop comprehensive incident response plan for organization",
+        "difficulty": "intermediate",
+        "duration": "5-8 weeks",
+        "skills": ["Incident Response", "Risk Management", "Documentation", "Process Design"],
+        "technologies": ["SIEM Tools", "Forensics Software", "Documentation Tools"],
+        "deliverables": [
+          "Incident response playbook",
+          "Response team structure",
+          "Communication templates",
+          "Training materials"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.85
+      },
+      {
+        "name": "Security Awareness Training Program",
+        "description": "Design and implement cybersecurity awareness training program",
+        "difficulty": "beginner",
+        "duration": "3-5 weeks",
+        "skills": ["Training Development", "Security Awareness", "Curriculum Design", "Assessment"],
+        "technologies": ["Learning Management System", "Video Tools", "Quiz Platforms"],
+        "deliverables": [
+          "Training curriculum design",
+          "Educational content materials",
+          "Assessment and quiz system",
+          "Progress tracking system"
+        ],
+        "career_impact": 0.75,
+        "portfolio_value": 0.8
+      },
+      {
+        "name": "Penetration Testing Project",
+        "description": "Ethical penetration testing of web application or network",
+        "difficulty": "advanced",
+        "duration": "6-10 weeks",
+        "skills": ["Penetration Testing", "Ethical Hacking", "Vulnerability Exploitation", "Reporting"],
+        "technologies": ["Kali Linux", "Burp Suite", "OWASP Tools", "Custom Scripts"],
+        "deliverables": [
+          "Penetration testing report",
+          "Vulnerability documentation",
+          "Proof of concept exploits",
+          "Remediation guidance"
+        ],
+        "career_impact": 0.95,
+        "portfolio_value": 0.9
+      }
+    ],
+    "research": [
+      {
+        "name": "Threat Intelligence Research",
+        "description": "Research and analysis of current cybersecurity threats and trends",
+        "difficulty": "intermediate",
+        "duration": "4-8 weeks",
+        "skills": ["Threat Research", "Intelligence Analysis", "Report Writing", "Trend Analysis"],
+        "technologies": ["OSINT Tools", "Threat Intelligence Platforms", "Analysis Software"],
+        "deliverables": [
+          "Threat landscape report",
+          "Intelligence briefings",
+          "Indicator analysis",
+          "Trend predictions"
+        ],
+        "career_impact": 0.8,
+        "portfolio_value": 0.85
+      }
+    ],
+    "compliance": [
+      {
+        "name": "Compliance Framework Implementation",
+        "description": "Implement security compliance framework (ISO 27001, NIST, etc.)",
+        "difficulty": "advanced",
+        "duration": "10-16 weeks",
+        "skills": ["Compliance Management", "Framework Implementation", "Audit Preparation", "Documentation"],
+        "technologies": ["GRC Platforms", "Documentation Tools", "Assessment Software"],
+        "deliverables": [
+          "Gap analysis report",
+          "Implementation roadmap",
+          "Policy and procedure documents",
+          "Audit readiness assessment"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.85
+      }
+    ]
+  },
+  "generic": {
+    "portfolio": [
+      {
+        "name": "Professional Development Blog",
+        "description": "Create and maintain a professional blog sharing industry insights",
+        "difficulty": "beginner",
+        "duration": "Ongoing",
+        "skills": ["Content Writing", "SEO", "Personal Branding", "Digital Marketing"],
+        "technologies": ["CMS Platform", "Analytics", "Social Media"],
+        "deliverables": [
+          "Professional blog website",
+          "Regular content publication",
+          "SEO-optimized articles",
+          "Social media integration"
+        ],
+        "career_impact": 0.7,
+        "portfolio_value": 0.8
+      },
+      {
+        "name": "Industry Conference Presentation",
+        "description": "Develop and deliver presentation at industry conference or meetup",
+        "difficulty": "intermediate",
+        "duration": "4-8 weeks",
+        "skills": ["Public Speaking", "Content Development", "Presentation Design", "Networking"],
+        "technologies": ["Presentation Software", "Video Recording", "Design Tools"],
+        "deliverables": [
+          "Conference presentation",
+          "Supporting materials",
+          "Video recording",
+          "Follow-up content"
+        ],
+        "career_impact": 0.85,
+        "portfolio_value": 0.8
+      }
+    ],
+    "leadership": [
+      {
+        "name": "Team Leadership Project",
+        "description": "Lead a cross-functional team project from initiation to completion",
+        "difficulty": "intermediate",
+        "duration": "8-16 weeks",
+        "skills": ["Team Leadership", "Project Management", "Communication", "Problem Solving"],
+        "technologies": ["Project Management Tools", "Communication Platforms"],
+        "deliverables": [
+          "Project planning documentation",
+          "Team progress reports",
+          "Final project delivery",
+          "Leadership reflection report"
+        ],
+        "career_impact": 0.9,
+        "portfolio_value": 0.75
+      }
+    ],
+    "volunteer": [
+      {
+        "name": "Non-profit Digital Transformation",
+        "description": "Help non-profit organization improve their digital capabilities",
+        "difficulty": "intermediate",
+        "duration": "12-20 weeks",
+        "skills": ["Volunteer Leadership", "Digital Strategy", "Change Management", "Training"],
+        "technologies": ["Various based on needs"],
+        "deliverables": [
+          "Digital needs assessment",
+          "Implementation plan",
+          "Training materials",
+          "Impact measurement report"
+        ],
+        "career_impact": 0.8,
+        "portfolio_value": 0.85
+      }
+    ]
+  }
+}

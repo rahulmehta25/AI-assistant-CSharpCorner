@@ -1,0 +1,564 @@
+{
+  "template_version": "1.0",
+  "description": "Skills development timeline by grade level and career field",
+  "high_school_skills": {
+    "freshman_hs": {
+      "foundational_skills": {
+        "academic": [
+          "effective note-taking",
+          "time management basics",
+          "study strategies",
+          "reading comprehension",
+          "basic research skills",
+          "test-taking strategies"
+        ],
+        "social": [
+          "teamwork basics",
+          "communication skills",
+          "conflict resolution",
+          "empathy and understanding",
+          "cultural awareness"
+        ],
+        "personal": [
+          "self-reflection",
+          "goal setting",
+          "responsibility",
+          "organization",
+          "self-advocacy",
+          "stress management"
+        ]
+      },
+      "career_specific_skills": {
+        "STEM": [
+          "basic programming concepts",
+          "mathematical problem-solving",
+          "scientific method understanding",
+          "data collection and analysis basics",
+          "logical reasoning"
+        ],
+        "Business": [
+          "basic financial literacy",
+          "customer service awareness",
+          "presentation skills basics",
+          "teamwork in projects",
+          "basic economic concepts"
+        ],
+        "Arts": [
+          "creative expression",
+          "basic design principles",
+          "artistic technique fundamentals",
+          "creative problem solving",
+          "visual communication basics"
+        ],
+        "Health": [
+          "basic anatomy awareness",
+          "health and wellness concepts",
+          "empathy and caregiving",
+          "attention to detail",
+          "scientific observation"
+        ],
+        "Liberal_Arts": [
+          "critical reading",
+          "basic writing skills",
+          "cultural awareness",
+          "historical thinking",
+          "language learning basics"
+        ]
+      }
+    },
+    "sophomore_hs": {
+      "developing_skills": {
+        "academic": [
+          "advanced research methods",
+          "critical analysis",
+          "source evaluation",
+          "advanced writing techniques",
+          "project management basics",
+          "presentation skills"
+        ],
+        "social": [
+          "leadership basics",
+          "public speaking",
+          "networking fundamentals",
+          "mentoring younger students",
+          "collaborative problem-solving"
+        ],
+        "personal": [
+          "decision-making processes",
+          "independence building",
+          "career exploration methods",
+          "self-assessment skills",
+          "adaptability"
+        ]
+      },
+      "career_specific_skills": {
+        "STEM": [
+          "intermediate programming",
+          "advanced mathematical concepts",
+          "experimental design basics",
+          "data visualization",
+          "technical communication"
+        ],
+        "Business": [
+          "market research basics",
+          "spreadsheet proficiency",
+          "business communication",
+          "project coordination",
+          "customer relations"
+        ],
+        "Arts": [
+          "portfolio development",
+          "art criticism and analysis",
+          "digital tool proficiency",
+          "artistic collaboration",
+          "creative project management"
+        ],
+        "Health": [
+          "medical terminology basics",
+          "patient interaction skills",
+          "health assessment basics",
+          "research in health sciences",
+          "ethical reasoning in healthcare"
+        ],
+        "Liberal_Arts": [
+          "analytical writing",
+          "research methodology",
+          "cross-cultural communication",
+          "historical analysis",
+          "philosophical reasoning"
+        ]
+      }
+    },
+    "junior_hs": {
+      "advanced_skills": {
+        "academic": [
+          "college-level research",
+          "complex problem-solving",
+          "analytical reasoning",
+          "advanced communication",
+          "independent learning",
+          "synthesis of information"
+        ],
+        "social": [
+          "advanced leadership",
+          "conflict mediation",
+          "professional networking",
+          "mentoring and teaching",
+          "community engagement"
+        ],
+        "personal": [
+          "strategic planning",
+          "advanced decision-making",
+          "stress management under pressure",
+          "self-directed learning",
+          "resilience building"
+        ]
+      },
+      "career_specific_skills": {
+        "STEM": [
+          "advanced programming languages",
+          "statistical analysis",
+          "research methodology",
+          "technical writing",
+          "innovation and design thinking"
+        ],
+        "Business": [
+          "financial analysis basics",
+          "marketing strategy understanding",
+          "business plan development",
+          "entrepreneurial thinking",
+          "professional presentation"
+        ],
+        "Arts": [
+          "advanced artistic techniques",
+          "professional portfolio creation",
+          "art business understanding",
+          "exhibition and presentation",
+          "artistic entrepreneurship"
+        ],
+        "Health": [
+          "advanced biology and chemistry",
+          "clinical observation skills",
+          "healthcare ethics",
+          "medical research basics",
+          "patient advocacy"
+        ],
+        "Liberal_Arts": [
+          "advanced academic writing",
+          "independent research projects",
+          "cultural analysis",
+          "language proficiency",
+          "interdisciplinary thinking"
+        ]
+      }
+    },
+    "senior_hs": {
+      "mastery_skills": {
+        "academic": [
+          "independent research mastery",
+          "advanced critical thinking",
+          "college-level academic skills",
+          "scholarly communication",
+          "knowledge synthesis",
+          "peer review understanding"
+        ],
+        "social": [
+          "mature leadership",
+          "professional communication",
+          "advanced networking",
+          "teaching and mentoring",
+          "community leadership"
+        ],
+        "personal": [
+          "life planning and goal setting",
+          "independence and self-reliance",
+          "transition management",
+          "financial planning basics",
+          "professional self-presentation"
+        ]
+      },
+      "career_specific_skills": {
+        "STEM": [
+          "professional-level programming",
+          "advanced research methods",
+          "technical project leadership",
+          "scientific communication",
+          "industry tool proficiency"
+        ],
+        "Business": [
+          "advanced business analysis",
+          "strategic thinking",
+          "professional networking",
+          "financial modeling basics",
+          "business ethics understanding"
+        ],
+        "Arts": [
+          "professional artistic practice",
+          "art direction basics",
+          "creative business skills",
+          "artistic collaboration leadership",
+          "portfolio presentation mastery"
+        ],
+        "Health": [
+          "pre-professional preparation",
+          "advanced scientific knowledge",
+          "clinical skills introduction",
+          "healthcare communication",
+          "medical ethics application"
+        ],
+        "Liberal_Arts": [
+          "thesis-level research",
+          "advanced theoretical understanding",
+          "professional academic communication",
+          "interdisciplinary synthesis",
+          "graduate school preparation"
+        ]
+      }
+    }
+  },
+  "college_skills": {
+    "freshman_college": {
+      "foundational_college_skills": {
+        "academic": [
+          "college-level writing",
+          "advanced research methods",
+          "academic integrity understanding",
+          "independent learning strategies",
+          "time management for college workload",
+          "note-taking for lectures"
+        ],
+        "professional": [
+          "professional email communication",
+          "networking basics",
+          "informational interviewing",
+          "resume writing basics",
+          "professional self-presentation",
+          "LinkedIn profile development"
+        ],
+        "personal": [
+          "independence and self-reliance",
+          "stress management techniques",
+          "financial management basics",
+          "healthy lifestyle maintenance",
+          "relationship building skills"
+        ]
+      },
+      "major_specific_skills": {
+        "Computer_Science": [
+          "programming fundamentals",
+          "problem decomposition",
+          "algorithmic thinking",
+          "debugging techniques",
+          "version control basics",
+          "technical documentation"
+        ],
+        "Engineering": [
+          "engineering problem-solving",
+          "mathematical modeling",
+          "technical drawing basics",
+          "laboratory skills",
+          "safety protocols",
+          "engineering ethics"
+        ],
+        "Business": [
+          "business communication",
+          "spreadsheet advanced functions",
+          "presentation design",
+          "market analysis basics",
+          "financial statement reading",
+          "team project management"
+        ],
+        "Pre_Med": [
+          "advanced laboratory techniques",
+          "medical terminology",
+          "patient interaction basics",
+          "medical ethics introduction",
+          "research methodology",
+          "scientific writing"
+        ],
+        "Liberal_Arts": [
+          "advanced analytical writing",
+          "research methodology",
+          "critical theory application",
+          "language proficiency",
+          "cultural analysis",
+          "interdisciplinary thinking"
+        ]
+      }
+    },
+    "sophomore_college": {
+      "intermediate_skills": {
+        "academic": [
+          "advanced research and analysis",
+          "peer collaboration",
+          "academic presentation skills",
+          "complex project management",
+          "interdisciplinary thinking",
+          "knowledge application"
+        ],
+        "professional": [
+          "internship preparation",
+          "professional interview skills",
+          "workplace communication",
+          "networking expansion",
+          "career planning",
+          "professional portfolio development"
+        ],
+        "personal": [
+          "advanced decision-making",
+          "leadership development",
+          "conflict resolution",
+          "cultural competency",
+          "emotional intelligence"
+        ]
+      },
+      "major_specific_skills": {
+        "Computer_Science": [
+          "data structures mastery",
+          "object-oriented programming",
+          "database design basics",
+          "software testing",
+          "team programming",
+          "agile development introduction"
+        ],
+        "Engineering": [
+          "advanced mathematical modeling",
+          "CAD proficiency",
+          "materials science application",
+          "circuit analysis",
+          "project design basics",
+          "engineering communication"
+        ],
+        "Business": [
+          "financial analysis",
+          "marketing strategy basics",
+          "operations understanding",
+          "business law awareness",
+          "data analysis for business",
+          "professional networking"
+        ],
+        "Pre_Med": [
+          "advanced clinical skills",
+          "medical research participation",
+          "patient care observation",
+          "healthcare system understanding",
+          "medical ethics application",
+          "MCAT preparation beginning"
+        ],
+        "Liberal_Arts": [
+          "advanced theoretical analysis",
+          "independent research projects",
+          "language mastery",
+          "cultural research methods",
+          "teaching and tutoring",
+          "academic conference participation"
+        ]
+      }
+    },
+    "junior_college": {
+      "advanced_skills": {
+        "academic": [
+          "original research capability",
+          "advanced analytical thinking",
+          "scholarly writing mastery",
+          "teaching and mentoring",
+          "interdisciplinary collaboration",
+          "knowledge creation"
+        ],
+        "professional": [
+          "advanced internship performance",
+          "professional project leadership",
+          "industry networking",
+          "professional presentation mastery",
+          "career strategy development",
+          "professional certification pursuit"
+        ],
+        "personal": [
+          "mature leadership",
+          "strategic thinking",
+          "innovation and creativity",
+          "global perspective",
+          "ethical reasoning mastery"
+        ]
+      },
+      "major_specific_skills": {
+        "Computer_Science": [
+          "advanced algorithms implementation",
+          "software architecture design",
+          "database optimization",
+          "machine learning basics",
+          "full-stack development",
+          "technical leadership"
+        ],
+        "Engineering": [
+          "advanced design projects",
+          "professional engineering tools",
+          "project management certification",
+          "innovation and design thinking",
+          "industry collaboration",
+          "engineering leadership"
+        ],
+        "Business": [
+          "strategic analysis mastery",
+          "advanced financial modeling",
+          "business plan development",
+          "market research leadership",
+          "international business awareness",
+          "entrepreneurial skills"
+        ],
+        "Pre_Med": [
+          "clinical experience advanced",
+          "medical research leadership",
+          "patient advocacy skills",
+          "healthcare policy understanding",
+          "medical school preparation",
+          "clinical skills certification"
+        ],
+        "Liberal_Arts": [
+          "thesis research mastery",
+          "original theoretical contribution",
+          "academic writing for publication",
+          "conference presentation",
+          "graduate school preparation",
+          "academic mentoring"
+        ]
+      }
+    },
+    "senior_college": {
+      "mastery_and_transition_skills": {
+        "academic": [
+          "capstone project mastery",
+          "scholarly contribution",
+          "academic leadership",
+          "knowledge dissemination",
+          "peer review participation",
+          "lifelong learning foundation"
+        ],
+        "professional": [
+          "job search mastery",
+          "salary negotiation",
+          "professional transition management",
+          "industry expertise",
+          "professional mentoring",
+          "career launch preparation"
+        ],
+        "personal": [
+          "post-graduation planning",
+          "professional identity formation",
+          "life-work balance strategies",
+          "community leadership",
+          "global citizenship"
+        ]
+      },
+      "major_specific_skills": {
+        "Computer_Science": [
+          "professional software development",
+          "system architecture mastery",
+          "technical leadership",
+          "innovation and research",
+          "industry best practices",
+          "professional certification completion"
+        ],
+        "Engineering": [
+          "professional engineering preparation",
+          "advanced project leadership",
+          "industry expertise development",
+          "innovation and patents",
+          "professional responsibility",
+          "PE exam preparation"
+        ],
+        "Business": [
+          "business strategy mastery",
+          "advanced financial analysis",
+          "organizational leadership",
+          "entrepreneurial execution",
+          "global business understanding",
+          "professional certification completion"
+        ],
+        "Pre_Med": [
+          "medical school readiness",
+          "advanced clinical competency",
+          "medical research completion",
+          "healthcare leadership",
+          "patient care mastery",
+          "MCAT excellence"
+        ],
+        "Liberal_Arts": [
+          "advanced academic expertise",
+          "research publication",
+          "teaching excellence",
+          "cultural leadership",
+          "graduate school readiness",
+          "academic career preparation"
+        ]
+      }
+    }
+  },
+  "skill_assessment_rubrics": {
+    "proficiency_levels": {
+      "novice": "Basic awareness and understanding",
+      "developing": "Limited experience with guidance needed",
+      "proficient": "Adequate skill with occasional guidance",
+      "advanced": "Strong skill with independence",
+      "expert": "Mastery level with ability to teach others"
+    },
+    "assessment_frequency": {
+      "high_school": "End of each semester",
+      "college": "End of each academic year"
+    }
+  },
+  "cross_curricular_skills": {
+    "all_levels": [
+      "critical thinking",
+      "problem solving",
+      "communication",
+      "collaboration",
+      "creativity",
+      "digital literacy",
+      "ethical reasoning",
+      "cultural competency",
+      "adaptability",
+      "leadership"
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "student": {
+    "id": "STU003",
+    "name": "Michael Johnson",
+    "major": "Biology (Pre-Med)",
+    "gpa": 3.9
+  },
+  "recommendations": [
+    {
+      "career_id": "acute_care_nurses",
+      "title": "Acute Care Nurses",
+      "match_score": 0.69,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your conscientiousness, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.9 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Time Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Time Management",
+            "Book: Mastering Time Management",
+            "Tutorial: Time Management for beginners",
+            "Practice projects in Time Management"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Time Management through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational acute care nurses training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Acute Care Nurses",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Acute Care Nurses",
+        "  - Customize resume for healthcare industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$31 - $37",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "advanced_practice_psychiatric_nurses",
+      "title": "Advanced Practice Psychiatric Nurses",
+      "match_score": 0.69,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your conscientiousness, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.9 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Time Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Time Management",
+            "Book: Mastering Time Management",
+            "Tutorial: Time Management for beginners",
+            "Practice projects in Time Management"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Time Management through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational advanced practice psychiatric nurses training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Advanced Practice Psychiatric Nurses",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Advanced Practice Psychiatric Nurses",
+        "  - Customize resume for healthcare industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$31 - $37",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "animal_scientists",
+      "title": "Animal Scientists",
+      "match_score": 0.619,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your conscientiousness, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.9 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Time Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Time Management",
+            "Book: Mastering Time Management",
+            "Tutorial: Time Management for beginners",
+            "Practice projects in Time Management"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Time Management through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational animal scientists training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Animal Scientists",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Animal Scientists",
+        "  - Customize resume for science industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$26 - $31",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "aerospace_engineering_and_operations_technologists_and_technicians",
+      "title": "Aerospace Engineering and Operations Technologists and Technicians",
+      "match_score": 0.544,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your conscientiousness, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.9 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Time Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Time Management",
+            "Book: Mastering Time Management",
+            "Tutorial: Time Management for beginners",
+            "Practice projects in Time Management"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Time Management through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational aerospace engineering and operations technologists and technicians training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Aerospace Engineering and Operations Technologists and Technicians",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Aerospace Engineering and Operations Technologists and Technicians",
+        "  - Customize resume for engineering industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$26 - $31",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "administrative_services_managers",
+      "title": "Administrative Services Managers",
+      "match_score": 0.541,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your conscientiousness, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.9 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Time Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Time Management",
+            "Book: Mastering Time Management",
+            "Tutorial: Time Management for beginners",
+            "Practice projects in Time Management"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Time Management through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational administrative services managers training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Administrative Services Managers",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Administrative Services Managers",
+        "  - Customize resume for business industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$36 - $43",
+      "job_outlook": "Stable - Average growth expected"
+    }
+  ],
+  "assessment": {
+    "holland_code": "ISR",
+    "top_skills": [
+      [
+        "Biology",
+        5
+      ],
+      [
+        "Attention to Detail",
+        5
+      ],
+      [
+        "Chemistry",
+        4
+      ],
+      [
+        "Research",
+        4
+      ],
+      [
+        "Problem Solving",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "job_sources": {
+    "indeed": {
+      "name": "Indeed",
+      "enabled": true,
+      "base_url": "https://indeed.com",
+      "search_endpoint": "/jobs",
+      "rate_limit": {
+        "requests_per_minute": 10,
+        "delay_between_requests": 6
+      },
+      "selectors": {
+        "job_listings": ".job_seen_beacon",
+        "job_title": "h2[data-testid='job-title'] a span",
+        "company": "[data-testid='company-name']",
+        "location": "[data-testid='job-location']",
+        "salary": ".metadata.salary-snippet-container",
+        "description": ".jobsearch-JobComponent-description",
+        "job_url": "h2[data-testid='job-title'] a",
+        "next_page": "a[data-testid='pagination-page-next']"
+      },
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1"
+      },
+      "params": {
+        "q": "query",
+        "l": "location",
+        "radius": "25",
+        "fromage": "7",
+        "limit": "50"
+      }
+    },
+    "glassdoor": {
+      "name": "Glassdoor",
+      "enabled": true,
+      "base_url": "https://www.glassdoor.com",
+      "search_endpoint": "/Job/jobs.htm",
+      "rate_limit": {
+        "requests_per_minute": 8,
+        "delay_between_requests": 7.5
+      },
+      "selectors": {
+        "job_listings": "[data-test='jobListing']",
+        "job_title": "[data-test='job-title']",
+        "company": "[data-test='employer-name']",
+        "location": "[data-test='job-location']",
+        "salary": "[data-test='detailSalary']",
+        "description": "[data-test='jobDescriptionContainer']",
+        "job_url": "[data-test='job-title'] a",
+        "next_page": "[data-test='next-page']"
+      },
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Referer": "https://www.glassdoor.com/"
+      },
+      "params": {
+        "sc.keyword": "query",
+        "locT": "C",
+        "locId": "location",
+        "jobType": "all",
+        "fromAge": "7",
+        "minSalary": "0",
+        "includeNoSalaryJobs": "true"
+      }
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "enabled": true,
+      "base_url": "https://www.linkedin.com",
+      "search_endpoint": "/jobs/search",
+      "rate_limit": {
+        "requests_per_minute": 5,
+        "delay_between_requests": 12
+      },
+      "selectors": {
+        "job_listings": ".job-search-card",
+        "job_title": ".base-search-card__title",
+        "company": ".base-search-card__subtitle",
+        "location": ".job-search-card__location",
+        "salary": ".job-search-card__salary-info",
+        "description": ".show-more-less-html__markup",
+        "job_url": ".base-card__full-link",
+        "next_page": ".artdeco-pagination__button--next"
+      },
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "X-Requested-With": "XMLHttpRequest"
+      },
+      "params": {
+        "keywords": "query",
+        "location": "location",
+        "distance": "25",
+        "f_TPR": "r604800",
+        "f_JT": "F%2CP%2CT%2CC%2CI",
+        "start": "0"
+      }
+    }
+  },
+  "cache_settings": {
+    "enabled": true,
+    "ttl_hours": 2,
+    "cache_directory": "data/cache/jobs"
+  },
+  "scraping_settings": {
+    "max_jobs_per_query": 100,
+    "max_pages_per_source": 5,
+    "timeout_seconds": 30,
+    "retry_attempts": 3,
+    "use_rotating_proxies": false,
+    "use_selenium": true,
+    "selenium_options": {
+      "headless": true,
+      "window_size": [1920, 1080],
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+      "disable_images": true,
+      "disable_javascript": false
+    }
+  },
+  "filtering": {
+    "min_salary": 0,
+    "max_age_days": 30,
+    "exclude_keywords": ["scam", "pyramid", "mlm", "work from home guaranteed"],
+    "required_fields": ["title", "company", "location"],
+    "duplicate_detection": {
+      "enabled": true,
+      "similarity_threshold": 0.85,
+      "fields_to_compare": ["title", "company", "location"]
+    }
+  },
+  "onet_integration": {
+    "enabled": true,
+    "career_matching_threshold": 0.7,
+    "skills_matching_weight": 0.4,
+    "experience_matching_weight": 0.3,
+    "location_matching_weight": 0.2,
+    "salary_matching_weight": 0.1
+  }
+}

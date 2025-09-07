@@ -1,0 +1,556 @@
+{
+  "template_version": "1.0",
+  "description": "College Career Pathway Template (Freshman to Senior Year)",
+  "year_levels": {
+    "freshman_college": {
+      "year": 1,
+      "focus": "Foundation & Exploration",
+      "key_objectives": [
+        "Adjust to college academic expectations",
+        "Explore major options if undecided",
+        "Build study skills and time management",
+        "Get involved in campus activities",
+        "Begin building professional network"
+      ],
+      "academic_priorities": [
+        {
+          "priority": "Complete general education requirements",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Explore potential majors through introductory courses",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Maintain strong GPA (3.5+ recommended)",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Develop effective study habits",
+          "importance": "high",
+          "timeline": "First semester"
+        }
+      ],
+      "course_recommendations_by_major": {
+        "Computer Science": [
+          "Introduction to Programming",
+          "Calculus I",
+          "Introduction to Computer Science",
+          "College Writing",
+          "General Education electives"
+        ],
+        "Engineering": [
+          "Engineering Fundamentals",
+          "Calculus I",
+          "Physics I (Mechanics)",
+          "Chemistry I",
+          "Technical Communication"
+        ],
+        "Business": [
+          "Introduction to Business",
+          "Microeconomics",
+          "Statistics",
+          "College Writing",
+          "Mathematics for Business"
+        ],
+        "Pre-Med": [
+          "General Biology I",
+          "General Chemistry I",
+          "Calculus I",
+          "College Writing",
+          "Psychology or Sociology"
+        ],
+        "Liberal Arts": [
+          "Composition and Rhetoric",
+          "Introduction to Literature",
+          "History survey course",
+          "Foreign Language",
+          "Philosophy or Critical Thinking"
+        ]
+      },
+      "extracurricular_recommendations": [
+        "Academic clubs related to potential major",
+        "Student government or leadership positions",
+        "Volunteer work in community",
+        "Intramural sports or fitness activities",
+        "Cultural or special interest clubs"
+      ],
+      "milestones": [
+        {
+          "title": "Declare or Confirm Major",
+          "deadline": "End of Spring Semester",
+          "category": "academic",
+          "priority": "high"
+        },
+        {
+          "title": "Join Professional Student Organizations",
+          "deadline": "October",
+          "category": "networking",
+          "priority": "medium"
+        },
+        {
+          "title": "Meet with Academic Advisor",
+          "deadline": "Each semester",
+          "category": "academic",
+          "priority": "high"
+        },
+        {
+          "title": "Build Relationships with Professors",
+          "deadline": "Throughout year",
+          "category": "networking",
+          "priority": "medium"
+        },
+        {
+          "title": "Visit Career Services Center",
+          "deadline": "Spring semester",
+          "category": "career_prep",
+          "priority": "medium"
+        }
+      ],
+      "skills_to_develop": [
+        "advanced academic writing",
+        "research methods",
+        "critical analysis",
+        "time management",
+        "independent learning",
+        "networking basics",
+        "presentation skills"
+      ],
+      "summer_opportunities": [
+        "Summer courses to get ahead",
+        "Entry-level internships",
+        "Study abroad programs",
+        "Research opportunities",
+        "Volunteer work",
+        "Part-time jobs for experience"
+      ]
+    },
+    "sophomore_college": {
+      "year": 2,
+      "focus": "Skill Building & Career Direction",
+      "key_objectives": [
+        "Complete major prerequisite courses",
+        "Gain relevant work experience",
+        "Develop technical and professional skills",
+        "Build stronger faculty relationships",
+        "Begin networking in chosen field"
+      ],
+      "academic_priorities": [
+        {
+          "priority": "Complete core major requirements",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Maintain or improve GPA",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Begin specialized coursework",
+          "importance": "high",
+          "timeline": "Spring semester"
+        },
+        {
+          "priority": "Consider minor or double major",
+          "importance": "medium",
+          "timeline": "Full year"
+        }
+      ],
+      "advanced_coursework_by_major": {
+        "Computer Science": [
+          "Data Structures and Algorithms",
+          "Computer Systems Architecture",
+          "Discrete Mathematics",
+          "Object-Oriented Programming",
+          "Database Systems"
+        ],
+        "Engineering": [
+          "Engineering Mathematics",
+          "Materials Science",
+          "Thermodynamics or Circuit Analysis",
+          "Engineering Design",
+          "Computer-Aided Design (CAD)"
+        ],
+        "Business": [
+          "Macroeconomics",
+          "Financial Accounting",
+          "Business Law",
+          "Marketing Principles",
+          "Operations Management"
+        ],
+        "Pre-Med": [
+          "Organic Chemistry I & II",
+          "General Physics I & II",
+          "Advanced Biology courses",
+          "Biochemistry",
+          "Research Methods"
+        ],
+        "Liberal Arts": [
+          "Advanced composition",
+          "Literary analysis",
+          "Historical research methods",
+          "Foreign language continuation",
+          "Specialized area courses"
+        ]
+      },
+      "career_development_activities": [
+        "Apply for competitive summer internships",
+        "Attend career fairs and networking events",
+        "Join professional organizations",
+        "Develop LinkedIn profile",
+        "Begin informational interviews"
+      ],
+      "milestones": [
+        {
+          "title": "Secure Summer Internship",
+          "deadline": "March",
+          "category": "career_experience",
+          "priority": "high"
+        },
+        {
+          "title": "Complete Major Prerequisites",
+          "deadline": "End of year",
+          "category": "academic",
+          "priority": "high"
+        },
+        {
+          "title": "Leadership Role in Organization",
+          "deadline": "Throughout year",
+          "category": "leadership",
+          "priority": "medium"
+        },
+        {
+          "title": "Begin Building Portfolio",
+          "deadline": "Spring semester",
+          "category": "career_prep",
+          "priority": "medium"
+        },
+        {
+          "title": "Research Study Abroad Options",
+          "deadline": "Fall semester",
+          "category": "academic",
+          "priority": "low"
+        }
+      ],
+      "skills_to_develop": [
+        "technical skills specific to major",
+        "project management",
+        "teamwork and collaboration",
+        "professional communication",
+        "problem-solving",
+        "analytical thinking",
+        "leadership basics"
+      ],
+      "summer_opportunities": [
+        "Competitive internships in field",
+        "Research positions with faculty",
+        "Study abroad programs",
+        "Advanced skill-building workshops",
+        "Volunteer work in professional area",
+        "Part-time jobs with career relevance"
+      ]
+    },
+    "junior_college": {
+      "year": 3,
+      "focus": "Specialization & Professional Preparation",
+      "key_objectives": [
+        "Complete advanced major coursework",
+        "Gain significant work experience",
+        "Build professional portfolio",
+        "Prepare for senior capstone",
+        "Plan post-graduation pathway"
+      ],
+      "academic_priorities": [
+        {
+          "priority": "Complete major core requirements",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Begin capstone or thesis planning",
+          "importance": "high",
+          "timeline": "Spring semester"
+        },
+        {
+          "priority": "Take advanced electives in specialization",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Consider graduate school preparation",
+          "importance": "medium",
+          "timeline": "Full year"
+        }
+      ],
+      "specialized_coursework_by_major": {
+        "Computer Science": [
+          "Advanced Algorithms",
+          "Software Engineering",
+          "Database Management Systems",
+          "Computer Networks",
+          "Artificial Intelligence or Machine Learning"
+        ],
+        "Engineering": [
+          "Advanced Engineering Design",
+          "Professional Engineering courses",
+          "Industry-specific applications",
+          "Project Management",
+          "Engineering Economics"
+        ],
+        "Business": [
+          "Strategic Management",
+          "International Business",
+          "Advanced Finance or Marketing",
+          "Business Analytics",
+          "Entrepreneurship"
+        ],
+        "Pre-Med": [
+          "Advanced sciences (Physiology, Genetics)",
+          "Medical Ethics",
+          "Healthcare Systems",
+          "Research Independent Study",
+          "MCAT preparation courses"
+        ],
+        "Liberal Arts": [
+          "Advanced seminars in specialization",
+          "Independent research projects",
+          "Internship for academic credit",
+          "Senior seminar preparation",
+          "Graduate school prep courses"
+        ]
+      },
+      "professional_development": [
+        "Major internship or co-op experience",
+        "Research projects with faculty",
+        "Conference presentations",
+        "Professional certifications",
+        "Industry networking"
+      ],
+      "milestones": [
+        {
+          "title": "Complete Major Internship/Co-op",
+          "deadline": "Summer",
+          "category": "career_experience",
+          "priority": "high"
+        },
+        {
+          "title": "Begin Senior Capstone Project",
+          "deadline": "Spring semester",
+          "category": "academic",
+          "priority": "high"
+        },
+        {
+          "title": "Graduate School Research (if applicable)",
+          "deadline": "Fall semester",
+          "category": "post_grad_prep",
+          "priority": "medium"
+        },
+        {
+          "title": "Professional Certification Progress",
+          "deadline": "Throughout year",
+          "category": "career_prep",
+          "priority": "medium"
+        },
+        {
+          "title": "Build Strong Portfolio",
+          "deadline": "End of year",
+          "category": "career_prep",
+          "priority": "high"
+        }
+      ],
+      "skills_to_develop": [
+        "advanced technical expertise",
+        "research and analysis",
+        "project leadership",
+        "professional networking",
+        "strategic thinking",
+        "independent work capability",
+        "mentoring and teaching"
+      ],
+      "summer_opportunities": [
+        "Advanced internships with major companies",
+        "Research fellowships",
+        "International programs",
+        "Industry conferences and workshops",
+        "Professional certification programs",
+        "Leadership development programs"
+      ]
+    },
+    "senior_college": {
+      "year": 4,
+      "focus": "Capstone & Career Launch",
+      "key_objectives": [
+        "Complete degree requirements",
+        "Execute senior capstone project",
+        "Secure post-graduation opportunity",
+        "Transition to professional life",
+        "Build lasting professional network"
+      ],
+      "academic_priorities": [
+        {
+          "priority": "Complete all degree requirements",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Excel in senior capstone/thesis",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Maintain strong GPA through graduation",
+          "importance": "high",
+          "timeline": "Full year"
+        },
+        {
+          "priority": "Complete any outstanding prerequisites",
+          "importance": "high",
+          "timeline": "Fall semester"
+        }
+      ],
+      "capstone_options_by_major": {
+        "Computer Science": [
+          "Software development project",
+          "Research thesis in specialized area",
+          "Industry collaboration project",
+          "Open source contribution project",
+          "Startup development project"
+        ],
+        "Engineering": [
+          "Senior design project",
+          "Industry-sponsored capstone",
+          "Research thesis",
+          "Patent application project",
+          "Professional engineering preparation"
+        ],
+        "Business": [
+          "Business plan development",
+          "Consulting project for real client",
+          "Market research study",
+          "Financial analysis project",
+          "Social enterprise development"
+        ],
+        "Pre-Med": [
+          "Medical research thesis",
+          "Healthcare policy analysis",
+          "Clinical observation study",
+          "Public health initiative",
+          "Medical school preparation intensive"
+        ],
+        "Liberal Arts": [
+          "Senior thesis",
+          "Creative project with analysis",
+          "Community engagement project",
+          "Teaching or mentoring program",
+          "Cultural research initiative"
+        ]
+      },
+      "career_launch_activities": [
+        "Job applications and interviews",
+        "Graduate school applications",
+        "Professional school applications",
+        "Fellowship and grant applications",
+        "Alumni networking"
+      ],
+      "milestones": [
+        {
+          "title": "Job/Graduate School Applications",
+          "deadline": "Fall semester",
+          "category": "post_grad_prep",
+          "priority": "high"
+        },
+        {
+          "title": "Complete Senior Capstone",
+          "deadline": "Spring semester",
+          "category": "academic",
+          "priority": "high"
+        },
+        {
+          "title": "Secure Post-Graduation Position",
+          "deadline": "Spring semester",
+          "category": "career_launch",
+          "priority": "high"
+        },
+        {
+          "title": "Graduate School Decision (if applicable)",
+          "deadline": "April",
+          "category": "post_grad_prep",
+          "priority": "high"
+        },
+        {
+          "title": "Professional Transition Preparation",
+          "deadline": "Spring semester",
+          "category": "career_launch",
+          "priority": "medium"
+        }
+      ],
+      "skills_to_develop": [
+        "professional presentation",
+        "interview skills",
+        "salary negotiation",
+        "workplace professionalism",
+        "continuing education planning",
+        "professional relationship building",
+        "industry knowledge updates"
+      ],
+      "post_graduation_pathways": [
+        "Entry-level professional positions",
+        "Graduate school (Master's/PhD)",
+        "Professional school (Law, Medicine, etc.)",
+        "Fellowship programs",
+        "Entrepreneurship/startup",
+        "Peace Corps or volunteer service",
+        "Gap year with purpose"
+      ]
+    }
+  },
+  "professional_development_timeline": {
+    "freshman": [
+      "Campus involvement",
+      "Academic skill building",
+      "Career exploration"
+    ],
+    "sophomore": [
+      "First internships",
+      "Professional organization membership",
+      "Skill specialization begins"
+    ],
+    "junior": [
+      "Major internships/co-ops",
+      "Research opportunities",
+      "Conference participation",
+      "Leadership roles"
+    ],
+    "senior": [
+      "Job search/grad school applications",
+      "Capstone project completion",
+      "Professional networking",
+      "Transition preparation"
+    ]
+  },
+  "graduate_school_preparation": {
+    "timeline": {
+      "sophomore_year": "Begin exploring programs",
+      "junior_year": "Take standardized tests, research programs",
+      "senior_fall": "Apply to programs",
+      "senior_spring": "Make decisions"
+    },
+    "requirements_by_field": {
+      "STEM_PhD": ["GRE", "Research experience", "Strong recommendations", "Statement of purpose"],
+      "Medical_School": ["MCAT", "Clinical experience", "Research", "Strong GPA", "Community service"],
+      "Law_School": ["LSAT", "Strong writing samples", "Diverse experiences", "Leadership"],
+      "Business_School": ["GMAT/GRE", "Work experience", "Leadership experience", "Clear career goals"],
+      "Master_Programs": ["GRE (often)", "Relevant experience", "Clear academic goals", "Strong recommendations"]
+    }
+  },
+  "internship_progression": {
+    "freshman_summer": "Exploration internships, volunteer work, summer courses",
+    "sophomore_summer": "First professional internships, research positions",
+    "junior_summer": "Advanced internships, co-op programs, research fellowships",
+    "senior_summer": "Pre-professional positions, advanced research, transition programs"
+  }
+}

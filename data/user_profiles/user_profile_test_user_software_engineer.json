@@ -1,0 +1,74 @@
+{
+  "user_id": "test_user_software_engineer",
+  "skills": [
+    "Python",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "SQL",
+    "PostgreSQL",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "Git",
+    "REST API",
+    "GraphQL",
+    "Machine Learning",
+    "TensorFlow",
+    "Pandas",
+    "NumPy",
+    "Django",
+    "Flask"
+  ],
+  "experience_level": "mid",
+  "experience_years": 5,
+  "preferred_locations": [
+    "San Francisco",
+    "New York",
+    "Remote",
+    "Seattle",
+    "Austin"
+  ],
+  "salary_expectations": {
+    "min": 120000,
+    "max": 180000,
+    "period": "year"
+  },
+  "job_titles": [
+    "Software Engineer",
+    "Full Stack Developer",
+    "Backend Developer",
+    "Python Developer",
+    "Senior Software Engineer",
+    "Software Developer"
+  ],
+  "industries": [
+    "Technology",
+    "Finance",
+    "Healthcare",
+    "E-commerce",
+    "Startups"
+  ],
+  "work_preferences": {
+    "remote": true,
+    "hybrid": true,
+    "onsite": true
+  },
+  "education_level": "Bachelor's Degree in Computer Science",
+  "certifications": [
+    "AWS Certified Developer",
+    "Google Cloud Professional"
+  ],
+  "languages": [
+    "English",
+    "Python",
+    "JavaScript"
+  ],
+  "career_goals": [
+    "Tech Lead",
+    "Senior Engineer",
+    "Full Stack Expert",
+    "Machine Learning Engineer",
+    "Cloud Architect"
+  ]
+}

@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Occupation Keyword Search</title>
+    <link rel="alternate" type="application/rss+xml" href="https://www.onetcenter.org/rss/whatsnew.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20201126">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=20201126">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=20201126">
+    <link rel="manifest" href="/site.webmanifest?v=20201126">
+    <link rel="shortcut icon" href="/favicon.ico?v=20201126">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#004488">
+    <meta name="og:url" content="https://www.onetonline.org/find/quick?s=nurse">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Occupation Keyword Search">
+    <meta name="og:title" content="Occupation Keyword Search">
+    <meta name="twitter:creator" content="@onet_center">
+    <meta name="twitter:image" content="https://www.onetonline.org/shared/image/promo/online.jpg">
+    <meta name="og:image" content="https://www.onetonline.org/shared/image/promo/online.jpg">
+    <meta name="twitter:image:alt" content="Woman helping a client">
+    <meta name="og:image:alt" content="Woman helping a client">
+    <meta name="twitter:description" content="O*NET OnLine provides detailed descriptions of the world-of-work for use by job seekers, workforce development and HR professionals, students, developers, researchers, and more. Individuals can find, search, or browse across 900+ occupations based on their goals and needs. Comprehensive reports include occupation requirements, worker characteristics, and available training, education, and job opportunities.">
+    <meta name="og:description" content="O*NET OnLine provides detailed descriptions of the world-of-work for use by job seekers, workforce development and HR professionals, students, developers, researchers, and more. Individuals can find, search, or browse across 900+ occupations based on their goals and needs. Comprehensive reports include occupation requirements, worker characteristics, and available training, education, and job opportunities.">
+    <link href="/shared/libraries/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/shared/libraries/tablesorter-2.31.3-dist/css/theme.bootstrap_4.min.css" rel="stylesheet">
+    <link href="/shared/fonts/opensans/opensans.css" rel="stylesheet">
+    <link href="/shared/fonts/opensanscond/opensanscond.css" rel="stylesheet">
+    <link href="/shared/resp.css?v=20240827" rel="stylesheet">
+    <link href="/shared/libraries/autocomplete/autocomplete.css" rel="stylesheet">
+    <link href="/libraries/online/online.css" rel="stylesheet">
+    <style>
+.backlink, .openlink {
+  position: absolute;
+  color: white !important;
+  text-decoration: none;
+  font-size: 11px;
+  text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+}
+.backlink {
+  top: -20px;
+  left: 0;
+}
+.openlink {
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+    </style>
+    <script src="/shared/libraries/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+    <script src="/shared/libraries/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/shared/libraries/tablesorter-2.31.3-dist/js/jquery.tablesorter.min.js"></script>
+    <script src="/shared/libraries/tablesorter-2.31.3-dist/js/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/shared/libraries/stickyfill-2.1.0-dist/stickyfill.min.js"></script>
+    <script src="/shared/libraries/clipboard.js-2.0.6-dist/clipboard.min.js"></script>
+    <script src="/shared/libraries/form-4.2.2-dist/jquery.form.min.js"></script>
+    <script src="/shared/libraries/anychart-7.12.0/anychart-7.12.0.min.js"></script>
+    <script src="/shared/libraries/fontawesome-free-6.5.2-web/js/solid.min.js"></script>
+    <script src="/shared/libraries/fontawesome-free-6.5.2-web/js/brands.min.js"></script>
+    <script src="/shared/libraries/fontawesome-free-6.5.2-web/js/fontawesome.min.js" data-auto-replace-svg="nest"></script>
+    <script src="/shared/libraries/bootstrap-html5-history-tabs/bootstrap-history-tabs.js"></script>
+    <script src="/shared/libraries/jquery-querystring/querystring.js"></script>
+    <script src="/shared/libraries/jquery-filterable/filterable.js"></script>
+    <script src="/shared/libraries/jquery-linktrack/linktrack.js"></script>
+    <script src="/shared/resp.js?v=20240827"></script>
+    <script src="/shared/libraries/autocomplete/autocomplete.js"></script>
+    <script src="/shared/libraries/autocomplete/onet_data.js"></script>
+    <script src="/libraries/online/online.js"></script>
+    <script>
+$(function(){
+function filterRows () {
+  var occ = $('#occsel input:checked').first().val() || 'all';
+  $('.keyword-results tr.occ-all').hide();
+  $('.keyword-results tr.occ-' + occ).show();
+  $('.keyword-row-ct').text('' + $('.keyword-results tr.occ-all:visible').length);
+}
+$('#occsel input').on('change', filterRows);
+filterRows();
+
+});
+
+    </script>
+  </head><body>
+    <div class="grid-parent">
+    <div class="container-fluid" id="allcontent">
+      <div id="realcontent">
+        <div id="head">
+<div class="d-md-flex align-items-center justify-content-start mt-3 mb-3">
+<div class="w-100"><a href="/"><img src="/image/online-header.svg" class="header-logo" alt="O*NET OnLine"></a></div>
+<div class="d-none d-md-block ms-auto">
+  <form action="/find/quick" method="GET">
+    <div class="text-center">
+      <label id="headersearchlglabel" class="form-label mb-1 h6" for="headersearchlg">Occupation keyword search</label>
+    </div>
+    <div class="input-group">
+      <span class="input-group-text"><i class="fa fa-search"></i></span>
+      <input id="headersearchlg" type="text" name="s" class="form-control" placeholder="electrician" data-bs-toggle="dropdown" data-ac-toggle="autocomplete" data-ac-menu="headersearchlg-autocomplete" data-ac-dataset="online" autocomplete="off">
+        <ul class="dropdown-menu autocomplete-menu dropdown-menu-end" id="headersearchlg-autocomplete" data-autocomplete-init="headersearchlg" aria-labelledby="headersearchlg">
+    <li class="prompt"><span class="dropdown-header">Type a title or code for matches</span></li>
+    <li class="notfound"><span class="dropdown-header">No quick matches found</span></li>
+    <li class="notfound"><button class="dropdown-item" type="submit">Search for keyword results</button></li>
+    <li class="result1"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result2"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result3"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result4"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result5"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+  </ul>
+
+      <button type="submit" class="btn btn-secondary">Go</button>
+    </div>
+  </form>
+</div>
+</div>
+<nav class="navbar mt-3 mb-3 px-2 navbar-expand-md navbar-light bg-light d-print-none">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="form-inline d-md-none" action="/find/quick" method="GET" >
+    <div class="input-group">
+      <input type="text" id="headersearchsm" name="s" class="form-control" placeholder="electrician" aria-label="Occupation keyword search" data-bs-toggle="dropdown" data-ac-toggle="autocomplete" data-ac-menu="headersearchsm-autocomplete" data-ac-dataset="online" autocomplete="off">
+        <ul class="dropdown-menu autocomplete-menu dropdown-menu-end" id="headersearchsm-autocomplete" data-autocomplete-init="headersearchsm" aria-labelledby="headersearchsm">
+    <li class="prompt"><span class="dropdown-header">Type a title or code for matches</span></li>
+    <li class="notfound"><span class="dropdown-header">No quick matches found</span></li>
+    <li class="notfound"><button class="dropdown-item" type="submit">Search for keyword results</button></li>
+    <li class="result1"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result2"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result3"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result4"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result5"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+  </ul>
+
+      <button type="submit" class="btn btn-secondary">Go</button>
+    </div>
+  </form>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navDropdownHelp" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
+        <div class="dropdown-menu" aria-labelledby="navDropdownHelp">
+          <a class="dropdown-item" href="/help/online/search">OnLine Help</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/overview.html">About O*NET</a>
+          <a class="dropdown-item" href="/help/online/deskaid">OnLine Desk Aid</a>
+          <a class="dropdown-item" href="/shared/jobhelp_resp">Job Seeker Help</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/links.html">Related Sites</a>
+          <a class="dropdown-item" href="/">Home</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navDropdownFindOccupations" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Occupations</a>
+        <div class="dropdown-menu" aria-labelledby="navDropdownFindOccupations">
+          <a class="dropdown-item" href="/find/bright">Bright Outlook</a>
+          <a class="dropdown-item" href="/find/career">Career Cluster</a>
+          <a class="dropdown-item" href="/search/hot_tech/">Hot Technology</a>
+          <a class="dropdown-item" href="/find/industry">Industry</a>
+          <a class="dropdown-item" href="/find/family">Job Family</a>
+          <a class="dropdown-item" href="/find/zone">Job Zone</a>
+          <a class="dropdown-item" href="/find/stem">STEM</a>
+          <a class="dropdown-item" href="/find/all">All Occupations</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navDropdownAdvancedSearches" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Advanced Searches</a>
+        <div class="dropdown-menu" aria-labelledby="navDropdownAdvancedSearches">
+          <a class="dropdown-item" href="/search/task/">Job Duties</a>
+          <a class="dropdown-item" href="/search/associations/">Professional Associations</a>
+          <a class="dropdown-item" href="/search/dwa/">Related Activities</a>
+          <a class="dropdown-item" href="/skills/soft/">Soft Skills</a>
+          <a class="dropdown-item" href="/search/tech/">Technology Skills</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navDropdownONETData" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">O*NET Data</a>
+        <div class="dropdown-menu" aria-labelledby="navDropdownONETData">
+          <a class="dropdown-item" href="/find/descriptor/browse/1.A">Abilities</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/1.B.1">Interests</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/2.C">Knowledge</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/2.A">Skills (Basic)</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/2.B">Skills (Cross-Functional)</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/4.A">Work Activities</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/4.C">Work Context</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/1.C">Work Styles</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/1.B.2">Work Values</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navDropdownCrosswalks" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Crosswalks</a>
+        <div class="dropdown-menu" aria-labelledby="navDropdownCrosswalks">
+          <a class="dropdown-item" href="/crosswalk/MOC/">Military</a>
+          <a class="dropdown-item" href="/crosswalk/CIP/">Education</a>
+          <a class="dropdown-item" href="/crosswalk/OOH/">Occupation Handbook</a>
+          <a class="dropdown-item" href="/crosswalk/SOC/">SOC</a>
+          <a class="dropdown-item" href="/crosswalk/DOT/">DOT</a>
+          <a class="dropdown-item" href="/crosswalk/RAPIDS/">RAPIDS</a>
+          <a class="dropdown-item" href="/crosswalk/ESCO/">ESCO</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="https://www.onetcenter.org/share?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search" id="navDropdownShare" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Share</a>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navDropdownShare">
+          <a class="dropdown-item" href="https://www.onetcenter.org/share/f?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search"><i class="fab fa-facebook-square fa-fw me-2" style="color: #435A94"></i> Facebook</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/share/t?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search"><i class="fab fa-square-x-twitter fa-fw me-2" style="color: #000000"></i> X</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/share/i?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search"><i class="fab fa-linkedin fa-fw me-2" style="color: #3275B0"></i> LinkedIn</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/share/r?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search"><i class="fab fa-reddit-square fa-fw me-2" style="color: #EB5528"></i> Reddit</a>
+          <a class="dropdown-item" href="mailto:?body=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;subject=Occupation%20Keyword%20Search"><i class="fas fa-envelope-square fa-fw me-2" style="color: #9B9B9B"></i> Email</a>
+        </div>
+      </li>
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="https://www.onetcenter.org/sites.html" id="navDropdownSites" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sites</a>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navDropdownSites">
+          <a class="dropdown-item" href="https://www.mynextmove.org/">My Next Move</a>
+          <a class="dropdown-item" href="https://www.miproximopaso.org/">Mi Próximo Paso</a>
+          <a class="dropdown-item" href="https://www.mynextmove.org/vets/">My Next Move for Veterans</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/">Resource Center</a>
+          <a class="dropdown-item" href="https://services.onetcenter.org/">O*NET Web Services</a>
+          <a class="dropdown-item" href="https://www.onetcodeconnector.org/">Code Connector</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header">Partner sites</div>
+          <a class="dropdown-item" href="https://onet.rti.org/">Data Collection Program</a>
+          <a class="dropdown-item" href="https://www.doleta.gov/programs/onet/eta_default.cfm">U.S. Department of Labor</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/links.html">Related Sites</a>
+        <div>
+      </li>
+    </ul>
+  </div>
+</nav>
+        </div>
+        <div id="content">
+<h1><span class="main">Occupation Keyword Search</span> <span class="sub">Occupations matching “nurse”</span></h1>
+
+<!-- begin content -->
+<form class="my-3 needs-validation" novalidate action="/find/result" method="GET">
+<div class="formsub input-group has-validation">
+  <label class="input-group-text" for="s">Search again:</label>
+  <input class="form-control" type="text" placeholder="dental assistant" name="s" id="s" value="nurse" required value="nurse" data-bs-toggle="dropdown" data-ac-toggle="autocomplete" data-ac-menu="s-autocomplete" data-ac-dataset="online" autocomplete="off">
+    <ul class="dropdown-menu autocomplete-menu " id="s-autocomplete" data-autocomplete-init="s" aria-labelledby="s">
+    <li class="prompt"><span class="dropdown-header">Type a title or code for matches</span></li>
+    <li class="notfound"><span class="dropdown-header">No quick matches found</span></li>
+    <li class="notfound"><button class="dropdown-item" type="submit">Search for keyword results</button></li>
+    <li class="result1"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result2"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result3"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result4"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result5"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+  </ul>
+
+  <button class="btn btn-secondary" type="submit">Go</button>
+  <div class="invalid-feedback">Please enter a keyword or code.</div>
+</div>
+</form>
+<div class="small d-md-flex mt-4 mb-2 align-items-baseline">
+  <div class="my-2 my-md-0" style="min-width: 12em">
+    <span class="keyword-row-ct">111</span> occupations shown
+  </div>
+  <div class="my-2 my-md-0 ms-md-4 d-flex align-items-baseline">
+    <label id="occsellabel" class="form-label me-2" for="occsel">Show matches:</label>
+    <div id="occsel" class="btn-group btn-group-sm" role="group" aria-labelledby="occsellabel">
+      <input id="occradiofeatured" type="radio" class="btn-check" name="occ" value="featured" autocomplete="off" checked>
+      <label class="btn btn-outline-secondary" for="occradiofeatured">Closest</label>
+      <input id="occradioall" type="radio" class="btn-check" name="occ" value="all" autocomplete="off">
+      <label class="btn btn-outline-secondary" for="occradioall">All</label>
+    </div>
+  </div>
+  <div class="my-2 my-md-0 ms-md-4 d-flex align-items-baseline">
+    <button class="btn btn-secondary btn-sm" data-bs-toggle="collapse" data-bs-target=".match-details" aria-expanded="false">How do they match?</button>
+  </div>
+</div>
+
+<div id="match-details-info" class="collapse multi-collapse match-details">
+  <div class="alert alert-primary">
+    Click the <span class="link-primary"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></span> icon next to an occupation to see how it matched your search.
+  </div>
+</div>
+<table class="table tablesorter tablesorter-bootstrap table-responsive-md w-100  keyword-results">
+  <thead>
+    <tr>
+<th class="border border-start-0 border-end-0 text-end w-15 mw-8e">Code</th><th class="border border-start-0 border-end-0 w-85 mw-10e sorter-text">Occupation</th>    </tr>
+  </thead>
+  <tbody>
+<tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-2061.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Licensed Practical and Licensed Vocational Nurses"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-2061.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-2061.00">Licensed Practical and Licensed Vocational Nurses</a> 
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1141.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Registered Nurses"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1141.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1141.00">Registered Nurses</a>  <a href="/help/bright/29-1141.00" class="text-decoration-none text-nowrap" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook">
+ <small class="font-header" style="color: #f83">Bright Outlook</small>
+ </a> &nbsp;
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1141.03</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Critical Care Nurses"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1141.03?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1141.03">Critical Care Nurses</a>  <a href="/help/bright/29-1141.03" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1141.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Acute Care Nurses"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1141.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1141.01">Acute Care Nurses</a>  <a href="/help/bright/29-1141.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1141.04</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Clinical Nurse Specialists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1141.04?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1141.04">Clinical Nurse Specialists</a>  <a href="/help/bright/29-1141.04" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1171.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Nurse Practitioners"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1171.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1171.00">Nurse Practitioners</a>  <a href="/help/bright/29-1171.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1151.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Nurse Anesthetists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1151.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1151.00">Nurse Anesthetists</a>  <a href="/help/bright/29-1151.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1161.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Nurse Midwives"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1161.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1161.00">Nurse Midwives</a>  <a href="/help/bright/29-1161.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">31-1131.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Nursing Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-1131.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-1131.00">Nursing Assistants</a>  <a href="/help/bright/31-1131.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1141.02</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Advanced Practice Psychiatric Nurses"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1141.02?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1141.02">Advanced Practice Psychiatric Nurses</a>  <a href="/help/bright/29-1141.02" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">25-1072.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Nursing Instructors and Teachers, Postsecondary"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/25-1072.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/25-1072.00">Nursing Instructors and Teachers, Postsecondary</a>  <a href="/help/bright/25-1072.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">15-1211.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Health Informatics Specialists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/15-1211.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/15-1211.01">Health Informatics Specialists</a>  <a href="/help/bright/15-1211.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-2055.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Surgical Technologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-2055.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-2055.00">Surgical Technologists</a>  <a href="/help/bright/29-2055.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">31-1133.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Psychiatric Aides"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-1133.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-1133.00">Psychiatric Aides</a> 
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">31-9099.02</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Endoscopy Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-9099.02?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-9099.02">Endoscopy Technicians</a>  <a href="/help/bright/31-9099.02" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">31-1121.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Home Health Aides"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-1121.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-1121.00">Home Health Aides</a>  <a href="/help/bright/31-1121.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1215.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Family Medicine Physicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1215.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1215.00">Family Medicine Physicians</a> 
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">11-9111.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Medical and Health Services Managers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9111.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9111.00">Medical and Health Services Managers</a>  <a href="/help/bright/11-9111.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">11-9121.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Clinical Research Coordinators"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9121.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9121.01">Clinical Research Coordinators</a>  <a href="/help/bright/11-9121.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all occ-featured"><td class="text-end w-15 mw-8e" data-title="Code">29-1216.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="General Internal Medicine Physicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1216.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1216.00">General Internal Medicine Physicians</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1218.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Obstetricians and Gynecologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1218.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1218.00">Obstetricians and Gynecologists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1229.05</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Preventive Medicine Physicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1229.05?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1229.05">Preventive Medicine Physicians</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1242.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Orthopedic Surgeons, Except Pediatric"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1242.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1242.00">Orthopedic Surgeons, Except Pediatric</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1243.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Pediatric Surgeons"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1243.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1243.00">Pediatric Surgeons</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-1122.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Personal Care Aides"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-1122.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-1122.00">Personal Care Aides</a>  <a href="/help/bright/31-1122.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1217.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Neurologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1217.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1217.00">Neurologists</a>  <a href="/help/bright/29-1217.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-2053.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Psychiatric Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-2053.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-2053.00">Psychiatric Technicians</a>  <a href="/help/bright/29-2053.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">39-9011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Childcare Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/39-9011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/39-9011.00">Childcare Workers</a>  <a href="/help/bright/39-9011.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-3013.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Facilities Managers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-3013.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-3013.00">Facilities Managers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-9121.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Natural Sciences Managers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9121.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9121.00">Natural Sciences Managers</a>  <a href="/help/bright/11-9121.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-9179.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Fitness and Wellness Coordinators"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9179.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9179.01">Fitness and Wellness Coordinators</a>  <a href="/help/bright/11-9179.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">13-1011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Agents and Business Managers of Artists, Performers, and Athletes"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/13-1011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/13-1011.00">Agents and Business Managers of Artists, Performers, and Athletes</a>  <a href="/help/bright/13-1011.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">17-1012.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Landscape Architects"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/17-1012.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/17-1012.00">Landscape Architects</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">17-1022.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Surveyors"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/17-1022.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/17-1022.00">Surveyors</a>  <a href="/help/bright/17-1022.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-1029.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Bioinformatics Scientists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-1029.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-1029.01">Bioinformatics Scientists</a>  <a href="/help/bright/19-1029.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-1041.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Epidemiologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-1041.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-1041.00">Epidemiologists</a>  <a href="/help/bright/19-1041.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-2099.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Remote Sensing Scientists and Technologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-2099.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-2099.01">Remote Sensing Scientists and Technologists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-4092.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Forensic Science Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-4092.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-4092.00">Forensic Science Technicians</a>  <a href="/help/bright/19-4092.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">21-1015.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Rehabilitation Counselors"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/21-1015.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/21-1015.00">Rehabilitation Counselors</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">21-1091.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Health Education Specialists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/21-1091.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/21-1091.00">Health Education Specialists</a>  <a href="/help/bright/21-1091.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">21-1094.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Community Health Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/21-1094.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/21-1094.00">Community Health Workers</a>  <a href="/help/bright/21-1094.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">21-2099.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Religious Workers, All Other"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/21-2099.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/21-2099.00">Religious Workers, All Other</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">25-1194.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Career/Technical Education Teachers, Postsecondary"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/25-1194.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/25-1194.00">Career/Technical Education Teachers, Postsecondary</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">27-1013.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Fine Artists, Including Painters, Sculptors, and Illustrators"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/27-1013.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/27-1013.00">Fine Artists, Including Painters, Sculptors, and Illustrators</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">27-2023.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Umpires, Referees, and Other Sports Officials"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/27-2023.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/27-2023.00">Umpires, Referees, and Other Sports Officials</a>  <a href="/help/bright/27-2023.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1071.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Physician Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1071.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1071.00">Physician Assistants</a>  <a href="/help/bright/29-1071.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1071.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Anesthesiologist Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1071.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1071.01">Anesthesiologist Assistants</a>  <a href="/help/bright/29-1071.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1124.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Radiation Therapists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1124.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1124.00">Radiation Therapists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1127.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Speech-Language Pathologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1127.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1127.00">Speech-Language Pathologists</a>  <a href="/help/bright/29-1127.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1224.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Radiologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1224.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1224.00">Radiologists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1229.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Allergists and Immunologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1229.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1229.01">Allergists and Immunologists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1292.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Dental Hygienists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1292.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1292.00">Dental Hygienists</a>  <a href="/help/bright/29-1292.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-2031.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Cardiovascular Technologists and Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-2031.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-2031.00">Cardiovascular Technologists and Technicians</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-2056.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Veterinary Technologists and Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-2056.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-2056.00">Veterinary Technologists and Technicians</a>  <a href="/help/bright/29-2056.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-9021.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Health Information Technologists and Medical Registrars"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-9021.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-9021.00">Health Information Technologists and Medical Registrars</a>  <a href="/help/bright/29-9021.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-9093.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Surgical Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-9093.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-9093.00">Surgical Assistants</a>  <a href="/help/bright/29-9093.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-9099.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Midwives"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-9099.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-9099.01">Midwives</a>  <a href="/help/bright/29-9099.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-9091.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Dental Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-9091.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-9091.00">Dental Assistants</a>  <a href="/help/bright/31-9091.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-9099.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Healthcare Support Workers, All Other"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-9099.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-9099.00">Healthcare Support Workers, All Other</a>  <a href="/help/bright/31-9099.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-9099.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Speech-Language Pathology Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-9099.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-9099.01">Speech-Language Pathology Assistants</a>  <a href="/help/bright/31-9099.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">33-1011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="First-Line Supervisors of Correctional Officers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/33-1011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/33-1011.00">First-Line Supervisors of Correctional Officers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">39-5094.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Skincare Specialists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/39-5094.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/39-5094.00">Skincare Specialists</a>  <a href="/help/bright/39-5094.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">41-3041.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Travel Agents"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/41-3041.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/41-3041.00">Travel Agents</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">43-5052.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Postal Service Mail Carriers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/43-5052.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/43-5052.00">Postal Service Mail Carriers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">51-2031.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Engine and Other Machine Assemblers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/51-2031.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/51-2031.00">Engine and Other Machine Assemblers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-9199.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Managers, All Other"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9199.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9199.00">Managers, All Other</a>  <a href="/help/bright/11-9199.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">13-1071.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Human Resources Specialists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/13-1071.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/13-1071.00">Human Resources Specialists</a>  <a href="/help/bright/13-1071.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">13-1199.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Business Operations Specialists, All Other"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/13-1199.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/13-1199.00">Business Operations Specialists, All Other</a>  <a href="/help/bright/13-1199.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-1011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Chief Executives"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-1011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-1011.00">Chief Executives</a>  <a href="/help/bright/11-1011.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-9033.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Education Administrators, Postsecondary"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9033.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9033.00">Education Administrators, Postsecondary</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-9039.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Education Administrators, All Other"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9039.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9039.00">Education Administrators, All Other</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">13-1131.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Fundraisers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/13-1131.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/13-1131.00">Fundraisers</a>  <a href="/help/bright/13-1131.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">21-1022.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Healthcare Social Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/21-1022.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/21-1022.00">Healthcare Social Workers</a>  <a href="/help/bright/21-1022.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">25-1071.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Health Specialties Teachers, Postsecondary"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/25-1071.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/25-1071.00">Health Specialties Teachers, Postsecondary</a>  <a href="/help/bright/25-1071.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">25-2032.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Career/Technical Education Teachers, Secondary School"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/25-2032.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/25-2032.00">Career/Technical Education Teachers, Secondary School</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">25-3041.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Tutors"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/25-3041.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/25-3041.00">Tutors</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1123.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Physical Therapists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1123.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1123.00">Physical Therapists</a>  <a href="/help/bright/29-1123.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-2011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Occupational Therapy Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-2011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-2011.00">Occupational Therapy Assistants</a>  <a href="/help/bright/31-2011.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-2012.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Occupational Therapy Aides"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-2012.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-2012.00">Occupational Therapy Aides</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-2021.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Physical Therapist Assistants"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-2021.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-2021.00">Physical Therapist Assistants</a>  <a href="/help/bright/31-2021.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">35-9011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Dining Room and Cafeteria Attendants and Bartender Helpers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/35-9011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/35-9011.00">Dining Room and Cafeteria Attendants and Bartender Helpers</a>  <a href="/help/bright/35-9011.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">45-2092.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Farmworkers and Laborers, Crop, Nursery, and Greenhouse"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/45-2092.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/45-2092.00">Farmworkers and Laborers, Crop, Nursery, and Greenhouse</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">11-9013.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Farmers, Ranchers, and Other Agricultural Managers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/11-9013.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/11-9013.00">Farmers, Ranchers, and Other Agricultural Managers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">39-2021.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Animal Caretakers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/39-2021.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/39-2021.00">Animal Caretakers</a>  <a href="/help/bright/39-2021.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">25-2011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Preschool Teachers, Except Special Education"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/25-2011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/25-2011.00">Preschool Teachers, Except Special Education</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1125.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Recreational Therapists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1125.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1125.00">Recreational Therapists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">37-1012.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/37-1012.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/37-1012.00">First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">37-3011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Landscaping and Groundskeeping Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/37-3011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/37-3011.00">Landscaping and Groundskeeping Workers</a>  <a href="/help/bright/37-3011.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">41-2031.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Retail Salespersons"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/41-2031.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/41-2031.00">Retail Salespersons</a>  <a href="/help/bright/41-2031.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">45-1011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="First-Line Supervisors of Farming, Fishing, and Forestry Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/45-1011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/45-1011.00">First-Line Supervisors of Farming, Fishing, and Forestry Workers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">45-4011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Forest and Conservation Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/45-4011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/45-4011.00">Forest and Conservation Workers</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-1013.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Soil and Plant Scientists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-1013.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-1013.00">Soil and Plant Scientists</a>  <a href="/help/bright/19-1013.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">21-1011.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Substance Abuse and Behavioral Disorder Counselors"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/21-1011.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/21-1011.00">Substance Abuse and Behavioral Disorder Counselors</a>  <a href="/help/bright/21-1011.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">21-1023.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Mental Health and Substance Abuse Social Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/21-1023.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/21-1023.00">Mental Health and Substance Abuse Social Workers</a>  <a href="/help/bright/21-1023.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1122.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Occupational Therapists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1122.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1122.00">Occupational Therapists</a>  <a href="/help/bright/29-1122.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1126.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Respiratory Therapists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1126.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1126.00">Respiratory Therapists</a>  <a href="/help/bright/29-1126.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1181.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Audiologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1181.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1181.00">Audiologists</a>  <a href="/help/bright/29-1181.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1211.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Anesthesiologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1211.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1211.00">Anesthesiologists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1214.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Emergency Medicine Physicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1214.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1214.00">Emergency Medicine Physicians</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1221.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Pediatricians, General"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1221.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1221.00">Pediatricians, General</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1223.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Psychiatrists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1223.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1223.00">Psychiatrists</a>  <a href="/help/bright/29-1223.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1229.03</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Urologists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1229.03?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1229.03">Urologists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1229.04</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Physical Medicine and Rehabilitation Physicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1229.04?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1229.04">Physical Medicine and Rehabilitation Physicians</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">31-1132.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Orderlies"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/31-1132.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/31-1132.00">Orderlies</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-1032.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Foresters"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-1032.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-1032.00">Foresters</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-4071.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Forest and Conservation Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-4071.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-4071.00">Forest and Conservation Technicians</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1129.01</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Art Therapists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1129.01?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1129.01">Art Therapists</a>  <a href="/help/bright/29-1129.01" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-1229.02</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Hospitalists"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-1229.02?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-1229.02">Hospitalists</a> 
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">29-2052.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Pharmacy Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/29-2052.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/29-2052.00">Pharmacy Technicians</a>  <a href="/help/bright/29-2052.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">35-2021.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Food Preparation Workers"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/35-2021.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/35-2021.00">Food Preparation Workers</a>  <a href="/help/bright/35-2021.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr><tr class="occ-all"><td class="text-end w-15 mw-8e" data-title="Code">19-4012.00</td><td class="w-85 mw-10e sorter-text" data-title="Occupation" data-text="Agricultural Technicians"><span class="collapse multi-collapse match-details me-2">
+<a href="/find/score/19-4012.00?s=nurse"  role="button" data-bs-toggle="modal" data-bs-target="#ajaxModal"><i class="fa fa-question-circle" aria-hidden="true" title="Info"></i><span class="visually-hidden">Info</span></a>
+</span>
+<a href="https://www.onetonline.org/link/summary/19-4012.00">Agricultural Technicians</a>  <a href="/help/bright/19-4012.00" data-bs-toggle-extra="tooltip" data-bs-placement="bottom" title="Bright Outlook" data-bs-toggle="modal" data-bs-target="#ajaxModal"><img class="align-text-bottom" style="height: 1.2rem" src="/shared/image/logos/bright.svg" alt="Bright Outlook"></a>
+
+</td></tr>  </tbody>
+</table>
+<!-- end content -->
+      </div>
+<nav class="navbar mt-3 mb-3 px-2 navbar-expand-md navbar-light bg-light d-print-none">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropup" aria-controls="navbarNavDropup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="form-inline d-md-none" action="/find/quick" method="GET" >
+    <div class="input-group">
+      <input type="text" id="headersearchsm" name="s" class="form-control" placeholder="electrician" aria-label="Occupation keyword search" data-bs-toggle="dropdown" data-ac-toggle="autocomplete" data-ac-menu="headersearchsm-autocomplete" data-ac-dataset="online" autocomplete="off">
+        <ul class="dropdown-menu autocomplete-menu dropdown-menu-end" id="headersearchsm-autocomplete" data-autocomplete-init="headersearchsm" aria-labelledby="headersearchsm">
+    <li class="prompt"><span class="dropdown-header">Type a title or code for matches</span></li>
+    <li class="notfound"><span class="dropdown-header">No quick matches found</span></li>
+    <li class="notfound"><button class="dropdown-item" type="submit">Search for keyword results</button></li>
+    <li class="result1"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result2"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result3"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result4"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+    <li class="result5"><a class="dropdown-item" href="#" data-root="/link/summary/"></a></li>
+  </ul>
+
+      <button type="submit" class="btn btn-secondary">Go</button>
+    </div>
+  </form>
+  <div class="collapse navbar-collapse" id="navbarNavDropup">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="" id="navDropupHelp" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
+        <div class="dropdown-menu" aria-labelledby="navDropupHelp">
+          <a class="dropdown-item" href="/help/online/search">OnLine Help</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/overview.html">About O*NET</a>
+          <a class="dropdown-item" href="/help/online/deskaid">OnLine Desk Aid</a>
+          <a class="dropdown-item" href="/shared/jobhelp_resp">Job Seeker Help</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/links.html">Related Sites</a>
+          <a class="dropdown-item" href="/">Home</a>
+        </div>
+      </li>
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="" id="navDropupFindOccupations" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Occupations</a>
+        <div class="dropdown-menu" aria-labelledby="navDropupFindOccupations">
+          <a class="dropdown-item" href="/find/bright">Bright Outlook</a>
+          <a class="dropdown-item" href="/find/career">Career Cluster</a>
+          <a class="dropdown-item" href="/search/hot_tech/">Hot Technology</a>
+          <a class="dropdown-item" href="/find/industry">Industry</a>
+          <a class="dropdown-item" href="/find/family">Job Family</a>
+          <a class="dropdown-item" href="/find/zone">Job Zone</a>
+          <a class="dropdown-item" href="/find/stem">STEM</a>
+          <a class="dropdown-item" href="/find/all">All Occupations</a>
+        </div>
+      </li>
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="" id="navDropupAdvancedSearches" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Advanced Searches</a>
+        <div class="dropdown-menu" aria-labelledby="navDropupAdvancedSearches">
+          <a class="dropdown-item" href="/search/task/">Job Duties</a>
+          <a class="dropdown-item" href="/search/associations/">Professional Associations</a>
+          <a class="dropdown-item" href="/search/dwa/">Related Activities</a>
+          <a class="dropdown-item" href="/skills/soft/">Soft Skills</a>
+          <a class="dropdown-item" href="/search/tech/">Technology Skills</a>
+        </div>
+      </li>
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="" id="navDropupONETData" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">O*NET Data</a>
+        <div class="dropdown-menu" aria-labelledby="navDropupONETData">
+          <a class="dropdown-item" href="/find/descriptor/browse/1.A">Abilities</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/1.B.1">Interests</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/2.C">Knowledge</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/2.A">Skills (Basic)</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/2.B">Skills (Cross-Functional)</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/4.A">Work Activities</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/4.C">Work Context</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/1.C">Work Styles</a>
+          <a class="dropdown-item" href="/find/descriptor/browse/1.B.2">Work Values</a>
+        </div>
+      </li>
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="" id="navDropupCrosswalks" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Crosswalks</a>
+        <div class="dropdown-menu" aria-labelledby="navDropupCrosswalks">
+          <a class="dropdown-item" href="/crosswalk/MOC/">Military</a>
+          <a class="dropdown-item" href="/crosswalk/CIP/">Education</a>
+          <a class="dropdown-item" href="/crosswalk/OOH/">Occupation Handbook</a>
+          <a class="dropdown-item" href="/crosswalk/SOC/">SOC</a>
+          <a class="dropdown-item" href="/crosswalk/DOT/">DOT</a>
+          <a class="dropdown-item" href="/crosswalk/RAPIDS/">RAPIDS</a>
+          <a class="dropdown-item" href="/crosswalk/ESCO/">ESCO</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+    <ul class="navbar-nav">
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="https://www.onetcenter.org/sites.html" id="navDropupSites" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sites</a>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navDropupSites">
+          <a class="dropdown-item" href="https://www.mynextmove.org/">My Next Move</a>
+          <a class="dropdown-item" href="https://www.miproximopaso.org/">Mi Próximo Paso</a>
+          <a class="dropdown-item" href="https://www.mynextmove.org/vets/">My Next Move for Veterans</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/">Resource Center</a>
+          <a class="dropdown-item" href="https://services.onetcenter.org/">O*NET Web Services</a>
+          <a class="dropdown-item" href="https://www.onetcodeconnector.org/">Code Connector</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header">Partner sites</div>
+          <a class="dropdown-item" href="https://onet.rti.org/">Data Collection Program</a>
+          <a class="dropdown-item" href="https://www.doleta.gov/programs/onet/eta_default.cfm">U.S. Department of Labor</a>
+          <a class="dropdown-item" href="https://www.onetcenter.org/links.html">Related Sites</a>
+        <div>
+      </li>
+    </ul>
+  </div>
+</nav>
+      <div id="foot" class="d-print-none">
+        <div class="row" style="font-size: 0.875rem">
+          <div class="col-md-4 text-center mt-2 mb-2">
+            <div class="d-flex justify-content-center align-items-center linkline">
+  <div class="me-2">Was this page helpful?</div>  <button class="rate-this-page image-button image-container image-16x16" data-bs-toggle="tooltip" title="Yes, it was helpful" data-completed-title="Thank you for your feedback." data-bs-content="&lt;div class=&quot;mb-3&quot;&gt;
+  &lt;div class=&quot;form-control-plaintext&quot;&gt;Can we make this page even better?&lt;/div&gt;
+  &lt;textarea class=&quot;feedback-message form-control&quot; rows=&quot;3&quot; aria-label=&quot;Can we make this page even better?&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn btn-sm btn-success w-100 feedback-button&quot;&gt;Send&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn btn-sm btn-secondary w-100 close-button&quot;&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+" data-rate-url="/shared/rate_resp" data-page-url="https://www.onetonline.org/find/quick?s=nurse" data-page-title="Occupation Keyword Search" data-helpful="y"><span class="visually-hidden">Yes, it was helpful</span><span class="fa-layers" style="font-size: 2rem; position: relative"><i class="fas fa-square" style="color: #67BE94"></i><i class="fas fa-thumbs-up" style="color: black" data-fa-transform="shrink-8 up-.5 left-.5 up-0.5"></i><i class="fas fa-thumbs-up" style="color: black" data-fa-transform="shrink-8 down-.5 right-.5 up-0.5"></i><i class="fas fa-thumbs-up" style="color: black" data-fa-transform="shrink-8 up-.5 right-.5 up-0.5"></i><i class="fas fa-thumbs-up" style="color: black" data-fa-transform="shrink-8 down-.5 left-.5 up-0.5"></i><i class="fas fa-thumbs-up" style="color: white" data-fa-transform="shrink-8 up-0.5"></i></span></button>
+  <button class="rate-this-page image-button image-container image-16x16" data-bs-toggle="tooltip" title="No, it was not helpful" data-completed-title="Thank you for your feedback." data-bs-content="&lt;div class=&quot;mb-3&quot;&gt;
+  &lt;div class=&quot;form-control-plaintext&quot;&gt;How can we make this page better?&lt;/div&gt;
+  &lt;textarea class=&quot;feedback-message form-control&quot; rows=&quot;3&quot; aria-label=&quot;How can we make this page better?&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn btn-sm btn-success w-100 feedback-button&quot;&gt;Send&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn btn-sm btn-secondary w-100 close-button&quot;&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+" data-rate-url="/shared/rate_resp" data-page-url="https://www.onetonline.org/find/quick?s=nurse" data-page-title="Occupation Keyword Search" data-helpful="n"><span class="visually-hidden">No, it was not helpful</span><span class="fa-layers" style="font-size: 2rem; position: relative"><i class="fas fa-square" style="color: #B24945"></i><i class="fas fa-thumbs-down" style="color: black" data-fa-transform="shrink-8 up-.5 left-.5 down-0.5"></i><i class="fas fa-thumbs-down" style="color: black" data-fa-transform="shrink-8 down-.5 right-.5 down-0.5"></i><i class="fas fa-thumbs-down" style="color: black" data-fa-transform="shrink-8 up-.5 right-.5 down-0.5"></i><i class="fas fa-thumbs-down" style="color: black" data-fa-transform="shrink-8 down-.5 left-.5 down-0.5"></i><i class="fas fa-thumbs-down" style="color: white" data-fa-transform="shrink-8 down-0.5"></i></span></button>
+
+</div>
+<div class="linkline">
+  <a href="/shared/jobhelp_resp?from=footer" data-bs-toggle="modal" data-bs-target="#ajaxModal">Job Seeker Help</a> &bull; <a href="/shared/contact_resp?from=footer&amp;u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search" data-bs-toggle="modal" data-bs-target="#ajaxModal">Contact Us</a>
+</div>
+
+          </div>
+          <div class="col-md-4 text-center mt-2 mb-2">
+            <div class="d-flex justify-content-center align-items-center linkline">
+  <div>Share:</div>    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/share/f?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search" target="_blank"><span class="visually-hidden">Facebook</span><i class="fab fa-facebook-square" title="Share on Facebook" style="color: #435A94; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/share/t?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search" target="_blank"><span class="visually-hidden">X</span><i class="fab fa-square-x-twitter" title="Share on X" style="color: #000000; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/share/i?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search" target="_blank"><span class="visually-hidden">LinkedIn</span><i class="fab fa-linkedin" title="Share on LinkedIn" style="color: #3275B0; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/share/r?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search" target="_blank"><span class="visually-hidden">Reddit</span><i class="fab fa-reddit-square" title="Share on Reddit" style="color: #EB5528; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="mailto:?body=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;subject=Occupation%20Keyword%20Search" target="_blank"><span class="visually-hidden">Email</span><i class="fas fa-envelope-square" title="Share on Email" style="color: #9B9B9B; font-size: 2rem; position: relative"></i></a></div>
+
+</div>
+<div class="linkline">
+  <a href="https://www.onetcenter.org/linkToOnet.html#link">Link to Us</a> &bull; <a href="/shared/cite_resp?u=https%3A%2F%2Fwww.onetonline.org%2Ffind%2Fquick%3Fs%3Dnurse&amp;t=Occupation%20Keyword%20Search" data-bs-toggle="modal" data-bs-target="#ajaxModal">Cite this Page</a>
+</div>
+<div class="linkline">
+  <div class="d-flex justify-content-center align-items-center linkline">
+  <a href="/help/license" class="d-flex justify-content-center align-items-center linkline">
+    <div class="d-flex image-container image-48x24 me-2"><span class="visually-hidden">Creative Commons CC-BY</span><span class="text-secondary" style="font-size: 1.4rem; position: relative"><i class="fab fa-creative-commons" style="padding-right: 0.2em"></i><i class="fab fa-creative-commons-by"></i></span></div>
+    <div class="d-flex">License</div>
+  </a>
+  <div class="d-none"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Occupation Keyword Search</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.onetonline.org/find/quick?s=nurse" property="cc:attributionName" rel="cc:attributionURL">U.S. Department of Labor, Employment and Training Administration</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
+</div>
+
+</div>
+
+          </div>
+          <div class="col-md-4 text-center mt-2 mb-2">
+            <div class="d-flex justify-content-center align-items-center linkline">
+  <div>Follow us:</div>    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/follow/mailing-list" target="_blank"><i class="fas fa-envelope-square" title="O*NET Updates mailing list" style="color: #9B9B9B; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/follow/facebook" target="_blank"><i class="fab fa-facebook-square" title="O*NET Updates on Facebook" style="color: #435A94; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/follow/twitter" target="_blank"><i class="fab fa-square-x-twitter" title="O*NET Updates on X" style="color: #000000; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/follow/youtube" target="_blank"><i class="fab fa-youtube-square" title="O*NET Center YouTube channel" style="color: #FF0000; font-size: 2rem; position: relative"></i></a></div>
+    <div class="image-container image-16x16"><a href="https://www.onetcenter.org/follow/github" target="_blank"><i class="fab fa-github-square" title="O*NET Center on GitHub" style="color: #000000; font-size: 2rem; position: relative"></i></a></div>
+
+</div>
+<div class="linkline">
+  <a href="/help/online/">About this Site</a> &bull; <a href="/help/privacy/" data-bs-toggle="modal" data-bs-target="#ajaxModal">Privacy</a> &bull; <a href="/help/disclaimer/" data-bs-toggle="modal" data-bs-target="#ajaxModal">Disclaimer</a>
+</div>
+<div class="linkline">
+  Site updated August 26, 2025
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class="modal ajax fade" id="ajaxModal" data-dest="" tabindex="-1" role="dialog" aria-labelledby="ajaxModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" data-default-class="modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title m-0" id="ajaxModalLabel">
+            <span class="loading">Loading...</span>
+            <span class="loaded"></span>
+          </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="loading"><p>Loading...</p></div>
+          <div class="loaded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

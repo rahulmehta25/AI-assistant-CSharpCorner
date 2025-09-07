@@ -1,0 +1,590 @@
+{
+  "template_version": "1.0",
+  "description": "Extracurricular activities and opportunities mapped to career fields and student levels",
+  "career_field_activities": {
+    "Computer_Science": {
+      "high_school": {
+        "clubs_and_organizations": [
+          {
+            "name": "Computer Science Club",
+            "description": "Programming projects and tech discussions",
+            "time_commitment": "3-5 hours/week",
+            "skills_gained": ["programming", "teamwork", "problem-solving", "technical presentation"],
+            "leadership_opportunities": ["club president", "project lead", "tutor"],
+            "competitions": ["coding competitions", "hackathons", "robotics competitions"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Robotics Team",
+            "description": "Build and program robots for competitions",
+            "time_commitment": "10-15 hours/week",
+            "skills_gained": ["programming", "mechanical design", "teamwork", "project management"],
+            "leadership_opportunities": ["team captain", "programming lead", "design lead"],
+            "competitions": ["FIRST Robotics", "VEX Robotics", "local robotics competitions"],
+            "relevance_score": 0.9
+          },
+          {
+            "name": "Math Team",
+            "description": "Mathematical problem solving and competitions",
+            "time_commitment": "4-6 hours/week",
+            "skills_gained": ["mathematical reasoning", "problem-solving", "analytical thinking"],
+            "leadership_opportunities": ["team captain", "peer tutor"],
+            "competitions": ["Math Olympiad", "regional math competitions"],
+            "relevance_score": 0.8
+          }
+        ],
+        "competitions": [
+          {
+            "name": "USACO (USA Computing Olympiad)",
+            "description": "Programming competition with bronze, silver, gold levels",
+            "preparation_time": "5-10 hours/week",
+            "skills_developed": ["algorithmic thinking", "competitive programming"],
+            "recognition_level": "national",
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Local Hackathons",
+            "description": "Weekend programming competitions",
+            "time_commitment": "weekend events",
+            "skills_developed": ["rapid prototyping", "teamwork", "innovation"],
+            "recognition_level": "local/regional",
+            "relevance_score": 0.9
+          }
+        ],
+        "volunteer_opportunities": [
+          {
+            "name": "Code.org Volunteer",
+            "description": "Teach coding to younger students",
+            "time_commitment": "2-4 hours/week",
+            "skills_gained": ["teaching", "leadership", "technical communication"],
+            "impact": "community education",
+            "relevance_score": 0.7
+          },
+          {
+            "name": "Tech Support Volunteer",
+            "description": "Help community members with technology",
+            "time_commitment": "3-5 hours/week",
+            "skills_gained": ["technical support", "patience", "communication"],
+            "impact": "digital divide reduction",
+            "relevance_score": 0.6
+          }
+        ]
+      },
+      "college": {
+        "professional_organizations": [
+          {
+            "name": "ACM Student Chapter",
+            "description": "Association for Computing Machinery student group",
+            "time_commitment": "3-5 hours/week",
+            "skills_gained": ["networking", "professional development", "technical knowledge"],
+            "leadership_opportunities": ["chapter president", "event coordinator", "treasurer"],
+            "professional_benefits": ["industry connections", "conference attendance", "resume building"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "IEEE Computer Society",
+            "description": "Institute of Electrical and Electronics Engineers",
+            "time_commitment": "2-4 hours/week",
+            "skills_gained": ["technical standards", "professional networking", "industry trends"],
+            "leadership_opportunities": ["chapter officer", "event organizer"],
+            "professional_benefits": ["technical publications", "professional development", "networking"],
+            "relevance_score": 0.9
+          }
+        ],
+        "competitions": [
+          {
+            "name": "International Collegiate Programming Contest (ICPC)",
+            "description": "Team programming competition",
+            "preparation_time": "8-12 hours/week",
+            "skills_developed": ["algorithmic problem-solving", "team programming", "time management"],
+            "recognition_level": "international",
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Hackathons (MLH, company-sponsored)",
+            "description": "Intensive programming competitions",
+            "time_commitment": "weekend events",
+            "skills_developed": ["rapid development", "innovation", "networking"],
+            "recognition_level": "industry",
+            "relevance_score": 0.9
+          }
+        ],
+        "research_opportunities": [
+          {
+            "name": "Undergraduate Research Assistant",
+            "description": "Assist faculty with computer science research",
+            "time_commitment": "10-15 hours/week",
+            "skills_gained": ["research methods", "academic writing", "advanced technical skills"],
+            "outcomes": ["publications", "conference presentations", "graduate school preparation"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Independent Study Projects",
+            "description": "Self-directed research projects",
+            "time_commitment": "varies",
+            "skills_gained": ["independent research", "project management", "innovation"],
+            "outcomes": ["portfolio projects", "potential publications"],
+            "relevance_score": 0.8
+          }
+        ],
+        "internship_types": [
+          {
+            "name": "Software Development Internship",
+            "description": "Programming and development work",
+            "typical_duration": "summer (3 months)",
+            "skills_gained": ["professional programming", "software development lifecycle", "teamwork"],
+            "career_preparation": "direct industry experience",
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Research Internship",
+            "description": "Academic or industry research",
+            "typical_duration": "summer or semester",
+            "skills_gained": ["research methods", "academic writing", "advanced technical skills"],
+            "career_preparation": "graduate school or research careers",
+            "relevance_score": 0.9
+          }
+        ]
+      }
+    },
+    "Engineering": {
+      "high_school": {
+        "clubs_and_organizations": [
+          {
+            "name": "Engineering Club",
+            "description": "Engineering design challenges and projects",
+            "time_commitment": "4-6 hours/week",
+            "skills_gained": ["design thinking", "problem-solving", "technical communication", "teamwork"],
+            "leadership_opportunities": ["club president", "project manager", "mentor"],
+            "competitions": ["Science Olympiad", "engineering design challenges"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Science Olympiad",
+            "description": "STEM academic competition",
+            "time_commitment": "6-10 hours/week",
+            "skills_gained": ["scientific knowledge", "teamwork", "competition skills", "research"],
+            "leadership_opportunities": ["team captain", "event specialist"],
+            "competitions": ["regional", "state", "national Science Olympiad"],
+            "relevance_score": 0.9
+          },
+          {
+            "name": "Technology Student Association (TSA)",
+            "description": "Technology and engineering competition organization",
+            "time_commitment": "5-8 hours/week",
+            "skills_gained": ["technical skills", "presentation", "project management"],
+            "leadership_opportunities": ["chapter officer", "team leader"],
+            "competitions": ["state and national TSA competitions"],
+            "relevance_score": 0.9
+          }
+        ],
+        "summer_programs": [
+          {
+            "name": "Engineering Summer Camps",
+            "description": "Intensive engineering programs at universities",
+            "duration": "1-4 weeks",
+            "skills_gained": ["engineering fundamentals", "hands-on experience", "career exploration"],
+            "providers": ["universities", "engineering organizations"],
+            "relevance_score": 0.8
+          }
+        ]
+      },
+      "college": {
+        "professional_organizations": [
+          {
+            "name": "American Society of Civil Engineers (ASCE)",
+            "description": "Professional organization for civil engineers",
+            "time_commitment": "3-5 hours/week",
+            "skills_gained": ["professional networking", "industry knowledge", "leadership"],
+            "discipline": "Civil Engineering",
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Society of Women Engineers (SWE)",
+            "description": "Professional development for women in engineering",
+            "time_commitment": "3-5 hours/week",
+            "skills_gained": ["networking", "professional development", "mentorship"],
+            "discipline": "All Engineering",
+            "relevance_score": 0.9
+          },
+          {
+            "name": "Institute of Electrical and Electronics Engineers (IEEE)",
+            "description": "Professional organization for electrical engineers",
+            "time_commitment": "2-4 hours/week",
+            "skills_gained": ["technical standards", "professional networking", "continuing education"],
+            "discipline": "Electrical/Computer Engineering",
+            "relevance_score": 1.0
+          }
+        ],
+        "design_teams": [
+          {
+            "name": "Formula SAE",
+            "description": "Design and build formula-style race cars",
+            "time_commitment": "15-25 hours/week",
+            "skills_gained": ["mechanical design", "manufacturing", "project management", "teamwork"],
+            "competition_level": "international",
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Concrete Canoe",
+            "description": "Design and build concrete canoe",
+            "time_commitment": "8-12 hours/week",
+            "skills_gained": ["materials engineering", "design optimization", "manufacturing"],
+            "discipline": "Civil Engineering",
+            "relevance_score": 0.9
+          },
+          {
+            "name": "Solar Car Team",
+            "description": "Design and build solar-powered vehicles",
+            "time_commitment": "12-20 hours/week",
+            "skills_gained": ["sustainable engineering", "electrical systems", "aerodynamics"],
+            "competition_level": "international",
+            "relevance_score": 0.9
+          }
+        ]
+      }
+    },
+    "Business": {
+      "high_school": {
+        "clubs_and_organizations": [
+          {
+            "name": "DECA",
+            "description": "Marketing, finance, and business competition organization",
+            "time_commitment": "6-10 hours/week",
+            "skills_gained": ["business knowledge", "presentation", "networking", "competition"],
+            "leadership_opportunities": ["chapter president", "committee chair"],
+            "competitions": ["regional", "state", "international DECA competitions"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Future Business Leaders of America (FBLA)",
+            "description": "Business and entrepreneurship organization",
+            "time_commitment": "4-8 hours/week",
+            "skills_gained": ["business skills", "leadership", "networking", "competition"],
+            "leadership_opportunities": ["chapter officer", "event coordinator"],
+            "competitions": ["state and national FBLA competitions"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Junior Achievement",
+            "description": "Entrepreneurship and financial literacy programs",
+            "time_commitment": "varies by program",
+            "skills_gained": ["entrepreneurship", "financial literacy", "business operations"],
+            "outcomes": ["real business creation", "financial education"],
+            "relevance_score": 0.9
+          }
+        ],
+        "leadership_activities": [
+          {
+            "name": "Student Government",
+            "description": "School leadership and governance",
+            "time_commitment": "5-10 hours/week",
+            "skills_gained": ["leadership", "public speaking", "policy making", "event planning"],
+            "leadership_roles": ["president", "vice president", "treasurer", "representative"],
+            "relevance_score": 0.8
+          }
+        ]
+      },
+      "college": {
+        "professional_organizations": [
+          {
+            "name": "Business Student Organizations",
+            "description": "Major-specific business clubs",
+            "examples": ["Marketing Club", "Finance Society", "Entrepreneurship Club"],
+            "time_commitment": "3-6 hours/week",
+            "skills_gained": ["professional networking", "industry knowledge", "career development"],
+            "relevance_score": 1.0
+          }
+        ],
+        "competitions": [
+          {
+            "name": "Case Competition Teams",
+            "description": "Business case analysis competitions",
+            "time_commitment": "8-15 hours/week during competition season",
+            "skills_gained": ["analytical thinking", "presentation", "teamwork", "business strategy"],
+            "competition_levels": ["regional", "national", "international"],
+            "relevance_score": 1.0
+          }
+        ]
+      }
+    },
+    "Health_Sciences": {
+      "high_school": {
+        "clubs_and_organizations": [
+          {
+            "name": "Health Occupations Students of America (HOSA)",
+            "description": "Health career preparation organization",
+            "time_commitment": "4-8 hours/week",
+            "skills_gained": ["medical knowledge", "healthcare skills", "leadership", "competition"],
+            "leadership_opportunities": ["chapter officer", "committee chair"],
+            "competitions": ["regional", "state", "national HOSA competitions"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Red Cross Club",
+            "description": "Health and emergency response volunteer work",
+            "time_commitment": "3-6 hours/week",
+            "skills_gained": ["first aid", "emergency response", "community service", "healthcare awareness"],
+            "certifications": ["First Aid", "CPR", "AED"],
+            "relevance_score": 0.8
+          }
+        ],
+        "volunteer_opportunities": [
+          {
+            "name": "Hospital Volunteering",
+            "description": "Volunteer work in healthcare settings",
+            "time_commitment": "4-8 hours/week",
+            "skills_gained": ["patient interaction", "healthcare environment", "empathy", "professionalism"],
+            "requirements": ["application process", "background check", "training"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Nursing Home Volunteering",
+            "description": "Work with elderly patients",
+            "time_commitment": "2-6 hours/week",
+            "skills_gained": ["patient care", "communication", "empathy", "geriatric awareness"],
+            "impact": "improving quality of life for elderly",
+            "relevance_score": 0.8
+          }
+        ]
+      },
+      "college": {
+        "pre_professional_activities": [
+          {
+            "name": "Pre-Med Society",
+            "description": "Medical school preparation and support",
+            "time_commitment": "3-5 hours/week",
+            "skills_gained": ["medical school preparation", "networking", "study strategies"],
+            "benefits": ["MCAT preparation", "medical school guidance", "peer support"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Clinical Experience Programs",
+            "description": "Direct patient care experience",
+            "time_commitment": "varies",
+            "skills_gained": ["patient interaction", "clinical skills", "healthcare systems"],
+            "types": ["scribing", "EMT", "CNA work", "clinical research"],
+            "relevance_score": 1.0
+          }
+        ]
+      }
+    },
+    "Liberal_Arts": {
+      "high_school": {
+        "clubs_and_organizations": [
+          {
+            "name": "National Honor Society",
+            "description": "Academic honor society emphasizing scholarship, leadership, service, character",
+            "time_commitment": "3-5 hours/week",
+            "skills_gained": ["leadership", "community service", "academic excellence", "character development"],
+            "requirements": ["GPA requirement", "service hours", "leadership activities"],
+            "relevance_score": 0.8
+          },
+          {
+            "name": "Debate Team",
+            "description": "Competitive speech and debate",
+            "time_commitment": "8-12 hours/week",
+            "skills_gained": ["public speaking", "research", "critical thinking", "argumentation"],
+            "competition_types": ["policy debate", "Lincoln-Douglas", "public forum"],
+            "relevance_score": 0.9
+          },
+          {
+            "name": "Model United Nations",
+            "description": "Simulation of United Nations proceedings",
+            "time_commitment": "4-8 hours/week",
+            "skills_gained": ["diplomacy", "international relations", "public speaking", "negotiation"],
+            "competitions": ["local", "regional", "national", "international conferences"],
+            "relevance_score": 0.9
+          }
+        ],
+        "academic_activities": [
+          {
+            "name": "Literary Magazine",
+            "description": "School publication for creative writing and art",
+            "time_commitment": "3-6 hours/week",
+            "skills_gained": ["writing", "editing", "publishing", "artistic curation"],
+            "roles": ["editor", "contributor", "layout designer"],
+            "relevance_score": 0.8
+          }
+        ]
+      },
+      "college": {
+        "academic_activities": [
+          {
+            "name": "Undergraduate Research",
+            "description": "Research projects with faculty",
+            "time_commitment": "10-15 hours/week",
+            "skills_gained": ["research methods", "academic writing", "critical analysis"],
+            "outcomes": ["conference presentations", "publications", "graduate school preparation"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Honor Societies",
+            "description": "Discipline-specific academic honor societies",
+            "examples": ["Phi Beta Kappa", "Phi Alpha Theta (History)", "Sigma Tau Delta (English)"],
+            "benefits": ["academic recognition", "networking", "graduate school advantages"],
+            "relevance_score": 0.8
+          }
+        ]
+      }
+    },
+    "Arts_and_Creative": {
+      "high_school": {
+        "clubs_and_organizations": [
+          {
+            "name": "Art Club",
+            "description": "Creative expression and artistic skill development",
+            "time_commitment": "4-8 hours/week",
+            "skills_gained": ["artistic techniques", "creativity", "portfolio development", "art appreciation"],
+            "activities": ["gallery exhibitions", "art competitions", "community art projects"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Drama/Theater Club",
+            "description": "Theater performance and production",
+            "time_commitment": "10-20 hours/week during productions",
+            "skills_gained": ["performance", "collaboration", "creativity", "confidence", "project management"],
+            "roles": ["actor", "director", "technician", "designer"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Music Ensembles",
+            "description": "Band, choir, orchestra, or other musical groups",
+            "time_commitment": "5-10 hours/week",
+            "skills_gained": ["musical skills", "teamwork", "performance", "discipline"],
+            "opportunities": ["competitions", "concerts", "community performances"],
+            "relevance_score": 0.9
+          }
+        ],
+        "competitions": [
+          {
+            "name": "Art Competitions",
+            "description": "Local, regional, and national art competitions",
+            "time_commitment": "varies",
+            "skills_gained": ["portfolio development", "artistic growth", "competition experience"],
+            "recognition": ["awards", "scholarships", "college application enhancement"],
+            "relevance_score": 1.0
+          }
+        ]
+      },
+      "college": {
+        "professional_development": [
+          {
+            "name": "Art Student Organizations",
+            "description": "Major-specific arts organizations",
+            "time_commitment": "3-6 hours/week",
+            "skills_gained": ["professional networking", "artistic collaboration", "exhibition experience"],
+            "activities": ["gallery shows", "arts festivals", "professional development"],
+            "relevance_score": 1.0
+          },
+          {
+            "name": "Portfolio Development",
+            "description": "Building professional artistic portfolio",
+            "time_commitment": "ongoing",
+            "skills_gained": ["professional presentation", "artistic curation", "career preparation"],
+            "outcomes": ["professional portfolio", "exhibition opportunities"],
+            "relevance_score": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "universal_activities": {
+    "all_career_fields": {
+      "high_school": [
+        {
+          "name": "Community Service",
+          "description": "Volunteer work in local community",
+          "time_commitment": "2-6 hours/week",
+          "skills_gained": ["empathy", "leadership", "community engagement", "social responsibility"],
+          "types": ["food banks", "tutoring", "environmental cleanup", "elderly care"],
+          "relevance_score": 0.7
+        },
+        {
+          "name": "Part-time Employment",
+          "description": "Work experience during high school",
+          "time_commitment": "10-20 hours/week",
+          "skills_gained": ["work ethic", "customer service", "time management", "responsibility"],
+          "types": ["retail", "food service", "tutoring", "office work"],
+          "relevance_score": 0.6
+        },
+        {
+          "name": "Peer Tutoring",
+          "description": "Teaching and helping other students",
+          "time_commitment": "2-5 hours/week",
+          "skills_gained": ["teaching", "patience", "communication", "subject mastery"],
+          "benefits": ["reinforces learning", "develops teaching skills"],
+          "relevance_score": 0.7
+        }
+      ],
+      "college": [
+        {
+          "name": "Study Abroad",
+          "description": "International academic experience",
+          "duration": "semester or year",
+          "skills_gained": ["cultural competency", "independence", "language skills", "global perspective"],
+          "career_benefits": ["international experience", "adaptability", "networking"],
+          "relevance_score": 0.8
+        },
+        {
+          "name": "Resident Assistant (RA)",
+          "description": "Residential life leadership position",
+          "time_commitment": "20+ hours/week",
+          "skills_gained": ["leadership", "crisis management", "mentoring", "program planning"],
+          "benefits": ["free housing", "stipend", "professional development"],
+          "relevance_score": 0.7
+        },
+        {
+          "name": "Campus Employment",
+          "description": "Work study or campus jobs",
+          "time_commitment": "10-20 hours/week",
+          "skills_gained": ["work experience", "time management", "professional skills"],
+          "types": ["library assistant", "lab assistant", "office work", "campus tours"],
+          "relevance_score": 0.6
+        }
+      ]
+    }
+  },
+  "activity_selection_criteria": {
+    "factors_to_consider": [
+      "Time commitment vs. academic priorities",
+      "Relevance to career goals",
+      "Leadership opportunity potential",
+      "Skill development alignment",
+      "Networking and relationship building",
+      "Personal interest and passion",
+      "College/career application impact",
+      "Community service component",
+      "Competition and recognition opportunities",
+      "Long-term commitment potential"
+    ],
+    "recommended_activity_load": {
+      "high_school": {
+        "freshman": "1-2 activities to allow adjustment",
+        "sophomore": "2-3 activities with some leadership",
+        "junior": "2-4 activities with significant leadership",
+        "senior": "Maintain 2-3 activities while managing applications"
+      },
+      "college": {
+        "freshman": "1-2 activities while adjusting to college",
+        "sophomore": "2-3 activities with increasing involvement",
+        "junior": "2-4 activities with leadership roles",
+        "senior": "Maintain activities while job searching"
+      }
+    }
+  },
+  "activity_progression_timeline": {
+    "high_school_progression": {
+      "freshman": "Exploration and joining",
+      "sophomore": "Increased involvement and skill development",
+      "junior": "Leadership roles and significant contributions",
+      "senior": "Mentoring and legacy building"
+    },
+    "college_progression": {
+      "freshman": "Campus involvement and exploration",
+      "sophomore": "Skill building and networking",
+      "junior": "Leadership and professional development",
+      "senior": "Mentoring and transition preparation"
+    }
+  }
+}

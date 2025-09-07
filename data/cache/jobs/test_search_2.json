@@ -1,0 +1,16 @@
+{
+  "indeed": [],
+  "combined": [],
+  "total_jobs": 0,
+  "search_metadata": {
+    "query": "software engineer",
+    "location": "Remote",
+    "sources_used": [
+      "indeed"
+    ],
+    "scraped_at": "2025-09-06T17:41:24.610539",
+    "jobs_found": {
+      "indeed": 0
+    }
+  }
+}

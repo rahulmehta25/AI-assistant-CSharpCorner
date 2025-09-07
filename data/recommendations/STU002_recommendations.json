@@ -1,0 +1,318 @@
+{
+  "student": {
+    "id": "STU002",
+    "name": "Sarah Martinez",
+    "major": "Business Administration",
+    "gpa": 3.5
+  },
+  "recommendations": [
+    {
+      "career_id": "financial_analysts",
+      "title": "Financial Analysts",
+      "match_score": 0.5,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, extraversion, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.5 GPA and undergraduate education exceed requirements",
+        "High growth field: This career has 10-15% growth rate, offering excellent future opportunities"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Microsoft Office",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Microsoft Office",
+            "Book: Mastering Microsoft Office",
+            "Tutorial: Microsoft Office for beginners",
+            "Practice projects in Microsoft Office"
+          ]
+        },
+        {
+          "skill": "Research",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Research",
+            "Book: Mastering Research",
+            "Tutorial: Research for beginners",
+            "Practice projects in Research"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Microsoft Office through online courses and practice",
+        "  2. Master Research through online courses and practice",
+        "Phase 2: Professional Certifications (6-12 months)",
+        "  - Obtain Microsoft Office Specialist certification",
+        "  - Obtain Google Analytics certification",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete financial analysts fundamentals course",
+        "  - Build portfolio with 3-5 sample projects",
+        "  - Contribute to team projects",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Financial Analysts",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Financial Analysts",
+        "  - Customize resume for business industry"
+      ],
+      "growth_potential": "10-15%",
+      "salary_range": "$48,000 - $64,000",
+      "job_outlook": "Good - Above average growth"
+    },
+    {
+      "career_id": "onet_scrape_summary",
+      "title": "Onet Scrape Summary",
+      "match_score": 0.488,
+      "confidence": 0.9,
+      "reasons": [
+        "Personality fit: Your openness, extraversion, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.5 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [],
+      "learning_path": [
+        "Phase 4: Experience Building",
+        "  - Seek internships in this field",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to this role",
+        "  - Customize resume for this industry"
+      ],
+      "growth_potential": "Moderate",
+      "salary_range": "Competitive",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "acute_care_nurses",
+      "title": "Acute Care Nurses",
+      "match_score": 0.418,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, extraversion, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.5 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Problem Solving",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Problem Solving",
+            "Book: Mastering Problem Solving",
+            "Tutorial: Problem Solving for beginners",
+            "Practice projects in Problem Solving"
+          ]
+        },
+        {
+          "skill": "Teamwork",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Teamwork",
+            "Book: Mastering Teamwork",
+            "Tutorial: Teamwork for beginners",
+            "Practice projects in Teamwork"
+          ]
+        },
+        {
+          "skill": "Attention to Detail",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Attention to Detail",
+            "Book: Mastering Attention to Detail",
+            "Tutorial: Attention to Detail for beginners",
+            "Practice projects in Attention to Detail"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Problem Solving through online courses and practice",
+        "  2. Master Teamwork through online courses and practice",
+        "  3. Master Attention to Detail through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational acute care nurses training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Acute Care Nurses",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Acute Care Nurses",
+        "  - Customize resume for healthcare industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$31 - $37",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "aerospace_engineering_and_operations_technologists_and_technicians",
+      "title": "Aerospace Engineering and Operations Technologists and Technicians",
+      "match_score": 0.412,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, extraversion, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.5 GPA and undergraduate education exceed requirements"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Problem Solving",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Problem Solving",
+            "Book: Mastering Problem Solving",
+            "Tutorial: Problem Solving for beginners",
+            "Practice projects in Problem Solving"
+          ]
+        },
+        {
+          "skill": "Teamwork",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Teamwork",
+            "Book: Mastering Teamwork",
+            "Tutorial: Teamwork for beginners",
+            "Practice projects in Teamwork"
+          ]
+        },
+        {
+          "skill": "Attention to Detail",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Attention to Detail",
+            "Book: Mastering Attention to Detail",
+            "Tutorial: Attention to Detail for beginners",
+            "Practice projects in Attention to Detail"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Problem Solving through online courses and practice",
+        "  2. Master Teamwork through online courses and practice",
+        "  3. Master Attention to Detail through online courses and practice",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete foundational aerospace engineering and operations technologists and technicians training",
+        "  - Shadow experienced professionals",
+        "  - Complete first independent project",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Aerospace Engineering and Operations Technologists and Technicians",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Aerospace Engineering and Operations Technologists and Technicians",
+        "  - Customize resume for engineering industry"
+      ],
+      "growth_potential": "8%",
+      "salary_range": "$26 - $31",
+      "job_outlook": "Stable - Average growth expected"
+    },
+    {
+      "career_id": "elementary_school_teachers",
+      "title": "Elementary School Teachers",
+      "match_score": 0.392,
+      "confidence": 1.0,
+      "reasons": [
+        "Personality fit: Your openness, extraversion, agreeableness traits are ideal for success in this role",
+        "Academic excellence: Your 3.5 GPA and undergraduate education exceed requirements",
+        "High growth field: This career has 10-15% growth rate, offering excellent future opportunities"
+      ],
+      "skill_gaps": [
+        {
+          "skill": "Lesson Planning",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Lesson Planning",
+            "Book: Mastering Lesson Planning",
+            "Tutorial: Lesson Planning for beginners",
+            "Practice projects in Lesson Planning"
+          ]
+        },
+        {
+          "skill": "Classroom Management",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Classroom Management",
+            "Book: Mastering Classroom Management",
+            "Tutorial: Classroom Management for beginners",
+            "Practice projects in Classroom Management"
+          ]
+        },
+        {
+          "skill": "Assessment",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Assessment",
+            "Book: Mastering Assessment",
+            "Tutorial: Assessment for beginners",
+            "Practice projects in Assessment"
+          ]
+        },
+        {
+          "skill": "Technology",
+          "importance": "high",
+          "learning_resources": [
+            "Online course: Introduction to Technology",
+            "Book: Mastering Technology",
+            "Tutorial: Technology for beginners",
+            "Practice projects in Technology"
+          ]
+        }
+      ],
+      "learning_path": [
+        "Phase 1: Foundation Building (3-6 months)",
+        "  1. Master Lesson Planning through online courses and practice",
+        "  2. Master Classroom Management through online courses and practice",
+        "  3. Master Assessment through online courses and practice",
+        "Phase 2: Professional Certifications (6-12 months)",
+        "  - Obtain Teaching License certification",
+        "  - Obtain First Aid certification",
+        "Phase 3: Portfolio Development (Ongoing)",
+        "  - Complete elementary school teachers fundamentals course",
+        "  - Build portfolio with 3-5 sample projects",
+        "  - Contribute to team projects",
+        "Phase 4: Experience Building",
+        "  - Seek internships in Elementary School Teachers",
+        "  - Contribute to relevant open-source projects or volunteer work",
+        "  - Network with professionals in the field",
+        "Phase 5: Career Launch Preparation",
+        "  - Build professional portfolio showcasing your skills",
+        "  - Practice interview skills specific to Elementary School Teachers",
+        "  - Customize resume for education industry"
+      ],
+      "growth_potential": "10-15%",
+      "salary_range": "$33,000 - $44,000",
+      "job_outlook": "Good - Above average growth"
+    }
+  ],
+  "assessment": {
+    "holland_code": "EAS",
+    "top_skills": [
+      [
+        "Communication",
+        5
+      ],
+      [
+        "Social Media",
+        5
+      ],
+      [
+        "Marketing",
+        4
+      ],
+      [
+        "Leadership",
+        4
+      ],
+      [
+        "Creative Writing",
+        4
+      ]
+    ]
+  }
+}

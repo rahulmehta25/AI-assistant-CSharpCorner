@@ -1,0 +1,801 @@
+{
+  "software_developers": {
+    "entry": [
+      {
+        "id": "programming_fundamentals",
+        "title": "Master Programming Fundamentals",
+        "description": "Learn core programming concepts including variables, functions, control structures, and basic algorithms",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 200,
+        "prerequisites": [],
+        "skills_gained": ["Programming Logic", "Debugging", "Code Organization"],
+        "completion_criteria": [
+          "Complete beginner programming course",
+          "Build 5 simple programs",
+          "Pass programming assessment"
+        ],
+        "resources": [
+          "Codecademy Python/JavaScript course",
+          "freeCodeCamp curriculum",
+          "YouTube programming tutorials",
+          "Local coding bootcamp"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "version_control",
+        "title": "Learn Version Control with Git",
+        "description": "Master Git for code versioning, collaboration, and project management",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 50,
+        "prerequisites": ["programming_fundamentals"],
+        "skills_gained": ["Git", "GitHub", "Collaboration"],
+        "completion_criteria": [
+          "Create GitHub account and profile",
+          "Complete Git tutorial",
+          "Collaborate on open source project"
+        ],
+        "resources": [
+          "GitHub Learning Lab",
+          "Atlassian Git tutorials",
+          "Pro Git book (free)",
+          "Interactive Git tutorial"
+        ],
+        "career_impact": 0.8
+      },
+      {
+        "id": "first_portfolio_project",
+        "title": "Build First Portfolio Project",
+        "description": "Create a complete project demonstrating programming skills and problem-solving ability",
+        "category": "project",
+        "priority": "high",
+        "estimated_hours": 80,
+        "prerequisites": ["programming_fundamentals", "version_control"],
+        "skills_gained": ["Project Planning", "Problem Solving", "Documentation"],
+        "completion_criteria": [
+          "Complete project meets requirements",
+          "Code is well-documented",
+          "Project is deployed/accessible",
+          "README file explains project"
+        ],
+        "resources": [
+          "Project idea lists online",
+          "GitHub Pages for deployment",
+          "Stack Overflow for help",
+          "Code review communities"
+        ],
+        "career_impact": 0.85
+      }
+    ],
+    "junior": [
+      {
+        "id": "web_development_stack",
+        "title": "Master Full-Stack Web Development",
+        "description": "Learn front-end and back-end technologies for web application development",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 300,
+        "prerequisites": ["programming_fundamentals"],
+        "skills_gained": ["HTML/CSS", "JavaScript", "React/Vue", "Node.js", "Databases"],
+        "completion_criteria": [
+          "Build responsive website",
+          "Create REST API",
+          "Implement user authentication",
+          "Deploy full-stack application"
+        ],
+        "resources": [
+          "The Odin Project",
+          "Full Stack Open",
+          "MongoDB University",
+          "AWS free tier"
+        ],
+        "career_impact": 0.95
+      },
+      {
+        "id": "database_skills",
+        "title": "Database Design and Management",
+        "description": "Learn database concepts, SQL, and NoSQL database management",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 120,
+        "prerequisites": ["programming_fundamentals"],
+        "skills_gained": ["SQL", "Database Design", "MongoDB", "PostgreSQL"],
+        "completion_criteria": [
+          "Design normalized database schema",
+          "Write complex SQL queries",
+          "Implement database in project",
+          "Understand NoSQL concepts"
+        ],
+        "resources": [
+          "SQLBolt interactive tutorial",
+          "PostgreSQL documentation",
+          "MongoDB University courses",
+          "Database design course"
+        ],
+        "career_impact": 0.8
+      },
+      {
+        "id": "agile_methodology",
+        "title": "Learn Agile Development Practices",
+        "description": "Understand Scrum, Kanban, and modern software development practices",
+        "category": "skill",
+        "priority": "medium",
+        "estimated_hours": 60,
+        "prerequisites": ["first_portfolio_project"],
+        "skills_gained": ["Scrum", "Kanban", "Sprint Planning", "User Stories"],
+        "completion_criteria": [
+          "Complete Scrum certification",
+          "Participate in sprint planning",
+          "Write user stories",
+          "Use project management tools"
+        ],
+        "resources": [
+          "Scrum.org certification",
+          "Atlassian Agile tutorials",
+          "Jira training",
+          "Agile books and podcasts"
+        ],
+        "career_impact": 0.7
+      }
+    ],
+    "mid_level": [
+      {
+        "id": "system_architecture",
+        "title": "System Architecture and Design Patterns",
+        "description": "Learn to design scalable systems and implement common design patterns",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 250,
+        "prerequisites": ["web_development_stack", "database_skills"],
+        "skills_gained": ["System Design", "Design Patterns", "Scalability", "Microservices"],
+        "completion_criteria": [
+          "Design system for 1M+ users",
+          "Implement design patterns",
+          "Create microservices architecture",
+          "Document system design"
+        ],
+        "resources": [
+          "System Design Interview books",
+          "High Scalability blog",
+          "AWS Architecture Center",
+          "Design Patterns book"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "devops_practices",
+        "title": "DevOps and CI/CD Implementation",
+        "description": "Implement continuous integration, deployment, and infrastructure as code",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 200,
+        "prerequisites": ["web_development_stack"],
+        "skills_gained": ["CI/CD", "Docker", "Kubernetes", "Infrastructure as Code"],
+        "completion_criteria": [
+          "Set up CI/CD pipeline",
+          "Containerize applications",
+          "Deploy to cloud platforms",
+          "Monitor application performance"
+        ],
+        "resources": [
+          "Docker documentation",
+          "Kubernetes tutorials",
+          "GitHub Actions guide",
+          "AWS/Azure/GCP tutorials"
+        ],
+        "career_impact": 0.85
+      },
+      {
+        "id": "team_leadership",
+        "title": "Technical Leadership Skills",
+        "description": "Develop skills to lead technical teams and mentor junior developers",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 150,
+        "prerequisites": ["agile_methodology"],
+        "skills_gained": ["Leadership", "Mentoring", "Code Review", "Technical Communication"],
+        "completion_criteria": [
+          "Lead team project",
+          "Mentor junior developer",
+          "Conduct code reviews",
+          "Present technical decisions"
+        ],
+        "resources": [
+          "Engineering leadership books",
+          "Management training courses",
+          "Speaking clubs",
+          "Leadership workshops"
+        ],
+        "career_impact": 0.8
+      }
+    ],
+    "senior": [
+      {
+        "id": "enterprise_architecture",
+        "title": "Enterprise Architecture Expertise",
+        "description": "Design and implement enterprise-level software solutions",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 300,
+        "prerequisites": ["system_architecture", "devops_practices"],
+        "skills_gained": ["Enterprise Patterns", "Integration Architecture", "Security Architecture"],
+        "completion_criteria": [
+          "Design enterprise system",
+          "Implement security framework",
+          "Create integration strategy",
+          "Document architecture decisions"
+        ],
+        "resources": [
+          "Enterprise Integration Patterns",
+          "Architecture decision records",
+          "TOGAF certification",
+          "Security architecture guides"
+        ],
+        "career_impact": 0.95
+      },
+      {
+        "id": "strategic_planning",
+        "title": "Technology Strategy and Planning",
+        "description": "Develop strategic technology roadmaps and make architectural decisions",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 180,
+        "prerequisites": ["team_leadership"],
+        "skills_gained": ["Strategic Planning", "Technology Assessment", "Roadmapping"],
+        "completion_criteria": [
+          "Create technology roadmap",
+          "Evaluate technology stack",
+          "Present to executives",
+          "Drive technical decisions"
+        ],
+        "resources": [
+          "Technology strategy courses",
+          "Executive communication training",
+          "Industry analysis reports",
+          "Strategic planning workshops"
+        ],
+        "career_impact": 0.9
+      }
+    ]
+  },
+  "data_scientists": {
+    "entry": [
+      {
+        "id": "statistics_fundamentals",
+        "title": "Master Statistics and Mathematics",
+        "description": "Build strong foundation in statistics, probability, and linear algebra",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 250,
+        "prerequisites": [],
+        "skills_gained": ["Statistics", "Probability", "Linear Algebra", "Calculus"],
+        "completion_criteria": [
+          "Complete statistics course",
+          "Pass probability assessments",
+          "Solve linear algebra problems",
+          "Apply statistical concepts"
+        ],
+        "resources": [
+          "Khan Academy Statistics",
+          "Coursera Statistics courses",
+          "MIT OpenCourseWare",
+          "Statistics textbooks"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "python_data_science",
+        "title": "Python for Data Science",
+        "description": "Learn Python programming with focus on data science libraries",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 200,
+        "prerequisites": [],
+        "skills_gained": ["Python", "Pandas", "NumPy", "Matplotlib", "Jupyter"],
+        "completion_criteria": [
+          "Complete Python course",
+          "Master pandas operations",
+          "Create data visualizations",
+          "Build Jupyter notebooks"
+        ],
+        "resources": [
+          "Python Data Science Handbook",
+          "Kaggle Learn",
+          "DataCamp courses",
+          "Anaconda distribution"
+        ],
+        "career_impact": 0.95
+      },
+      {
+        "id": "first_data_project",
+        "title": "Complete First Data Analysis Project",
+        "description": "End-to-end data analysis project from data collection to insights",
+        "category": "project",
+        "priority": "high",
+        "estimated_hours": 100,
+        "prerequisites": ["python_data_science", "statistics_fundamentals"],
+        "skills_gained": ["Data Analysis", "Storytelling", "Visualization"],
+        "completion_criteria": [
+          "Clean and prepare dataset",
+          "Perform exploratory analysis",
+          "Generate actionable insights",
+          "Present findings clearly"
+        ],
+        "resources": [
+          "Kaggle datasets",
+          "Data.gov datasets",
+          "Project portfolio examples",
+          "Data storytelling guides"
+        ],
+        "career_impact": 0.85
+      }
+    ],
+    "junior": [
+      {
+        "id": "machine_learning",
+        "title": "Machine Learning Fundamentals",
+        "description": "Learn supervised and unsupervised learning algorithms",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 300,
+        "prerequisites": ["python_data_science", "statistics_fundamentals"],
+        "skills_gained": ["Scikit-learn", "ML Algorithms", "Model Evaluation", "Feature Engineering"],
+        "completion_criteria": [
+          "Implement classification models",
+          "Build regression models",
+          "Perform clustering analysis",
+          "Evaluate model performance"
+        ],
+        "resources": [
+          "Scikit-learn documentation",
+          "Hands-On Machine Learning",
+          "Coursera ML course",
+          "Kaggle competitions"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "sql_databases",
+        "title": "SQL and Database Management",
+        "description": "Master SQL for data extraction and database management",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 120,
+        "prerequisites": ["python_data_science"],
+        "skills_gained": ["SQL", "Database Queries", "Data Warehousing"],
+        "completion_criteria": [
+          "Write complex SQL queries",
+          "Join multiple tables",
+          "Create stored procedures",
+          "Optimize query performance"
+        ],
+        "resources": [
+          "SQLBolt tutorial",
+          "PostgreSQL exercises",
+          "Database design courses",
+          "SQL practice platforms"
+        ],
+        "career_impact": 0.8
+      }
+    ],
+    "mid_level": [
+      {
+        "id": "deep_learning",
+        "title": "Deep Learning and Neural Networks",
+        "description": "Advanced machine learning with neural networks and deep learning",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 350,
+        "prerequisites": ["machine_learning"],
+        "skills_gained": ["TensorFlow", "PyTorch", "Neural Networks", "Deep Learning"],
+        "completion_criteria": [
+          "Build neural networks",
+          "Implement CNN and RNN",
+          "Train deep learning models",
+          "Deploy ML models"
+        ],
+        "resources": [
+          "Deep Learning Specialization",
+          "TensorFlow tutorials",
+          "PyTorch documentation",
+          "Fast.ai courses"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "big_data_tools",
+        "title": "Big Data Processing Tools",
+        "description": "Learn tools for processing large-scale data",
+        "category": "skill",
+        "priority": "medium",
+        "estimated_hours": 200,
+        "prerequisites": ["sql_databases"],
+        "skills_gained": ["Spark", "Hadoop", "Kafka", "Cloud Platforms"],
+        "completion_criteria": [
+          "Process data with Spark",
+          "Set up data pipeline",
+          "Use cloud data services",
+          "Handle streaming data"
+        ],
+        "resources": [
+          "Apache Spark documentation",
+          "AWS/GCP data services",
+          "Databricks tutorials",
+          "Big data architecture guides"
+        ],
+        "career_impact": 0.75
+      }
+    ]
+  },
+  "business_analysts": {
+    "entry": [
+      {
+        "id": "business_analysis_fundamentals",
+        "title": "Business Analysis Fundamentals",
+        "description": "Learn core business analysis concepts and methodologies",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 150,
+        "prerequisites": [],
+        "skills_gained": ["Requirements Analysis", "Process Mapping", "Stakeholder Management"],
+        "completion_criteria": [
+          "Complete BA certification prep",
+          "Document business requirements",
+          "Create process flows",
+          "Conduct stakeholder interviews"
+        ],
+        "resources": [
+          "BABOK Guide",
+          "Business Analysis courses",
+          "Requirements documentation templates",
+          "Process mapping tools"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "data_analysis_skills",
+        "title": "Data Analysis and Excel Mastery",
+        "description": "Master Excel and basic data analysis techniques",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 100,
+        "prerequisites": [],
+        "skills_gained": ["Advanced Excel", "Data Analysis", "Pivot Tables", "VBA"],
+        "completion_criteria": [
+          "Create complex Excel models",
+          "Build interactive dashboards",
+          "Automate with VBA",
+          "Perform statistical analysis"
+        ],
+        "resources": [
+          "Excel training courses",
+          "Microsoft Excel certification",
+          "Data analysis tutorials",
+          "Business dashboard examples"
+        ],
+        "career_impact": 0.8
+      }
+    ],
+    "junior": [
+      {
+        "id": "sql_business_intelligence",
+        "title": "SQL and Business Intelligence",
+        "description": "Learn SQL and BI tools for data-driven business insights",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 180,
+        "prerequisites": ["data_analysis_skills"],
+        "skills_gained": ["SQL", "Tableau", "Power BI", "Data Visualization"],
+        "completion_criteria": [
+          "Write business SQL queries",
+          "Create Tableau dashboards",
+          "Build Power BI reports",
+          "Present data insights"
+        ],
+        "resources": [
+          "SQL for Business Analysis",
+          "Tableau training",
+          "Power BI documentation",
+          "Data visualization best practices"
+        ],
+        "career_impact": 0.85
+      },
+      {
+        "id": "project_management",
+        "title": "Project Management Skills",
+        "description": "Learn project management methodologies and tools",
+        "category": "skill",
+        "priority": "medium",
+        "estimated_hours": 120,
+        "prerequisites": ["business_analysis_fundamentals"],
+        "skills_gained": ["Project Planning", "Risk Management", "Agile", "Scrum"],
+        "completion_criteria": [
+          "Create project plans",
+          "Manage project timeline",
+          "Identify and mitigate risks",
+          "Facilitate Scrum ceremonies"
+        ],
+        "resources": [
+          "PMP certification materials",
+          "Agile project management",
+          "Project management tools",
+          "Scrum certification"
+        ],
+        "career_impact": 0.75
+      }
+    ]
+  },
+  "marketing_managers": {
+    "entry": [
+      {
+        "id": "digital_marketing_fundamentals",
+        "title": "Digital Marketing Fundamentals",
+        "description": "Learn core digital marketing concepts and channels",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 150,
+        "prerequisites": [],
+        "skills_gained": ["SEO", "SEM", "Social Media Marketing", "Content Marketing"],
+        "completion_criteria": [
+          "Complete Google Ads certification",
+          "Optimize website for SEO",
+          "Create content marketing strategy",
+          "Run social media campaigns"
+        ],
+        "resources": [
+          "Google Digital Marketing Course",
+          "HubSpot Academy",
+          "Facebook Blueprint",
+          "Content marketing guides"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "analytics_measurement",
+        "title": "Marketing Analytics and Measurement",
+        "description": "Learn to measure and analyze marketing performance",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 120,
+        "prerequisites": [],
+        "skills_gained": ["Google Analytics", "Marketing Metrics", "A/B Testing", "ROI Analysis"],
+        "completion_criteria": [
+          "Set up Google Analytics",
+          "Create marketing dashboards",
+          "Design A/B tests",
+          "Calculate marketing ROI"
+        ],
+        "resources": [
+          "Google Analytics Academy",
+          "Marketing measurement courses",
+          "A/B testing guides",
+          "Marketing analytics tools"
+        ],
+        "career_impact": 0.85
+      }
+    ],
+    "junior": [
+      {
+        "id": "marketing_automation",
+        "title": "Marketing Automation and CRM",
+        "description": "Implement marketing automation and customer relationship management",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 180,
+        "prerequisites": ["digital_marketing_fundamentals"],
+        "skills_gained": ["Marketing Automation", "CRM", "Lead Nurturing", "Email Marketing"],
+        "completion_criteria": [
+          "Set up automation workflows",
+          "Implement CRM system",
+          "Create lead nurturing campaigns",
+          "Optimize email marketing"
+        ],
+        "resources": [
+          "HubSpot certification",
+          "Salesforce Trailhead",
+          "Marketing automation platforms",
+          "CRM best practices"
+        ],
+        "career_impact": 0.8
+      }
+    ]
+  },
+  "cybersecurity_specialists": {
+    "entry": [
+      {
+        "id": "security_fundamentals",
+        "title": "Information Security Fundamentals",
+        "description": "Learn core information security concepts and principles",
+        "category": "skill",
+        "priority": "critical",
+        "estimated_hours": 200,
+        "prerequisites": [],
+        "skills_gained": ["Security Principles", "Risk Assessment", "Threat Analysis", "Compliance"],
+        "completion_criteria": [
+          "Complete Security+ certification",
+          "Understand CIA triad",
+          "Conduct risk assessments",
+          "Know compliance frameworks"
+        ],
+        "resources": [
+          "CompTIA Security+ materials",
+          "NIST Cybersecurity Framework",
+          "Security awareness training",
+          "Cybersecurity courses"
+        ],
+        "career_impact": 0.9
+      },
+      {
+        "id": "network_security",
+        "title": "Network Security and Infrastructure",
+        "description": "Learn network security concepts and implementation",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 180,
+        "prerequisites": ["security_fundamentals"],
+        "skills_gained": ["Firewalls", "VPN", "Network Monitoring", "Intrusion Detection"],
+        "completion_criteria": [
+          "Configure firewalls",
+          "Set up VPN connections",
+          "Monitor network traffic",
+          "Implement IDS/IPS"
+        ],
+        "resources": [
+          "Network security courses",
+          "Cisco security training",
+          "Network monitoring tools",
+          "Security configuration guides"
+        ],
+        "career_impact": 0.85
+      }
+    ],
+    "junior": [
+      {
+        "id": "incident_response",
+        "title": "Incident Response and Forensics",
+        "description": "Learn to respond to security incidents and conduct forensic analysis",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 220,
+        "prerequisites": ["network_security"],
+        "skills_gained": ["Incident Response", "Digital Forensics", "Malware Analysis", "Investigation"],
+        "completion_criteria": [
+          "Create incident response plan",
+          "Conduct forensic investigation",
+          "Analyze malware samples",
+          "Document security incidents"
+        ],
+        "resources": [
+          "SANS incident response training",
+          "Digital forensics courses",
+          "Malware analysis tools",
+          "Incident response frameworks"
+        ],
+        "career_impact": 0.8
+      }
+    ]
+  },
+  "generic": {
+    "entry": [
+      {
+        "id": "professional_communication",
+        "title": "Professional Communication Skills",
+        "description": "Develop strong written and verbal communication skills",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 80,
+        "prerequisites": [],
+        "skills_gained": ["Written Communication", "Presentation Skills", "Active Listening"],
+        "completion_criteria": [
+          "Deliver effective presentations",
+          "Write professional documents",
+          "Participate in meetings",
+          "Handle difficult conversations"
+        ],
+        "resources": [
+          "Toastmasters International",
+          "Business writing courses",
+          "Communication workshops",
+          "Public speaking practice"
+        ],
+        "career_impact": 0.75
+      },
+      {
+        "id": "time_management",
+        "title": "Time Management and Productivity",
+        "description": "Master time management and productivity techniques",
+        "category": "skill",
+        "priority": "medium",
+        "estimated_hours": 40,
+        "prerequisites": [],
+        "skills_gained": ["Time Management", "Prioritization", "Goal Setting"],
+        "completion_criteria": [
+          "Implement productivity system",
+          "Set and track goals",
+          "Manage calendar effectively",
+          "Eliminate time wasters"
+        ],
+        "resources": [
+          "Getting Things Done methodology",
+          "Productivity apps and tools",
+          "Time management courses",
+          "Goal setting frameworks"
+        ],
+        "career_impact": 0.6
+      },
+      {
+        "id": "professional_networking",
+        "title": "Professional Networking",
+        "description": "Build and maintain professional relationships",
+        "category": "skill",
+        "priority": "medium",
+        "estimated_hours": 60,
+        "prerequisites": ["professional_communication"],
+        "skills_gained": ["Networking", "Relationship Building", "Personal Branding"],
+        "completion_criteria": [
+          "Attend industry events",
+          "Build LinkedIn network",
+          "Maintain relationships",
+          "Establish personal brand"
+        ],
+        "resources": [
+          "Networking events",
+          "LinkedIn Learning",
+          "Industry associations",
+          "Personal branding guides"
+        ],
+        "career_impact": 0.7
+      }
+    ],
+    "junior": [
+      {
+        "id": "leadership_development",
+        "title": "Leadership and Team Collaboration",
+        "description": "Develop leadership skills and team collaboration abilities",
+        "category": "skill",
+        "priority": "high",
+        "estimated_hours": 120,
+        "prerequisites": ["professional_networking"],
+        "skills_gained": ["Leadership", "Team Building", "Conflict Resolution", "Mentoring"],
+        "completion_criteria": [
+          "Lead team project",
+          "Resolve team conflicts",
+          "Mentor junior colleague",
+          "Complete leadership training"
+        ],
+        "resources": [
+          "Leadership development programs",
+          "Team building workshops",
+          "Mentorship programs",
+          "Leadership books and courses"
+        ],
+        "career_impact": 0.8
+      },
+      {
+        "id": "strategic_thinking",
+        "title": "Strategic Thinking and Analysis",
+        "description": "Develop strategic thinking and analytical problem-solving skills",
+        "category": "skill",
+        "priority": "medium",
+        "estimated_hours": 100,
+        "prerequisites": ["leadership_development"],
+        "skills_gained": ["Strategic Planning", "Critical Thinking", "Decision Making", "Problem Solving"],
+        "completion_criteria": [
+          "Develop strategic plans",
+          "Analyze complex problems",
+          "Make data-driven decisions",
+          "Think systemically"
+        ],
+        "resources": [
+          "Strategic planning courses",
+          "Case study analysis",
+          "Business strategy books",
+          "Critical thinking workshops"
+        ],
+        "career_impact": 0.75
+      }
+    ]
+  }
+}

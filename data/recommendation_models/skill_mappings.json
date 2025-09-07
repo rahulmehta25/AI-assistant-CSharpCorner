@@ -1,0 +1,279 @@
+{
+  "programming": {
+    "careers": [
+      "software_developer",
+      "data_scientist",
+      "web_developer",
+      "mobile_developer",
+      "devops_engineer",
+      "system_administrator",
+      "game_developer",
+      "ai_engineer",
+      "backend_developer",
+      "frontend_developer"
+    ],
+    "weight": 1.0,
+    "related_skills": ["algorithms", "debugging", "version_control", "testing"]
+  },
+  "data_analysis": {
+    "careers": [
+      "data_analyst",
+      "data_scientist",
+      "business_analyst",
+      "market_researcher",
+      "financial_analyst",
+      "operations_analyst",
+      "research_scientist",
+      "statistician"
+    ],
+    "weight": 0.9,
+    "related_skills": ["statistics", "visualization", "sql", "excel"]
+  },
+  "communication": {
+    "careers": [
+      "teacher",
+      "marketing_manager",
+      "public_relations",
+      "sales_representative",
+      "hr_specialist",
+      "consultant",
+      "journalist",
+      "content_writer"
+    ],
+    "weight": 0.8,
+    "related_skills": ["writing", "presentation", "listening", "negotiation"]
+  },
+  "leadership": {
+    "careers": [
+      "project_manager",
+      "executive",
+      "team_lead",
+      "entrepreneur",
+      "operations_manager",
+      "product_manager",
+      "department_head",
+      "ceo"
+    ],
+    "weight": 0.85,
+    "related_skills": ["decision_making", "delegation", "motivation", "strategic_planning"]
+  },
+  "creativity": {
+    "careers": [
+      "graphic_designer",
+      "ux_designer",
+      "content_creator",
+      "marketing_specialist",
+      "product_designer",
+      "animator",
+      "artist",
+      "creative_director"
+    ],
+    "weight": 0.8,
+    "related_skills": ["design", "innovation", "artistic_vision", "storytelling"]
+  },
+  "problem_solving": {
+    "careers": [
+      "consultant",
+      "engineer",
+      "researcher",
+      "analyst",
+      "developer",
+      "architect",
+      "scientist",
+      "strategist"
+    ],
+    "weight": 0.9,
+    "related_skills": ["analytical_thinking", "logic", "research", "troubleshooting"]
+  },
+  "mathematics": {
+    "careers": [
+      "actuary",
+      "statistician",
+      "data_scientist",
+      "financial_analyst",
+      "engineer",
+      "physicist",
+      "economist",
+      "quantitative_analyst"
+    ],
+    "weight": 0.95,
+    "related_skills": ["calculus", "statistics", "algebra", "modeling"]
+  },
+  "writing": {
+    "careers": [
+      "content_writer",
+      "journalist",
+      "technical_writer",
+      "copywriter",
+      "editor",
+      "author",
+      "blogger",
+      "grant_writer"
+    ],
+    "weight": 0.9,
+    "related_skills": ["grammar", "research", "editing", "storytelling"]
+  },
+  "teaching": {
+    "careers": [
+      "teacher",
+      "professor",
+      "trainer",
+      "instructional_designer",
+      "education_consultant",
+      "tutor",
+      "curriculum_developer",
+      "education_administrator"
+    ],
+    "weight": 1.0,
+    "related_skills": ["patience", "explanation", "curriculum_design", "assessment"]
+  },
+  "research": {
+    "careers": [
+      "research_scientist",
+      "market_researcher",
+      "ux_researcher",
+      "policy_analyst",
+      "academic_researcher",
+      "clinical_researcher",
+      "data_scientist",
+      "lab_technician"
+    ],
+    "weight": 0.95,
+    "related_skills": ["methodology", "data_collection", "analysis", "documentation"]
+  },
+  "customer_service": {
+    "careers": [
+      "customer_service_rep",
+      "account_manager",
+      "client_relations",
+      "support_specialist",
+      "hospitality_manager",
+      "retail_manager",
+      "service_coordinator"
+    ],
+    "weight": 0.75,
+    "related_skills": ["patience", "empathy", "problem_resolution", "communication"]
+  },
+  "design": {
+    "careers": [
+      "graphic_designer",
+      "ux_designer",
+      "product_designer",
+      "interior_designer",
+      "fashion_designer",
+      "web_designer",
+      "architect",
+      "industrial_designer"
+    ],
+    "weight": 0.85,
+    "related_skills": ["aesthetics", "software_tools", "color_theory", "typography"]
+  },
+  "healthcare": {
+    "careers": [
+      "doctor",
+      "nurse",
+      "therapist",
+      "pharmacist",
+      "medical_technician",
+      "healthcare_administrator",
+      "public_health_specialist",
+      "medical_researcher"
+    ],
+    "weight": 0.9,
+    "related_skills": ["patient_care", "medical_knowledge", "empathy", "attention_to_detail"]
+  },
+  "sales": {
+    "careers": [
+      "sales_representative",
+      "account_executive",
+      "business_development",
+      "sales_manager",
+      "retail_sales",
+      "real_estate_agent",
+      "insurance_agent"
+    ],
+    "weight": 0.8,
+    "related_skills": ["persuasion", "negotiation", "relationship_building", "product_knowledge"]
+  },
+  "finance": {
+    "careers": [
+      "financial_analyst",
+      "accountant",
+      "investment_banker",
+      "financial_advisor",
+      "auditor",
+      "budget_analyst",
+      "credit_analyst",
+      "treasurer"
+    ],
+    "weight": 0.85,
+    "related_skills": ["accounting", "budgeting", "forecasting", "risk_assessment"]
+  },
+  "marketing": {
+    "careers": [
+      "marketing_manager",
+      "digital_marketer",
+      "brand_manager",
+      "content_marketer",
+      "seo_specialist",
+      "social_media_manager",
+      "market_researcher",
+      "advertising_manager"
+    ],
+    "weight": 0.8,
+    "related_skills": ["strategy", "analytics", "creativity", "communication"]
+  },
+  "engineering": {
+    "careers": [
+      "software_engineer",
+      "mechanical_engineer",
+      "electrical_engineer",
+      "civil_engineer",
+      "chemical_engineer",
+      "aerospace_engineer",
+      "biomedical_engineer",
+      "environmental_engineer"
+    ],
+    "weight": 0.9,
+    "related_skills": ["mathematics", "physics", "problem_solving", "technical_design"]
+  },
+  "project_management": {
+    "careers": [
+      "project_manager",
+      "program_manager",
+      "scrum_master",
+      "product_owner",
+      "delivery_manager",
+      "construction_manager",
+      "it_project_manager"
+    ],
+    "weight": 0.85,
+    "related_skills": ["planning", "organization", "risk_management", "stakeholder_management"]
+  },
+  "artificial_intelligence": {
+    "careers": [
+      "ai_engineer",
+      "machine_learning_engineer",
+      "data_scientist",
+      "nlp_engineer",
+      "computer_vision_engineer",
+      "ai_researcher",
+      "robotics_engineer"
+    ],
+    "weight": 0.95,
+    "related_skills": ["deep_learning", "neural_networks", "python", "mathematics"]
+  },
+  "cybersecurity": {
+    "careers": [
+      "cybersecurity_analyst",
+      "security_engineer",
+      "penetration_tester",
+      "security_architect",
+      "incident_responder",
+      "security_consultant",
+      "cryptographer"
+    ],
+    "weight": 0.9,
+    "related_skills": ["network_security", "ethical_hacking", "risk_assessment", "compliance"]
+  }
+}
