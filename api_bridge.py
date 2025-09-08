@@ -17,8 +17,8 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import backend modules
 from modules.career_assistant_core import CareerAssistantCore
-from modules.onet_comprehensive_scraper import ONETComprehensiveScraper
-from modules.student_pathways import StudentPathwayGenerator
+from modules.data_loader import data_loader
+from modules.student_pathways import StudentPathwaySystem
 from modules.live_job_scraper import LiveJobScraper
 from modules.recommendation_engine import RecommendationEngine
 
@@ -28,7 +28,7 @@ app = FastAPI(title="AI Career Assistant API", version="1.0.0")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=["http://localhost:5173", "http://localhost:3000", "http://localhost:8000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -36,13 +36,9 @@ app.add_middleware(
 
 # Initialize core components
 assistant = CareerAssistantCore()
-onet_scraper = ONETComprehensiveScraper()
-pathway_generator = StudentPathwayGenerator()
+pathway_generator = StudentPathwaySystem()
 job_scraper = LiveJobScraper()
 recommendation_engine = RecommendationEngine()
-
-# Cache for career data
-career_cache = {}
 
 # Request Models
 class UserProfile(BaseModel):
@@ -78,78 +74,107 @@ async def root():
 
 @app.get("/api/careers")
 async def get_all_careers():
-    """Get all available careers"""
+    """Get all available careers from actual O*NET data"""
     try:
-        # Try to get careers from cache first
-        if not career_cache:
-            # Get careers from O*NET scraper
-            occupations = onet_scraper.get_bright_outlook_occupations()
-            if not occupations:
-                # Fallback to getting from clusters
-                occupations = onet_scraper.get_occupations_from_clusters()
-            
-            # Format careers for frontend
-            careers = []
-            for occ in occupations[:100]:  # Limit to 100 for now
-                careers.append({
-                    'id': occ.get('soc_code', ''),
-                    'title': occ.get('title', ''),
-                    'description': occ.get('description', ''),
-                    'growth': occ.get('growth_outlook', 'Average'),
-                    'salary': occ.get('salary_range', '$50,000 - $80,000')
-                })
-            career_cache['careers'] = careers
+        # Get real careers from data loader
+        careers_data = data_loader.get_all_careers()
         
-        return {"careers": career_cache.get('careers', []), "total": len(career_cache.get('careers', []))}
+        # Format careers for frontend
+        careers = []
+        for career in careers_data:
+            median_salary = career.get('median_salary', 70000)
+            if isinstance(median_salary, (int, float)) and median_salary > 0:
+                salary_min = max(30000, int(median_salary * 0.8))
+                salary_max = int(median_salary * 1.4)
+            else:
+                salary_min = 50000
+                salary_max = 80000
+            
+            careers.append({
+                'id': career.get('soc_code', ''),
+                'title': career.get('title', ''),
+                'description': career.get('description', '')[:200] + '...' if len(career.get('description', '')) > 200 else career.get('description', ''),
+                'match': 85,  # Default match score
+                'salary': {'min': salary_min, 'max': salary_max},
+                'growth': career.get('employment_outlook', 'Average'),
+                'education': career.get('education_level', "Bachelor's degree") if career.get('education_level') not in ['Education', None] else "Bachelor's degree",
+                'experience': career.get('experience_level', '2-5 years') if career.get('experience_level') not in ['Experience Requirements', None] else "2-5 years",
+                'skills': career.get('skills', [])[:5] if career.get('skills') else [],
+                'tasks': career.get('tasks', [])[:3] if career.get('tasks') else [],
+                'cluster': career.get('cluster', 'General')
+            })
+        
+        return {"careers": careers, "total": len(careers)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/careers/{career_id}")
 async def get_career_details(career_id: str):
-    """Get detailed information about a specific career"""
+    """Get detailed information about a specific career from real data"""
     try:
-        # Try to scrape detailed career data
-        occupation = {'soc_code': career_id, 'title': 'Career', 'url': f'/summary/{career_id}'}
-        career_data = onet_scraper.scrape_occupation_details(occupation)
+        # Get career from loaded data
+        career_data = data_loader.get_career(career_id)
         
         if career_data:
+            median_salary = career_data.get('median_salary', 70000)
+            if isinstance(median_salary, (int, float)) and median_salary > 0:
+                salary_min = max(30000, int(median_salary * 0.8))
+                salary_max = int(median_salary * 1.4)
+            else:
+                salary_min = 50000
+                salary_max = 80000
+            
             return {
-                'id': career_data.soc_code,
-                'title': career_data.title,
-                'description': career_data.description,
-                'tasks': career_data.tasks,
-                'skills': career_data.skills,
-                'knowledge': career_data.knowledge,
-                'abilities': career_data.abilities,
-                'education': career_data.education_level,
-                'experience': career_data.experience_level,
-                'salary': {'min': career_data.median_salary - 10000 if career_data.median_salary else 50000,
-                          'max': career_data.median_salary + 20000 if career_data.median_salary else 80000},
-                'growth': career_data.employment_outlook,
-                'related_careers': career_data.related_occupations
+                'id': career_data.get('soc_code', career_id),
+                'title': career_data.get('title', ''),
+                'description': career_data.get('description', ''),
+                'tasks': career_data.get('tasks', []),
+                'skills': career_data.get('skills', []),
+                'knowledge': career_data.get('knowledge', []),
+                'abilities': career_data.get('abilities', []),
+                'education': career_data.get('education_level', "Bachelor's degree") if career_data.get('education_level') not in ['Education', None] else "Bachelor's degree",
+                'experience': career_data.get('experience_level', '2-5 years') if career_data.get('experience_level') not in ['Experience Requirements', None] else "2-5 years",
+                'salary': {'min': salary_min, 'max': salary_max},
+                'growth': career_data.get('employment_outlook', 'Average'),
+                'growth_rate': career_data.get('growth_rate', '10%'),
+                'related_careers': career_data.get('related_occupations', []),
+                'work_environment': career_data.get('work_environment', []),
+                'interests': career_data.get('interests', []),
+                'work_styles': career_data.get('work_styles', []),
+                'cluster': career_data.get('cluster', 'General')
             }
         else:
-            raise HTTPException(status_code=404, detail="Career not found")
+            raise HTTPException(status_code=404, detail=f"Career {career_id} not found")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/careers/search")
 async def search_careers(query: CareerSearchQuery):
-    """Search for careers based on query"""
+    """Search for careers based on query using real data"""
     try:
-        # Get all careers and filter based on query
-        if not career_cache:
-            await get_all_careers()
+        # Search in real career data
+        results_data = data_loader.search_careers(query.query)
         
-        careers = career_cache.get('careers', [])
-        query_lower = query.query.lower()
-        
-        # Filter careers based on search query
-        results = [
-            career for career in careers
-            if query_lower in career['title'].lower() or 
-               query_lower in career.get('description', '').lower()
-        ]
+        # Format results for frontend
+        results = []
+        for career in results_data:
+            median_salary = career.get('median_salary', 70000)
+            if isinstance(median_salary, (int, float)) and median_salary > 0:
+                salary_min = max(30000, int(median_salary * 0.8))
+                salary_max = int(median_salary * 1.4)
+            else:
+                salary_min = 50000
+                salary_max = 80000
+            
+            results.append({
+                'id': career.get('soc_code', ''),
+                'title': career.get('title', ''),
+                'description': career.get('description', '')[:200] + '...' if len(career.get('description', '')) > 200 else career.get('description', ''),
+                'match': 85,
+                'salary': {'min': salary_min, 'max': salary_max},
+                'growth': career.get('employment_outlook', 'Average'),
+                'cluster': career.get('cluster', 'General')
+            })
         
         return {"results": results, "count": len(results)}
     except Exception as e:
@@ -269,7 +294,7 @@ async def get_platform_stats():
     """Get platform statistics"""
     try:
         stats = {
-            "total_careers": len(onet_scraper.get_career_list()),
+            "total_careers": len(data_loader.get_all_careers()),
             "active_jobs": 5000,  # Mock data
             "users_helped": 1250,  # Mock data
             "success_rate": 89.5  # Mock data
@@ -279,6 +304,6 @@ async def get_platform_stats():
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
-    print("Starting API Bridge on http://localhost:8000")
+    print("Starting API Bridge on http://localhost:8001")
     print("Frontend should connect to this API for all backend operations")
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=8001, reload=True)
