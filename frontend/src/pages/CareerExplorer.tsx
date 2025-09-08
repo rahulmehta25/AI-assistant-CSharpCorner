@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, SlidersHorizontal } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { CareerCard } from '@/components/careers/CareerCard';
-import { mockCareers } from '@/services/api';
+import { apiService } from '@/services/api';
+import { Career } from '@/types';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,17 +25,37 @@ const itemVariants = {
 };
 
 export default function CareerExplorer() {
+  const [careers, setCareers] = useState<Career[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGrowth, setSelectedGrowth] = useState<string>('');
   const [selectedSalary, setSelectedSalary] = useState<string>('');
   const [selectedEducation, setSelectedEducation] = useState<string>('');
 
-  const filteredCareers = mockCareers.filter((career) => {
+  useEffect(() => {
+    const fetchCareers = async () => {
+      try {
+        setLoading(true);
+        const data = await apiService.getCareers();
+        setCareers(data);
+      } catch (err) {
+        setError('Failed to load careers');
+        console.error('Error loading careers:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCareers();
+  }, []);
+
+  const filteredCareers = careers.filter((career) => {
     const matchesSearch = career.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          career.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         career.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase()));
+                         career.skills?.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase())) || false;
     
-    const matchesGrowth = !selectedGrowth || career.growth === selectedGrowth;
+    const matchesGrowth = !selectedGrowth || career.growth.toLowerCase().includes(selectedGrowth.toLowerCase());
     
     const matchesSalary = !selectedSalary || (() => {
       const minSalary = career.salary.min;
@@ -164,31 +185,47 @@ export default function CareerExplorer() {
 
       {/* Career Grid */}
       <motion.div variants={itemVariants}>
-        {filteredCareers.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {filteredCareers.map((career, index) => (
-              <motion.div
-                key={career.id}
-                variants={itemVariants}
-                transition={{ delay: index * 0.05 }}
-              >
-                <CareerCard career={career} showMatch />
-              </motion.div>
-            ))}
-          </div>
-        ) : (
+        {loading && (
           <div className="text-center py-12">
-            <div className="mx-auto h-24 w-24 text-muted-foreground/40 mb-4">
-              <Search className="h-full w-full" />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">No careers found</h3>
-            <p className="text-muted-foreground mb-4">
-              Try adjusting your search terms or filters to find more results.
-            </p>
-            <Button variant="outline" onClick={clearFilters}>
-              Clear All Filters
-            </Button>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading careers...</p>
           </div>
+        )}
+        
+        {error && (
+          <div className="text-center py-12">
+            <p className="text-red-500 mb-4">{error}</p>
+            <Button onClick={() => window.location.reload()}>Try Again</Button>
+          </div>
+        )}
+        
+        {!loading && !error && (
+          filteredCareers.length > 0 ? (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {filteredCareers.map((career, index) => (
+                <motion.div
+                  key={career.id}
+                  variants={itemVariants}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <CareerCard career={career} showMatch />
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <div className="mx-auto h-24 w-24 text-muted-foreground/40 mb-4">
+                <Search className="h-full w-full" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">No careers found</h3>
+              <p className="text-muted-foreground mb-4">
+                Try adjusting your search terms or filters to find more results.
+              </p>
+              <Button variant="outline" onClick={clearFilters}>
+                Clear All Filters
+              </Button>
+            </div>
+          )
         )}
       </motion.div>
     </motion.div>

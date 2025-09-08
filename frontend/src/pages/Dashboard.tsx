@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { StatsCard } from '@/components/dashboard/StatsCard';
 import { CareerCard } from '@/components/careers/CareerCard';
@@ -17,7 +18,8 @@ import {
   BookOpen
 } from 'lucide-react';
 import { useUserStore } from '@/store/useUserStore';
-import { mockCareers, mockJobs } from '@/services/api';
+import { apiService } from '@/services/api';
+import { Career, Job } from '@/types';
 import { Link } from 'react-router-dom';
 
 const containerVariants = {
@@ -37,6 +39,23 @@ const itemVariants = {
 
 export default function Dashboard() {
   const { user } = useUserStore();
+  const [careers, setCareers] = useState<Career[]>([]);
+  const [loadingCareers, setLoadingCareers] = useState(true);
+
+  useEffect(() => {
+    const fetchCareers = async () => {
+      try {
+        const data = await apiService.getCareers();
+        setCareers(data.slice(0, 3)); // Get top 3 careers
+      } catch (error) {
+        console.error('Error loading careers:', error);
+      } finally {
+        setLoadingCareers(false);
+      }
+    };
+
+    fetchCareers();
+  }, []);
 
   if (!user) {
     return (
@@ -49,8 +68,57 @@ export default function Dashboard() {
     );
   }
 
-  const topCareers = mockCareers.slice(0, 3);
-  const recentJobs = mockJobs.slice(0, 3);
+  // Mock jobs data for now (since jobs endpoint doesn't exist yet)
+  const recentJobs: Job[] = [
+    {
+      id: '1',
+      title: 'Frontend Developer',
+      company: 'TechCorp',
+      location: 'San Francisco, CA',
+      salary: '$90,000 - $120,000',
+      type: 'full-time',
+      description: 'Build amazing user interfaces with React and TypeScript.',
+      requirements: ['3+ years React experience', 'TypeScript proficiency', 'CSS expertise'],
+      benefits: ['Health insurance', '401k matching', 'Flexible PTO'],
+      match: 94,
+      postedDate: '2024-01-15',
+      applied: false,
+      saved: false,
+      source: 'LinkedIn',
+    },
+    {
+      id: '2',
+      title: 'Full Stack Engineer',
+      company: 'StartupXYZ',
+      location: 'Remote',
+      salary: '$80,000 - $110,000',
+      type: 'full-time',
+      description: 'Work on both frontend and backend systems using modern technologies.',
+      requirements: ['JavaScript/TypeScript', 'Node.js', 'Database design', 'API development'],
+      benefits: ['Remote work', 'Stock options', 'Learning budget'],
+      match: 89,
+      postedDate: '2024-01-12',
+      applied: true,
+      saved: true,
+      source: 'Indeed',
+    },
+    {
+      id: '3',
+      title: 'Software Engineering Intern',
+      company: 'BigTech Inc',
+      location: 'Seattle, WA',
+      salary: '$35/hour',
+      type: 'internship',
+      description: 'Summer internship program for computer science students.',
+      requirements: ['CS major', 'Programming skills', 'Problem-solving abilities'],
+      benefits: ['Mentorship', 'Housing stipend', 'Return offer potential'],
+      match: 87,
+      postedDate: '2024-01-10',
+      applied: false,
+      saved: true,
+      source: 'Company Website',
+    }
+  ];
 
   const milestones = [
     {
@@ -148,9 +216,16 @@ export default function Dashboard() {
               </Button>
             </CardHeader>
             <CardContent className="space-y-4">
-              {topCareers.map((career) => (
-                <CareerCard key={career.id} career={career} compact showMatch />
-              ))}
+              {loadingCareers ? (
+                <div className="text-center py-8">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary mx-auto mb-2"></div>
+                  <p className="text-sm text-muted-foreground">Loading careers...</p>
+                </div>
+              ) : (
+                careers.map((career) => (
+                  <CareerCard key={career.id} career={career} compact showMatch />
+                ))
+              )}
             </CardContent>
           </Card>
         </motion.div>

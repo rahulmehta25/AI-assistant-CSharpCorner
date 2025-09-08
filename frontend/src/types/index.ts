@@ -45,12 +45,20 @@ export interface Career {
     min: number;
     max: number;
   };
-  growth: 'high' | 'medium' | 'low';
+  growth: string; // Now accepts any string like "Bright Outlook"
+  growth_rate?: string; // Optional growth rate field
   education: string;
   experience: string;
   skills: string[];
   tasks: string[];
-  relatedCareers: string[];
+  knowledge?: string[]; // O*NET knowledge areas
+  abilities?: string[]; // O*NET abilities
+  interests?: string[]; // O*NET work interests
+  work_styles?: string[]; // O*NET work styles
+  work_environment?: string[]; // O*NET work environment
+  cluster?: string; // Career cluster
+  related_careers?: string[]; // Updated to match API
+  relatedCareers?: string[]; // Keep for backward compatibility
   pathway?: CareerPathway;
 }
 
