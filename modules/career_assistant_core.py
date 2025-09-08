@@ -773,3 +773,319 @@ class CareerAssistantCore:
                 
         except Exception as e:
             self.logger.error(f"Error cleaning up sessions: {e}")
+    
+    # Additional API Methods for Frontend Integration
+    
+    def analyze_profile(self, profile_data: Dict) -> Dict:
+        """Analyze user profile and return insights"""
+        try:
+            # Create temporary profile
+            skills = profile_data.get('skills', [])
+            interests = profile_data.get('interests', [])
+            experience = profile_data.get('experience', '')
+            
+            analysis = {
+                'profile_strength': self._calculate_profile_strength(profile_data),
+                'career_matches': [],
+                'skill_insights': {
+                    'strong_skills': skills[:5] if skills else [],
+                    'trending_skills': ['AI/ML', 'Cloud Computing', 'Data Analysis'],
+                    'recommended_skills': self._get_recommended_skills(skills, interests)
+                },
+                'market_insights': {
+                    'demand_level': 'High',
+                    'growth_outlook': 'Positive',
+                    'average_salary': '$85,000 - $120,000'
+                }
+            }
+            
+            # Get career matches
+            if self.recommendation_engine:
+                recommendations = self.recommendation_engine.get_personalized_recommendations(
+                    skills=skills,
+                    interests=interests,
+                    education_level=profile_data.get('education_level', 'Bachelor'),
+                    experience_level=experience
+                )
+                analysis['career_matches'] = recommendations[:5]
+            
+            return analysis
+        except Exception as e:
+            self.logger.error(f"Error analyzing profile: {e}")
+            return {}
+    
+    def create_roadmap(self, profile_data: Dict) -> Dict:
+        """Create career roadmap based on profile"""
+        try:
+            target_career = profile_data.get('career_goals', ['Software Engineer'])[0]
+            
+            if self.roadmap_generator:
+                roadmap = self.roadmap_generator.generate_roadmap(
+                    user_skills=profile_data.get('skills', []),
+                    target_career=target_career,
+                    timeline_months=24
+                )
+                return roadmap
+            
+            # Fallback roadmap
+            return {
+                'target_career': target_career,
+                'timeline': '24 months',
+                'phases': [
+                    {
+                        'phase': 1,
+                        'title': 'Foundation',
+                        'duration': '6 months',
+                        'milestones': ['Learn basics', 'Build projects']
+                    },
+                    {
+                        'phase': 2,
+                        'title': 'Specialization',
+                        'duration': '12 months',
+                        'milestones': ['Deep dive into tech stack', 'Gain experience']
+                    },
+                    {
+                        'phase': 3,
+                        'title': 'Career Launch',
+                        'duration': '6 months',
+                        'milestones': ['Job search', 'Interview prep']
+                    }
+                ]
+            }
+        except Exception as e:
+            self.logger.error(f"Error creating roadmap: {e}")
+            return {}
+    
+    def match_jobs(self, profile_data: Dict) -> List[Dict]:
+        """Match jobs based on user profile"""
+        try:
+            skills = profile_data.get('skills', [])
+            experience = profile_data.get('experience', '')
+            
+            # Search for relevant jobs
+            jobs = []
+            if self.job_scraper:
+                for skill in skills[:3]:  # Use top 3 skills
+                    job_results = self.job_scraper.search_jobs(
+                        query=skill,
+                        location='Remote',
+                        limit=10
+                    )
+                    jobs.extend(job_results)
+            
+            # Calculate match scores
+            for job in jobs:
+                job['match_score'] = self._calculate_job_match_score(job, profile_data)
+            
+            # Sort by match score
+            jobs.sort(key=lambda x: x.get('match_score', 0), reverse=True)
+            
+            return jobs[:20]  # Return top 20 matches
+        except Exception as e:
+            self.logger.error(f"Error matching jobs: {e}")
+            return []
+    
+    def analyze_skills(self, profile_data: Dict) -> Dict:
+        """Analyze user skills and provide insights"""
+        try:
+            current_skills = profile_data.get('skills', [])
+            
+            analysis = {
+                'current_level': self._determine_skill_level(current_skills),
+                'skill_categories': self._categorize_skills(current_skills),
+                'market_demand': self._get_skill_market_demand(current_skills),
+                'learning_recommendations': [],
+                'certification_suggestions': []
+            }
+            
+            # Get learning recommendations
+            if self.recommendation_engine:
+                analysis['learning_recommendations'] = self._get_learning_paths(current_skills)
+                analysis['certification_suggestions'] = self._get_certification_suggestions(current_skills)
+            
+            return analysis
+        except Exception as e:
+            self.logger.error(f"Error analyzing skills: {e}")
+            return {}
+    
+    def analyze_skill_gap(self, current_skills: List[str], target_career: str) -> Dict:
+        """Analyze skill gaps for target career"""
+        try:
+            # Get required skills for target career
+            required_skills = self._get_career_required_skills(target_career)
+            
+            # Calculate gaps
+            current_set = set(current_skills)
+            required_set = set(required_skills)
+            
+            gap_analysis = {
+                'target_career': target_career,
+                'current_skills': list(current_set),
+                'required_skills': list(required_set),
+                'missing_skills': list(required_set - current_set),
+                'matching_skills': list(current_set & required_set),
+                'match_percentage': len(current_set & required_set) / len(required_set) * 100 if required_set else 0,
+                'recommendations': self._get_skill_development_recommendations(required_set - current_set)
+            }
+            
+            return gap_analysis
+        except Exception as e:
+            self.logger.error(f"Error analyzing skill gap: {e}")
+            return {}
+    
+    def generate_resume(self, profile_data: Dict) -> str:
+        """Generate optimized resume"""
+        try:
+            name = profile_data.get('name', 'John Doe')
+            skills = profile_data.get('skills', [])
+            experience = profile_data.get('experience', '')
+            
+            resume = f"""
+{name}
+{'=' * len(name)}
+
+PROFESSIONAL SUMMARY
+{'-' * 20}
+{experience}
+
+SKILLS
+{'-' * 6}
+{', '.join(skills)}
+
+EDUCATION
+{'-' * 9}
+{profile_data.get('education_level', 'Bachelor\'s Degree')}
+
+EXPERIENCE
+{'-' * 10}
+[Add your work experience here]
+
+PROJECTS
+{'-' * 8}
+[Add your projects here]
+"""
+            return resume
+        except Exception as e:
+            self.logger.error(f"Error generating resume: {e}")
+            return ""
+    
+    def generate_cover_letter(self, profile_data: Dict, job_details: Dict) -> str:
+        """Generate cover letter for specific job"""
+        try:
+            name = profile_data.get('name', 'John Doe')
+            company = job_details.get('company', 'Company')
+            position = job_details.get('title', 'Position')
+            
+            cover_letter = f"""
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the {position} position at {company}.
+
+[Your cover letter content here - customize based on the job requirements and your experience]
+
+Thank you for considering my application.
+
+Sincerely,
+{name}
+"""
+            return cover_letter
+        except Exception as e:
+            self.logger.error(f"Error generating cover letter: {e}")
+            return ""
+    
+    # Helper methods for API integration
+    
+    def _calculate_profile_strength(self, profile_data: Dict) -> float:
+        """Calculate profile completion strength"""
+        score = 0
+        if profile_data.get('name'): score += 20
+        if profile_data.get('skills'): score += 30
+        if profile_data.get('experience'): score += 25
+        if profile_data.get('interests'): score += 15
+        if profile_data.get('education_level'): score += 10
+        return min(score, 100)
+    
+    def _get_recommended_skills(self, current_skills: List[str], interests: List[str]) -> List[str]:
+        """Get recommended skills based on current skills and interests"""
+        # This would use ML/AI to recommend skills
+        recommended = ['Python', 'JavaScript', 'Cloud Computing', 'Data Analysis', 'Machine Learning']
+        return [s for s in recommended if s not in current_skills][:5]
+    
+    def _calculate_job_match_score(self, job: Dict, profile: Dict) -> float:
+        """Calculate job match score"""
+        score = 0
+        job_skills = job.get('required_skills', [])
+        user_skills = profile.get('skills', [])
+        
+        if job_skills and user_skills:
+            matching = len(set(job_skills) & set(user_skills))
+            score = (matching / len(job_skills)) * 100 if job_skills else 0
+        
+        return round(score, 1)
+    
+    def _determine_skill_level(self, skills: List[str]) -> str:
+        """Determine overall skill level"""
+        if len(skills) < 3:
+            return 'Beginner'
+        elif len(skills) < 7:
+            return 'Intermediate'
+        else:
+            return 'Advanced'
+    
+    def _categorize_skills(self, skills: List[str]) -> Dict:
+        """Categorize skills by type"""
+        categories = {
+            'Technical': [],
+            'Soft Skills': [],
+            'Tools': [],
+            'Languages': []
+        }
+        
+        # Simple categorization logic
+        for skill in skills:
+            skill_lower = skill.lower()
+            if any(tech in skill_lower for tech in ['python', 'java', 'javascript', 'c++', 'sql']):
+                categories['Languages'].append(skill)
+            elif any(tool in skill_lower for tool in ['git', 'docker', 'aws', 'azure']):
+                categories['Tools'].append(skill)
+            elif any(soft in skill_lower for soft in ['communication', 'leadership', 'teamwork']):
+                categories['Soft Skills'].append(skill)
+            else:
+                categories['Technical'].append(skill)
+        
+        return categories
+    
+    def _get_skill_market_demand(self, skills: List[str]) -> Dict:
+        """Get market demand for skills"""
+        # This would use real market data
+        return {
+            'high_demand': ['Python', 'Cloud Computing', 'AI/ML'],
+            'moderate_demand': ['JavaScript', 'SQL', 'Docker'],
+            'emerging': ['Rust', 'WebAssembly', 'Quantum Computing']
+        }
+    
+    def _get_learning_paths(self, current_skills: List[str]) -> List[Dict]:
+        """Get recommended learning paths"""
+        return [
+            {'path': 'Full Stack Development', 'duration': '6 months', 'difficulty': 'Intermediate'},
+            {'path': 'Data Science', 'duration': '8 months', 'difficulty': 'Advanced'},
+            {'path': 'Cloud Architecture', 'duration': '4 months', 'difficulty': 'Intermediate'}
+        ]
+    
+    def _get_certification_suggestions(self, skills: List[str]) -> List[Dict]:
+        """Get certification suggestions"""
+        return [
+            {'name': 'AWS Certified Solutions Architect', 'provider': 'Amazon', 'difficulty': 'Intermediate'},
+            {'name': 'Google Cloud Professional', 'provider': 'Google', 'difficulty': 'Advanced'},
+            {'name': 'Microsoft Azure Fundamentals', 'provider': 'Microsoft', 'difficulty': 'Beginner'}
+        ]
+    
+    def _get_career_required_skills(self, career: str) -> List[str]:
+        """Get required skills for a career"""
+        # This would fetch from O*NET or database
+        career_skills = {
+            'Software Engineer': ['Python', 'JavaScript', 'Git', 'SQL', 'Algorithms'],
+            'Data Scientist': ['Python', 'Statistics', 'Machine Learning', 'SQL', 'Data Visualization'],
+            'DevOps Engineer': ['Docker', 'Kubernetes', 'CI/CD', 'AWS', 'Linux']
+        }
+        return career_skills.get(career, ['Problem Solving', 'Communication', 'Technical Skills'])

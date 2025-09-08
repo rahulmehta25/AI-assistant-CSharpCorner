@@ -1,6 +1,6 @@
 import { Career, Job, StudentPathway, Skill, SkillGap } from '@/types';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:7860';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 // API service functions
 class ApiService {
