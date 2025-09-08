@@ -253,6 +253,18 @@ async def analyze_skill_gap(data: Dict):
     try:
         current_skills = data.get("current_skills", [])
         target_career = data.get("target_career", "")
+        
+        # Try AI-powered analysis first
+        if hasattr(recommendation_engine, 'get_ai_skill_gap_analysis'):
+            # Convert skills list to dict for AI analysis
+            skills_dict = {skill: 3 for skill in current_skills}  # Default level 3
+            target_skills = data.get("target_skills", [])
+            
+            ai_analysis = recommendation_engine.get_ai_skill_gap_analysis(skills_dict, target_skills)
+            if ai_analysis:
+                return ai_analysis
+        
+        # Fallback to traditional analysis
         gap_analysis = assistant.analyze_skill_gap(current_skills, target_career)
         return gap_analysis
     except Exception as e:
@@ -263,8 +275,17 @@ async def generate_resume(profile: UserProfile):
     """Generate optimized resume"""
     try:
         profile_dict = profile.dict()
+        
+        # Try AI-powered resume generation first
+        if hasattr(recommendation_engine, 'generate_ai_resume_suggestions'):
+            target_career = profile_dict.get('target_career', 'general position')
+            ai_suggestions = recommendation_engine.generate_ai_resume_suggestions(profile_dict, target_career)
+            if ai_suggestions:
+                return {"resume": ai_suggestions, "ai_generated": True}
+        
+        # Fallback to traditional generation
         resume = assistant.generate_resume(profile_dict)
-        return {"resume": resume}
+        return {"resume": resume, "ai_generated": False}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -274,8 +295,16 @@ async def generate_cover_letter(data: Dict):
     try:
         profile = data.get("profile", {})
         job_details = data.get("job_details", {})
+        
+        # Try AI-powered cover letter generation first
+        if hasattr(recommendation_engine, 'generate_ai_cover_letter'):
+            ai_cover_letter = recommendation_engine.generate_ai_cover_letter(profile, job_details)
+            if ai_cover_letter:
+                return {"cover_letter": ai_cover_letter, "ai_generated": True}
+        
+        # Fallback to traditional generation
         cover_letter = assistant.generate_cover_letter(profile, job_details)
-        return {"cover_letter": cover_letter}
+        return {"cover_letter": cover_letter, "ai_generated": False}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

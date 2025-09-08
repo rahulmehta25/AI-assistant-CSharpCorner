@@ -5,6 +5,7 @@ This module provides personalized career recommendations using hybrid ML approac
 - Collaborative filtering for similar student profiles
 - Content-based filtering for skill and interest matching
 - Explainable AI for transparent recommendations
+- OpenAI GPT-4 for enhanced, personalized insights
 """
 
 import json
@@ -18,10 +19,46 @@ from sklearn.preprocessing import MinMaxScaler
 import logging
 from datetime import datetime
 import re
+import os
+from dotenv import load_dotenv
+
+# OpenAI and LangChain imports
+try:
+    from openai import OpenAI
+    from langchain_openai import ChatOpenAI
+    from langchain.prompts import ChatPromptTemplate
+    from langchain.output_parsers import PydanticOutputParser
+    from pydantic import BaseModel, Field
+    OPENAI_AVAILABLE = True
+except ImportError:
+    OPENAI_AVAILABLE = False
+    logger.warning("OpenAI libraries not available. Some features will be limited.")
+
+# Load environment variables
+load_dotenv()
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+
+# Pydantic models for OpenAI responses
+if OPENAI_AVAILABLE:
+    class AICareerInsight(BaseModel):
+        """Structure for AI-generated career insights"""
+        career_fit_analysis: str = Field(description="Detailed analysis of career fit")
+        personalized_advice: str = Field(description="Personalized career advice")
+        key_strengths: List[str] = Field(description="Key strengths for this career")
+        development_areas: List[str] = Field(description="Areas needing development")
+        success_probability: float = Field(description="Estimated success probability (0-1)")
+        timeline_estimate: str = Field(description="Estimated timeline to enter career")
+        
+    class AISkillGapAnalysis(BaseModel):
+        """Structure for AI-generated skill gap analysis"""
+        critical_gaps: List[str] = Field(description="Critical skill gaps to address")
+        learning_priorities: List[str] = Field(description="Prioritized learning recommendations")
+        resources: List[str] = Field(description="Recommended learning resources")
+        estimated_time: str = Field(description="Estimated time to bridge gaps")
 
 
 @dataclass
@@ -89,6 +126,27 @@ class RecommendationEngine:
         # Initialize ML components
         self.tfidf_vectorizer = TfidfVectorizer(max_features=500)
         self.scaler = MinMaxScaler()
+        
+        # Initialize OpenAI client if available
+        self.openai_client = None
+        self.langchain_llm = None
+        if OPENAI_AVAILABLE:
+            api_key = os.getenv("OPENAI_API_KEY")
+            if api_key and api_key != "your_openai_api_key_here":
+                try:
+                    self.openai_client = OpenAI(api_key=api_key)
+                    self.langchain_llm = ChatOpenAI(
+                        model="gpt-4-turbo-preview",
+                        temperature=0.7,
+                        api_key=api_key
+                    )
+                    logger.info("OpenAI GPT-4 initialized successfully")
+                except Exception as e:
+                    logger.warning(f"Failed to initialize OpenAI: {e}")
+                    self.openai_client = None
+                    self.langchain_llm = None
+            else:
+                logger.warning("OpenAI API key not configured. Add OPENAI_API_KEY to .env file for enhanced recommendations.")
         
         # Holland code mapping (RIASEC)
         self.holland_codes = {
@@ -904,6 +962,321 @@ class RecommendationEngine:
         
         logger.info(f"Saved recommendations to {output_file}")
         return output_file
+    
+    def get_ai_career_insights(self, student_profile: StudentProfile, 
+                               career_data: Dict) -> Optional[Dict]:
+        """Get AI-powered career insights using OpenAI GPT-4"""
+        if not self.openai_client:
+            return None
+        
+        try:
+            # Prepare profile summary
+            profile_summary = f"""
+            Student Profile:
+            - Name: {student_profile.name}
+            - Age: {student_profile.age}
+            - Education: {student_profile.education_level} (GPA: {student_profile.gpa})
+            - Major: {student_profile.major or 'Not specified'}
+            - Skills: {', '.join([f'{k} (Level {v}/5)' for k, v in list(student_profile.skills.items())[:5]])}
+            - Interests: {', '.join(student_profile.interests[:5])}
+            - Work Experience: {len(student_profile.work_experience)} positions
+            - Personality: {', '.join([f'{k}: {v:.1f}' for k, v in list(student_profile.personality_traits.items())[:5]])}
+            """
+            
+            career_summary = f"""
+            Career: {career_data.get('title', 'Unknown')}
+            Category: {career_data.get('category', 'General')}
+            Description: {career_data.get('description', 'No description')[:200]}
+            Growth Rate: {career_data.get('growth_rate', 'Unknown')}
+            """
+            
+            prompt = f"""As an expert career counselor, analyze this student's fit for the given career.
+            
+            {profile_summary}
+            
+            {career_summary}
+            
+            Provide a comprehensive analysis including:
+            1. Detailed career fit analysis (2-3 sentences)
+            2. Personalized advice for pursuing this career (2-3 sentences)
+            3. List 3-4 key strengths the student has for this career
+            4. List 3-4 areas for development
+            5. Estimate success probability (0.0 to 1.0)
+            6. Realistic timeline to enter this career field
+            
+            Be specific, actionable, and encouraging while being realistic."""
+            
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4-turbo-preview",
+                messages=[
+                    {"role": "system", "content": "You are an expert career counselor with deep knowledge of career pathways and student development."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.7,
+                max_tokens=800
+            )
+            
+            # Parse the response
+            content = response.choices[0].message.content
+            
+            # Extract structured information from the response
+            insights = {
+                "career_fit_analysis": self._extract_section(content, "career fit analysis", 2),
+                "personalized_advice": self._extract_section(content, "advice", 2),
+                "key_strengths": self._extract_list(content, "strengths", 4),
+                "development_areas": self._extract_list(content, "development", 4),
+                "success_probability": self._extract_probability(content),
+                "timeline_estimate": self._extract_timeline(content),
+                "raw_analysis": content
+            }
+            
+            return insights
+            
+        except Exception as e:
+            logger.error(f"Error getting AI career insights: {e}")
+            return None
+    
+    def _extract_section(self, text: str, keyword: str, sentences: int = 2) -> str:
+        """Extract a section from AI response"""
+        lines = text.split('\n')
+        for i, line in enumerate(lines):
+            if keyword.lower() in line.lower():
+                # Get next few lines
+                section = []
+                for j in range(i, min(i + sentences + 1, len(lines))):
+                    if lines[j].strip():
+                        section.append(lines[j].strip())
+                return ' '.join(section) if section else "Analysis not available"
+        return "Analysis not available"
+    
+    def _extract_list(self, text: str, keyword: str, max_items: int = 4) -> List[str]:
+        """Extract list items from AI response"""
+        items = []
+        lines = text.split('\n')
+        found_section = False
+        
+        for line in lines:
+            if keyword.lower() in line.lower():
+                found_section = True
+                continue
+            if found_section and (line.strip().startswith('-') or line.strip().startswith('•') or line.strip().startswith('*')):
+                item = line.strip().lstrip('-•* ').strip()
+                if item:
+                    items.append(item)
+                if len(items) >= max_items:
+                    break
+        
+        return items if items else ["No specific items identified"]
+    
+    def _extract_probability(self, text: str) -> float:
+        """Extract probability from AI response"""
+        import re
+        # Look for patterns like "0.7", "70%", "probability: 0.8"
+        patterns = [
+            r'probability[:\s]+([0-9.]+)',
+            r'([0-9.]+)\s*probability',
+            r'success[:\s]+([0-9.]+)',
+            r'([0-9]+)%\s*(?:chance|probability|success)'
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text.lower())
+            if match:
+                value = float(match.group(1))
+                if value > 1:  # It's a percentage
+                    return value / 100
+                return min(value, 1.0)
+        
+        return 0.7  # Default probability
+    
+    def _extract_timeline(self, text: str) -> str:
+        """Extract timeline from AI response"""
+        import re
+        # Look for time-related patterns
+        patterns = [
+            r'timeline[:\s]+([^.]+)',
+            r'(\d+[-\s]+\d+\s*(?:months?|years?))',
+            r'(?:approximately|about|around)\s+(\d+\s*(?:months?|years?))',
+            r'(?:within|in)\s+(\d+[-\s]+\d+\s*(?:months?|years?))'
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text.lower())
+            if match:
+                return match.group(1).strip().capitalize()
+        
+        return "1-2 years with focused preparation"
+    
+    def get_ai_skill_gap_analysis(self, student_skills: Dict[str, int], 
+                                  career_skills: List[str]) -> Optional[Dict]:
+        """Get AI-powered skill gap analysis using OpenAI GPT-4"""
+        if not self.openai_client:
+            return None
+        
+        try:
+            current_skills = ', '.join([f'{k} (Level {v}/5)' for k, v in student_skills.items()])
+            required_skills = ', '.join(career_skills)
+            
+            prompt = f"""As a career development expert, analyze the skill gaps between current and required skills.
+            
+            Current Skills: {current_skills}
+            Required Career Skills: {required_skills}
+            
+            Provide:
+            1. List the 3-5 most critical skill gaps to address
+            2. Prioritized learning recommendations (3-5 items)
+            3. Specific resources for skill development (3-5 resources)
+            4. Realistic timeline to bridge these gaps
+            
+            Be specific and actionable in your recommendations."""
+            
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4-turbo-preview",
+                messages=[
+                    {"role": "system", "content": "You are an expert in skill development and career transitions."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.7,
+                max_tokens=600
+            )
+            
+            content = response.choices[0].message.content
+            
+            return {
+                "critical_gaps": self._extract_list(content, "critical", 5),
+                "learning_priorities": self._extract_list(content, "learning", 5),
+                "resources": self._extract_list(content, "resources", 5),
+                "estimated_time": self._extract_timeline(content),
+                "raw_analysis": content
+            }
+            
+        except Exception as e:
+            logger.error(f"Error in AI skill gap analysis: {e}")
+            return None
+    
+    def generate_ai_resume_suggestions(self, profile: Dict, target_career: str) -> Optional[str]:
+        """Generate AI-powered resume optimization suggestions"""
+        if not self.openai_client:
+            return None
+        
+        try:
+            prompt = f"""As a professional resume writer, provide specific suggestions to optimize this resume for a {target_career} position.
+            
+            Current Profile:
+            - Skills: {', '.join(profile.get('skills', [])[:8])}
+            - Experience: {profile.get('experience', 'Entry level')}
+            - Education: {profile.get('education_level', 'Not specified')}
+            
+            Provide:
+            1. Key skills to highlight (3-4 items)
+            2. Action verbs to use (5-6 verbs)
+            3. Quantifiable achievements to include (2-3 examples)
+            4. Keywords for ATS optimization (5-7 keywords)
+            5. Resume format recommendations
+            
+            Be specific and tailored to {target_career}."""
+            
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4-turbo-preview",
+                messages=[
+                    {"role": "system", "content": "You are an expert resume writer and career coach."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.7,
+                max_tokens=500
+            )
+            
+            return response.choices[0].message.content
+            
+        except Exception as e:
+            logger.error(f"Error generating resume suggestions: {e}")
+            return None
+    
+    def generate_ai_cover_letter(self, profile: Dict, job_details: Dict) -> Optional[str]:
+        """Generate AI-powered cover letter"""
+        if not self.openai_client:
+            return None
+        
+        try:
+            prompt = f"""Write a professional cover letter for this position.
+            
+            Candidate Profile:
+            - Name: {profile.get('name', 'Candidate')}
+            - Skills: {', '.join(profile.get('skills', [])[:5])}
+            - Experience: {profile.get('experience', 'Entry level')}
+            - Interests: {', '.join(profile.get('interests', [])[:3])}
+            
+            Job Details:
+            - Title: {job_details.get('title', 'Position')}
+            - Company: {job_details.get('company', 'the company')}
+            - Key Requirements: {', '.join(job_details.get('requirements', [])[:4])}
+            
+            Write a compelling, professional cover letter (250-300 words) that:
+            1. Shows enthusiasm for the role
+            2. Highlights relevant skills and experience
+            3. Demonstrates knowledge of the company/role
+            4. Includes a strong opening and closing
+            
+            Use a professional tone and format."""
+            
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4-turbo-preview",
+                messages=[
+                    {"role": "system", "content": "You are a professional career coach and expert cover letter writer."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.8,
+                max_tokens=600
+            )
+            
+            return response.choices[0].message.content
+            
+        except Exception as e:
+            logger.error(f"Error generating cover letter: {e}")
+            return None
+    
+    def generate_recommendations(self, profile_dict: Dict) -> List[Dict]:
+        """Generate AI-enhanced career recommendations from profile dictionary"""
+        # Convert dictionary to StudentProfile
+        student_profile = StudentProfile(
+            student_id=profile_dict.get('id', 'USER001'),
+            name=profile_dict.get('name', 'User'),
+            age=profile_dict.get('age', 25),
+            education_level=profile_dict.get('education_level', 'undergraduate'),
+            gpa=profile_dict.get('gpa', 3.5),
+            major=profile_dict.get('major'),
+            interests=profile_dict.get('interests', []),
+            skills={skill: 3 for skill in profile_dict.get('skills', [])},  # Default level 3
+            activities=profile_dict.get('activities', []),
+            personality_traits=profile_dict.get('personality_traits', {}),
+            work_experience=profile_dict.get('work_experience', []),
+            preferred_work_environment=profile_dict.get('preferred_work_environment', []),
+            location_preference=profile_dict.get('location_preference', 'flexible'),
+            salary_expectations=profile_dict.get('salary_expectations')
+        )
+        
+        # Get base recommendations
+        recommendations = self.recommend_careers(student_profile, top_n=10)
+        
+        # Enhance with AI insights if available
+        enhanced_recommendations = []
+        for rec in recommendations:
+            rec_dict = rec.to_dict()
+            
+            # Add AI insights if OpenAI is available
+            if self.openai_client and rec.match_score > 0.6:  # Only for good matches
+                career_data = self.career_data.get(rec.career_id, {})
+                ai_insights = self.get_ai_career_insights(student_profile, career_data)
+                
+                if ai_insights:
+                    rec_dict['ai_insights'] = ai_insights
+                    # Update confidence based on AI analysis
+                    if 'success_probability' in ai_insights:
+                        rec_dict['confidence'] = (rec_dict['confidence'] + ai_insights['success_probability']) / 2
+            
+            enhanced_recommendations.append(rec_dict)
+        
+        return enhanced_recommendations
 
 
 def main():
