@@ -283,12 +283,24 @@ async def generate_student_pathway(request: StudentProfileRequest):
 async def search_jobs(query: JobSearchQuery):
     """Search for job postings"""
     try:
-        jobs = job_scraper.scrape_jobs(
+        # Use the correct method name from LiveJobScraper
+        results = await job_scraper.search_jobs(
             query=query.query,
             location=query.location,
-            max_results=query.max_results
+            sources=['indeed']  # Start with Indeed for testing
         )
-        return {"jobs": jobs, "count": len(jobs)}
+        
+        # Limit results based on max_results
+        jobs = results.get('combined', [])
+        if query.max_results and len(jobs) > query.max_results:
+            jobs = jobs[:query.max_results]
+        
+        return {
+            "jobs": jobs, 
+            "count": len(jobs),
+            "metadata": results.get('search_metadata', {}),
+            "sources_used": results.get('search_metadata', {}).get('sources_used', [])
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
