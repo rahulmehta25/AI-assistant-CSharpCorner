@@ -1,0 +1,249 @@
+{
+  "summary": {
+    "total_tests": 18,
+    "passed": 15,
+    "failed": 2,
+    "errors": 1,
+    "success_rate": 83.33333333333334,
+    "timestamp": "2025-09-08 12:51:00"
+  },
+  "results": [
+    {
+      "test_name": "Grade Level - High School Freshman",
+      "status": "FAIL",
+      "details": {},
+      "error_message": "Failed validations: hs_has_college_prep"
+    },
+    {
+      "test_name": "Grade Level - High School Sophomore",
+      "status": "PASS",
+      "details": {
+        "milestones_count": 5,
+        "courses_count": 4,
+        "activities_count": 5,
+        "skills_count": 14,
+        "focus_areas": [
+          "Career Preparation",
+          "Skill Development",
+          "Application Preparation"
+        ]
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Grade Level - High School Junior",
+      "status": "PASS",
+      "details": {
+        "milestones_count": 5,
+        "courses_count": 6,
+        "activities_count": 5,
+        "skills_count": 14,
+        "focus_areas": [
+          "Advanced Academics",
+          "Career Preparation",
+          "Skill Development",
+          "Application Preparation"
+        ]
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Grade Level - High School Senior",
+      "status": "PASS",
+      "details": {
+        "milestones_count": 4,
+        "courses_count": 3,
+        "activities_count": 5,
+        "skills_count": 14,
+        "focus_areas": [
+          "Advanced Academics",
+          "Career Preparation",
+          "Skill Development",
+          "Application Preparation"
+        ]
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Grade Level - College Freshman",
+      "status": "FAIL",
+      "details": {},
+      "error_message": "Failed validations: college_has_career_prep"
+    },
+    {
+      "test_name": "Grade Level - College Sophomore",
+      "status": "PASS",
+      "details": {
+        "milestones_count": 4,
+        "courses_count": 3,
+        "activities_count": 5,
+        "skills_count": 15,
+        "focus_areas": [
+          "Career Preparation",
+          "Skill Development"
+        ]
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Grade Level - College Junior",
+      "status": "PASS",
+      "details": {
+        "milestones_count": 5,
+        "courses_count": 3,
+        "activities_count": 5,
+        "skills_count": 15,
+        "focus_areas": [
+          "Career Preparation",
+          "Skill Development",
+          "Application Preparation"
+        ]
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Grade Level - College Senior",
+      "status": "PASS",
+      "details": {
+        "milestones_count": 5,
+        "courses_count": 3,
+        "activities_count": 5,
+        "skills_count": 15,
+        "focus_areas": [
+          "Career Preparation",
+          "Skill Development",
+          "Application Preparation"
+        ]
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Career Field - Computer Science",
+      "status": "PASS",
+      "details": {
+        "career_field": "computer science",
+        "milestones": 5,
+        "activities": [
+          "Robotics Club",
+          "Science Olympiad",
+          "Math Team",
+          "Volunteer Work",
+          "Study Groups"
+        ],
+        "has_relevant_activities": true
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Career Field - Business",
+      "status": "PASS",
+      "details": {
+        "career_field": "business",
+        "milestones": 5,
+        "activities": [
+          "DECA",
+          "Student Government",
+          "Debate Team",
+          "Volunteer Work",
+          "Study Groups"
+        ],
+        "has_relevant_activities": true
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Career Field - Engineering",
+      "status": "PASS",
+      "details": {
+        "career_field": "engineering",
+        "milestones": 5,
+        "activities": [
+          "Robotics Club",
+          "Science Olympiad",
+          "Math Team",
+          "Volunteer Work",
+          "Study Groups"
+        ],
+        "has_relevant_activities": true
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Career Field - Medicine",
+      "status": "PASS",
+      "details": {
+        "career_field": "medicine",
+        "milestones": 5,
+        "activities": [
+          "Robotics Club",
+          "Science Olympiad",
+          "Math Team",
+          "Volunteer Work",
+          "Study Groups"
+        ],
+        "has_relevant_activities": true
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Career Field - Art",
+      "status": "PASS",
+      "details": {
+        "career_field": "art",
+        "milestones": 5,
+        "activities": [
+          "Art Club",
+          "Yearbook/Newspaper",
+          "Theater/Drama",
+          "Volunteer Work",
+          "Study Groups"
+        ],
+        "has_relevant_activities": true
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "O*NET Integration - Setup",
+      "status": "ERROR",
+      "details": {},
+      "error_message": "slice(None, 5, None)"
+    },
+    {
+      "test_name": "API Consistency",
+      "status": "PASS",
+      "details": {
+        "consistent_responses": true,
+        "average_response_time": "0.00s",
+        "requests_tested": 3
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Edge Case - Empty Interests & Skills",
+      "status": "PASS",
+      "details": {
+        "response_valid": true,
+        "milestones": 5
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Edge Case - Very High GPA",
+      "status": "PASS",
+      "details": {
+        "response_valid": true,
+        "milestones": 4
+      },
+      "error_message": null
+    },
+    {
+      "test_name": "Edge Case - Unknown Career Field",
+      "status": "PASS",
+      "details": {
+        "response_valid": true,
+        "milestones": 4
+      },
+      "error_message": null
+    }
+  ]
+}

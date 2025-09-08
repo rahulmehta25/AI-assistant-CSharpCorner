@@ -18,7 +18,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # Import backend modules
 from modules.career_assistant_core import CareerAssistantCore
 from modules.data_loader import data_loader
-from modules.student_pathways import StudentPathwaySystem
+from modules.student_pathways import StudentPathwaySystem, StudentLevel
 from modules.live_job_scraper import LiveJobScraper
 from modules.recommendation_engine import RecommendationEngine
 
@@ -60,11 +60,13 @@ class JobSearchQuery(BaseModel):
     max_results: Optional[int] = 50
 
 class StudentProfileRequest(BaseModel):
-    student_level: str  # "high_school" or "college"
+    student_level: str  # "freshman_hs", "sophomore_hs", "junior_hs", "senior_hs", "freshman_college", etc.
     grade_year: Optional[str] = None
-    interests: List[str]
+    interests: Optional[List[str]] = []
     current_skills: Optional[List[str]] = []
     career_goals: Optional[List[str]] = []
+    gpa: Optional[float] = None
+    standardized_scores: Optional[Dict[str, int]] = None
 
 # API Endpoints
 
@@ -204,13 +206,76 @@ async def generate_roadmap(profile: UserProfile):
 async def generate_student_pathway(request: StudentProfileRequest):
     """Generate pathway for students"""
     try:
+        # Convert string to StudentLevel enum
+        try:
+            student_level = StudentLevel(request.student_level)
+        except ValueError:
+            # If direct conversion fails, try to find a matching enum value
+            level_map = {
+                'freshman_hs': StudentLevel.FRESHMAN_HS,
+                'sophomore_hs': StudentLevel.SOPHOMORE_HS,
+                'junior_hs': StudentLevel.JUNIOR_HS,
+                'senior_hs': StudentLevel.SENIOR_HS,
+                'freshman_college': StudentLevel.FRESHMAN_COLLEGE,
+                'sophomore_college': StudentLevel.SOPHOMORE_COLLEGE,
+                'junior_college': StudentLevel.JUNIOR_COLLEGE,
+                'senior_college': StudentLevel.SENIOR_COLLEGE,
+                'high_school': StudentLevel.SOPHOMORE_HS,  # Default high school level
+                'college': StudentLevel.SOPHOMORE_COLLEGE  # Default college level
+            }
+            student_level = level_map.get(request.student_level.lower(), StudentLevel.SOPHOMORE_HS)
+        
+        # Generate pathway
         pathway = pathway_generator.generate_pathway(
-            student_level=request.student_level,
-            career_field=request.career_goals[0] if request.career_goals else "Technology",
+            student_level=student_level,
+            career_field=request.career_goals[0] if request.career_goals else "computer science",
+            interests=request.interests,
             current_skills=request.current_skills,
-            grade_year=request.grade_year
+            gpa=request.gpa,
+            standardized_scores=request.standardized_scores
         )
-        return pathway
+        
+        # Convert pathway to serializable format
+        from dataclasses import asdict
+        pathway_dict = {
+            "student_level": pathway.student_level.value,
+            "career_field": pathway.career_field,
+            "onet_code": pathway.onet_code,
+            "milestones": [
+                {
+                    "title": m.title,
+                    "description": m.description,
+                    "deadline": m.deadline,
+                    "priority": m.priority,
+                    "category": m.category
+                } for m in pathway.milestones
+            ],
+            "courses": [
+                {
+                    "course_name": c.course_name,
+                    "course_type": c.course_type,
+                    "description": c.description,
+                    "prerequisites": c.prerequisites,
+                    "difficulty_level": c.difficulty_level,
+                    "relevance_score": c.relevance_score
+                } for c in pathway.courses
+            ],
+            "activities": [
+                {
+                    "name": a.name,
+                    "type": a.type,
+                    "description": a.description,
+                    "time_commitment": a.time_commitment,
+                    "skills_gained": a.skills_gained,
+                    "career_relevance": a.career_relevance
+                } for a in pathway.activities
+            ],
+            "skills_to_develop": pathway.skills_to_develop,
+            "timeline": pathway.timeline,
+            "summary": pathway_generator.get_pathway_summary(pathway)
+        }
+        
+        return pathway_dict
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
