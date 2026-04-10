@@ -1,14 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import {
-  Bot, Send, User, Sparkles, MessageCircle, BookOpen,
-  Target, TrendingUp, AlertCircle, RotateCcw, Zap,
-} from 'lucide-react';
+import { Bot, Send, User, Sparkles, MessageCircle, BookOpen, Target, TrendingUp, AlertCircle, RefreshCw } from 'lucide-react';
 import { useUserStore } from '@/store/useUserStore';
 
 interface Message {
@@ -23,103 +20,54 @@ interface Message {
 const quickActions = [
   {
     title: 'Career Path Guidance',
-    description: 'Get personalized recommendations',
+    description: 'Get personalized career recommendations',
     icon: Target,
-    color: 'text-blue-400',
-    bg: 'bg-blue-500/10',
-    border: 'border-blue-500/20',
+    color: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
     prompt: 'Based on my background and skills, what career paths do you recommend and why? Please be specific to my profile.',
   },
   {
     title: 'Skill Gap Analysis',
-    description: 'Identify what to learn next',
+    description: 'Identify what skills you need to develop',
     icon: TrendingUp,
-    color: 'text-emerald-400',
-    bg: 'bg-emerald-500/10',
-    border: 'border-emerald-500/20',
-    prompt: 'Analyze my current skills and tell me specifically what I need to learn to advance. Give me a prioritized list with resources.',
+    color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+    prompt: 'Analyze my current skills and tell me specifically what I need to learn to advance to the next level in my career. Give me a prioritized list with resources.',
   },
   {
     title: 'Learning Roadmap',
-    description: 'Structured 6-month plan',
+    description: 'Create a structured learning plan',
     icon: BookOpen,
-    color: 'text-violet-400',
-    bg: 'bg-violet-500/10',
-    border: 'border-violet-500/20',
-    prompt: 'Create a 6-month learning roadmap for me with specific courses, projects, and milestones. Focus on highest impact.',
+    color: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+    prompt: 'Create a 6-month learning roadmap for me with specific courses, projects, and milestones. Focus on what will have the highest impact on my career.',
   },
   {
     title: 'Interview Prep',
-    description: 'Practice & strategy',
+    description: 'Practice and get interview strategies',
     icon: MessageCircle,
-    color: 'text-amber-400',
-    bg: 'bg-amber-500/10',
-    border: 'border-amber-500/20',
-    prompt: 'Help me prepare for technical interviews. What are the most important topics and strategies for my target roles?',
+    color: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+    prompt: 'Help me prepare for technical interviews. What are the most important topics to study for my target roles, and what interview strategies do you recommend?',
   },
 ];
 
 const initialMessage: Message = {
   id: '1',
   role: 'assistant',
-  content: "Hello! I'm your AI Career Assistant powered by Claude. I have full context of your profile and can provide personalized guidance tailored to your background and goals.\n\nWhat would you like to explore today?",
+  content: "Hello! I'm your AI Career Assistant powered by Claude. I have access to your profile and can provide personalized career guidance tailored to your specific background and goals.\n\nWhat would you like to work on today?",
   timestamp: new Date(),
   suggestions: [
     'Help me choose a career path',
-    'Analyze my skill gaps',
+    'Review my skills and suggest improvements',
     'Find jobs that match my profile',
     'Create a learning roadmap',
   ],
 };
 
-function generateFollowUps(userInput: string): string[] {
-  const input = userInput.toLowerCase();
-  if (input.includes('career') || input.includes('path'))
-    return ['What skills should I build first?', 'What salary can I expect?', 'How long will this take?'];
-  if (input.includes('skill') || input.includes('learn'))
-    return ['Recommend specific courses', 'How do I practice these?', 'What projects should I build?'];
-  if (input.includes('interview') || input.includes('job'))
-    return ['Give me practice questions', 'Tips for resume?', 'How to negotiate salary?'];
-  return ['Tell me more', 'What should I do next?', 'Give me a specific example'];
-}
-
-function formatContent(content: string): React.ReactNode[] {
-  const parts = content.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, i) => {
-    if (part.startsWith('**') && part.endsWith('**'))
-      return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
-    return <span key={i}>{part}</span>;
-  });
-}
-
-/* ── Typing indicator ─────────────────────────────────── */
-const TypingIndicator = () => (
-  <div id="typing-indicator" className="flex gap-3">
-    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center shadow-glow">
-      <Bot className="h-4 w-4 text-white" />
-    </div>
-    <div className="bg-card border border-border/50 rounded-2xl rounded-tl-sm px-4 py-3.5 shadow-sm">
-      <div id="typing-dots" className="flex items-center gap-1.5">
-        {[0, 1, 2].map((i) => (
-          <div
-            key={i}
-            className="h-2 w-2 rounded-full bg-primary/70 animate-bounce-dot"
-            style={{ animationDelay: `${i * 0.18}s` }}
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-);
-
-/* ── Main component ───────────────────────────────────── */
 const AIAssistant = () => {
   const { user } = useUserStore();
   const [messages, setMessages] = useState<Message[]>([initialMessage]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const bottomRef  = useRef<HTMLDivElement>(null);
-  const inputRef   = useRef<HTMLTextAreaElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -127,28 +75,37 @@ const AIAssistant = () => {
 
   const userProfile = user
     ? {
-        name:       user.name,
-        title:      user.profile.title,
+        name: user.name,
+        title: user.profile.title,
         experience: user.profile.experience,
-        education:  user.profile.education,
-        location:   user.profile.location,
-        interests:  user.profile.interests,
-        skills:     user.profile.skills?.map((s) => ({ name: s.name, level: s.level, category: s.category })),
+        education: user.profile.education,
+        location: user.profile.location,
+        interests: user.profile.interests,
+        skills: user.profile.skills?.map((s) => ({
+          name: s.name,
+          level: s.level,
+          category: s.category,
+        })),
       }
     : undefined;
 
   const sendMessage = async (content: string) => {
     if (!content.trim() || isLoading) return;
 
-    const userMsg: Message = {
-      id: Date.now().toString(), role: 'user', content: content.trim(), timestamp: new Date(),
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      role: 'user',
+      content: content.trim(),
+      timestamp: new Date(),
     };
-    const updated = [...messages, userMsg];
-    setMessages(updated);
+
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     setInputMessage('');
     setIsLoading(true);
 
-    const apiMessages = updated
+    // Build conversation history for the API (exclude initial welcome message system-side)
+    const apiMessages = updatedMessages
       .filter((m) => !m.error)
       .map((m) => ({ role: m.role as 'user' | 'assistant', content: m.content }));
 
@@ -163,28 +120,29 @@ const AIAssistant = () => {
         const err = await res.json().catch(() => ({ error: 'Request failed' }));
         throw new Error(err.error || `HTTP ${res.status}`);
       }
+
       const data = await res.json();
+
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: data.response,
+        timestamp: new Date(),
+        suggestions: generateFollowUps(content),
+      };
+
+      setMessages((prev) => [...prev, assistantMessage]);
+    } catch (error) {
+      const isApiKeyMissing =
+        error instanceof Error && error.message.includes('API key not configured');
 
       setMessages((prev) => [
         ...prev,
         {
           id: (Date.now() + 1).toString(),
           role: 'assistant',
-          content: data.response,
-          timestamp: new Date(),
-          suggestions: generateFollowUps(content),
-        },
-      ]);
-    } catch (error) {
-      const isApiKeyMissing =
-        error instanceof Error && error.message.includes('API key not configured');
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: (Date.now() + 1).toString(),
-          role: 'assistant',
           content: isApiKeyMissing
-            ? 'The AI assistant requires an API key. Please add ANTHROPIC_API_KEY to your environment variables.'
+            ? 'The AI assistant requires an API key to be configured. Please add ANTHROPIC_API_KEY to your environment variables in Vercel.'
             : `I encountered an error: ${error instanceof Error ? error.message : 'Unknown error'}. Please try again.`,
           timestamp: new Date(),
           error: true,
@@ -192,94 +150,92 @@ const AIAssistant = () => {
       ]);
     } finally {
       setIsLoading(false);
-      setTimeout(() => inputRef.current?.focus(), 50);
+      inputRef.current?.focus();
     }
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage(inputMessage);
+  const generateFollowUps = (userInput: string): string[] => {
+    const input = userInput.toLowerCase();
+    if (input.includes('career') || input.includes('path')) {
+      return ['What skills should I build first?', 'What salary can I expect?', 'How long will this take?'];
     }
+    if (input.includes('skill') || input.includes('learn')) {
+      return ['Recommend specific courses', 'How do I practice these skills?', 'What projects should I build?'];
+    }
+    if (input.includes('interview') || input.includes('job')) {
+      return ['Give me practice questions', 'Review my resume tips', 'How should I negotiate salary?'];
+    }
+    return ['Tell me more', 'What should I do next?', 'Can you give me a specific example?'];
   };
 
-  const resetChat = () => {
-    setMessages([initialMessage]);
-    setInputMessage('');
-    setTimeout(() => inputRef.current?.focus(), 50);
+  const formatContent = (content: string) => {
+    // Convert **bold** markdown to spans and preserve newlines
+    const parts = content.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return (
+          <strong key={i} className="font-semibold text-foreground">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      return <span key={i}>{part}</span>;
+    });
   };
 
   return (
-    <div id="ai-assistant-container" className="max-w-6xl mx-auto space-y-6">
-      {/* ── Header ──────────────────────────────────────── */}
+    <div id="ai-assistant-container" className="container mx-auto py-8 px-4 max-w-6xl">
       <motion.div
         id="ai-assistant-header"
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex items-center justify-between flex-wrap gap-4"
+        className="mb-8"
       >
-        <div className="flex items-center gap-3">
-          <div className="h-11 w-11 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow animate-pulse-glow">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
             <Bot className="h-5 w-5 text-white" />
           </div>
           <div>
-            <h1 className="text-2xl font-extrabold tracking-tight text-gradient-primary">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               AI Career Assistant
             </h1>
             <div className="flex items-center gap-2 mt-0.5">
-              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs text-muted-foreground">
-                Powered by Claude · Personalized to your profile
-              </span>
+              <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-xs text-muted-foreground">Powered by Claude — Personalized to your profile</span>
             </div>
           </div>
         </div>
-
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={resetChat}
-          className="gap-2 text-muted-foreground hover:text-foreground"
-        >
-          <RotateCcw className="h-4 w-4" />
-          New Chat
-        </Button>
       </motion.div>
 
-      {/* ── Body grid ───────────────────────────────────── */}
-      <div id="ai-assistant-grid" className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-
-        {/* Sidebar: quick actions + profile context */}
-        <div id="ai-sidebar" className="lg:col-span-1 space-y-4">
-          {/* Quick actions */}
-          <Card className="border-border/50 bg-card/80">
+      <div id="ai-assistant-grid" className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Quick Actions */}
+        <div id="quick-actions-panel" className="lg:col-span-1 space-y-4">
+          <Card className="border-border/50 bg-card/50 backdrop-blur">
             <CardHeader className="pb-3">
-              <CardTitle className="flex items-center gap-2 text-sm">
+              <CardTitle className="flex items-center gap-2 text-base">
                 <Sparkles className="h-4 w-4 text-primary" />
-                Quick Start
+                Quick Actions
               </CardTitle>
-              <CardDescription className="text-xs">One-click conversation starters</CardDescription>
+              <CardDescription>Start with one click</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-2 pt-0">
-              {quickActions.map((action, idx) => (
+            <CardContent className="space-y-2">
+              {quickActions.map((action, index) => (
                 <button
-                  key={idx}
-                  id={`quick-action-${idx}`}
+                  key={index}
+                  id={`quick-action-${index}`}
                   onClick={() => sendMessage(action.prompt)}
                   disabled={isLoading}
-                  className={`w-full p-3 rounded-xl border ${action.border} ${action.bg}/40 hover:${action.bg} hover:border-opacity-60 transition-all duration-200 text-left group disabled:opacity-50 disabled:cursor-not-allowed`}
+                  className="w-full p-3 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-muted/50 transition-all duration-200 text-left group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <div className="flex items-start gap-3">
-                    <div className={`p-1.5 rounded-lg ${action.bg} flex-shrink-0`}>
-                      <action.icon className={`h-3.5 w-3.5 ${action.color}`} />
+                    <div className={`p-1.5 rounded-lg border ${action.color} transition-colors`}>
+                      <action.icon className="h-3.5 w-3.5" />
                     </div>
-                    <div className="min-w-0">
-                      <p className={`font-semibold text-xs text-foreground group-hover:${action.color} transition-colors`}>
+                    <div>
+                      <p className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
                         {action.title}
                       </p>
-                      <p className="text-[11px] text-muted-foreground mt-0.5 leading-snug">
-                        {action.description}
-                      </p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{action.description}</p>
                     </div>
                   </div>
                 </button>
@@ -287,176 +243,144 @@ const AIAssistant = () => {
             </CardContent>
           </Card>
 
-          {/* Profile context */}
+          {/* Profile context badge */}
           {user && (
-            <Card id="ai-profile-card" className="border-border/50 bg-card/80">
-              <CardContent className="pt-4 pb-4 space-y-2">
-                <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wide mb-3">
-                  Advising based on
-                </p>
+            <Card id="profile-context-card" className="border-border/50 bg-card/50 backdrop-blur">
+              <CardContent className="pt-4 pb-4">
+                <p className="text-xs font-medium text-muted-foreground mb-2">Advising based on your profile</p>
                 <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/40">
-                    <Zap className="h-3.5 w-3.5 text-primary flex-shrink-0" />
-                    <span className="text-xs text-foreground font-medium truncate">{user.profile.title}</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/40">
-                    <TrendingUp className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0" />
-                    <span className="text-xs text-muted-foreground">{user.profile.experience}</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/40">
-                    <Target className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0" />
-                    <span className="text-xs text-muted-foreground">{user.profile.location}</span>
-                  </div>
+                  <Badge variant="secondary" className="text-xs w-full justify-start">
+                    {user.profile.title}
+                  </Badge>
+                  <Badge variant="outline" className="text-xs w-full justify-start">
+                    {user.profile.experience}
+                  </Badge>
+                  <Badge variant="outline" className="text-xs w-full justify-start">
+                    {user.profile.location}
+                  </Badge>
                 </div>
-                {user.profile.skills && user.profile.skills.length > 0 && (
-                  <div className="flex flex-wrap gap-1 pt-1">
-                    {user.profile.skills.slice(0, 4).map((s) => (
-                      <Badge key={s.id} variant="secondary" className="text-[10px] h-4 px-1.5">
-                        {s.name}
-                      </Badge>
-                    ))}
-                    {user.profile.skills.length > 4 && (
-                      <Badge variant="outline" className="text-[10px] h-4 px-1.5 text-muted-foreground">
-                        +{user.profile.skills.length - 4}
-                      </Badge>
-                    )}
-                  </div>
-                )}
               </CardContent>
             </Card>
           )}
         </div>
 
-        {/* Chat window */}
-        <Card
-          id="chat-window"
-          className="lg:col-span-2 border-border/50 bg-card/80 flex flex-col"
-          style={{ height: '72vh', minHeight: 480 }}
-        >
-          <CardHeader className="pb-3 border-b border-border/50 flex-shrink-0">
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle className="text-sm">Conversation</CardTitle>
-                <CardDescription className="text-xs">
-                  {messages.length - 1} messages
-                </CardDescription>
-              </div>
-              <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-                <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Claude claude-sonnet-4-6
-              </div>
-            </div>
+        {/* Chat Interface */}
+        <Card id="chat-card" className="lg:col-span-2 border-border/50 flex flex-col" style={{ height: '70vh', minHeight: '500px' }}>
+          <CardHeader className="pb-3 border-b border-border/50">
+            <CardTitle className="text-base">Chat</CardTitle>
+            <CardDescription>Get personalized career advice</CardDescription>
           </CardHeader>
-
-          {/* Messages */}
-          <CardContent className="p-0 flex-1 flex flex-col min-h-0">
-            <ScrollArea id="chat-messages-area" className="flex-1 px-4 py-3">
-              <div id="chat-messages" className="space-y-5">
-                <AnimatePresence initial={false}>
-                  {messages.map((message) => (
-                    <motion.div
-                      key={message.id}
-                      id={`msg-${message.id}`}
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.25 }}
-                      className="space-y-2"
+          <CardContent className="p-0 flex flex-col flex-1 min-h-0">
+            <ScrollArea id="chat-scroll-area" className="flex-1 p-4">
+              <div id="chat-messages" className="space-y-4">
+                {messages.map((message) => (
+                  <div key={message.id} id={`message-${message.id}`} className="space-y-2">
+                    <div
+                      className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
-                        className={`flex gap-2.5 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                        className={`flex gap-2.5 max-w-[85%] ${
+                          message.role === 'user' ? 'flex-row-reverse' : 'flex-row'
+                        }`}
                       >
                         <div
-                          className={`flex gap-2.5 max-w-[88%] ${message.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
+                          className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center ${
+                            message.role === 'user'
+                              ? 'bg-primary text-primary-foreground'
+                              : message.error
+                              ? 'bg-destructive/10 text-destructive'
+                              : 'bg-gradient-to-br from-primary to-secondary text-white'
+                          }`}
                         >
-                          {/* Avatar */}
-                          <div
-                            className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                              message.role === 'user'
-                                ? 'bg-gradient-primary'
-                                : message.error
-                                ? 'bg-destructive/20'
-                                : 'bg-gradient-primary'
-                            } shadow-sm`}
-                          >
-                            {message.role === 'user' ? (
-                              <User className="h-3.5 w-3.5 text-white" />
-                            ) : message.error ? (
-                              <AlertCircle className="h-3.5 w-3.5 text-destructive" />
-                            ) : (
-                              <Bot className="h-3.5 w-3.5 text-white" />
-                            )}
+                          {message.role === 'user' ? (
+                            <User className="h-3.5 w-3.5" />
+                          ) : message.error ? (
+                            <AlertCircle className="h-3.5 w-3.5" />
+                          ) : (
+                            <Bot className="h-3.5 w-3.5" />
+                          )}
+                        </div>
+                        <div
+                          className={`rounded-xl px-4 py-3 text-sm leading-relaxed ${
+                            message.role === 'user'
+                              ? 'bg-primary text-primary-foreground'
+                              : message.error
+                              ? 'bg-destructive/10 text-destructive border border-destructive/20'
+                              : 'bg-muted text-foreground'
+                          }`}
+                        >
+                          <div className="whitespace-pre-line">
+                            {formatContent(message.content)}
                           </div>
-
-                          {/* Bubble */}
-                          <div
-                            className={`rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm ${
-                              message.role === 'user'
-                                ? 'bg-gradient-primary text-white rounded-tr-sm'
-                                : message.error
-                                ? 'bg-destructive/10 text-destructive border border-destructive/20 rounded-tl-sm'
-                                : 'bg-card border border-border/50 text-foreground rounded-tl-sm'
-                            }`}
-                          >
-                            <div className="whitespace-pre-line">
-                              {formatContent(message.content)}
-                            </div>
-                            <div className={`text-[10px] mt-2 ${message.role === 'user' ? 'text-white/60 text-right' : 'text-muted-foreground'}`}>
-                              {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                            </div>
+                          <div className="text-xs opacity-50 mt-2">
+                            {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      {/* Suggestion chips */}
-                      {message.role === 'assistant' && message.suggestions && !message.error && (
-                        <div id={`chips-${message.id}`} className="flex flex-wrap gap-1.5 ml-11">
-                          {message.suggestions.map((s, i) => (
-                            <button
-                              key={i}
-                              onClick={() => sendMessage(s)}
-                              disabled={isLoading}
-                              className="text-xs px-3 py-1 rounded-full border border-border/60 hover:border-primary/50 hover:bg-primary/5 hover:text-primary text-muted-foreground transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
-                            >
-                              {s}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
+                    {message.role === 'assistant' && message.suggestions && !message.error && (
+                      <div id={`suggestions-${message.id}`} className="flex flex-wrap gap-1.5 ml-9">
+                        {message.suggestions.map((suggestion, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => sendMessage(suggestion)}
+                            disabled={isLoading}
+                            className="text-xs px-3 py-1 rounded-full border border-border hover:border-primary/50 hover:bg-primary/5 hover:text-primary text-muted-foreground transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {suggestion}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
 
-                {isLoading && <TypingIndicator />}
+                {isLoading && (
+                  <div id="loading-indicator" className="flex gap-2.5">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                      <Bot className="h-3.5 w-3.5 text-white" />
+                    </div>
+                    <div className="bg-muted rounded-xl px-4 py-3">
+                      <div className="flex items-center gap-1.5">
+                        <RefreshCw className="h-3 w-3 text-muted-foreground animate-spin" />
+                        <span className="text-xs text-muted-foreground">Thinking...</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <div ref={bottomRef} />
               </div>
             </ScrollArea>
 
-            {/* Input area */}
-            <div id="chat-input-area" className="border-t border-border/50 p-3 flex-shrink-0">
-              <div className="flex gap-2 items-end">
-                <Textarea
+            <div id="chat-input-area" className="border-t border-border/50 p-4">
+              <div className="flex gap-2">
+                <Input
                   ref={inputRef}
-                  id="chat-textarea"
+                  id="chat-input"
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Ask about careers, skills, or job strategies… (Enter to send)"
+                  placeholder="Ask about your career, skills, job search..."
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault();
+                      sendMessage(inputMessage);
+                    }
+                  }}
                   disabled={isLoading}
-                  rows={2}
-                  className="flex-1 resize-none min-h-[2.5rem] max-h-32 bg-muted/40 border-border/50 focus-visible:border-primary/50 focus-visible:ring-1 focus-visible:ring-primary/30 text-sm placeholder:text-muted-foreground/60"
+                  className="flex-1"
                 />
                 <Button
                   id="chat-send-btn"
                   onClick={() => sendMessage(inputMessage)}
                   disabled={isLoading || !inputMessage.trim()}
                   size="icon"
-                  className="h-10 w-10 flex-shrink-0 bg-gradient-primary hover:opacity-90 border-0 shadow-glow disabled:shadow-none"
                 >
                   <Send className="h-4 w-4" />
                 </Button>
               </div>
-              <p className="text-[10px] text-muted-foreground/50 mt-2 text-center">
-                Shift+Enter for new line · Claude has full context of your profile
+              <p className="text-xs text-muted-foreground mt-2 text-center">
+                Claude has full context of your profile and career goals
               </p>
             </div>
           </CardContent>
