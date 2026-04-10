@@ -270,7 +270,7 @@ export default function Pathways() {
               initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -8 }}
-              transition={{ duration: 0.25, ease: 'easeOut' }}
+              transition={{ duration: 0.25, ease: 'easeOut' as const }}
               className="space-y-4"
             >
               {/* Overview card */}

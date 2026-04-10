@@ -89,7 +89,7 @@ export const ResumeStrengthMeter = ({
                   transition={{
                     duration: 0.8,
                     delay: i * 0.08,
-                    ease: 'easeOut',
+                    ease: 'easeOut' as const,
                   }}
                 />
               )}

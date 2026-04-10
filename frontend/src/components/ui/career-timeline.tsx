@@ -51,7 +51,7 @@ const TimelineItem = ({
       id={`timeline-item-${step.id}`}
       initial={{ opacity: 0, x: -16 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: index * 0.08, duration: 0.4, ease: 'easeOut' }}
+      transition={{ delay: index * 0.08, duration: 0.4, ease: 'easeOut' as const }}
       className="flex gap-3 relative"
     >
       {/* Left column: icon + connector line */}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { format, addDays } from 'date-fns';
 import {
@@ -21,13 +21,13 @@ import { apiService } from '@/services/api';
 import type { Career, Job } from '@/types';
 
 /* ── Animation variants ─────────────────────────────── */
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.07 } },
 };
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 18 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' as const } },
 };
 
 /* ── Static helpers ──────────────────────────────────── */
@@ -339,7 +339,7 @@ export default function Dashboard() {
                         {career.title}
                       </p>
                       <p className="text-xs text-muted-foreground mt-0.5">
-                        ${(career.salary.min / 1000).toFixed(0)}k – ${(career.salary.max / 1000).toFixed(0)}k
+                        {career.salary ? `$${(career.salary.min / 1000).toFixed(0)}k – $${(career.salary.max / 1000).toFixed(0)}k` : career.salaryRange ?? ''}
                       </p>
                     </div>
                     <div className="flex items-center gap-2 flex-shrink-0">
