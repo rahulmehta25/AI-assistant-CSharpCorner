@@ -237,7 +237,7 @@ export default function JobSearch() {
     const q = searchQuery.toLowerCase();
     const matchSearch = !q || job.title.toLowerCase().includes(q) ||
                         job.company.toLowerCase().includes(q) ||
-                        job.description.toLowerCase().includes(q);
+                        (job.description ?? '').toLowerCase().includes(q);
     const matchLoc  = !selectedLocation || job.location.toLowerCase().includes(selectedLocation.toLowerCase());
     const matchType = !selectedType || job.type === selectedType;
     const matchSal  = !selectedSalary || (() => {

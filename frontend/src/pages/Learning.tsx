@@ -218,6 +218,7 @@ export default function Learning() {
               key={cat}
               id={`cat-${cat}`}
               onClick={() => setCategory(cat)}
+              aria-pressed={category === cat}
               className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all ${
                 category === cat
                   ? 'bg-primary text-primary-foreground border-primary'
@@ -264,9 +265,12 @@ export default function Learning() {
                     <Clock className="h-3 w-3" />
                     {course.duration}
                   </span>
-                  <span className="flex items-center gap-1">
-                    <Star className="h-3 w-3 text-amber-400 fill-amber-400" />
-                    {course.rating}
+                  <span
+                    className="flex items-center gap-1"
+                    aria-label={`Rating: ${course.rating} out of 5`}
+                  >
+                    <Star className="h-3 w-3 text-amber-400 fill-amber-400" aria-hidden="true" />
+                    <span>{course.rating}</span>
                   </span>
                   <span className={`flex items-center gap-1 font-medium ${course.cost === 'Free' ? 'text-emerald-500' : 'text-muted-foreground'}`}>
                     <DollarSign className="h-3 w-3" />

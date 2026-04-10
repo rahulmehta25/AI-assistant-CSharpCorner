@@ -195,7 +195,7 @@ export default function Achievements() {
                 <span>Overall Progress</span>
                 <span>{Math.round((unlocked.length / achievements.length) * 100)}%</span>
               </div>
-              <Progress value={(unlocked.length / achievements.length) * 100} className="h-2" />
+              <Progress value={(unlocked.length / achievements.length) * 100} className="h-2" aria-label="Overall achievement progress" />
             </div>
           </CardContent>
         </Card>
@@ -211,7 +211,7 @@ export default function Achievements() {
           {unlocked.map((a) => {
             const Icon = a.icon;
             return (
-              <Card key={a.id} id={`achievement-${a.id}`} className="border-emerald-500/20 bg-emerald-500/3">
+              <Card key={a.id} id={`achievement-${a.id}`} className="border-emerald-500/20 bg-emerald-500/3" aria-label={`${a.title}: unlocked on ${a.unlockedDate ?? 'unknown date'}`}>
                 <CardContent className="pt-4 pb-4">
                   <div className="flex items-start gap-3">
                     <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center flex-shrink-0">
@@ -247,7 +247,7 @@ export default function Achievements() {
           {locked.map((a) => {
             const Icon = a.icon;
             return (
-              <Card key={a.id} id={`achievement-locked-${a.id}`} className="border-border/50 opacity-80">
+              <Card key={a.id} id={`achievement-locked-${a.id}`} className="border-border/50 opacity-80" aria-label={`${a.title}: locked, ${a.progress != null ? `${a.progress}% complete` : 'not started'}`}>
                 <CardContent className="pt-4 pb-4">
                   <div className="flex items-start gap-3">
                     <div className="h-10 w-10 rounded-xl bg-muted flex items-center justify-center flex-shrink-0">
@@ -267,7 +267,14 @@ export default function Achievements() {
                             <span>Progress</span>
                             <span>{a.progress}%</span>
                           </div>
-                          <Progress value={a.progress} className="h-1.5" />
+                          <Progress
+                            value={a.progress}
+                            className="h-1.5"
+                            aria-label={`${a.title} progress`}
+                            aria-valuenow={a.progress}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                          />
                         </div>
                       )}
                     </div>

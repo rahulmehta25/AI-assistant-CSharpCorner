@@ -17,7 +17,7 @@ const container = {
 };
 const item = {
   hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' as const } },
 };
 
 const skillGaps = [
@@ -63,7 +63,27 @@ function getLevelColor(level: string) {
     intermediate: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
     beginner:     'bg-muted/60 text-muted-foreground border-border/60',
   };
-  return map[level.toLowerCase()] ?? map.beginner;
+  return map[level.toLowerCase()] ?? map['beginner'];
+}
+
+function getLevelBg(level: string) {
+  const map: Record<string, string> = {
+    expert:       'bg-emerald-500/10',
+    advanced:     'bg-blue-500/10',
+    intermediate: 'bg-amber-500/10',
+    beginner:     'bg-muted/60',
+  };
+  return map[level.toLowerCase()] ?? 'bg-muted/60';
+}
+
+function getLevelText(level: string) {
+  const map: Record<string, string> = {
+    expert:       'text-emerald-400',
+    advanced:     'text-blue-400',
+    intermediate: 'text-amber-400',
+    beginner:     'text-muted-foreground',
+  };
+  return map[level.toLowerCase()] ?? 'text-muted-foreground';
 }
 
 function getPriorityColor(priority: string) {
@@ -77,6 +97,7 @@ function getPriorityColor(priority: string) {
 
 export default function SkillsAnalysis() {
   const { user } = useUserStore();
+  const isLoading = user === null;
 
   const technicalSkills = user?.profile.skills ?? [];
   const softSkills = [
@@ -128,7 +149,18 @@ export default function SkillsAnalysis() {
         </div>
       </motion.div>
 
-      <Tabs defaultValue="overview" className="space-y-5">
+      {isLoading && (
+        <motion.div id="skills-loading-skeleton" variants={item} className="space-y-4" aria-label="Loading skills data" aria-busy="true">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="h-24 rounded-xl bg-muted animate-pulse" aria-hidden="true" />
+            ))}
+          </div>
+          <div className="h-64 rounded-xl bg-muted animate-pulse" aria-hidden="true" />
+        </motion.div>
+      )}
+
+      <Tabs defaultValue="overview" aria-label="Skills analysis sections" className="space-y-5">
         <motion.div variants={item}>
           <TabsList className="grid w-full grid-cols-4 bg-muted/40 border border-border/50">
             <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -245,8 +277,8 @@ export default function SkillsAnalysis() {
                       key={skill.id}
                       className="flex flex-col items-center p-4 rounded-xl border border-border/40 bg-muted/20 text-center"
                     >
-                      <div className={`h-8 w-8 rounded-full ${getLevelColor(skill.level).split(' ').slice(0,1).join('')} flex items-center justify-center mb-2`}>
-                        <Star className={`h-4 w-4 ${getLevelColor(skill.level).split(' ').slice(1,2).join('')}`} />
+                      <div className={`h-8 w-8 rounded-full ${getLevelBg(skill.level)} flex items-center justify-center mb-2`}>
+                        <Star className={`h-4 w-4 ${getLevelText(skill.level)}`} />
                       </div>
                       <p className="text-sm font-medium text-foreground">{skill.name}</p>
                       <Badge className={`mt-1.5 text-[10px] border ${getLevelColor(skill.level)}`}>

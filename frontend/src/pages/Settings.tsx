@@ -7,12 +7,13 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { Settings as SettingsIcon, Bell, Shield, Palette, Globe, Trash2, CheckCircle } from 'lucide-react';
+import { Settings as SettingsIcon, Bell, Shield, Palette, Globe, Trash2, CheckCircle, Loader2 } from 'lucide-react';
 import { useUserStore } from '@/store/useUserStore';
 
 export default function Settings() {
   const { updatePreferences } = useUserStore();
   const [saved, setSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
 
   const [notifications, setNotifications] = useState({
     jobAlerts: true,
@@ -34,8 +35,12 @@ export default function Settings() {
   });
 
   const handleSave = () => {
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2500);
+    setSaving(true);
+    setTimeout(() => {
+      setSaving(false);
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2500);
+    }, 800);
   };
 
   return (
@@ -249,18 +254,30 @@ export default function Settings() {
               <div id="clear-data-row" className="flex items-center justify-between p-3 rounded-lg border border-border/50">
                 <div>
                   <p className="font-medium text-sm">Clear All Data</p>
-                  <p className="text-xs text-muted-foreground">Remove all saved jobs, bookmarks, and progress</p>
+                  <p id="clear-data-warning" className="text-xs text-muted-foreground">Remove all saved jobs, bookmarks, and progress</p>
                 </div>
-                <Button id="clear-data-btn" variant="outline" size="sm" className="border-destructive/30 text-destructive hover:bg-destructive/10">
+                <Button
+                  id="clear-data-btn"
+                  variant="outline"
+                  size="sm"
+                  className="border-destructive/30 text-destructive hover:bg-destructive/10 transition-colors duration-200"
+                  aria-describedby="clear-data-warning"
+                >
                   Clear Data
                 </Button>
               </div>
               <div id="delete-account-row" className="flex items-center justify-between p-3 rounded-lg border border-border/50">
                 <div>
                   <p className="font-medium text-sm">Delete Account</p>
-                  <p className="text-xs text-muted-foreground">Permanently delete your account and all data</p>
+                  <p id="delete-account-warning" className="text-xs text-muted-foreground">Permanently delete your account and all data</p>
                 </div>
-                <Button id="delete-account-btn" variant="destructive" size="sm">
+                <Button
+                  id="delete-account-btn"
+                  variant="destructive"
+                  size="sm"
+                  className="transition-colors duration-200"
+                  aria-describedby="delete-account-warning"
+                >
                   Delete Account
                 </Button>
               </div>
@@ -270,8 +287,13 @@ export default function Settings() {
 
         {/* Save Button */}
         <div id="settings-save-row" className="flex justify-end">
-          <Button id="settings-save-btn" onClick={handleSave} className="gap-2 px-6">
-            {saved ? (
+          <Button id="settings-save-btn" onClick={handleSave} disabled={saving} className="gap-2 px-6">
+            {saving ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />
+                Saving...
+              </>
+            ) : saved ? (
               <>
                 <CheckCircle className="h-4 w-4" />
                 Saved!

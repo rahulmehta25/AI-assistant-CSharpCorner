@@ -9,12 +9,13 @@ import { Progress } from '@/components/ui/progress';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
-import { User, MapPin, GraduationCap, Briefcase, Plus, X, CheckCircle, Star } from 'lucide-react';
+import { User, MapPin, GraduationCap, Briefcase, Plus, X, CheckCircle, Star, Loader2 } from 'lucide-react';
 import { useUserStore } from '@/store/useUserStore';
 
 export default function Profile() {
   const { user, updateProfile } = useUserStore();
   const [saved, setSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
   const [newSkill, setNewSkill] = useState('');
 
   const [formData, setFormData] = useState({
@@ -40,14 +41,18 @@ export default function Profile() {
   const completionPct = Math.round((completionFields.filter((f) => f.done).length / completionFields.length) * 100);
 
   const handleSave = () => {
-    updateProfile({
-      title: formData.title,
-      experience: formData.experience,
-      education: formData.education,
-      location: formData.location,
-    });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2500);
+    setSaving(true);
+    setTimeout(() => {
+      updateProfile({
+        title: formData.title,
+        experience: formData.experience,
+        education: formData.education,
+        location: formData.location,
+      });
+      setSaving(false);
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2500);
+    }, 800);
   };
 
   const getSkillLevelColor = (level: string) => {
@@ -107,18 +112,21 @@ export default function Profile() {
                 <Progress value={completionPct} className="flex-1 h-2" />
                 <span className="text-sm font-semibold">{completionPct}%</span>
               </div>
-              <div id="completion-checklist" className="space-y-2">
+              <ul id="completion-checklist" className="space-y-2 list-none">
                 {completionFields.map((f, i) => (
-                  <div key={i} id={`completion-item-${i}`} className="flex items-center gap-2 text-xs">
+                  <li key={i} id={`completion-item-${i}`} className="flex items-center gap-2 text-xs">
                     {f.done ? (
-                      <CheckCircle className="h-3.5 w-3.5 text-emerald-500 flex-shrink-0" />
+                      <CheckCircle className="h-3.5 w-3.5 text-emerald-500 flex-shrink-0" aria-hidden="true" />
                     ) : (
-                      <div className="h-3.5 w-3.5 rounded-full border border-muted-foreground/40 flex-shrink-0" />
+                      <div className="h-3.5 w-3.5 rounded-full border border-muted-foreground/40 flex-shrink-0" aria-hidden="true" />
                     )}
-                    <span className={f.done ? 'text-foreground' : 'text-muted-foreground'}>{f.label}</span>
-                  </div>
+                    <span className={f.done ? 'text-foreground' : 'text-muted-foreground'}>
+                      {f.done ? <span className="sr-only">Completed: </span> : <span className="sr-only">Incomplete: </span>}
+                      {f.label}
+                    </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </CardContent>
           </Card>
         </div>
@@ -231,20 +239,21 @@ export default function Profile() {
               <CardDescription>Skills that power your career recommendations</CardDescription>
             </CardHeader>
             <CardContent>
-              <div id="skills-list" className="flex flex-wrap gap-2 mb-4">
+              <ul id="skills-list" className="flex flex-wrap gap-2 mb-4 list-none">
                 {skills.map((skill) => (
-                  <Badge
-                    key={skill.id}
-                    className={`gap-1 pr-1 ${getSkillLevelColor(skill.level)}`}
-                  >
-                    {skill.name}
-                    <span className="text-xs opacity-60 capitalize ml-1">{skill.level}</span>
-                  </Badge>
+                  <li key={skill.id}>
+                    <Badge
+                      className={`gap-1 pr-1 ${getSkillLevelColor(skill.level)}`}
+                    >
+                      {skill.name}
+                      <span className="text-xs opacity-60 capitalize ml-1">{skill.level}</span>
+                    </Badge>
+                  </li>
                 ))}
                 {skills.length === 0 && (
-                  <p className="text-sm text-muted-foreground">No skills added yet.</p>
+                  <li className="text-sm text-muted-foreground">No skills added yet.</li>
                 )}
-              </div>
+              </ul>
               <div id="add-skill-row" className="flex gap-2">
                 <Input
                   id="new-skill-input"
@@ -288,8 +297,13 @@ export default function Profile() {
           </Card>
 
           <div id="profile-save-row" className="flex justify-end">
-            <Button id="profile-save-btn" onClick={handleSave} className="gap-2 px-6">
-              {saved ? (
+            <Button id="profile-save-btn" onClick={handleSave} disabled={saving} className="gap-2 px-6">
+              {saving ? (
+                <>
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Saving...
+                </>
+              ) : saved ? (
                 <>
                   <CheckCircle className="h-4 w-4" />
                   Saved!
