@@ -161,6 +161,15 @@ export default function Help() {
                 expanded === faq.question ? 'border-primary/30 bg-primary/3' : 'hover:border-border'
               }`}
               onClick={() => setExpanded(expanded === faq.question ? null : faq.question)}
+              role="button"
+              aria-expanded={expanded === faq.question}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setExpanded(expanded === faq.question ? null : faq.question);
+                }
+              }}
             >
               <CardContent className="pt-4 pb-4">
                 <div className="flex items-start justify-between gap-3">

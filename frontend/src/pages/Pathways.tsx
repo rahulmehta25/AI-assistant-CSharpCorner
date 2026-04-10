@@ -215,7 +215,13 @@ function PathwayCard({ pathway, selected, onSelect }: { pathway: Pathway; select
         </div>
         <Badge variant="outline" className="text-xs">{pathway.progress}%</Badge>
       </div>
-      <Progress value={pathway.progress} className="h-1" />
+      <Progress
+        value={pathway.progress}
+        className="h-1"
+        aria-label={`${pathway.title} progress`}
+        aria-valuenow={pathway.progress}
+        aria-valuemax={100}
+      />
     </button>
   );
 }
@@ -238,6 +244,7 @@ function StepCard({ step }: { step: PathwayStep }) {
       {/* Timeline dot */}
       <div className="flex flex-col items-center gap-1 flex-shrink-0">
         <div
+          aria-label={`Step status: ${step.status}`}
           className={`h-8 w-8 rounded-full flex items-center justify-center ${
             step.status === 'completed'
               ? 'bg-emerald-500/20'
@@ -247,11 +254,11 @@ function StepCard({ step }: { step: PathwayStep }) {
           }`}
         >
           {step.status === 'completed' ? (
-            <CheckCircle className="h-4 w-4 text-emerald-500" />
+            <CheckCircle className="h-4 w-4 text-emerald-500" aria-hidden="true" />
           ) : step.status === 'active' ? (
-            <Clock className="h-4 w-4 text-primary" />
+            <Clock className="h-4 w-4 text-primary" aria-hidden="true" />
           ) : (
-            <div className="h-3 w-3 rounded-full border-2 border-muted-foreground/30" />
+            <div className="h-3 w-3 rounded-full border-2 border-muted-foreground/30" aria-hidden="true" />
           )}
         </div>
       </div>
@@ -337,7 +344,7 @@ export default function Pathways() {
                     <span className="text-muted-foreground">Overall Progress</span>
                     <span className="font-semibold">{selected.progress}%</span>
                   </div>
-                  <Progress value={selected.progress} className="h-2" />
+                  <Progress value={selected.progress} className="h-2" aria-valuenow={selected.progress} aria-valuemax={100} aria-label={`${selected.title} pathway progress`} />
                 </div>
                 <div id="pathway-outcome" className="p-3 bg-emerald-500/5 rounded-lg border border-emerald-500/15">
                   <p className="text-xs font-medium text-emerald-500">Target Outcome</p>

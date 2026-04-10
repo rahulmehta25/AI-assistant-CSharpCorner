@@ -127,6 +127,7 @@ export default function Dashboard() {
   const { user } = useUserStore();
   const [careers, setCareers] = useState<Career[]>([]);
   const [loadingCareers, setLoadingCareers] = useState(true);
+  const [careersError, setCareersError] = useState(false);
 
   useEffect(() => {
     const fetchCareers = async () => {
@@ -135,6 +136,7 @@ export default function Dashboard() {
         setCareers(data.slice(0, 3));
       } catch (error) {
         console.error('Error loading careers:', error);
+        setCareersError(true);
       } finally {
         setLoadingCareers(false);
       }
@@ -210,12 +212,21 @@ export default function Dashboard() {
                 </Link>
               </Button>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4" aria-live="polite">
               {loadingCareers ? (
-                <div id="careers-skeleton" className="space-y-3">
+                <div id="careers-skeleton" className="space-y-3" aria-label="Loading career matches" aria-busy="true">
                   {[1, 2, 3].map((i) => (
-                    <div key={i} className="h-16 rounded-lg bg-muted animate-pulse" />
+                    <div key={i} className="h-16 rounded-lg bg-muted animate-pulse" aria-hidden="true" />
                   ))}
+                </div>
+              ) : careersError ? (
+                <div id="careers-error" className="text-center py-8 text-muted-foreground">
+                  <Briefcase className="h-8 w-8 mx-auto mb-2 opacity-30" />
+                  <p className="text-sm font-medium text-foreground">Unable to load career matches</p>
+                  <p className="text-xs mt-1">Check your connection and try refreshing the page.</p>
+                  <Button variant="link" size="sm" asChild className="mt-2">
+                    <Link to="/careers">Browse all careers</Link>
+                  </Button>
                 </div>
               ) : careers.length > 0 ? (
                 careers.map((career) => (

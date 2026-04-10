@@ -265,14 +265,14 @@ const AIAssistant = () => {
         </div>
 
         {/* Chat Interface */}
-        <Card id="chat-card" className="lg:col-span-2 border-border/50 flex flex-col" style={{ height: '70vh', minHeight: '500px' }}>
+        <Card id="chat-card" className="lg:col-span-2 border-border/50 flex flex-col min-h-[50vh] max-h-[70vh] lg:max-h-none" style={{ height: '70vh', minHeight: '500px' }}>
           <CardHeader className="pb-3 border-b border-border/50">
             <CardTitle className="text-base">Chat</CardTitle>
             <CardDescription>Get personalized career advice</CardDescription>
           </CardHeader>
           <CardContent className="p-0 flex flex-col flex-1 min-h-0">
             <ScrollArea id="chat-scroll-area" className="flex-1 p-4">
-              <div id="chat-messages" className="space-y-4">
+              <div id="chat-messages" role="log" aria-live="polite" aria-label="Chat messages" className="space-y-4">
                 {messages.map((message) => (
                   <div key={message.id} id={`message-${message.id}`} className="space-y-2">
                     <div
@@ -284,6 +284,7 @@ const AIAssistant = () => {
                         }`}
                       >
                         <div
+                          aria-label={message.role === 'user' ? 'You' : message.error ? 'Error' : 'AI Assistant'}
                           className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center ${
                             message.role === 'user'
                               ? 'bg-primary text-primary-foreground'
@@ -355,6 +356,7 @@ const AIAssistant = () => {
 
             <div id="chat-input-area" className="border-t border-border/50 p-4">
               <div className="flex gap-2">
+                <label htmlFor="chat-input" className="sr-only">Message the AI Career Assistant</label>
                 <Input
                   ref={inputRef}
                   id="chat-input"

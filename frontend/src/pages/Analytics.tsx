@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -45,8 +46,19 @@ const insights = [
   { label: 'Profile Views', value: '47', trend: '+12', positive: true, desc: 'In the last 30 days' },
 ];
 
+function ChartSkeleton({ height = 200 }: { height?: number }) {
+  return (
+    <div
+      className="w-full rounded-lg bg-muted/40 animate-pulse"
+      style={{ height }}
+      aria-hidden="true"
+    />
+  );
+}
+
 export default function Analytics() {
   const { user } = useUserStore();
+  const [chartsLoaded] = useState(true); // Charts render immediately; set to false to preview skeletons
 
   return (
     <div id="analytics-container" className="container mx-auto py-8 px-4 max-w-6xl">
@@ -65,7 +77,7 @@ export default function Analytics() {
       {/* Key Insights */}
       <motion.div id="key-insights" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         {insights.map((insight, i) => (
-          <Card key={i} id={`insight-${i}`} className="border-border/50">
+          <Card key={i} id={`insight-${i}`} className="border-border/50 hover:border-primary/20 transition-colors duration-200">
             <CardContent className="pt-4 pb-4">
               <p className="text-xs text-muted-foreground mb-1">{insight.label}</p>
               <div className="flex items-end justify-between">
@@ -98,23 +110,32 @@ export default function Analytics() {
               <CardDescription>Applications and skills added per month</CardDescription>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={200}>
-                <BarChart data={activityData} barGap={4}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis dataKey="month" tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
-                  <YAxis tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
-                  <Tooltip
-                    contentStyle={{
-                      background: 'hsl(var(--card))',
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px',
-                      fontSize: '12px',
-                    }}
-                  />
-                  <Bar dataKey="applications" name="Applications" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="skills" name="Skills" fill="hsl(var(--secondary))" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
+              <div
+                aria-label="Bar chart showing number of job applications and skills added per month over the last 12 months"
+                role="img"
+              >
+                {chartsLoaded ? (
+                  <ResponsiveContainer width="100%" height={200}>
+                    <BarChart data={activityData} barGap={4}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                      <XAxis dataKey="month" tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
+                      <YAxis tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
+                      <Tooltip
+                        contentStyle={{
+                          background: 'hsl(var(--card))',
+                          border: '1px solid hsl(var(--border))',
+                          borderRadius: '8px',
+                          fontSize: '12px',
+                        }}
+                      />
+                      <Bar dataKey="applications" name="Applications" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="skills" name="Skills" fill="hsl(var(--secondary))" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <ChartSkeleton height={200} />
+                )}
+              </div>
             </CardContent>
           </Card>
         </motion.div>
@@ -130,24 +151,33 @@ export default function Analytics() {
               <CardDescription>Applications → Responses → Interviews over 5 weeks</CardDescription>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={jobSearchData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis dataKey="week" tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
-                  <YAxis tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
-                  <Tooltip
-                    contentStyle={{
-                      background: 'hsl(var(--card))',
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px',
-                      fontSize: '12px',
-                    }}
-                  />
-                  <Line type="monotone" dataKey="applied" name="Applied" stroke="hsl(var(--primary))" strokeWidth={2} dot={false} />
-                  <Line type="monotone" dataKey="responses" name="Responses" stroke="hsl(var(--secondary))" strokeWidth={2} dot={false} />
-                  <Line type="monotone" dataKey="interviews" name="Interviews" stroke="hsl(158 64% 52%)" strokeWidth={2} dot={false} />
-                </LineChart>
-              </ResponsiveContainer>
+              <div
+                aria-label="Line chart showing job search funnel: applications sent, responses received, and interviews scheduled over 5 weeks"
+                role="img"
+              >
+                {chartsLoaded ? (
+                  <ResponsiveContainer width="100%" height={200}>
+                    <LineChart data={jobSearchData}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                      <XAxis dataKey="week" tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
+                      <YAxis tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} axisLine={false} tickLine={false} />
+                      <Tooltip
+                        contentStyle={{
+                          background: 'hsl(var(--card))',
+                          border: '1px solid hsl(var(--border))',
+                          borderRadius: '8px',
+                          fontSize: '12px',
+                        }}
+                      />
+                      <Line type="monotone" dataKey="applied" name="Applied" stroke="hsl(var(--primary))" strokeWidth={2} dot={false} />
+                      <Line type="monotone" dataKey="responses" name="Responses" stroke="hsl(var(--secondary))" strokeWidth={2} dot={false} />
+                      <Line type="monotone" dataKey="interviews" name="Interviews" stroke="hsl(158 64% 52%)" strokeWidth={2} dot={false} />
+                    </LineChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <ChartSkeleton height={200} />
+                )}
+              </div>
             </CardContent>
           </Card>
         </motion.div>
@@ -171,7 +201,13 @@ export default function Analytics() {
                     <span className="font-medium">{s.skill}</span>
                     <span className="text-muted-foreground">{s.level}%</span>
                   </div>
-                  <Progress value={s.level} className="h-2" />
+                  <Progress
+                    value={s.level}
+                    className="h-2"
+                    aria-label={`${s.skill} proficiency`}
+                    aria-valuenow={s.level}
+                    aria-valuemax={100}
+                  />
                 </div>
               ))}
             </div>
@@ -200,7 +236,13 @@ export default function Analytics() {
                 <div key={i} id={`health-metric-${i}`} className="text-center p-4 rounded-xl border border-border/50">
                   <p className={`text-3xl font-bold ${m.color}`}>{m.score}</p>
                   <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
-                  <Progress value={m.score} className="h-1 mt-2" />
+                  <Progress
+                    value={m.score}
+                    className="h-1 mt-2"
+                    aria-label={`${m.label} health score`}
+                    aria-valuenow={m.score}
+                    aria-valuemax={100}
+                  />
                 </div>
               ))}
             </div>

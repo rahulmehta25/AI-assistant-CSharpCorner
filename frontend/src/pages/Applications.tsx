@@ -115,8 +115,8 @@ function ApplicationCard({ app }: { app: Application }) {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap mb-1">
               <h3 className="font-semibold text-base">{app.title}</h3>
-              <Badge className={`text-xs border ${cfg.color} gap-1`}>
-                <Icon className="h-3 w-3" />
+              <Badge className={`text-xs border ${cfg.color} gap-1`} aria-label={`Status: ${cfg.label}`}>
+                <Icon className="h-3 w-3" aria-hidden="true" />
                 {cfg.label}
               </Badge>
             </div>
@@ -251,7 +251,7 @@ export default function Applications() {
 
       {/* Application list */}
       <Tabs id="applications-tabs" defaultValue="active">
-        <TabsList id="applications-tablist" className="mb-6">
+        <TabsList id="applications-tablist" className="mb-6" aria-label="Application status filter">
           <TabsTrigger value="active">Active ({active.length})</TabsTrigger>
           <TabsTrigger value="closed">Closed ({closed.length})</TabsTrigger>
           <TabsTrigger value="all">All ({filtered.length})</TabsTrigger>
