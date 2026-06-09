@@ -1,143 +1,79 @@
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  Compass, 
-  GraduationCap, 
-  Briefcase, 
-  Target, 
+import { motion } from 'framer-motion';
+import {
+  Home,
+  Compass,
+  Briefcase,
   FileText,
   TrendingUp,
-  BookOpen,
-  Award,
   Settings,
   HelpCircle,
   Bot,
-  Brain
+  Brain,
+  PenTool,
+  MessageSquare,
+  BarChart3
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
 interface SidebarProps {
   open: boolean;
   onClose: () => void;
 }
 
-const navigationItems = [
-  {
-    title: 'Dashboard',
-    href: '/',
-    icon: Home,
-    badge: null,
-  },
-  {
-    title: 'Career Explorer',
-    href: '/careers',
-    icon: Compass,
-    badge: 'New',
-  },
-  {
-    title: 'Job Search',
-    href: '/jobs',
-    icon: Briefcase,
-    badge: '12',
-  },
-  {
-    title: 'Skills Analysis',
-    href: '/skills',
-    icon: Brain,
-    badge: null,
-  },
-  {
-    title: 'AI Assistant',
-    href: '/assistant',
-    icon: Bot,
-    badge: 'Beta',
-  },
-  {
-    title: 'Student Pathways',
-    href: '/pathways',
-    icon: GraduationCap,
-    badge: null,
-  },
-  {
-    title: 'Applications',
-    href: '/applications',
-    icon: FileText,
-    badge: '3',
-  },
+const mainItems = [
+  { title: 'Dashboard', href: '/', icon: Home },
+  { title: 'Careers', href: '/careers', icon: Compass },
+  { title: 'Jobs', href: '/jobs', icon: Briefcase },
+  { title: 'Progress', href: '/progress', icon: BarChart3 },
 ];
 
-const secondaryItems = [
-  {
-    title: 'Learning Hub',
-    href: '/learning',
-    icon: BookOpen,
-    badge: null,
-  },
-  {
-    title: 'Achievements',
-    href: '/achievements',
-    icon: Award,
-    badge: null,
-  },
-  {
-    title: 'Analytics',
-    href: '/analytics',
-    icon: TrendingUp,
-    badge: null,
-  },
+const toolsItems = [
+  { title: 'AI Assistant', href: '/assistant', icon: Bot },
+  { title: 'Resume Builder', href: '/resume', icon: FileText },
+  { title: 'Cover Letter', href: '/cover-letter', icon: PenTool },
+  { title: 'Interview Prep', href: '/interview', icon: MessageSquare },
+  { title: 'Skills', href: '/skills', icon: Brain },
 ];
 
 const bottomItems = [
-  {
-    title: 'Settings',
-    href: '/settings',
-    icon: Settings,
-    badge: null,
-  },
-  {
-    title: 'Help & Support',
-    href: '/help',
-    icon: HelpCircle,
-    badge: null,
-  },
+  { title: 'Settings', href: '/settings', icon: Settings },
+  { title: 'Help', href: '/help', icon: HelpCircle },
 ];
 
 export const Sidebar = ({ open, onClose }: SidebarProps) => {
   const location = useLocation();
 
-  const NavItem = ({ item, isActive }: { item: typeof navigationItems[0]; isActive: boolean }) => (
-    <Link
-      to={item.href}
-      onClick={onClose}
-      className={cn(
-        'flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 group',
-        isActive
-          ? 'bg-primary text-primary-foreground shadow-md'
-          : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
-      )}
-    >
-      <div className="flex items-center space-x-3">
-        <item.icon className={cn(
-          'h-5 w-5 transition-colors',
-          isActive ? 'text-primary-foreground' : 'text-muted-foreground group-hover:text-foreground'
-        )} />
-        <span>{item.title}</span>
-      </div>
-      {item.badge && (
-        <Badge 
-          variant={isActive ? "secondary" : "outline"} 
-          className={cn(
-            'h-5 px-2 text-xs',
-            isActive ? 'bg-primary-foreground/20 text-primary-foreground border-primary-foreground/20' : ''
-          )}
-        >
-          {item.badge}
-        </Badge>
-      )}
-    </Link>
-  );
+  const isActive = (href: string) => {
+    if (href === '/') return location.pathname === '/';
+    return location.pathname.startsWith(href);
+  };
+
+  const NavItem = ({ item }: { item: typeof mainItems[0] }) => {
+    const active = isActive(item.href);
+    return (
+      <Link
+        to={item.href}
+        onClick={onClose}
+        className={cn(
+          'relative flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors',
+          active
+            ? 'text-primary-foreground'
+            : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+        )}
+      >
+        {active && (
+          <motion.div
+            layoutId="sidebar-indicator"
+            className="absolute inset-0 bg-primary rounded-lg"
+            transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+          />
+        )}
+        <item.icon className="h-4 w-4 relative z-10" />
+        <span className="relative z-10">{item.title}</span>
+      </Link>
+    );
+  };
 
   return (
     <>
@@ -152,59 +88,49 @@ export const Sidebar = ({ open, onClose }: SidebarProps) => {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-16 left-0 z-50 h-[calc(100vh-4rem)] w-64 transform border-r bg-card transition-transform duration-300 ease-in-out lg:translate-x-0',
+          'fixed top-14 left-0 z-50 h-[calc(100vh-3.5rem)] w-56 transform border-r bg-background transition-transform duration-200 lg:translate-x-0',
           open ? 'translate-x-0' : '-translate-x-full'
         )}
       >
-        <div className="flex h-full flex-col p-4">
+        <div className="flex h-full flex-col py-4">
           {/* Main Navigation */}
-          <nav className="space-y-1">
-            <div className="pb-2">
-              <h3 className="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                Main
-              </h3>
-            </div>
-            {navigationItems.map((item) => (
-              <NavItem
-                key={item.href}
-                item={item}
-                isActive={location.pathname === item.href || (item.href === '/careers' && location.pathname.startsWith('/careers'))}
-              />
+          <nav className="px-3 space-y-1">
+            <p className="px-3 mb-2 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+              Main
+            </p>
+            {mainItems.map((item) => (
+              <NavItem key={item.href} item={item} />
             ))}
           </nav>
 
-          {/* Divider */}
-          <div className="my-4 border-t" />
+          <div className="my-4 mx-3 border-t" />
 
-          {/* Secondary Navigation */}
-          <nav className="space-y-1">
-            <div className="pb-2">
-              <h3 className="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                Tools
-              </h3>
-            </div>
-            {secondaryItems.map((item) => (
-              <NavItem
-                key={item.href}
-                item={item}
-                isActive={location.pathname === item.href}
-              />
+          {/* Tools Navigation */}
+          <nav className="px-3 space-y-1">
+            <p className="px-3 mb-2 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+              Tools
+            </p>
+            {toolsItems.map((item) => (
+              <NavItem key={item.href} item={item} />
             ))}
           </nav>
 
           {/* Bottom Navigation */}
-          <div className="mt-auto">
-            <div className="border-t pt-4">
-              <nav className="space-y-1">
-                {bottomItems.map((item) => (
-                  <NavItem
-                    key={item.href}
-                    item={item}
-                    isActive={location.pathname === item.href}
-                  />
-                ))}
-              </nav>
-            </div>
+          <nav className="mt-auto px-3 space-y-1 border-t pt-4">
+            {bottomItems.map((item) => (
+              <NavItem key={item.href} item={item} />
+            ))}
+          </nav>
+
+          {/* Keyboard shortcut hint */}
+          <div className="px-6 py-3 border-t animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <p className="text-xs text-muted-foreground">
+              Press{' '}
+              <kbd className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-medium bg-muted rounded border border-border/80 shadow-sm hover:bg-muted/80 transition-colors">
+                <span className="text-[11px]">&#8984;</span>K
+              </kbd>{' '}
+              for quick navigation
+            </p>
           </div>
         </div>
       </aside>

@@ -1,4 +1,5 @@
 import { Career, Job, StudentPathway, Skill, SkillGap } from '@/types';
+import { mockCareers } from './mock-data';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
@@ -27,16 +28,20 @@ class ApiService {
 
   // Career endpoints
   async getCareers(query?: string, filters?: any): Promise<Career[]> {
-    const params = new URLSearchParams();
-    if (query) params.append('q', query);
-    if (filters) {
-      Object.entries(filters).forEach(([key, value]) => {
-        if (value) params.append(key, String(value));
-      });
+    try {
+      const params = new URLSearchParams();
+      if (query) params.append('q', query);
+      if (filters) {
+        Object.entries(filters).forEach(([key, value]) => {
+          if (value) params.append(key, String(value));
+        });
+      }
+      const response = await this.request<{careers: Career[], total: number}>(`/api/careers?${params}`);
+      return response.careers;
+    } catch {
+      // Fallback to mock data when backend is unavailable
+      return mockCareers;
     }
-    
-    const response = await this.request<{careers: Career[], total: number}>(`/api/careers?${params}`);
-    return response.careers;
   }
 
   async searchCareers(query: string): Promise<Career[]> {

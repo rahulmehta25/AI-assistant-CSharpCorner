@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y gcc libpq-dev && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt || pip install --no-cache-dir \
+    fastapi uvicorn pydantic pydantic-settings python-dotenv httpx beautifulsoup4 \
+    scikit-learn pandas numpy aiohttp pyyaml requests python-jose passlib \
+    python-multipart google-generativeai langchain langchain-google-genai langchain-core
+
+COPY . .
+
+ENV ENVIRONMENT=production
+
+EXPOSE 8001
+
+CMD ["sh", "-c", "uvicorn api_bridge:app --host 0.0.0.0 --port ${PORT:-8001}"]
