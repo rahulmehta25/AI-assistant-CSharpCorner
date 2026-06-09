@@ -16,12 +16,23 @@ from urllib.parse import urljoin, quote_plus
 import aiohttp
 import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, WebDriverException
+try:
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.common.exceptions import TimeoutException, WebDriverException
+    HAS_SELENIUM = True
+except ImportError:
+    HAS_SELENIUM = False
+    webdriver = None
+    By = None
+    Options = None
+    WebDriverWait = None
+    EC = None
+    TimeoutException = Exception
+    WebDriverException = Exception
 import pandas as pd
 from difflib import SequenceMatcher
 
@@ -143,7 +154,7 @@ class LiveJobScraper:
         except json.JSONDecodeError as e:
             raise JobScrapingError(f"Invalid JSON in configuration file: {e}")
     
-    def _setup_selenium(self) -> webdriver.Chrome:
+    def _setup_selenium(self) -> "webdriver.Chrome":
         """Set up Selenium WebDriver"""
         if self.driver:
             return self.driver

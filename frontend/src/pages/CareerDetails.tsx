@@ -7,18 +7,163 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { apiService } from '@/services/api';
-import { Career } from '@/types';
+import { Career, RoadmapPhase, RoadmapStep } from '@/types';
 import { useUserStore } from '@/store/useUserStore';
-import { 
-  ArrowLeft, Bookmark, BookmarkCheck, DollarSign, TrendingUp, 
-  GraduationCap, Clock, CheckCircle, Circle, Star, Users,
-  BookOpen, Award, Target, Calendar
+import { RoadmapSkeleton, CardSkeleton } from '@/components/ui/loading-skeletons';
+import { EmptyState } from '@/components/ui/empty-state';
+import { ErrorState } from '@/components/ui/error-boundary';
+import {
+  ArrowLeft,
+  Bookmark,
+  BookmarkCheck,
+  DollarSign,
+  TrendingUp,
+  GraduationCap,
+  Clock,
+  CheckCircle2,
+  Circle,
+  Target,
+  ChevronRight,
+  BookOpen,
+  Briefcase,
+  Award
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const CareerDetails = () => {
+function RoadmapTimeline({ phases, currentPhaseIndex }: { phases: RoadmapPhase[]; currentPhaseIndex: number }) {
+  return (
+    <div className="space-y-0">
+      {phases.map((phase, index) => {
+        const isCompleted = phase.status === 'completed';
+        const isCurrent = phase.status === 'current';
+        const isLast = index === phases.length - 1;
+
+        return (
+          <motion.div
+            key={phase.id}
+            className="relative"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            {/* Connector line with grow animation */}
+            {!isLast && (
+              <motion.div
+                className={cn(
+                  'absolute left-[19px] top-10 w-0.5 h-full -mb-2',
+                  isCompleted ? 'bg-primary' : 'bg-border'
+                )}
+                initial={{ scaleY: 0 }}
+                animate={{ scaleY: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.15 + 0.2 }}
+                style={{ transformOrigin: 'top' }}
+              />
+            )}
+
+            <div className="flex gap-4 pb-8">
+              {/* Status indicator */}
+              <div className="relative z-10 flex-shrink-0">
+                <motion.div
+                  className={cn(
+                    'h-10 w-10 rounded-full flex items-center justify-center border-2',
+                    isCompleted && 'bg-primary border-primary',
+                    isCurrent && 'bg-background border-primary',
+                    !isCompleted && !isCurrent && 'bg-background border-border'
+                  )}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.15 + 0.1, type: 'spring', stiffness: 400, damping: 20 }}
+                >
+                  {isCompleted ? (
+                    <CheckCircle2 className="h-5 w-5 text-primary-foreground" />
+                  ) : isCurrent ? (
+                    <div className="h-3 w-3 rounded-full bg-primary" />
+                  ) : (
+                    <Circle className="h-5 w-5 text-muted-foreground" />
+                  )}
+                </motion.div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 pt-1">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="font-semibold">{phase.title}</h3>
+                      {isCurrent && (
+                        <Badge variant="default" className="text-xs">
+                          Current
+                        </Badge>
+                      )}
+                    </div>
+                    <p className="text-sm text-muted-foreground">{phase.description}</p>
+                  </div>
+                  <span className="text-xs text-muted-foreground shrink-0 ml-4">
+                    {phase.duration}
+                  </span>
+                </div>
+
+                {/* Steps */}
+                <div className="mt-4 space-y-2">
+                  {phase.steps.map((step, stepIndex) => (
+                    <motion.div
+                      key={step.id}
+                      className={cn(
+                        'flex items-center gap-3 p-3 rounded-lg border',
+                        step.completed ? 'bg-muted/50' : 'bg-background'
+                      )}
+                      initial={{ opacity: 0, x: -12 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.15 + stepIndex * 0.08 + 0.3 }}
+                    >
+                      {step.completed ? (
+                        <CheckCircle2 className="h-4 w-4 text-success shrink-0" />
+                      ) : (
+                        <Circle className="h-4 w-4 text-muted-foreground shrink-0" />
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <p className={cn('text-sm', step.completed && 'text-muted-foreground')}>
+                          {step.title}
+                        </p>
+                      </div>
+                      <Badge variant="secondary" className="text-xs shrink-0">
+                        {step.type}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+}
+
+function MetricCard({
+  icon: Icon,
+  label,
+  value,
+  className
+}: {
+  icon: React.ElementType;
+  label: string;
+  value: string;
+  className?: string;
+}) {
+  return (
+    <div className={cn('text-center p-4', className)}>
+      <Icon className="h-5 w-5 mx-auto mb-2 text-muted-foreground" />
+      <p className="text-xs text-muted-foreground mb-1">{label}</p>
+      <p className="text-sm font-medium">{value}</p>
+    </div>
+  );
+}
+
+export default function CareerDetails() {
   const { id } = useParams();
   const { bookmarkedCareers, bookmarkCareer, unbookmarkCareer, user } = useUserStore();
-  const [activeStep, setActiveStep] = useState(0);
   const [career, setCareer] = useState<Career | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -27,15 +172,14 @@ const CareerDetails = () => {
   useEffect(() => {
     const fetchCareer = async () => {
       if (!id) return;
-      
+
       try {
         setLoading(true);
         const careerData = await apiService.getCareer(id);
         setCareer(careerData);
-        
-        // Fetch related careers (first 3 from general list)
+
         const allCareers = await apiService.getCareers();
-        setRelatedCareers(allCareers.slice(0, 3).filter(c => c.id !== id));
+        setRelatedCareers(allCareers.slice(0, 3).filter((c) => c.id !== id));
       } catch (err) {
         setError('Failed to load career details');
         console.error('Error loading career:', err);
@@ -47,35 +191,10 @@ const CareerDetails = () => {
     fetchCareer();
   }, [id]);
 
-  const isBookmarked = career ? bookmarkedCareers.some(c => c.id === career.id) : false;
-
-  if (loading) {
-    return (
-      <div className="container mx-auto py-8 px-4">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading career details...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error || !career) {
-    return (
-      <div className="container mx-auto py-8 px-4">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">
-            {error || 'Career Not Found'}
-          </h1>
-          <Link to="/careers">
-            <Button>Back to Careers</Button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  const isBookmarked = career ? bookmarkedCareers.some((c) => c.id === career.id) : false;
 
   const handleBookmark = () => {
+    if (!career) return;
     if (isBookmarked) {
       unbookmarkCareer(career.id);
     } else {
@@ -83,425 +202,332 @@ const CareerDetails = () => {
     }
   };
 
-  // Generate personalized roadmap based on user's current skills
-  const generatePersonalizedRoadmap = () => {
-    const userSkills = user?.profile.skills?.map(s => s.name.toLowerCase()) || [];
-    const careerSkills = career.skills?.map(s => s.toLowerCase()) || [];
-    const missingSkills = careerSkills.filter(skill => 
-      !userSkills.some(userSkill => userSkill.includes(skill.toLowerCase()))
+  // Generate roadmap phases based on career and user skills
+  const generateRoadmap = (): { phases: RoadmapPhase[]; currentPhaseIndex: number; completionRate: number } => {
+    const userSkills = user?.profile.skills?.map((s) => s.name.toLowerCase()) || [];
+    const careerSkills = career?.skills?.map((s) => s.toLowerCase()) || [];
+    const matchedSkills = careerSkills.filter((skill) =>
+      userSkills.some((us) => us.includes(skill))
     );
+    const completionRate = careerSkills.length > 0
+      ? Math.round((matchedSkills.length / careerSkills.length) * 100)
+      : 0;
 
-    return {
-      currentLevel: "Entry Level",
-      targetLevel: "Mid Level",
-      estimatedTime: "12-18 months",
-      completionRate: Math.round((userSkills.length / careerSkills.length) * 100),
-      steps: [
-        {
-          id: 1,
-          phase: "Foundation",
-          title: "Build Core Skills",
-          duration: "3-4 months",
-          status: userSkills.length > 2 ? "completed" : "current",
-          skills: career.skills?.slice(0, 2) || [],
-          description: "Master the fundamental skills required for this career path",
-          resources: [
-            { title: "Introduction to Programming", type: "course", provider: "Coursera" },
-            { title: "Computer Science Fundamentals", type: "book", provider: "MIT Press" }
-          ]
-        },
-        {
-          id: 2,
-          phase: "Development",
-          title: "Advanced Skills & Projects",
-          duration: "4-6 months", 
-          status: userSkills.length > 4 ? "completed" : missingSkills.length < 3 ? "current" : "upcoming",
-          skills: career.skills?.slice(2, 4) || [],
-          description: "Develop advanced technical skills through hands-on projects",
-          resources: [
-            { title: "Advanced Web Development", type: "course", provider: "Udemy" },
-            { title: "Build a Portfolio Project", type: "project", provider: "Self-guided" }
-          ]
-        },
-        {
-          id: 3,
-          phase: "Specialization",
-          title: "Industry Expertise",
-          duration: "3-4 months",
-          status: userSkills.length >= careerSkills.length ? "current" : "upcoming",
-          skills: career.skills?.slice(4) || [],
-          description: "Specialize in industry-specific tools and frameworks",
-          resources: [
-            { title: "Industry Certification Prep", type: "certification", provider: "Professional Body" },
-            { title: "Real-world Internship", type: "experience", provider: "Company" }
-          ]
-        },
-        {
-          id: 4,
-          phase: "Job Ready",
-          title: "Career Preparation",
-          duration: "2-3 months",
-          status: "upcoming",
-          skills: ["Interview Prep", "Portfolio Review", "Network Building"],
-          description: "Prepare for job applications and interviews",
-          resources: [
-            { title: "Technical Interview Prep", type: "course", provider: "LeetCode" },
-            { title: "Portfolio Review Session", type: "mentoring", provider: "Industry Mentor" }
-          ]
-        }
-      ]
-    };
+    const phases: RoadmapPhase[] = [
+      {
+        id: '1',
+        title: 'Foundation',
+        description: 'Build core technical skills and fundamentals',
+        duration: '3-4 months',
+        status: completionRate >= 25 ? 'completed' : completionRate > 0 ? 'current' : 'upcoming',
+        steps: [
+          { id: '1-1', title: 'Complete fundamentals assessment', description: '', type: 'skill', completed: completionRate >= 10, resources: [] },
+          { id: '1-2', title: career?.skills?.[0] || 'Core skill 1', description: '', type: 'skill', completed: matchedSkills.length >= 1, resources: [] },
+          { id: '1-3', title: career?.skills?.[1] || 'Core skill 2', description: '', type: 'skill', completed: matchedSkills.length >= 2, resources: [] },
+        ],
+      },
+      {
+        id: '2',
+        title: 'Development',
+        description: 'Advance your skills through hands-on projects',
+        duration: '4-6 months',
+        status: completionRate >= 50 ? 'completed' : completionRate >= 25 ? 'current' : 'upcoming',
+        steps: [
+          { id: '2-1', title: 'Build portfolio project', description: '', type: 'experience', completed: completionRate >= 35, resources: [] },
+          { id: '2-2', title: career?.skills?.[2] || 'Advanced skill 1', description: '', type: 'skill', completed: matchedSkills.length >= 3, resources: [] },
+          { id: '2-3', title: career?.skills?.[3] || 'Advanced skill 2', description: '', type: 'skill', completed: matchedSkills.length >= 4, resources: [] },
+        ],
+      },
+      {
+        id: '3',
+        title: 'Specialization',
+        description: 'Gain industry-specific expertise and certifications',
+        duration: '3-4 months',
+        status: completionRate >= 75 ? 'completed' : completionRate >= 50 ? 'current' : 'upcoming',
+        steps: [
+          { id: '3-1', title: 'Industry certification', description: '', type: 'certification', completed: completionRate >= 60, resources: [] },
+          { id: '3-2', title: 'Complete internship or freelance work', description: '', type: 'experience', completed: completionRate >= 70, resources: [] },
+        ],
+      },
+      {
+        id: '4',
+        title: 'Job Ready',
+        description: 'Prepare for job applications and interviews',
+        duration: '2-3 months',
+        status: completionRate >= 100 ? 'completed' : completionRate >= 75 ? 'current' : 'upcoming',
+        steps: [
+          { id: '4-1', title: 'Update resume and portfolio', description: '', type: 'skill', completed: completionRate >= 85, resources: [] },
+          { id: '4-2', title: 'Practice technical interviews', description: '', type: 'skill', completed: completionRate >= 90, resources: [] },
+          { id: '4-3', title: 'Apply to target companies', description: '', type: 'experience', completed: completionRate >= 100, resources: [] },
+        ],
+      },
+    ];
+
+    const currentPhaseIndex = phases.findIndex((p) => p.status === 'current');
+
+    return { phases, currentPhaseIndex, completionRate };
   };
 
-  const roadmap = generatePersonalizedRoadmap();
+  if (loading) {
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center gap-3">
+          <div className="h-8 w-24 bg-muted rounded animate-pulse" />
+          <div className="h-8 w-24 bg-muted rounded animate-pulse" />
+        </div>
+        <div className="h-10 w-64 bg-muted rounded animate-pulse" />
+        <div className="h-6 w-96 bg-muted rounded animate-pulse" />
+        <div className="grid gap-4 md:grid-cols-4">
+          {[1, 2, 3, 4].map((i) => (
+            <CardSkeleton key={i} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'completed': return <CheckCircle className="h-5 w-5 text-emerald-500" />;
-      case 'current': return <Circle className="h-5 w-5 text-primary fill-current" />;
-      default: return <Circle className="h-5 w-5 text-muted-foreground" />;
-    }
-  };
+  if (error || !career) {
+    return (
+      <ErrorState
+        title="Career Not Found"
+        description={error || 'The career you are looking for could not be found.'}
+        onRetry={() => window.location.reload()}
+      />
+    );
+  }
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed': return 'bg-emerald-100 text-emerald-700 border-emerald-200';
-      case 'current': return 'bg-blue-100 text-blue-700 border-blue-200';
-      default: return 'bg-gray-100 text-gray-700 border-gray-200';
-    }
-  };
+  const { phases, currentPhaseIndex, completionRate } = generateRoadmap();
 
   return (
-    <div className="container mx-auto py-8 px-4 max-w-6xl">
+    <div className="space-y-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-8"
-      >
-        <div className="flex items-center gap-4 mb-6">
+      <div className="flex items-center gap-3">
+        <Button variant="ghost" size="sm" asChild>
           <Link to="/careers">
-            <Button variant="outline" size="sm">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Careers
-            </Button>
+            <ArrowLeft className="h-4 w-4 mr-1" />
+            Careers
           </Link>
-          <Button
-            variant={isBookmarked ? "default" : "outline"}
-            size="sm"
-            onClick={handleBookmark}
-          >
-            {isBookmarked ? (
-              <BookmarkCheck className="h-4 w-4 mr-2" />
-            ) : (
-              <Bookmark className="h-4 w-4 mr-2" />
-            )}
-            {isBookmarked ? 'Bookmarked' : 'Bookmark'}
-          </Button>
-        </div>
+        </Button>
+        <Button
+          variant={isBookmarked ? 'default' : 'outline'}
+          size="sm"
+          onClick={handleBookmark}
+        >
+          {isBookmarked ? (
+            <BookmarkCheck className="h-4 w-4 mr-1" />
+          ) : (
+            <Bookmark className="h-4 w-4 mr-1" />
+          )}
+          {isBookmarked ? 'Saved' : 'Save'}
+        </Button>
+      </div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="flex-1">
-            <h1 className="text-4xl font-bold text-foreground mb-4">{career.title}</h1>
-            <p className="text-xl text-muted-foreground mb-6">{career.description}</p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div className="text-center">
-                <DollarSign className="h-6 w-6 mx-auto mb-2 text-emerald-500" />
-                <p className="text-sm text-muted-foreground">Salary Range</p>
-                <p className="font-semibold text-foreground">
-                  ${career.salary.min.toLocaleString()} - ${career.salary.max.toLocaleString()}
-                </p>
-              </div>
-              <div className="text-center">
-                <TrendingUp className="h-6 w-6 mx-auto mb-2 text-blue-500" />
-                <p className="text-sm text-muted-foreground">Growth</p>
-                <Badge className="bg-blue-100 text-blue-700">
-                  {career.growth}
-                </Badge>
-              </div>
-              <div className="text-center">
-                <GraduationCap className="h-6 w-6 mx-auto mb-2 text-purple-500" />
-                <p className="text-sm text-muted-foreground">Education</p>
-                <p className="font-semibold text-foreground text-xs">{career.education}</p>
-              </div>
-              <div className="text-center">
-                <Users className="h-6 w-6 mx-auto mb-2 text-orange-500" />
-                <p className="text-sm text-muted-foreground">Experience</p>
-                <p className="font-semibold text-foreground">{career.experience}</p>
-              </div>
-            </div>
-          </div>
-
+      {/* Title & Description */}
+      <div>
+        <div className="flex items-center gap-3 mb-2">
+          <h1 className="text-2xl font-semibold bg-gradient-to-r from-slate-900 via-violet-800 to-slate-900 bg-clip-text text-transparent">{career.title}</h1>
           {career.match && (
-            <Card className="lg:w-80">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Target className="h-5 w-5 text-primary" />
-                  Your Match
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">{career.match}%</div>
-                  <Progress value={career.match} className="mb-4" />
-                  <p className="text-sm text-muted-foreground">
-                    Based on your skills and interests
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <Badge variant="secondary">{career.match}% match</Badge>
           )}
         </div>
-      </motion.div>
+        <p className="text-muted-foreground">{career.description}</p>
+      </div>
+
+      {/* Metrics */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <Card>
+          <MetricCard
+            icon={DollarSign}
+            label="Salary Range"
+            value={`$${Math.round(career.salary.min / 1000)}k - $${Math.round(career.salary.max / 1000)}k`}
+          />
+        </Card>
+        <Card>
+          <MetricCard icon={TrendingUp} label="Growth" value={career.growth} />
+        </Card>
+        <Card>
+          <MetricCard icon={GraduationCap} label="Education" value={career.education} />
+        </Card>
+        <Card>
+          <MetricCard icon={Briefcase} label="Experience" value={career.experience} />
+        </Card>
+      </div>
 
       {/* Tabs */}
-      <Tabs defaultValue="overview" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-4">
+      <Tabs defaultValue="roadmap" className="space-y-6">
+        <TabsList>
+          <TabsTrigger value="roadmap">Your Roadmap</TabsTrigger>
           <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="roadmap">Personal Roadmap</TabsTrigger>
-          <TabsTrigger value="skills">Skills & Tasks</TabsTrigger>
-          <TabsTrigger value="related">Related Careers</TabsTrigger>
+          <TabsTrigger value="skills">Skills</TabsTrigger>
+          <TabsTrigger value="related">Related</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="overview" className="space-y-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Required Skills</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {career.skills && career.skills.length > 0 ? (
-                    career.skills.map((skill) => (
-                      <Badge key={skill} variant="secondary">{skill}</Badge>
-                    ))
-                  ) : (
-                    <p className="text-muted-foreground text-sm">Skills data will be available soon</p>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Daily Tasks</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {career.tasks && career.tasks.length > 0 ? (
-                    career.tasks.map((task, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{task}</span>
-                      </li>
-                    ))
-                  ) : (
-                    <p className="text-muted-foreground text-sm">Task details will be available soon</p>
-                  )}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </TabsContent>
-
         <TabsContent value="roadmap" className="space-y-6">
+          {/* Roadmap Progress */}
+          <Card>
+            <CardHeader className="pb-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="text-base">Career Progress</CardTitle>
+                  <CardDescription>
+                    Your personalized path to {career.title}
+                  </CardDescription>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-semibold">{completionRate}%</div>
+                  <p className="text-xs text-muted-foreground">Complete</p>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <Progress value={completionRate} className="h-2" />
+              <div className="flex justify-between mt-2 text-xs text-muted-foreground">
+                <span>Foundation</span>
+                <span>Development</span>
+                <span>Specialization</span>
+                <span>Job Ready</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Timeline */}
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-primary" />
-                Personalized Career Roadmap
-              </CardTitle>
+              <CardTitle className="text-base">Roadmap Timeline</CardTitle>
               <CardDescription>
-                Based on your current skills and target career goals
+                Estimated time: 12-18 months depending on your pace
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-                <div className="text-center">
-                  <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <p className="text-sm text-muted-foreground">Estimated Time</p>
-                  <p className="font-semibold text-foreground">{roadmap.estimatedTime}</p>
-                </div>
-                <div className="text-center">
-                  <Target className="h-6 w-6 mx-auto mb-2 text-emerald-500" />
-                  <p className="text-sm text-muted-foreground">Completion Rate</p>
-                  <p className="font-semibold text-foreground">{roadmap.completionRate}%</p>
-                </div>
-                <div className="text-center">
-                  <TrendingUp className="h-6 w-6 mx-auto mb-2 text-blue-500" />
-                  <p className="text-sm text-muted-foreground">Current Level</p>
-                  <p className="font-semibold text-foreground">{roadmap.currentLevel}</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                {roadmap.steps.map((step, index) => (
-                  <div key={step.id} className="relative">
-                    {/* Connection Line */}
-                    {index < roadmap.steps.length - 1 && (
-                      <div className="absolute left-6 top-12 w-0.5 h-24 bg-border" />
-                    )}
-                    
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 mt-2">
-                        {getStatusIcon(step.status)}
-                      </div>
-                      
-                      <Card className="flex-1 transition-shadow hover:shadow-md">
-                        <CardHeader>
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <Badge variant="outline" className="mb-2">
-                                {step.phase}
-                              </Badge>
-                              <CardTitle className="text-lg">{step.title}</CardTitle>
-                              <CardDescription>{step.description}</CardDescription>
-                            </div>
-                            <Badge className={getStatusColor(step.status)}>
-                              {step.status}
-                            </Badge>
-                          </div>
-                        </CardHeader>
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="flex items-center gap-2">
-                              <Clock className="h-4 w-4 text-muted-foreground" />
-                              <span className="text-sm text-muted-foreground">{step.duration}</span>
-                            </div>
-                            
-                            <div>
-                              <p className="text-sm font-medium mb-2 text-foreground">Skills to develop:</p>
-                              <div className="flex flex-wrap gap-1">
-                                {step.skills.map((skill) => (
-                                  <Badge key={skill} variant="secondary" className="text-xs">
-                                    {skill}
-                                  </Badge>
-                                ))}
-                              </div>
-                            </div>
-
-                            <div>
-                              <p className="text-sm font-medium mb-2 text-foreground">Learning resources:</p>
-                              <div className="space-y-1">
-                                {step.resources.map((resource, idx) => (
-                                  <div key={idx} className="flex items-center gap-2 text-sm">
-                                    <BookOpen className="h-3 w-3 text-muted-foreground" />
-                                    <span className="text-muted-foreground">
-                                      {resource.title} ({resource.provider})
-                                    </span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-
-                            {step.status === 'current' && (
-                              <Button className="w-full">Start This Phase</Button>
-                            )}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <RoadmapTimeline phases={phases} currentPhaseIndex={currentPhaseIndex} />
             </CardContent>
           </Card>
         </TabsContent>
 
-        <TabsContent value="skills" className="space-y-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <TabsContent value="overview" className="space-y-6">
+          <div className="grid gap-6 lg:grid-cols-2">
             <Card>
               <CardHeader>
-                <CardTitle>Required Skills</CardTitle>
-                <CardDescription>Skills needed for this career</CardDescription>
+                <CardTitle className="text-base">Daily Tasks</CardTitle>
+                <CardDescription>What you'll do in this role</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
-                  {career.skills && career.skills.length > 0 ? (
-                    career.skills.map((skill) => {
-                      const userHasSkill = user?.profile.skills?.some(s => 
-                        s.name.toLowerCase().includes(skill.toLowerCase())
-                      );
-                      return (
-                        <div key={skill} className="flex items-center justify-between p-2 rounded-lg bg-muted/50">
-                          <span className="text-foreground">{skill}</span>
-                          {userHasSkill ? (
-                            <CheckCircle className="h-4 w-4 text-emerald-500" />
-                          ) : (
-                            <Circle className="h-4 w-4 text-muted-foreground" />
-                          )}
-                        </div>
-                      );
-                    })
-                  ) : (
-                    <p className="text-muted-foreground text-sm">Skills data will be available soon</p>
-                  )}
-                </div>
+                {career.tasks && career.tasks.length > 0 ? (
+                  <ul className="space-y-3">
+                    {career.tasks.map((task, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-success mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">{task}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-muted-foreground">Task details coming soon</p>
+                )}
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle>Daily Responsibilities</CardTitle>
-                <CardDescription>What you'll do in this role</CardDescription>
+                <CardTitle className="text-base">Work Environment</CardTitle>
+                <CardDescription>What to expect</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  {career.tasks && career.tasks.length > 0 ? (
-                    career.tasks.map((task, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{task}</span>
-                      </li>
-                    ))
-                  ) : (
-                    <p className="text-muted-foreground text-sm">Task details will be available soon</p>
-                  )}
-                </ul>
+                {career.work_environment && career.work_environment.length > 0 ? (
+                  <div className="flex flex-wrap gap-2">
+                    {career.work_environment.map((env) => (
+                      <Badge key={env} variant="secondary">
+                        {env}
+                      </Badge>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-sm text-muted-foreground">Environment details coming soon</p>
+                )}
               </CardContent>
             </Card>
           </div>
         </TabsContent>
 
+        <TabsContent value="skills" className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Required Skills</CardTitle>
+              <CardDescription>
+                Skills needed for this career path
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {career.skills && career.skills.length > 0 ? (
+                <div className="space-y-2">
+                  {career.skills.map((skill) => {
+                    const userHasSkill = user?.profile.skills?.some((s) =>
+                      s.name.toLowerCase().includes(skill.toLowerCase())
+                    );
+                    return (
+                      <div
+                        key={skill}
+                        className="flex items-center justify-between p-3 rounded-lg border"
+                      >
+                        <span className="text-sm">{skill}</span>
+                        {userHasSkill ? (
+                          <Badge variant="default" className="text-xs">
+                            <CheckCircle2 className="h-3 w-3 mr-1" />
+                            Acquired
+                          </Badge>
+                        ) : (
+                          <Badge variant="outline" className="text-xs">
+                            To learn
+                          </Badge>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p className="text-sm text-muted-foreground">Skills data coming soon</p>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
         <TabsContent value="related" className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {relatedCareers.map((relatedCareer) => (
-              <Card key={relatedCareer.id} className="transition-shadow hover:shadow-md">
-                <CardHeader>
-                  <CardTitle className="text-lg">{relatedCareer.title}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {relatedCareer.description.substring(0, 100)}...
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Salary:</span>
-                      <span className="font-medium text-foreground">
-                        ${Math.round(relatedCareer.salary.min / 1000)}k+
+          {relatedCareers.length > 0 ? (
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {relatedCareers.map((related) => (
+                <Card key={related.id} className="hover:bg-muted/50 transition-colors">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-base">{related.title}</CardTitle>
+                    <CardDescription className="line-clamp-2">
+                      {related.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center justify-between text-sm mb-3">
+                      <span className="text-muted-foreground">
+                        ${Math.round(related.salary.min / 1000)}k - ${Math.round(related.salary.max / 1000)}k
                       </span>
+                      <Badge variant="secondary">{related.growth}</Badge>
                     </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Growth:</span>
-                      <Badge className="bg-blue-100 text-blue-700">
-                        {relatedCareer.growth}
-                      </Badge>
-                    </div>
-                    <Link to={`/careers/${relatedCareer.id}`}>
-                      <Button variant="outline" size="sm" className="w-full">
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                    <Button variant="outline" size="sm" className="w-full" asChild>
+                      <Link to={`/careers/${related.id}`}>
+                        View Details
+                        <ChevronRight className="h-4 w-4 ml-1" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <EmptyState
+              icon={Briefcase}
+              title="No related careers"
+              description="Related career suggestions will appear here."
+            />
+          )}
         </TabsContent>
       </Tabs>
     </div>
   );
-};
-
-export default CareerDetails;
+}
