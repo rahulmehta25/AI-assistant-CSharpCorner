@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Search, Filter, SlidersHorizontal } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -8,21 +7,6 @@ import { Badge } from '@/components/ui/badge';
 import { CareerCard } from '@/components/careers/CareerCard';
 import { apiService } from '@/services/api';
 import { Career } from '@/types';
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-};
 
 export default function CareerExplorer() {
   const [careers, setCareers] = useState<Career[]>([]);
@@ -54,9 +38,9 @@ export default function CareerExplorer() {
     const matchesSearch = career.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          career.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          career.skills?.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase())) || false;
-    
+
     const matchesGrowth = !selectedGrowth || career.growth.toLowerCase().includes(selectedGrowth.toLowerCase());
-    
+
     const matchesSalary = !selectedSalary || (() => {
       const minSalary = career.salary.min;
       switch (selectedSalary) {
@@ -66,9 +50,9 @@ export default function CareerExplorer() {
         default: return true;
       }
     })();
-    
+
     const matchesEducation = !selectedEducation || career.education.toLowerCase().includes(selectedEducation.toLowerCase());
-    
+
     return matchesSearch && matchesGrowth && matchesSalary && matchesEducation;
   });
 
@@ -82,22 +66,17 @@ export default function CareerExplorer() {
   const activeFiltersCount = [selectedGrowth, selectedSalary, selectedEducation].filter(Boolean).length;
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="space-y-6"
-    >
+    <div className="space-y-6">
       {/* Header */}
-      <motion.div variants={itemVariants} className="space-y-2">
-        <h1 className="text-3xl font-bold">Career Explorer</h1>
+      <div className="space-y-2 animate-fade-in-up">
+        <h1 className="text-3xl font-bold gradient-text">Career Explorer</h1>
         <p className="text-muted-foreground text-lg">
           Discover your perfect career path from 100+ opportunities
         </p>
-      </motion.div>
+      </div>
 
       {/* Search and Filters */}
-      <motion.div variants={itemVariants} className="space-y-4">
+      <div className="space-y-4 animate-fade-in-up stagger-1">
         <div className="flex flex-col gap-4 md:flex-row md:items-center">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -168,7 +147,7 @@ export default function CareerExplorer() {
             Showing {filteredCareers.length} careers
             {searchQuery && ` for "${searchQuery}"`}
           </p>
-          
+
           <Select defaultValue="match">
             <SelectTrigger className="w-[140px]">
               <SelectValue />
@@ -181,35 +160,35 @@ export default function CareerExplorer() {
             </SelectContent>
           </Select>
         </div>
-      </motion.div>
+      </div>
 
       {/* Career Grid */}
-      <motion.div variants={itemVariants}>
+      <div>
         {loading && (
           <div className="text-center py-12">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
             <p className="text-muted-foreground">Loading careers...</p>
           </div>
         )}
-        
+
         {error && (
           <div className="text-center py-12">
             <p className="text-red-500 mb-4">{error}</p>
             <Button onClick={() => window.location.reload()}>Try Again</Button>
           </div>
         )}
-        
+
         {!loading && !error && (
           filteredCareers.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filteredCareers.map((career, index) => (
-                <motion.div
+                <div
                   key={career.id}
-                  variants={itemVariants}
-                  transition={{ delay: index * 0.05 }}
+                  className="animate-fade-in-up hover-lift"
+                  style={{ animationDelay: `${index * 60}ms` }}
                 >
                   <CareerCard career={career} showMatch />
-                </motion.div>
+                </div>
               ))}
             </div>
           ) : (
@@ -227,7 +206,7 @@ export default function CareerExplorer() {
             </div>
           )
         )}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }

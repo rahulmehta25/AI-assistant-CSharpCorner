@@ -3,7 +3,7 @@ API Bridge for Frontend-Backend Integration
 Provides REST endpoints for the React frontend to communicate with the Python backend
 """
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, List, Optional
@@ -11,6 +11,7 @@ import uvicorn
 import json
 import sys
 import os
+from datetime import datetime
 
 # Add modules to path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -22,13 +23,37 @@ from modules.student_pathways import StudentPathwaySystem, StudentLevel
 from modules.live_job_scraper import LiveJobScraper
 from modules.recommendation_engine import RecommendationEngine
 
+# Try to import monitoring (optional)
+try:
+    from prometheus_fastapi_instrumentator import Instrumentator
+    METRICS_AVAILABLE = True
+except ImportError:
+    METRICS_AVAILABLE = False
+
 # Initialize FastAPI
-app = FastAPI(title="AI Career Assistant API", version="1.0.0")
+app = FastAPI(
+    title="AI Career Assistant API",
+    version="1.0.0",
+    description="AI-powered career development platform API",
+)
+
+# Add Prometheus metrics instrumentation if available
+if METRICS_AVAILABLE:
+    Instrumentator().instrument(app).expose(app, endpoint="/metrics")
+
+# Track startup time
+START_TIME = datetime.utcnow()
 
 # Configure CORS
+cors_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000,http://localhost:8000").split(",")
+cors_origins = [origin.strip() for origin in cors_origins]
+# Allow all origins in production for Cloud Run + Vercel
+if os.getenv("ENVIRONMENT", "development") == "production":
+    cors_origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "http://localhost:8000"],
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -73,6 +98,35 @@ class StudentProfileRequest(BaseModel):
 @app.get("/")
 async def root():
     return {"message": "AI Career Assistant API", "status": "active"}
+
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for container orchestration"""
+    uptime = (datetime.utcnow() - START_TIME).total_seconds()
+
+    # Basic health checks
+    health_status = {
+        "status": "healthy",
+        "uptime_seconds": round(uptime, 2),
+        "timestamp": datetime.utcnow().isoformat(),
+        "version": "1.0.0",
+        "checks": {
+            "api": "ok",
+            "careers_loaded": len(data_loader.get_all_careers()) > 0,
+        }
+    }
+
+    # Check Redis if available
+    try:
+        from backend.services.cache import get_cache_service
+        cache = get_cache_service()
+        health_status["checks"]["redis"] = "ok" if cache.is_connected else "unavailable"
+    except Exception:
+        health_status["checks"]["redis"] = "not_configured"
+
+    return health_status
+
 
 @app.get("/api/careers")
 async def get_all_careers():

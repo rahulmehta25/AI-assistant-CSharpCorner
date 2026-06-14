@@ -954,7 +954,7 @@ SKILLS
 
 EDUCATION
 {'-' * 9}
-{profile_data.get('education_level', 'Bachelor\'s Degree')}
+{profile_data.get('education_level', "Bachelor's Degree")}
 
 EXPERIENCE
 {'-' * 10}

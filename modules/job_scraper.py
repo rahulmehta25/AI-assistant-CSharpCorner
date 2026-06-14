@@ -103,7 +103,8 @@ class JobScraper:
         base_salary = self.estimate_salary(job_title, experience_level)
         
         for i, template in enumerate(job_templates):
-            job_id = f"job_{hashlib.md5(f'{template["company"]}_{job_title}_{i}'.encode()).hexdigest()[:8]}"
+            hash_input = f"{template['company']}_{job_title}_{i}"
+            job_id = f"job_{hashlib.md5(hash_input.encode()).hexdigest()[:8]}"
             
             # Calculate salary range
             salary_min = int(base_salary * template['salary_multiplier'] * 0.9)
@@ -140,7 +141,8 @@ class JobScraper:
         related_titles = self.get_related_job_titles(job_title)
         for related_title in related_titles[:3]:
             for i, template in enumerate(job_templates[:2]):
-                job_id = f"job_{hashlib.md5(f'{template["company"]}_{related_title}_{i}'.encode()).hexdigest()[:8]}"
+                hash_input = f"{template['company']}_{related_title}_{i}"
+                job_id = f"job_{hashlib.md5(hash_input.encode()).hexdigest()[:8]}"
                 
                 salary_min = int(base_salary * template['salary_multiplier'] * 0.85)
                 salary_max = int(base_salary * template['salary_multiplier'] * 1.05)
