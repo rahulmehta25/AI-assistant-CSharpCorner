@@ -8,6 +8,25 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useUserStore } from '@/store/useUserStore';
 import { Brain, Target, TrendingUp, BookOpen, Award, Plus } from 'lucide-react';
 
+const skillLevelPercent: Record<string, number> = {
+  beginner: 25,
+  intermediate: 50,
+  advanced: 75,
+  expert: 100,
+};
+
+function AnimatedBar({ level }: { level: string }) {
+  const pct = skillLevelPercent[level.toLowerCase()] ?? 50;
+  return (
+    <div className="w-24 h-1.5 rounded-full bg-muted overflow-hidden">
+      <div
+        className="h-full rounded-full bg-primary progress-bar"
+        style={{ width: `${pct}%` }}
+      />
+    </div>
+  );
+}
+
 const SkillsAnalysis = () => {
   const { user } = useUserStore();
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
@@ -46,7 +65,7 @@ const SkillsAnalysis = () => {
       color: 'bg-gradient-to-r from-blue-500 to-cyan-500',
     },
     {
-      name: 'Soft Skills', 
+      name: 'Soft Skills',
       skills: [
         { id: 'comm', name: 'Communication', level: 'advanced', category: 'Soft Skills', isCore: true, verified: true },
         { id: 'lead', name: 'Leadership', level: 'intermediate', category: 'Soft Skills', isCore: true, verified: false },
@@ -68,7 +87,7 @@ const SkillsAnalysis = () => {
     {
       title: 'System Design Interview Prep',
       provider: 'Educative',
-      duration: '4 weeks', 
+      duration: '4 weeks',
       cost: 'Paid',
       rating: 4.7,
       priority: 'High',
@@ -104,21 +123,17 @@ const SkillsAnalysis = () => {
 
   return (
     <div className="container mx-auto py-8 px-4 max-w-7xl">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-8"
-      >
+      <div className="mb-8 animate-fade-in-up">
         <div className="flex items-center gap-3 mb-4">
           <Brain className="h-8 w-8 text-primary" />
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold gradient-text">
             Skills Analysis
           </h1>
         </div>
         <p className="text-xl text-muted-foreground">
           Analyze your skills, identify gaps, and get personalized learning recommendations
         </p>
-      </motion.div>
+      </div>
 
       <Tabs defaultValue="overview" className="space-y-6">
         <TabsList className="grid w-full grid-cols-4">
@@ -130,7 +145,7 @@ const SkillsAnalysis = () => {
 
         <TabsContent value="overview" className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="border-l-4 border-l-primary">
+            <Card className="border-l-4 border-l-primary animate-fade-in-up stagger-1 hover-lift">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -142,7 +157,7 @@ const SkillsAnalysis = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-emerald-500">
+            <Card className="border-l-4 border-l-emerald-500 animate-fade-in-up stagger-2 hover-lift">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -156,7 +171,7 @@ const SkillsAnalysis = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-amber-500">
+            <Card className="border-l-4 border-l-amber-500 animate-fade-in-up stagger-3 hover-lift">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -168,7 +183,7 @@ const SkillsAnalysis = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-purple-500">
+            <Card className="border-l-4 border-l-purple-500 animate-fade-in-up stagger-4 hover-lift">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -182,8 +197,8 @@ const SkillsAnalysis = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {skillCategories.map((category) => (
-              <Card key={category.name}>
+            {skillCategories.map((category, catIndex) => (
+              <Card key={category.name} className="animate-fade-in-up hover-lift" style={{ animationDelay: `${(catIndex + 3) * 80}ms` }}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <div className={`w-3 h-3 rounded-full ${category.color}`} />
@@ -193,18 +208,26 @@ const SkillsAnalysis = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {category.skills.map((skill) => (
-                      <div key={skill.id} className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.div
+                        key={skill.id}
+                        className="flex items-center justify-between p-3 bg-muted/50 rounded-lg cursor-default"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.15 }}
+                      >
                         <div className="flex items-center gap-3">
                           <span className="font-medium text-foreground">{skill.name}</span>
                           {skill.verified && (
                             <Award className="h-4 w-4 text-emerald-500" />
                           )}
                         </div>
-                        <Badge className={getSkillLevelColor(skill.level)}>
-                          {skill.level}
-                        </Badge>
-                      </div>
+                        <div className="flex items-center gap-3">
+                          <AnimatedBar level={skill.level} />
+                          <Badge className={getSkillLevelColor(skill.level)}>
+                            {skill.level}
+                          </Badge>
+                        </div>
+                      </motion.div>
                     ))}
                     <Button variant="outline" size="sm" className="w-full">
                       <Plus className="h-4 w-4 mr-2" />
@@ -220,7 +243,7 @@ const SkillsAnalysis = () => {
         <TabsContent value="gaps" className="space-y-6">
           <div className="space-y-4">
             {skillGaps.map((gap, index) => (
-              <Card key={index} className="transition-shadow hover:shadow-md">
+              <Card key={index} className="animate-fade-in-up hover-lift" style={{ animationDelay: `${index * 80}ms` }}>
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle className="text-lg text-foreground">{gap.skill}</CardTitle>
@@ -239,9 +262,14 @@ const SkillsAnalysis = () => {
                         <span className="text-muted-foreground">Progress to target level</span>
                         <span className="text-foreground font-medium">{100 - gap.gap}%</span>
                       </div>
-                      <Progress value={100 - gap.gap} className="h-2" />
+                      <div className="h-2 rounded-full bg-muted overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-primary progress-bar"
+                          style={{ width: `${100 - gap.gap}%` }}
+                        />
+                      </div>
                     </div>
-                    
+
                     <div>
                       <p className="text-sm font-medium text-foreground mb-2">Recommended Learning Path:</p>
                       <div className="flex flex-wrap gap-2">
@@ -262,7 +290,7 @@ const SkillsAnalysis = () => {
         <TabsContent value="recommendations" className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recommendations.map((rec, index) => (
-              <Card key={index} className="transition-shadow hover:shadow-md">
+              <Card key={index} className="animate-fade-in-up hover-lift" style={{ animationDelay: `${index * 80}ms` }}>
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <CardTitle className="text-lg text-foreground">{rec.title}</CardTitle>
@@ -295,7 +323,7 @@ const SkillsAnalysis = () => {
         </TabsContent>
 
         <TabsContent value="progress" className="space-y-6">
-          <Card>
+          <Card className="animate-fade-in-up">
             <CardHeader>
               <CardTitle>Learning Progress Timeline</CardTitle>
               <CardDescription>Track your skill development over time</CardDescription>

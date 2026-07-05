@@ -1,85 +1,276 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { StatsCard } from '@/components/dashboard/StatsCard';
-import { CareerCard } from '@/components/careers/CareerCard';
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Target, 
-  Briefcase, 
-  TrendingUp, 
-  Award,
+import {
+  Target,
+  Briefcase,
+  TrendingUp,
+  FileText,
   ArrowRight,
-  Calendar,
-  CheckCircle,
+  CheckCircle2,
   Clock,
-  BookOpen
+  Circle,
+  MapPin,
+  Building2,
+  ChevronRight,
+  Sparkles,
+  BookOpen,
+  MessageSquare
 } from 'lucide-react';
 import { useUserStore } from '@/store/useUserStore';
 import { apiService } from '@/services/api';
-import { Career, Job } from '@/types';
-import { Link } from 'react-router-dom';
+import { Career, Job, Milestone } from '@/types';
+import { DashboardSkeleton } from '@/components/ui/loading-skeletons';
+import { EmptyState } from '@/components/ui/empty-state';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-};
-
-export default function Dashboard() {
-  const { user } = useUserStore();
-  const [careers, setCareers] = useState<Career[]>([]);
-  const [loadingCareers, setLoadingCareers] = useState(true);
+function useCountUp(end: number, duration = 1000) {
+  const [count, setCount] = useState(0);
+  const started = useRef(false);
 
   useEffect(() => {
-    const fetchCareers = async () => {
-      try {
-        const data = await apiService.getCareers();
-        setCareers(data.slice(0, 3)); // Get top 3 careers
-      } catch (error) {
-        console.error('Error loading careers:', error);
-      } finally {
-        setLoadingCareers(false);
+    if (started.current || end === 0) return;
+    started.current = true;
+
+    let startTime: number | null = null;
+    let frameId: number;
+
+    const step = (ts: number) => {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * end));
+      if (progress < 1) {
+        frameId = requestAnimationFrame(step);
       }
     };
 
-    fetchCareers();
+    frameId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frameId);
+  }, [end, duration]);
+
+  return count;
+}
+
+function AnimatedStatCard({
+  title,
+  value,
+  suffix,
+  subtitle,
+  progress,
+  icon: Icon,
+}: {
+  title: string;
+  value: number;
+  suffix?: string;
+  subtitle?: string;
+  progress?: number;
+  icon: React.ElementType;
+}) {
+  const animatedValue = useCountUp(value);
+
+  return (
+    <Card className="overflow-hidden">
+      <CardContent className="p-6">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-sm text-muted-foreground">{title}</span>
+          <Icon className="h-4 w-4 text-muted-foreground" />
+        </div>
+        <div className="text-2xl font-semibold mb-1">
+          {animatedValue}
+          {suffix}
+        </div>
+        {progress !== undefined && (
+          <Progress value={animatedValue} className="h-1.5 mb-2" />
+        )}
+        {subtitle && (
+          <p className="text-xs text-muted-foreground">{subtitle}</p>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
+function MatchRingBadge({ percentage }: { percentage: number }) {
+  const size = 32;
+  const strokeWidth = 3;
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percentage / 100) * circumference;
+
+  return (
+    <div className="relative inline-flex items-center justify-center shrink-0">
+      <svg width={size} height={size} className="-rotate-90">
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke="hsl(var(--muted))"
+          strokeWidth={strokeWidth}
+        />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke="hsl(var(--primary))"
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          className="ring-progress"
+        />
+      </svg>
+      <span className="absolute text-[9px] font-semibold">{percentage}%</span>
+    </div>
+  );
+}
+
+function MilestoneItem({ milestone }: { milestone: Milestone }) {
+  const statusIcon = {
+    completed: <CheckCircle2 className="h-4 w-4 text-success" />,
+    'in-progress': <Clock className="h-4 w-4 text-primary" />,
+    pending: <Circle className="h-4 w-4 text-muted-foreground" />,
+    overdue: <Clock className="h-4 w-4 text-destructive" />,
+  };
+
+  return (
+    <div className="flex items-start gap-3 py-3">
+      <div className="mt-0.5">
+        {statusIcon[milestone.status]}
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-sm font-medium truncate">{milestone.title}</p>
+          <Badge
+            variant={milestone.status === 'completed' ? 'default' : 'secondary'}
+            className="text-xs shrink-0"
+          >
+            {milestone.status === 'in-progress' ? 'In Progress' : milestone.status}
+          </Badge>
+        </div>
+        {milestone.description && (
+          <p className="text-xs text-muted-foreground mt-0.5 truncate">
+            {milestone.description}
+          </p>
+        )}
+        {milestone.dueDate && (
+          <p className="text-xs text-muted-foreground mt-1">
+            Due {new Date(milestone.dueDate).toLocaleDateString()}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function CompactJobCard({ job, index }: { job: Job; index: number }) {
+  return (
+    <Link
+      to="/jobs"
+      className="flex items-start gap-3 p-3 rounded-lg border hover:bg-muted/50 transition-colors animate-slide-in-right hover-lift"
+      style={{ animationDelay: `${index * 60}ms` }}
+    >
+      <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
+        <Building2 className="h-5 w-5 text-muted-foreground" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-sm font-medium truncate">{job.title}</p>
+          {job.match && <MatchRingBadge percentage={job.match} />}
+        </div>
+        <p className="text-xs text-muted-foreground">{job.company}</p>
+        <div className="flex items-center gap-2 mt-1 text-xs text-muted-foreground">
+          <MapPin className="h-3 w-3" />
+          <span>{job.location}</span>
+          {job.salary && (
+            <>
+              <span className="text-muted-foreground/50">|</span>
+              <span>{job.salary}</span>
+            </>
+          )}
+        </div>
+      </div>
+      <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0 mt-3" />
+    </Link>
+  );
+}
+
+function CompactCareerCard({ career }: { career: Career }) {
+  return (
+    <Link
+      to={`/careers/${career.id}`}
+      className="flex items-center justify-between p-3 rounded-lg border hover:bg-muted/50 transition-colors hover-lift"
+    >
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2">
+          <p className="text-sm font-medium truncate">{career.title}</p>
+          {career.match && (
+            <Badge variant="secondary" className="text-xs shrink-0">
+              {career.match}% match
+            </Badge>
+          )}
+        </div>
+        <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
+          <span>${Math.round(career.salary.min / 1000)}k - ${Math.round(career.salary.max / 1000)}k</span>
+          <span className="text-muted-foreground/50">|</span>
+          <span>{career.growth}</span>
+        </div>
+      </div>
+      <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" />
+    </Link>
+  );
+}
+
+export default function Dashboard() {
+  const { user, savedJobs } = useUserStore();
+  const [careers, setCareers] = useState<Career[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await apiService.getCareers();
+        setCareers(data.slice(0, 4));
+      } catch (err) {
+        setError('Failed to load career matches');
+        console.error('Error loading careers:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
   }, []);
 
   if (!user) {
     return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-2">Welcome to AI Career Assistant</h2>
-          <p className="text-muted-foreground">Please sign in to access your dashboard.</p>
-        </div>
-      </div>
+      <EmptyState
+        icon={Target}
+        title="Welcome to AI Career Assistant"
+        description="Sign in to access your personalized career dashboard and recommendations."
+        action={{ label: 'Get Started', onClick: () => {} }}
+      />
     );
   }
 
-  // Mock jobs data for now (since jobs endpoint doesn't exist yet)
+  if (loading) {
+    return <DashboardSkeleton />;
+  }
+
   const recentJobs: Job[] = [
     {
       id: '1',
       title: 'Frontend Developer',
       company: 'TechCorp',
       location: 'San Francisco, CA',
-      salary: '$90,000 - $120,000',
+      salary: '$90k - $120k',
       type: 'full-time',
-      description: 'Build amazing user interfaces with React and TypeScript.',
-      requirements: ['3+ years React experience', 'TypeScript proficiency', 'CSS expertise'],
-      benefits: ['Health insurance', '401k matching', 'Flexible PTO'],
+      description: '',
+      requirements: [],
       match: 94,
       postedDate: '2024-01-15',
       applied: false,
@@ -91,280 +282,244 @@ export default function Dashboard() {
       title: 'Full Stack Engineer',
       company: 'StartupXYZ',
       location: 'Remote',
-      salary: '$80,000 - $110,000',
+      salary: '$80k - $110k',
       type: 'full-time',
-      description: 'Work on both frontend and backend systems using modern technologies.',
-      requirements: ['JavaScript/TypeScript', 'Node.js', 'Database design', 'API development'],
-      benefits: ['Remote work', 'Stock options', 'Learning budget'],
+      description: '',
+      requirements: [],
       match: 89,
       postedDate: '2024-01-12',
-      applied: true,
+      applied: false,
       saved: true,
       source: 'Indeed',
     },
     {
       id: '3',
-      title: 'Software Engineering Intern',
+      title: 'Software Engineer',
       company: 'BigTech Inc',
       location: 'Seattle, WA',
-      salary: '$35/hour',
-      type: 'internship',
-      description: 'Summer internship program for computer science students.',
-      requirements: ['CS major', 'Programming skills', 'Problem-solving abilities'],
-      benefits: ['Mentorship', 'Housing stipend', 'Return offer potential'],
+      salary: '$100k - $140k',
+      type: 'full-time',
+      description: '',
+      requirements: [],
       match: 87,
       postedDate: '2024-01-10',
       applied: false,
-      saved: true,
-      source: 'Company Website',
-    }
+      saved: false,
+      source: 'Glassdoor',
+    },
   ];
 
-  const milestones = [
+  const milestones: Milestone[] = [
     {
+      id: '1',
       title: 'Complete Skills Assessment',
-      type: 'assessment',
-      dueDate: '2024-01-20',
-      status: 'completed' as const,
-      description: 'Identify your key strengths and areas for improvement'
+      description: 'Identify your key strengths',
+      type: 'skill',
+      status: 'completed',
+      completedDate: '2024-01-18',
     },
     {
-      title: 'Apply to Software Engineer Role',
+      id: '2',
+      title: 'Apply to TechCorp',
+      description: 'Frontend Developer position',
       type: 'application',
+      status: 'in-progress',
       dueDate: '2024-01-25',
-      status: 'in-progress' as const,
-      description: 'TechCorp - Frontend Developer position'
     },
     {
+      id: '3',
       title: 'Complete React Course',
+      description: 'Advanced patterns',
       type: 'learning',
+      status: 'pending',
       dueDate: '2024-02-01',
-      status: 'upcoming' as const,
-      description: 'Advanced React patterns and best practices'
     },
-    {
-      title: 'Update Portfolio',
-      type: 'portfolio',
-      dueDate: '2024-02-05',
-      status: 'upcoming' as const,
-      description: 'Add recent projects and testimonials'
-    }
   ];
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="space-y-6"
-    >
-      {/* Welcome Section */}
-      <motion.div variants={itemVariants} className="space-y-2">
-        <h1 className="text-3xl font-bold">
-          Welcome back, {user.name.split(' ')[0]}! 👋
+    <div className="space-y-6">
+      {/* Header with gradient text */}
+      <div className="animate-fade-in-up">
+        <h1 className="text-2xl font-semibold gradient-text">
+          Welcome back, {user.name.split(' ')[0]}
         </h1>
-        <p className="text-muted-foreground text-lg">
-          Let's continue building your career path. Here's your progress overview.
+        <p className="text-muted-foreground mt-1">
+          Here's your career progress overview
         </p>
-      </motion.div>
-
-      {/* Stats Grid */}
-      <motion.div variants={itemVariants} className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <StatsCard
-          title="Career Match"
-          value={`${user.progress.careerMatch}%`}
-          progress={user.progress.careerMatch}
-          change={{ value: 5, trend: 'up' }}
-          icon={<Target className="h-4 w-4" />}
-          variant="success"
-          description="Based on your skills and interests"
-        />
-        <StatsCard
-          title="Skills Completed"
-          value={user.progress.skillsCompleted}
-          change={{ value: 2, trend: 'up' }}
-          icon={<Award className="h-4 w-4" />}
-          description="New skills learned this month"
-        />
-        <StatsCard
-          title="Applications"
-          value={user.progress.applicationsSubmitted}
-          icon={<Briefcase className="h-4 w-4" />}
-          description="Submitted this month"
-        />
-        <StatsCard
-          title="Profile Completion"
-          value={`${user.progress.profileCompletion}%`}
-          progress={user.progress.profileCompletion}
-          icon={<TrendingUp className="h-4 w-4" />}
-          variant="warning"
-          description="Complete your profile for better matches"
-        />
-      </motion.div>
-
-      <div className="grid gap-6 lg:grid-cols-2">
-        {/* Top Career Matches */}
-        <motion.div variants={itemVariants}>
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between">
-              <CardTitle className="text-xl">Top Career Matches</CardTitle>
-              <Button variant="ghost" size="sm" asChild>
-                <Link to="/careers">
-                  View All
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {loadingCareers ? (
-                <div className="text-center py-8">
-                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary mx-auto mb-2"></div>
-                  <p className="text-sm text-muted-foreground">Loading careers...</p>
-                </div>
-              ) : (
-                careers.map((career) => (
-                  <CareerCard key={career.id} career={career} compact showMatch />
-                ))
-              )}
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* Recent Job Recommendations */}
-        <motion.div variants={itemVariants}>
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between">
-              <CardTitle className="text-xl">Recent Job Matches</CardTitle>
-              <Button variant="ghost" size="sm" asChild>
-                <Link to="/jobs">
-                  View All
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {recentJobs.map((job) => (
-                <div
-                  key={job.id}
-                  className="flex items-start space-x-4 p-4 rounded-lg border hover:bg-muted/50 transition-colors"
-                >
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <h4 className="font-medium truncate">{job.title}</h4>
-                      {job.match && (
-                        <Badge variant="outline" className="text-xs">
-                          {job.match}% match
-                        </Badge>
-                      )}
-                    </div>
-                    <p className="text-sm text-muted-foreground">{job.company}</p>
-                    <p className="text-sm text-muted-foreground">{job.location}</p>
-                    {job.salary && (
-                      <p className="text-sm font-medium text-primary">{job.salary}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </motion.div>
       </div>
 
-      {/* Upcoming Milestones */}
-      <motion.div variants={itemVariants}>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle className="text-xl flex items-center">
-              <Calendar className="mr-2 h-5 w-5" />
-              Upcoming Milestones
-            </CardTitle>
-            <Button variant="ghost" size="sm">
-              Manage Timeline
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={index}
-                  className="flex items-start space-x-4 p-4 rounded-lg border"
-                >
-                  <div className="flex-shrink-0 mt-1">
-                    {milestone.status === 'completed' ? (
-                      <CheckCircle className="h-5 w-5 text-success" />
-                    ) : milestone.status === 'in-progress' ? (
-                      <Clock className="h-5 w-5 text-warning" />
-                    ) : (
-                      <div className="h-5 w-5 rounded-full border-2 border-muted" />
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <h4 className="font-medium">{milestone.title}</h4>
-                      <Badge
-                        variant={
-                          milestone.status === 'completed'
-                            ? 'default'
-                            : milestone.status === 'in-progress'
-                            ? 'secondary'
-                            : 'outline'
-                        }
-                        className="text-xs"
-                      >
-                        {milestone.status.replace('-', ' ')}
-                      </Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-1">
-                      {milestone.description}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      Due: {new Date(milestone.dueDate).toLocaleDateString()}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </motion.div>
+      {/* Stats Grid - staggered entrance */}
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="animate-fade-in-up stagger-1 hover-lift">
+          <AnimatedStatCard
+            title="Career Match"
+            value={user.progress.careerMatch}
+            suffix="%"
+            progress={user.progress.careerMatch}
+            subtitle="Based on your profile"
+            icon={Target}
+          />
+        </div>
+        <div className="animate-fade-in-up stagger-2 hover-lift">
+          <AnimatedStatCard
+            title="Skills Completed"
+            value={user.progress.skillsCompleted}
+            subtitle="Keep learning to improve"
+            icon={TrendingUp}
+          />
+        </div>
+        <div className="animate-fade-in-up stagger-3 hover-lift">
+          <AnimatedStatCard
+            title="Applications"
+            value={user.progress.applicationsSubmitted}
+            subtitle="This month"
+            icon={Briefcase}
+          />
+        </div>
+        <div className="animate-fade-in-up stagger-4 hover-lift">
+          <AnimatedStatCard
+            title="Profile"
+            value={user.progress.profileCompletion}
+            suffix="%"
+            progress={user.progress.profileCompletion}
+            subtitle="Complete for better matches"
+            icon={FileText}
+          />
+        </div>
+      </div>
 
-      {/* Quick Actions */}
-      <motion.div variants={itemVariants}>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl">Quick Actions</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              <Button variant="outline" className="h-20 flex-col space-y-2" asChild>
-                <Link to="/skills">
-                  <Target className="h-6 w-6" />
-                  <span>Assess Skills</span>
-                </Link>
-              </Button>
-              <Button variant="outline" className="h-20 flex-col space-y-2" asChild>
+      {/* Main Content Grid */}
+      <div className="grid gap-6 lg:grid-cols-3">
+        {/* Left Column - Career Matches & Jobs */}
+        <div className="lg:col-span-2 space-y-6">
+          {/* Career Matches */}
+          <div className="animate-fade-in-up stagger-3">
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-3">
+                <CardTitle className="text-base font-medium">Top Career Matches</CardTitle>
+                <Button variant="ghost" size="sm" className="text-muted-foreground" asChild>
+                  <Link to="/careers">
+                    View all
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                {careers.length > 0 ? (
+                  careers.map((career) => (
+                    <CompactCareerCard key={career.id} career={career} />
+                  ))
+                ) : (
+                  <EmptyState
+                    icon={Target}
+                    title="No career matches yet"
+                    description="Complete your profile to get personalized career recommendations."
+                    className="py-8"
+                  />
+                )}
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Recent Jobs */}
+          <div className="animate-slide-in-right stagger-4">
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-3">
+                <CardTitle className="text-base font-medium">Recent Job Matches</CardTitle>
+                <Button variant="ghost" size="sm" className="text-muted-foreground" asChild>
+                  <Link to="/jobs">
+                    View all
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                {recentJobs.map((job, index) => (
+                  <CompactJobCard key={job.id} job={job} index={index} />
+                ))}
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Right Column - Milestones & Quick Actions */}
+        <div className="space-y-6 animate-slide-in-right stagger-5">
+          {/* Active Roadmap Summary */}
+          <Card className="hover-lift">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-base font-medium">Your Roadmap</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-muted-foreground">Current goal</span>
+                  <span className="font-medium">Software Engineer</span>
+                </div>
+                <Progress value={35} className="h-2" />
+                <p className="text-xs text-muted-foreground">
+                  35% complete - 3 of 8 milestones achieved
+                </p>
+              </div>
+              <Button variant="outline" className="w-full mt-4" size="sm" asChild>
                 <Link to="/careers">
-                  <TrendingUp className="h-6 w-6" />
-                  <span>Explore Careers</span>
+                  View Roadmap
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" className="h-20 flex-col space-y-2" asChild>
-                <Link to="/jobs">
-                  <Briefcase className="h-6 w-6" />
-                  <span>Find Jobs</span>
+            </CardContent>
+          </Card>
+
+          {/* Milestones */}
+          <Card className="hover-lift">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base font-medium">Milestones</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="divide-y">
+                {milestones.map((milestone) => (
+                  <MilestoneItem key={milestone.id} milestone={milestone} />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Quick Actions */}
+          <Card className="hover-lift">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-base font-medium">Quick Actions</CardTitle>
+            </CardHeader>
+            <CardContent className="grid gap-2">
+              <Button variant="outline" className="justify-start h-auto py-3" asChild>
+                <Link to="/resume">
+                  <FileText className="h-4 w-4 mr-3" />
+                  <div className="text-left">
+                    <div className="font-medium text-sm">Resume Builder</div>
+                    <div className="text-xs text-muted-foreground">Upload and analyze</div>
+                  </div>
                 </Link>
               </Button>
-              <Button variant="outline" className="h-20 flex-col space-y-2" asChild>
-                <Link to="/applications">
-                  <BookOpen className="h-6 w-6" />
-                  <span>Build Resume</span>
+              <Button variant="outline" className="justify-start h-auto py-3" asChild>
+                <Link to="/interview">
+                  <MessageSquare className="h-4 w-4 mr-3" />
+                  <div className="text-left">
+                    <div className="font-medium text-sm">Interview Prep</div>
+                    <div className="text-xs text-muted-foreground">Practice questions</div>
+                  </div>
                 </Link>
               </Button>
-            </div>
-          </CardContent>
-        </Card>
-      </motion.div>
-    </motion.div>
+              <Button variant="outline" className="justify-start h-auto py-3" asChild>
+                <Link to="/assistant">
+                  <Sparkles className="h-4 w-4 mr-3" />
+                  <div className="text-left">
+                    <div className="font-medium text-sm">AI Assistant</div>
+                    <div className="text-xs text-muted-foreground">Get guidance</div>
+                  </div>
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
   );
 }

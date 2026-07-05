@@ -2,144 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Design System - Linear/Stripe inspired, light theme only
+   Clean, professional, Inter font, no gradients/glows */
 
 @layer base {
   :root {
-    /* Core brand colors - All HSL values */
+    /* Background & Foreground */
     --background: 0 0% 100%;
-    --foreground: 222 84% 5%;
+    --foreground: 220 14% 10%;
 
+    /* Cards & Popovers */
     --card: 0 0% 100%;
-    --card-foreground: 222 84% 5%;
-
+    --card-foreground: 220 14% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 5%;
+    --popover-foreground: 220 14% 10%;
 
-    /* Primary - Indigo */
-    --primary: 239 84% 67%;
+    /* Primary - Clean Blue (Linear-inspired) */
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 238 100% 70%;
-    --primary-dark: 239 84% 57%;
 
-    /* Secondary - Purple */
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 262 100% 75%;
-    --secondary-dark: 262 83% 48%;
+    /* Secondary - Slate */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 14% 10%;
 
-    /* Accent - Emerald */
-    --accent: 158 64% 52%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 158 100% 60%;
-    --accent-dark: 158 64% 42%;
+    /* Accent - Subtle blue tint */
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 14% 10%;
 
-    /* UI colors */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
+    /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 239 84% 67%;
-
-    /* Success colors */
-    --success: 142 76% 36%;
+    /* Success */
+    --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    /* Warning colors */
+    /* Warning */
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(239 84% 67%), hsl(238 100% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 100% 75%));
-    --gradient-accent: linear-gradient(135deg, hsl(158 64% 52%), hsl(158 100% 60%));
-    --gradient-rainbow: linear-gradient(135deg, hsl(239 84% 67%), hsl(262 83% 58%), hsl(158 64% 52%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 96%));
+    /* Borders & Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
 
-    /* Shadows */
+    /* Shadows - subtle, no glow */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-glow: 0 0 20px hsla(239, 84%, 67%, 0.3);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
 
-    --radius: 0.75rem;
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.5rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222 84% 5%;
-    --foreground: 210 40% 98%;
-
-    --card: 217 33% 17%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 217 33% 17%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 84% 5%;
-    --primary-light: 216 100% 70%;
-    --primary-dark: 217 91% 50%;
-
-    --secondary: 261 100% 80%;
-    --secondary-foreground: 222 84% 5%;
-    --secondary-light: 261 100% 85%;
-    --secondary-dark: 261 83% 70%;
-
-    --accent: 158 100% 70%;
-    --accent-foreground: 222 84% 5%;
-    --accent-light: 158 100% 80%;
-    --accent-dark: 158 64% 60%;
-
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --success: 158 64% 52%;
-    --success-foreground: 222 84% 5%;
-
-    --warning: 38 92% 50%;
-    --warning-foreground: 222 84% 5%;
-
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 60%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    /* Sidebar */
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 220 14% 10%;
+    --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 14% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 221 83% 53%;
   }
 }
 
@@ -149,7 +80,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -185,4 +116,142 @@ All colors MUST be HSL.
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+}
+
+/* Shimmer skeleton animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Chat input focus glow */
+.chat-input-glow:focus-within {
+  box-shadow: 0 0 0 2px hsl(221 83% 53% / 0.15), 0 0 20px -5px hsl(221 83% 53% / 0.2);
+  border-color: hsl(221 83% 53% / 0.4);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Typing indicator bounce */
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+.typing-dot {
+  animation: typingBounce 1.2s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* === Entrance & Micro-interaction Animations === */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes progressGrow {
+  from { width: 0; }
+}
+
+@keyframes ringProgress {
+  from { stroke-dashoffset: 251; }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes typingDot {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.4s ease-out both;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out both;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.stagger-1 { animation-delay: 0.08s; }
+.stagger-2 { animation-delay: 0.16s; }
+.stagger-3 { animation-delay: 0.24s; }
+.stagger-4 { animation-delay: 0.32s; }
+.stagger-5 { animation-delay: 0.4s; }
+.stagger-6 { animation-delay: 0.48s; }
+
+.gradient-text {
+  background: linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+.progress-bar {
+  animation: progressGrow 1s ease-out both;
+}
+
+.ring-progress {
+  animation: ringProgress 1s ease-out both;
 }
