@@ -1,0 +1,16 @@
+{
+  "indeed": [],
+  "combined": [],
+  "total_jobs": 0,
+  "search_metadata": {
+    "query": "full stack developer",
+    "location": "New York, NY",
+    "sources_used": [
+      "indeed"
+    ],
+    "scraped_at": "2025-09-06T17:41:35.042446",
+    "jobs_found": {
+      "indeed": 0
+    }
+  }
+}
